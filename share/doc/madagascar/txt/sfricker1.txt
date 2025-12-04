@@ -1,0 +1,14 @@
+Program sfricker1 | Convolution with a Ricker wavelet. 
+[SYNOPSIS]
+sfricker1 < in.rsf > out.rsf frequency= freq=0.2 deriv=n
+[COMMENTS]
+
+January 2013 program of the month:
+http://ahay.org/blog/2013/01/08/program-of-the-month-sfricker1/
+
+[PARAMETERS]
+bool    | deriv | =n |  [y/n] | 	apply a half-order derivative filter 
+float   | freq | =0.2 |   | 	peak frequency for Ricker wavelet (as fraction of Nyquist) 
+float   | frequency | = |   | 	peak frequency for Ricker wavelet (in Hz) 
+[DIRECTORY]
+system/seismic

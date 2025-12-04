@@ -1,0 +1,21 @@
+Program sftrishape | 2-D irregular data interpolation using triangulation and shaping regularization. 
+[SYNOPSIS]
+sftrishape < in.rsf > out.rsf pattern=pattern.rsf n1= n2= d1=1. d2=1. o1=0. o2=0. zero=0. niter=0 rect1=1 rect2=1 nw=2 fast=n sym=n tol=1e-3
+[PARAMETERS]
+float   | d1 | =1. |   | 	
+float   | d2 | =1. |   | 	
+bool    | fast | =n |  [y/n] | 	if y, use GMRES inversion 
+int     | n1 | = |   | 	
+int     | n2 | = |   | 	
+int     | niter | =0 |   | 	number of iterations 
+int     | nw | =2 |   | 	interpolator size 
+float   | o1 | =0. |   | 	
+float   | o2 | =0. |   | 	
+string  | pattern | = |   | 	pattern file for output dimensions (auxiliary input file name)
+int     | rect1 | =1 |   | 	
+int     | rect2 | =1 |   | 	smoothing regularization 
+bool    | sym | =n |  [y/n] | 	if y, use symmetric shaping 
+float   | tol | =1e-3 |   | 	tolerance for stopping iteration 
+float   | zero | =0. |   | 	level surface 
+[DIRECTORY]
+system/generic

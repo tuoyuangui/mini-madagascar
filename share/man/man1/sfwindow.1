@@ -1,0 +1,55 @@
+.TH sfwindow 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfwindow \- Window a portion of a dataset. \n.SH SYNOPSIS
+.B sfwindow < in.rsf > out.rsf verb=n squeeze=y j#=(1,...) d#=(d1,d2,...) f#=(0,...) min#=(o1,o2,,...) n#=(0,...) max#=(o1+(n1-1)*d1,o2+(n1-1)*d2,,...)
+.SH COMMENTS
+
+Other parameters from the command line are passed to the output (similar to sfput).
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B d#
+.B =(d1,d2,...)
+.R  	sampling in #-th dimension
+.TP
+.I largeint
+.B f#
+.B =(0,...)
+.R  	window start in #-th dimension
+.TP
+.I int    
+.B j#
+.B =(1,...)
+.R  	jump in #-th dimension
+.TP
+.I float  
+.B max#
+.B =(o1+(n1-1)*d1,o2+(n1-1)*d2,,...)
+.R  	maximum in #-th dimension
+.TP
+.I float  
+.B min#
+.B =(o1,o2,,...)
+.R  	minimum in #-th dimension
+.TP
+.I largeint
+.B n#
+.B =(0,...)
+.R  	window size in #-th dimension
+.TP
+.I bool   
+.B squeeze
+.B =y
+.R  [y/n]	if y, squeeze dimensions equal to 1 to the end
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]	Verbosity flag
+.SH SOURCE
+.I system/main/window.c
+.SH DOCUMENTATION
+.BR http://ahay.org/wiki/Guide_to_madagascar_programs#sfwindow
+.SH VERSION
+4.2

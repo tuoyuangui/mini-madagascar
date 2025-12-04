@@ -1,0 +1,19 @@
+Program sfzoeppritz | Testing Zoeppritz equation 
+[SYNOPSIS]
+sfzoeppritz > out.rsf na=90 a0=0. da=90./na icoef=4 vp1= vp2= vs1= vs2= rho1=1. rho2=1. incp=y outp=y refl=y
+[PARAMETERS]
+float   | a0 | =0. |   | 	first angle 
+float   | da | =90./na |   | 	angle increment 
+int     | icoef | =4 |  [1,2,3,4] | 	particle displacement, displacement potential, energy, real part 
+bool    | incp | =y |  [y/n] | 	incident P (or S) 
+int     | na | =90 |   | 	number of angles 
+bool    | outp | =y |  [y/n] | 	rellected/transmitted P (or S) 
+bool    | refl | =y |  [y/n] | 	reflection or transmission 
+float   | rho1 | =1. |   | 	
+float   | rho2 | =1. |   | 	
+float   | vp1 | = |   | 	
+float   | vp2 | = |   | 	
+float   | vs1 | = |   | 	
+float   | vs2 | = |   | 	
+[DIRECTORY]
+system/seismic

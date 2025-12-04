@@ -1,0 +1,114 @@
+
+    <!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+    <html><head><title>RSF: sfwindow</title>
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>sfwindow</strong></big></big> (4.2)</font></td
+    ><td align=right valign=bottom
+    ><font color="#ffffff" face="helvetica, arial"><a href="./index.html">index</a><br><a href="https://github.com/ahay/src/blob/madagascar-4.2/system/main/window.c">system/main/window.c</a><br><a href="http://ahay.org/wiki/Guide_to_madagascar_programs#sfwindow">Documentation</a></font></td></tr></table>
+    Window a portion of a dataset. 
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Synopsis</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">sfwindow < in.rsf > out.rsf verb=n squeeze=y j#=(1,...) d#=(d1,d2,...) f#=(0,...) min#=(o1,o2,,...) n#=(0,...) max#=(o1+(n1-1)*d1,o2+(n1-1)*d2,,...)</td></tr></table><br>
+Other parameters from the command line are passed to the output (similar to sfput).<br>
+
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parameters</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>d#=(d1,d2,...)</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	sampling in #-th dimension <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>largeint <strong>f#=(0,...)</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	window start in #-th dimension <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>j#=(1,...)</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	jump in #-th dimension <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>max#=(o1+(n1-1)*d1,o2+(n1-1)*d2,,...)</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	maximum in #-th dimension <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>min#=(o1,o2,,...)</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	minimum in #-th dimension <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>largeint <strong>n#=(0,...)</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	window size in #-th dimension <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>squeeze=y</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	if y, squeeze dimensions equal to 1 to the end <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>verb=n</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Verbosity flag <br>
+</font></td></tr></table>
+    
+</td></tr></table>
+    </body></html>

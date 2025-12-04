@@ -1,0 +1,155 @@
+
+    <!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+    <html><head><title>RSF: sfmath</title>
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>sfmath</strong></big></big> (4.2)</font></td
+    ><td align=right valign=bottom
+    ><font color="#ffffff" face="helvetica, arial"><a href="./index.html">index</a><br><a href="https://github.com/ahay/src/blob/madagascar-4.2/system/main/math.c">system/main/math.c</a><br><a href="http://ahay.org/wiki/Guide_to_madagascar_programs#sfmath">Documentation</a></font></td></tr></table>
+    Mathematical operations on data files.
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Synopsis</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">sfmath > out.rsf nostdin=n n#= d#=(1,1,...) o#=(0,0,...) label#= unit#= type= label= unit= output=</td></tr></table><br>
+Known functions: <br>
+cos,  sin,  tan,  acos,  asin,  atan, <br>
+cosh, sinh, tanh, acosh, asinh, atanh,<br>
+exp,  log,  sqrt, abs,<br>
+erf,  erfc, sign (for float data),<br>
+arg,  conj, real, imag (for complex data).<br>
+<br>
+sfmath will work on float or complex data, but all the input and output<br>
+files must be of the same data type.<br>
+<br>
+An alternative to sfmath is sfadd, which may be more efficient, but is<br>
+less versatile.<br>
+<br>
+Examples:<br>
+<br>
+sfmath x=file1.rsf y=file2.rsf power=file3.rsf output='sin((x+2*y)^power)' > out.rsf<br>
+sfmath < file1.rsf tau=file2.rsf output='exp(tau*input)' > out.rsf<br>
+sfmath n1=100 type=complex output="exp(I*x1)" > out.rsf<br>
+<br>
+Arguments which are not treated as variables in mathematical expressions:<br>
+datapath=, type=, out=<br>
+<br>
+See also: sfheadermath.
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parameters</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>d#=(1,1,...)</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	sampling on #-th axis <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>label=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	data label <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>label#=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	label on #-th axis <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>largeint <strong>n#=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	size of #-th axis <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>nostdin=n</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	y - ignore stdin <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>o#=(0,0,...)</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	origin on #-th axis <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>output=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Mathematical description of the output <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>type=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	output data type [float,complex] <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>unit=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	data unit <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>unit#=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	unit on #-th axis <br>
+</font></td></tr></table>
+    
+</td></tr></table>
+    </body></html>

@@ -1,0 +1,20 @@
+Program sfgraph3 | Generate 3-D cube plot for surfaces.
+[SYNOPSIS]
+sfgraph3 < in.rsf orient=1 yreverse=n min= max= point1=0.5 point2=0.5 frame1=0.5*(min+max) frame2=n1-1 frame3=0 movie=0 dframe=1 n1pix=n1/point1+n3/(1.-point1) n2pix=n2/point2+n3/(1.-point2) flat=y > plot.vpl
+[PARAMETERS]
+float   | dframe | =1 |   | 	frame increment in a movie 
+bool    | flat | =y |  [y/n] | 	if n, display perspective view 
+float   | frame1 | =0.5*(min+max) |   | 	
+int     | frame2 | =n1-1 |   | 	
+int     | frame3 | =0 |   | 	frame numbers for cube faces 
+float   | max | = |   | 	maximum function value 
+float   | min | = |   | 	minimum function value 
+int     | movie | =0 |   | 	0: no movie, 1: movie over axis 1, 2: axis 2, 3: axis 3 
+int     | n1pix | =n1/point1+n3/(1.-point1) |   | 	number of vertical pixels 
+int     | n2pix | =n2/point2+n3/(1.-point2) |   | 	number of horizontal pixels 
+int     | orient | =1 |   | 	function orientation 
+float   | point1 | =0.5 |   | 	fraction of the vertical axis for front face 
+float   | point2 | =0.5 |   | 	fraction of the horizontal axis for front face 
+bool    | yreverse | =n |  [y/n] | 	
+[DIRECTORY]
+plot/main

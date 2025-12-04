@@ -1,0 +1,15 @@
+Program sfiwarp2 | Inverse 2-D warping 
+[SYNOPSIS]
+sfiwarp2 < in.rsf > out.rsf warp=warp.rsf inv=y n1=nt n2=nx eps=0.01 d1=1 o1=0 d2=1 o2=0
+[PARAMETERS]
+int     | d1 | =1 |   | 	output sampling - for inv=y 
+float   | d2 | =1 |   | 	output sampling - for inv=y 
+float   | eps | =0.01 |   | 	stretch regularization 
+bool    | inv | =y |  [y/n] | 	inversion flag 
+int     | n1 | =nt |   | 	
+int     | n2 | =nx |   | 	output samples - for inv=y 
+float   | o1 | =0 |   | 	output origin - for inv=y 
+float   | o2 | =0 |   | 	output origin - for inv=y 
+file    | warp | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/seismic

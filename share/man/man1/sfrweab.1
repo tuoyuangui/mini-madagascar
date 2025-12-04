@@ -1,0 +1,39 @@
+.TH sfrweab 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfrweab \- Riemannian Wavefield Extrapolation: a,b coefficients \n.SH SYNOPSIS
+.B sfrweab < Fi.rsf slo=Fs.rsf > Fo.rsf abr=Fr.rsf verb=n naref=1 nbref=1 peps=0.01
+.SH PARAMETERS
+.PD 0
+.TP
+.I file   
+.B abr
+.B =
+.R  	auxiliary output file name
+.TP
+.I int    
+.B naref
+.B =1
+.R  
+.TP
+.I int    
+.B nbref
+.B =1
+.R  
+.TP
+.I float  
+.B peps
+.B =0.01
+.R  
+.TP
+.I file   
+.B slo
+.B =
+.R  	auxiliary input file name
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]
+.SH SOURCE
+.I system/seismic/Mrweab.c
+.SH VERSION
+4.2

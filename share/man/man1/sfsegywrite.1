@@ -1,0 +1,62 @@
+.TH sfsegywrite 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfsegywrite \- Convert an RSF dataset to SEGY or SU.\n.SH SYNOPSIS
+.B sfsegywrite < in.rsf tfile=hdr.rsf verb=n endian=y su= suxdr=n suxdr=n tape= hfile= bfile=
+.SH COMMENTS
+
+Merges trace headers with data.
+
+"suwrite" is equivalent to "segywrite su=y"
+
+If bfile= and/or hfile= are not provided, they will be created automatically
+using information from the trace headers.
+
+The file for tfile= can be generated with sfsegyheader.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I string 
+.B bfile
+.B =
+.R  	input binary data header file
+.TP
+.I bool   
+.B endian
+.B =y
+.R  [y/n]	Whether to automatically estimate endianness or not
+.TP
+.I string 
+.B hfile
+.B =
+.R  	input text data header file
+.TP
+.I bool   
+.B su
+.B =
+.R  [y/n]	y if input is SU, n if input is SEGY
+.TP
+.I bool   
+.B suxdr
+.B =n
+.R  [y/n]	y, SU has XDR support
+.TP
+.I string 
+.B tape
+.B =
+.R  	output data
+.TP
+.I file   
+.B tfile
+.B =
+.R  	auxiliary input file name
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]	Verbosity flag
+.SH SOURCE
+.I system/seismic/Msegywrite.c
+.SH DOCUMENTATION
+.BR http://ahay.org/wiki/Guide_to_madagascar_programs#sfsegywrite
+.SH VERSION
+4.2

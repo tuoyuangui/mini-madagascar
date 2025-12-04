@@ -1,0 +1,34 @@
+.TH sfmoveout 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfmoveout \- Put spikes at an arbitrary moveout \n.SH SYNOPSIS
+.B sfmoveout < warp.rsf > out.rsf n1= d1=1. o1=0. eps=0.1 nw=10
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B d1
+.B =1.
+.R  	time sampling
+.TP
+.I float  
+.B eps
+.B =0.1
+.R  	stretch regularization
+.TP
+.I int    
+.B n1
+.B =
+.R  	time samples
+.TP
+.I int    
+.B nw
+.B =10
+.R  	wavelet length
+.TP
+.I float  
+.B o1
+.B =0.
+.R  	time origin
+.SH SOURCE
+.I system/seismic/Mmoveout.c
+.SH VERSION
+4.2

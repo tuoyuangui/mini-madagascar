@@ -1,0 +1,32 @@
+Program sfcontour3 | Generate 3-D contour plot.
+[SYNOPSIS]
+sfcontour3 < in.rsf c= min1=o1 min2=o2 min3=o3 max1=o1+(n1-1)*d1 max2=o2+(n2-1)*d2 max3=o3+(n3-1)*d3 yreverse=y nc=50 dc= c0= point1=0.5 point2=0.5 frame1=0 frame2=n2-1 frame3=0 movie=0 dframe=1 n1pix=n1/point1+n3/(1.-point1) n2pix=n2/point2+n3/(1.-point2) flat=y scalebar=n minval= maxval= barreverse=n cfile= > plot.vpl
+[PARAMETERS]
+bool    | barreverse | =n |  [y/n] | 	if y, go from small to large on the bar scale 
+floats  | c | = |   | 	 [nc]
+float   | c0 | = |   | 	first contour 
+string  | cfile | = |   | 	contours in a file 
+float   | dc | = |   | 	contour increment 
+int     | dframe | =1 |   | 	frame increment in a movie 
+bool    | flat | =y |  [y/n] | 	if n, display perspective view 
+int     | frame1 | =0 |   | 	
+int     | frame2 | =n2-1 |   | 	
+int     | frame3 | =0 |   | 	frame numbers for cube faces 
+float   | max1 | =o1+(n1-1)*d1 |   | 	
+float   | max2 | =o2+(n2-1)*d2 |   | 	
+float   | max3 | =o3+(n3-1)*d3 |   | 	data window to plot 
+float   | maxval | = |   | 	maximum value for scalebar (default is the data maximum) 
+float   | min1 | =o1 |   | 	
+float   | min2 | =o2 |   | 	
+float   | min3 | =o3 |   | 	
+float   | minval | = |   | 	minimum value for scalebar (default is the data minimum) 
+int     | movie | =0 |   | 	0: no movie, 1: movie over axis 1, 2: axis 2, 3: axis 3 
+int     | n1pix | =n1/point1+n3/(1.-point1) |   | 	number of vertical pixels 
+int     | n2pix | =n2/point2+n3/(1.-point2) |   | 	number of horizontal pixels 
+int     | nc | =50 |   | 	number of contours 
+float   | point1 | =0.5 |   | 	fraction of the vertical axis for front face 
+float   | point2 | =0.5 |   | 	fraction of the horizontal axis for front face 
+bool    | scalebar | =n |  [y/n] | 	if y, draw scalebar 
+bool    | yreverse | =y |  [y/n] | 	if y, reverse the first axis 
+[DIRECTORY]
+plot/main

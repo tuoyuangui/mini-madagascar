@@ -1,0 +1,5 @@
+Program sffindmo | DMO without stacking by finite-difference offset continuation. 
+[SYNOPSIS]
+sffindmo < cmp.rsf > stk.rsf
+[DIRECTORY]
+system/seismic

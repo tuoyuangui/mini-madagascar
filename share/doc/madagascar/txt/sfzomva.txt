@@ -1,0 +1,18 @@
+Program sfzomva | 3-D zero-offset WEMVA 
+[SYNOPSIS]
+sfzomva slo=Bs.rsf wfl=Bw.rsf < Pi.rsf > Ps.rsf verb=n eps=0.01 inv=n twoway=y nrmax=1 dtmax=0.004 pmx=0 pmy=0 tmx=0 tmy=0
+[PARAMETERS]
+float   | dtmax | =0.004 |   | 	time error 
+float   | eps | =0.01 |   | 	stability parameter 
+bool    | inv | =n |  [y/n] | 	y=modeling; n=migration 
+int     | nrmax | =1 |   | 	maximum number of references 
+int     | pmx | =0 |   | 	padding on x 
+int     | pmy | =0 |   | 	padding on y
+file    | slo | = |   | 	auxiliary input file name
+int     | tmx | =0 |   | 	taper on x
+int     | tmy | =0 |   | 	taper on y 
+bool    | twoway | =y |  [y/n] | 	two-way traveltime 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+file    | wfl | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/seismic

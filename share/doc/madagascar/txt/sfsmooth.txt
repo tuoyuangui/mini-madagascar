@@ -1,0 +1,15 @@
+Program sfsmooth | Multi-dimensional triangle smoothing. 
+[SYNOPSIS]
+sfsmooth < in.rsf > out.rsf repeat=1 adj=n rect#=(1,1,...) diff#=(n,n,...)
+[COMMENTS]
+
+January 2012 program of the month:
+http://ahay.org/blog/2012/01/01/program-of-the-month-sfsmooth/
+
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	run in the adjoint mode 
+bool    | diff# | =(n,n,...) |  [y/n] | 	differentiation on #-th axis 
+int     | rect# | =(1,1,...) |   | 	smoothing radius on #-th axis 
+int     | repeat | =1 |   | 	repeat filtering several times 
+[DIRECTORY]
+system/generic

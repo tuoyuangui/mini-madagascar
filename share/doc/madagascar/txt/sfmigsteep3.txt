@@ -1,0 +1,19 @@
+Program sfmigsteep3 | 3-D Kirchhoff time migration for antialiased steep dips. 
+[SYNOPSIS]
+sfmigsteep3 < in.rsf hdr=head.rsf > mig.rsf n2= d2= o2= n3= d3= o3= n1= vel=
+[COMMENTS]
+
+Combine with sfmig3 antialias=flat for the complete response.
+
+[PARAMETERS]
+float   | d2 | = |   | 	
+float   | d3 | = |   | 	
+file    | hdr | = |   | 	auxiliary input file name
+int     | n1 | = |   | 	
+int     | n2 | = |   | 	
+int     | n3 | = |   | 	
+float   | o2 | = |   | 	
+float   | o3 | = |   | 	
+float   | vel | = |   | 	migration velocity 
+[DIRECTORY]
+system/seismic

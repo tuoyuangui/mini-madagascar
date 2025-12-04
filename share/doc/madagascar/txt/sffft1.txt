@@ -1,0 +1,12 @@
+Program sffft1 | Fast Fourier Transform along the first axis. 
+[SYNOPSIS]
+sffft1 < Fin.rsf > Fou.rsf ot=Fot.rsf verb=n inv=n sym=n opt=y memsize=1000.0
+[PARAMETERS]
+bool    | inv | =n |  [y/n] | 	y, inverse transform 
+float   | memsize | =1000.0 |   | 	
+bool    | opt | =y |  [y/n] | 	y, determine optimal size for efficiency 
+string  | ot | = |   | 	auxiliary input file name
+bool    | sym | =n |  [y/n] | 	y, symmetric scaling for Hermitian FFT 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+system/generic

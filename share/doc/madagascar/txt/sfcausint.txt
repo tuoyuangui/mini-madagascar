@@ -1,0 +1,12 @@
+Program sfcausint | Causal integration on the first axis. 
+[SYNOPSIS]
+sfcausint < in.rsf > out.rsf adj=n
+[COMMENTS]
+
+December 2013 program of the month:
+http://ahay.org/blog/2013/12/01/program-of-the-month-sfcausint/
+
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	if y, do adjoint integration 
+[DIRECTORY]
+system/generic

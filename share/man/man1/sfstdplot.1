@@ -1,0 +1,520 @@
+.TH sfstdplot 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfstdplot \- Setting up frames for a generic plot. \n.SH SYNOPSIS
+.B sfstdplot backcol= fillcol= dash= plotfat= plotcol= xreverse=xreverse1 yreverse=yreverse1 pad=pad1 scalebar=n barmove=n tickscale=0.5 tickscale1=tickscale tickscale2=tickscale tickscale3=tickscale tickscale4=tickscale min1=umin1 min2=umin2 max1=umax1 max2=umax2 font=-1 screenratio=VP_SCREEN_RATIO screenht=VP_STANDARD_HEIGHT screenwd=screenht / screenratio crowd=0.75 xinch= crowd1=crowd yinch= crowd2=crowd xll= xur= yll= yur= barwidth=0.36 axiscol=VP_WHITE framelabelcol=VP_YELLOW cubelinecol=framelabelcol labelsz=8. larnersz=0.0f labelrot=n grid1=transp? false: grid grid2=transp? grid: false gridcol=grid? VP_RED: framecol gridfat=1 griddash=0.0f titlesz=10. barlabelsz= framelabel1=(bool) (NULL != label1) framelabel2=(bool) (NULL != label2) framelabel3=(bool) (NULL != label3) axisfat=0 axiscol=7 labelfat=0 labelsz=8. wantaxis= screenratio=VP_SCREEN_RATIO screenht=VP_STANDARD_HEIGHT screenwd=screenht / screenratio crowd=0.75 xinch= crowd1=crowd yinch= crowd2=crowd xll= xur= yll= yur= transp=transp1 xreverse=n yreverse=yreverse1 labelrot=n min1= min2= max1= max2= wanttitle=y titlefat=0 titlesz=10. wantaxis= wantaxis1= wantaxis2= wantaxis3= labelfat= label1= unit1= label3= unit3= label2= unit2= nbartic= dbarnum= obarnum= wherebartics= n1tic= d1num= o1num= n2tic= d2num= o2num= n3tic= d3num= o3num= n4tic= d4num= o4num= wheretics= grid1= g1num0= g1num= grid2= g2num0= g2num= title= barlabelfat= barlabel= barunit= bartype= wherexlabel= whereylabel= formatbar= format2= format1= format3= wheretitle= wherebarlabel=
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B axiscol
+.B =7
+.R  
+.TP
+.I int    
+.B axisfat
+.B =0
+.R  
+.TP
+.I floats 
+.B backcol
+.B =
+.R  	 [3]
+.TP
+.I string 
+.B barlabel
+.B =
+.R  	( barlabel bar label )(bar label)
+.TP
+.I int    
+.B barlabelfat
+.B =
+.R  	bar label fatness
+.TP
+.I float  
+.B barlabelsz
+.B =
+.R  	bar label font size
+.TP
+.I bool   
+.B barmove
+.B =n
+.R  [y/n]	adjust scalebar position, if bartype=h
+.TP
+.I string 
+.B bartype
+.B =
+.R  	[v,h] vertical or horizontal bar (default is v)
+.TP
+.I string 
+.B barunit
+.B =
+.R  	( barunit bar unit )(bar unit)
+.TP
+.I float  
+.B barwidth
+.B =0.36
+.R  	scale bar size
+.TP
+.I float  
+.B crowd
+.B =0.75
+.R  
+.TP
+.I float  
+.B crowd1
+.B =crowd
+.R  
+.TP
+.I float  
+.B crowd2
+.B =crowd
+.R  
+.TP
+.I int    
+.B cubelinecol
+.B =framelabelcol
+.R  	cube lines color
+.TP
+.I float  
+.B d1num
+.B =
+.R  	axis1 tic increment
+.TP
+.I float  
+.B d2num
+.B =
+.R  	axis2 tic increment
+.TP
+.I float  
+.B d3num
+.B =
+.R  	axis3 tic increment
+.TP
+.I float  
+.B d4num
+.B =
+.R  	axis4 tic increment
+.TP
+.I floats 
+.B dash
+.B =
+.R  	line dash type	
+	    0 continuos (default)
+	    1 fine dash
+	    2 fine dot
+	    3 dash
+	    4 large dash
+	    5 dot dash
+	    6 large dash small dash
+	    7 double dot
+	    8 double dash
+	    9 loose dash  The part after the decimal point determines the pattern repetition interval  [n2]
+.TP
+.I string 
+.B dbarnum
+.B =
+.R  	scalebar tic increment
+.TP
+.I floats 
+.B fillcol
+.B =
+.R  	 [3]
+.TP
+.I int    
+.B font
+.B =-1
+.R  	font to use in text
+.TP
+.I string 
+.B format1
+.B =
+.R  	tick mark format
+.TP
+.I string 
+.B format2
+.B =
+.R  	tickmark format ()
+.TP
+.I string 
+.B format3
+.B =
+.R  	tickmark format
+.TP
+.I string 
+.B formatbar
+.B =
+.R  	format for ticmark labels in the scalebar
+.TP
+.I bool   
+.B framelabel1
+.B =(bool) (NULL != label1)
+.R  [y/n]	to put numbers at frame ends
+.TP
+.I bool   
+.B framelabel2
+.B =(bool) (NULL != label2)
+.R  [y/n]	to put numbers at frame ends
+.TP
+.I bool   
+.B framelabel3
+.B =(bool) (NULL != label3)
+.R  [y/n]	to put numbers at frame ends
+.TP
+.I int    
+.B framelabelcol
+.B =VP_YELLOW
+.R  	frame labels color
+.TP
+.I float  
+.B g1num
+.B =
+.R  	grid mark sampling on first axis
+.TP
+.I float  
+.B g1num0
+.B =
+.R  	grid mark origin on first axis
+.TP
+.I float  
+.B g2num
+.B =
+.R  	grid mark sampling on second axis
+.TP
+.I float  
+.B g2num0
+.B =
+.R  	grid mark origin on second axis
+.TP
+.I bool   
+.B grid1
+.B =
+.R  [y/n]	to draw grid on first axis
+.TP
+.I bool   
+.B grid2
+.B =
+.R  [y/n]	to draw grid on second axis
+.TP
+.I int    
+.B gridcol
+.B =grid? VP_RED: framecol
+.R  	grid color
+.TP
+.I float  
+.B griddash
+.B =0.0f
+.R  	grid dash pattern
+.TP
+.I int    
+.B gridfat
+.B =1
+.R  	grid fatness
+.TP
+.I string 
+.B label1
+.B =
+.R  	label on the first axis
+.TP
+.I string 
+.B label2
+.B =
+.R  	label on the second axis
+.TP
+.I string 
+.B label3
+.B =
+.R  	label on the third axis
+.TP
+.I int    
+.B labelfat
+.B =
+.R  	label fatness
+.TP
+.I bool   
+.B labelrot
+.B =n
+.R  [y/n]
+.TP
+.I float  
+.B labelsz
+.B =8.
+.R  
+.TP
+.I float  
+.B larnersz
+.B =0.0f
+.R  	give the font size as a fraction of the total screen height, 
+       this is based on Ken Larner's 1/20 rule.
+       Any positive larnersz value will overwrite labelsz with 
+       the appropiate rule
+.TP
+.I float  
+.B max1
+.B =
+.R  
+.TP
+.I float  
+.B max2
+.B =
+.R  
+.TP
+.I float  
+.B min1
+.B =
+.R  
+.TP
+.I float  
+.B min2
+.B =
+.R  
+.TP
+.I int    
+.B n1tic
+.B =
+.R  	axis1 number of ticmarks
+.TP
+.I int    
+.B n2tic
+.B =
+.R  	axis2 number of ticmarks
+.TP
+.I int    
+.B n3tic
+.B =
+.R  	axis3 number of ticmarks
+.TP
+.I int    
+.B n4tic
+.B =
+.R  	axis4 number of ticmarks
+.TP
+.I int    
+.B nbartic
+.B =
+.R  	number of scalebar ticmarks
+.TP
+.I float  
+.B o1num
+.B =
+.R  	axis1 tic origin
+.TP
+.I float  
+.B o2num
+.B =
+.R  	axis2 tic origin
+.TP
+.I float  
+.B o3num
+.B =
+.R  	axis3 tic origin
+.TP
+.I float  
+.B o4num
+.B =
+.R  	axis4 tic origin
+.TP
+.I float  
+.B obarnum
+.B =
+.R  	scalebar tic origin
+.TP
+.I bool   
+.B pad
+.B =pad1
+.R  [y/n]	pad plotting area
+.TP
+.I ints   
+.B plotcol
+.B =
+.R  	line color 
+	   7 white
+	   6 yellow (default)
+	   5 cyan
+	   4 green
+	   3 magenta
+	   2 red
+	   1 blue
+	   0 black  [n2]
+.TP
+.I ints   
+.B plotfat
+.B =
+.R  	line fatness  [n2]
+.TP
+.I bool   
+.B scalebar
+.B =n
+.R  [y/n]	plot a scalebar
+.TP
+.I float  
+.B screenht
+.B =VP_STANDARD_HEIGHT
+.R  
+.TP
+.I float  
+.B screenratio
+.B =VP_SCREEN_RATIO
+.R  
+.TP
+.I float  
+.B screenwd
+.B =screenht / screenratio
+.R  
+.TP
+.I float  
+.B tickscale
+.B =0.5
+.R  	ticks scaling
+.TP
+.I float  
+.B tickscale1
+.B =tickscale
+.R  	ticks scaling on first axis
+.TP
+.I float  
+.B tickscale2
+.B =tickscale
+.R  	ticks scaling on second axis
+.TP
+.I float  
+.B tickscale3
+.B =tickscale
+.R  	ticks scaling on third axis
+.TP
+.I float  
+.B tickscale4
+.B =tickscale
+.R  	ticks scaling on fourth axis
+.TP
+.I string 
+.B title
+.B =
+.R  	( title plot title )(plot title)
+.TP
+.I int    
+.B titlefat
+.B =0
+.R  
+.TP
+.I float  
+.B titlesz
+.B =10.
+.R  
+.TP
+.I bool   
+.B transp
+.B =transp1
+.R  [y/n]
+.TP
+.I string 
+.B unit1
+.B =
+.R  	unit on the first axis
+.TP
+.I string 
+.B unit2
+.B =
+.R  	unit on the second axis
+.TP
+.I string 
+.B unit3
+.B =
+.R  	unit on the third axis
+.TP
+.I bool   
+.B wantaxis
+.B =
+.R  [y/n]	if draw axes
+.TP
+.I bool   
+.B wantaxis1
+.B =
+.R  [y/n]	if draw first axis
+.TP
+.I bool   
+.B wantaxis2
+.B =
+.R  [y/n]	if draw second axis
+.TP
+.I bool   
+.B wantaxis3
+.B =
+.R  [y/n]	if draw third axis in cube plots
+.TP
+.I bool   
+.B wanttitle
+.B =y
+.R  [y/n]
+.TP
+.I string 
+.B wherebarlabel
+.B =
+.R  	where to put bar label (top,bottom,left,right)
+.TP
+.I string 
+.B wherebartics
+.B =
+.R  	( wherebartics where to put scalebar ticmarks )(where to put scalebar ticmarks)
+.TP
+.I string 
+.B wheretics
+.B =
+.R  	( wheretics where to put ticmarks )(where to put ticmarks)
+.TP
+.I string 
+.B wheretitle
+.B =
+.R  	where to put title (top,bottom,left,right)
+.TP
+.I string 
+.B wherexlabel
+.B =
+.R  	where to put horizontal axis (top,bottom)
+.TP
+.I string 
+.B whereylabel
+.B =
+.R  	checking to see if wantaxis is fetched (where to put vertical label (left,right))
+.TP
+.I float  
+.B xinch
+.B =
+.R  
+.TP
+.I float  
+.B xll
+.B =
+.R  
+.TP
+.I bool   
+.B xreverse
+.B =n
+.R  [y/n]
+.TP
+.I float  
+.B xur
+.B =
+.R  
+.TP
+.I float  
+.B yinch
+.B =
+.R  
+.TP
+.I float  
+.B yll
+.B =
+.R  
+.TP
+.I bool   
+.B yreverse
+.B =yreverse1
+.R  [y/n]
+.TP
+.I float  
+.B yur
+.B =
+.R  
+.SH SOURCE
+.I plot/lib/Mstdplot.c
+.SH VERSION
+4.2

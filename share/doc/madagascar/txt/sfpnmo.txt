@@ -1,0 +1,13 @@
+Program sfpnmo | Slope-based normal moveout. 
+[SYNOPSIS]
+sfpnmo < cmp.rsf dip=dip.rsf > nmod.rsf vel=vel.rsf offset=offset.rsf crv=crv.rsf eta=eta.rsf half=y eps=0.01
+[PARAMETERS]
+string  | crv | = |   | 	auxiliary input file name
+file    | dip | = |   | 	auxiliary input file name
+float   | eps | =0.01 |   | 	stretch regularization 
+file    | eta | = |   | 	auxiliary output file name
+bool    | half | =y |  [y/n] | 	if y, the second axis is half-offset instead of full offset 
+string  | offset | = |   | 	auxiliary input file name
+file    | vel | = |   | 	auxiliary output file name
+[DIRECTORY]
+system/seismic

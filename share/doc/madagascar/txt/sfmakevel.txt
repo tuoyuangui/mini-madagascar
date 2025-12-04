@@ -1,0 +1,35 @@
+Program sfmakevel | Make a velocity function v(x,y,z) 
+[SYNOPSIS]
+sfmakevel > out.rsf n2= n1= n3=1 d2=1.0 d3=1.0 d1=1.0 o2=0.0 o3=0.0 o1=0.0 v000=2.0 dvdx2=0.0 dvdx3=0.0 dvdx1=0.0 x2lens=fx x3lens=fy x1lens=fz vlens=0.0 dlens=1.0 tlens=1.0 vran=0.0 vx1ran=0.0 vx1c=0.0 x11c=fz x12c=fz+(nz-1)*dz l1c=dz l2c=dz exc=1.0 vzfile= vx1file=
+[PARAMETERS]
+float   | d1 | =1.0 |   | 	1st dimension sampling interval
+float   | d2 | =1.0 |   | 	2nd dimension sampling interval
+float   | d3 | =1.0 |   | 	3rd dimension sampling interval
+float   | dlens | =1.0 |   | 	diameter of parabolic lens
+float   | dvdx1 | =0.0 |   | 	velocity gradient with respect to 1st dimension
+float   | dvdx2 | =0.0 |   | 	velocity gradient with respect to 2nd dimension
+float   | dvdx3 | =0.0 |   | 	velocity gradient with respect to 3rd dimension
+float   | exc | =1.0 |   | 	exponent of chirp
+float   | l1c | =dz |   | 	wavelength at beginning of chirp
+float   | l2c | =dz |   | 	wavelength at end of chirp
+int     | n1 | = |   | 	number of z samples (1st dimension)), must be provided!
+int     | n2 | = |   | 	number of x samples (2nd dimension), must be provided!
+int     | n3 | =1 |   | 	number of y samples (3rd dimension)
+float   | o1 | =0.0 |   | 	Origin 1st dimension
+float   | o2 | =0.0 |   | 	Origin 2nd dimension
+float   | o3 | =0.0 |   | 	Origin 3rd dimension
+float   | tlens | =1.0 |   | 	thickness of parabolic lens
+float   | v000 | =2.0 |   | 	velocity at (x=0,y=0,z=0)
+float   | vlens | =0.0 |   | 	velocity perturbation in parabolic lens
+float   | vran | =0.0 |   | 	standard deviation of random perturbation
+float   | vx1c | =0.0 |   | 	1st dimension v(z) chirp amplitude
+string  | vx1file | = |   | 	file containing v(z) 1st dimension profile
+float   | vx1ran | =0.0 |   | 	standard deviation of random perturbation to 1st dimension
+string  | vzfile | = |   | 	
+float   | x11c | =fz |   | 	1st dimension at which to begin chirp
+float   | x12c | =fz+(nz-1)*dz |   | 	1st dimension at which to end chirp
+float   | x1lens | =fz |   | 	1st dimension coordinate of center of parabolic lens
+float   | x2lens | =fx |   | 	2nd dimension coordinate of center of parabolic lens
+float   | x3lens | =fy |   | 	3rd dimension coordinate of center of parabolic lens
+[DIRECTORY]
+su/main

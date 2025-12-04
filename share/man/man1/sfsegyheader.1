@@ -1,0 +1,33 @@
+.TH sfsegyheader 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfsegyheader \- Make a trace header file for segywrite.\n.SH SYNOPSIS
+.B sfsegyheader < in.rsf > out.rsf tfile=tfile.rsf n1= d1= o1=0
+.SH COMMENTS
+
+Use the output for tfile= argument in segywrite.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B d1
+.B =
+.R  	trace sampling
+.TP
+.I int    
+.B n1
+.B =
+.R  	number of samples in a trace
+.TP
+.I float  
+.B o1
+.B =0
+.R  	trace origin
+.TP
+.I string 
+.B tfile
+.B =
+.R  	auxiliary input file name
+.SH SOURCE
+.I system/seismic/Msegyheader.c
+.SH VERSION
+4.2

@@ -1,0 +1,13 @@
+Program sfvelmod | Velocity transform.
+[SYNOPSIS]
+sfvelmod < scan.rsf > cmp.rsf half=y extend=4 slowness=n
+[COMMENTS]
+
+Inverse of sfvscan.
+
+[PARAMETERS]
+int     | extend | =4 |   | 	trace extension 
+bool    | half | =y |  [y/n] | 	if y, the second axis is half-offset instead of full offset 
+bool    | slowness | =n |  [y/n] | 	if y, use slowness instead of velocity 
+[DIRECTORY]
+system/seismic

@@ -1,0 +1,14 @@
+Program sffourvc2 | Velocity continuation with semblance computation. 
+[SYNOPSIS]
+sffourvc2 < in.rsf > out.rsf nb=2 eps=0.01 pad=n1 pad2=2*kiss_fft_next_fast_size((n2+1)/2) nv= dv= semblance=y extend=4
+[PARAMETERS]
+float   | dv | = |   | 	
+float   | eps | =0.01 |   | 	
+int     | extend | =4 |   | 	trace extension 
+int     | nb | =2 |   | 	
+int     | nv | = |   | 	
+int     | pad | =n1 |   | 	
+int     | pad2 | =2*kiss_fft_next_fast_size((n2+1)/2) |   | 	
+bool    | semblance | =y |  [y/n] | 	if y, compute semblance; if n, stack 
+[DIRECTORY]
+system/seismic

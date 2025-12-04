@@ -1,0 +1,8 @@
+Program sfcanny | Canny-like edge detector. 
+[SYNOPSIS]
+sfcanny < in.rsf > out.rsf min=5.0 max=95.0
+[PARAMETERS]
+float   | max | =95.0 |   | 	maximum threshold 
+float   | min | =5.0 |   | 	minimum threshold 
+[DIRECTORY]
+system/generic

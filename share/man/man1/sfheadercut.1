@@ -1,0 +1,21 @@
+.TH sfheadercut 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfheadercut \- Zero a portion of a dataset based on a header mask.\n.SH SYNOPSIS
+.B sfheadercut mask=head.rsf < in.rsf > out.rsf
+.SH COMMENTS
+
+The input data is a collection of traces n1xn2,
+mask is an integer array of size n2.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I file   
+.B mask
+.B =
+.R  	auxiliary input file name
+.SH SOURCE
+.I system/main/headercut.c
+.SH DOCUMENTATION
+.BR http://ahay.org/wiki/Guide_to_madagascar_programs#sfheadercut
+.SH VERSION
+4.2 headerwindow.c 1303 2005-08-17 02:08:33Z fomels

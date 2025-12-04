@@ -1,0 +1,29 @@
+.TH sfshot2cmp 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfshot2cmp \- Convert shots to CMPs for regular 2-D geometry. \n.SH SYNOPSIS
+.B sfshot2cmp < in.rsf > out.rsf mask=msk.rsf positive=y half=y
+.SH COMMENTS
+
+The axes in the input are {time,offset,shot}
+The axes in the output are {time,offset,midpoint}
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B half
+.B =y
+.R  [y/n]	if y, the second axis is half-offset instead of full offset
+.TP
+.I string 
+.B mask
+.B =
+.R  	auxiliary output file name
+.TP
+.I bool   
+.B positive
+.B =y
+.R  [y/n]	initial offset orientation
+.SH SOURCE
+.I system/seismic/Mshot2cmp.c
+.SH VERSION
+4.2

@@ -1,0 +1,12 @@
+Program sfmodrefl | Normal reflectivity modeling. 
+[SYNOPSIS]
+sfmodrefl < depth.rsf vp=vp.rsf vs=vs.rsf rho=rho.rsf > dat.rsf nt= dt= nw=4
+[PARAMETERS]
+float   | dt | = |   | 	time sampling 
+int     | nt | = |   | 	time samples 
+int     | nw | =4 |   | 	interpolation length 
+file    | rho | = |   | 	auxiliary input file name
+file    | vp | = |   | 	auxiliary input file name
+file    | vs | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/seismic

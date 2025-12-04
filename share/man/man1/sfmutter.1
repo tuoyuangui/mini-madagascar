@@ -1,0 +1,80 @@
+.TH sfmutter 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfmutter \- Muting.\n.SH SYNOPSIS
+.B sfmutter < in.rsf > out.rsf offset=offset.rsf half=y nan=n tp=0.150 t0=0. v0=1.45 slope0=1./v0 slopep=slope0 x0=0. abs=y inner=n hyper=n
+.SH COMMENTS
+
+Data is smoothly weighted inside the mute zone.
+The weight is zero for t <       (x-x0) * slope0
+The weight is one  for t >  tp + (x-x0) * slopep
+
+The signs are reversed for inner=y.
+
+July 2015 program of the month:
+http://ahay.org/blog/2015/07/10/program-of-the-month-sfmutter/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B abs
+.B =y
+.R  [y/n]	if y, use absolute value |x-x0|
+.TP
+.I bool   
+.B half
+.B =y
+.R  [y/n]	if y, the second axis is half-offset instead of full offset
+.TP
+.I bool   
+.B hyper
+.B =n
+.R  [y/n]	if y, do hyperbolic mute
+.TP
+.I bool   
+.B inner
+.B =n
+.R  [y/n]	if y, do inner muter
+.TP
+.I bool   
+.B nan
+.B =n
+.R  [y/n]	if y, put  nans instead of zeros
+.TP
+.I string 
+.B offset
+.B =
+.R  	auxiliary input file name
+.TP
+.I float  
+.B slope0
+.B =1./v0
+.R  	slope
+.TP
+.I float  
+.B slopep
+.B =slope0
+.R  	end slope
+.TP
+.I float  
+.B t0
+.B =0.
+.R  	starting time
+.TP
+.I float  
+.B tp
+.B =0.150
+.R  	end time
+.TP
+.I float  
+.B v0
+.B =1.45
+.R  	velocity
+.TP
+.I float  
+.B x0
+.B =0.
+.R  	starting space
+.SH SOURCE
+.I system/generic/Mmutter.c
+.SH VERSION
+4.2

@@ -1,0 +1,189 @@
+.TH sfkirmod 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfkirmod \- Kirchhoff 2-D/2.5-D modeling with analytical Green's functions. \n.SH SYNOPSIS
+.B sfkirmod < modl.rsf > data.rsf curv=curv.rsf refl=refl.rsf picks=picks.rsf slopes=slopes.rsf lin=n adj=n absoff=n nt= dt=0.004 t0=0. ns=nx s0=x0 ds=dx nh=nx h0=0. dh=dx verb=n r0=1. r0=1. twod=n cmp=n freq=0.2/dt vel= gradx= gradz= velz= eta= refx= refz= vel2= gradx2= gradz2= rgrad= dip= type= type2=
+.SH COMMENTS
+
+October 2012 program of the month:
+http://ahay.org/blog/2012/10/03/program-of-the-month-sfkirmod/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B absoff
+.B =n
+.R  [y/n]	y - h0 is not in shot coordinate system
+.TP
+.I bool   
+.B adj
+.B =n
+.R  [y/n]	adjoint flag
+.TP
+.I bool   
+.B cmp
+.B =n
+.R  [y/n]	compute CMP instead of shot gathers
+.TP
+.I file   
+.B curv
+.B =
+.R  	auxiliary input file name
+.TP
+.I float  
+.B dh
+.B =dx
+.R  	offset increment
+.TP
+.I string 
+.B dip
+.B =
+.R  	reflector dip file
+.TP
+.I float  
+.B ds
+.B =dx
+.R  	shot/midpoint increment
+.TP
+.I float  
+.B dt
+.B =0.004
+.R  	time sampling
+.TP
+.I float  
+.B eta
+.B =
+.R  	parameter for VTI anisotropy
+.TP
+.I float  
+.B freq
+.B =0.2/dt
+.R  	peak frequency for Ricker wavelet
+.TP
+.I float  
+.B gradx
+.B =
+.R  	horizontal velocity gradient
+.TP
+.I float  
+.B gradx2
+.B =
+.R  	converted velocity, horizontal gradient
+.TP
+.I float  
+.B gradz
+.B =
+.R  	vertical velocity gradient
+.TP
+.I float  
+.B gradz2
+.B =
+.R  	converted velocity, vertical gradient
+.TP
+.I float  
+.B h0
+.B =0.
+.R  	first offset
+.TP
+.I bool   
+.B lin
+.B =n
+.R  [y/n]	if linear operator
+.TP
+.I int    
+.B nh
+.B =nx
+.R  	number of offsets
+.TP
+.I int    
+.B ns
+.B =nx
+.R  	number of shots (midpoints if cmp=y)
+.TP
+.I int    
+.B nt
+.B =
+.R  	time samples
+.TP
+.I string 
+.B picks
+.B =
+.R  	auxiliary output file name
+.TP
+.I float  
+.B r0
+.B =1.
+.R  	normal reflectivity (if constant)
+.TP
+.I string 
+.B refl
+.B =
+.R  	auxiliary input file name
+.TP
+.I float  
+.B refx
+.B =
+.R  	reference x-coordinate for velocity
+.TP
+.I float  
+.B refz
+.B =
+.R  	reference z-coordinate for velocity
+.TP
+.I string 
+.B rgrad
+.B =
+.R  	AVO gradient file (B/A)
+.TP
+.I float  
+.B s0
+.B =x0
+.R  	first shot (midpoint if cmp=y)
+.TP
+.I string 
+.B slopes
+.B =
+.R  	auxiliary output file name
+.TP
+.I float  
+.B t0
+.B =0.
+.R  	time origin
+.TP
+.I bool   
+.B twod
+.B =n
+.R  [y/n]	2-D or 2.5-D
+.TP
+.I string 
+.B type
+.B =
+.R  	type of velocity, 'c': constant, 's': linear sloth, 'v': linear velocity, 'a': VTI anisotropy
+.TP
+.I string 
+.B type2
+.B =
+.R  	type of velocity for the converted (receiver side) branch
+.TP
+.I float  
+.B vel
+.B =
+.R  	velocity
+.TP
+.I float  
+.B vel2
+.B =
+.R  	converted velocity
+.TP
+.I float  
+.B velz
+.B =
+.R  	vertical velocity for VTI anisotropy
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]	verbosity flag
+.SH SOURCE
+.I system/seismic/Mkirmod.c
+.SH VERSION
+4.2

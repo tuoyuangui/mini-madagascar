@@ -1,0 +1,14 @@
+Program sfscale | Scale data.
+[SYNOPSIS]
+sfscale < in.rsf > out.rsf axis=0 rscale=0. pclip=100. dscale=1.
+[COMMENTS]
+
+To scale by a constant factor, you can also use sfmath.
+
+[PARAMETERS]
+int     | axis | =0 |   | 	Scale by maximum in the dimensions up to this axis. 
+float   | dscale | =1. |   | 	Scale by this factor (works if rscale=0) 
+float   | pclip | =100. |   | 	data clip percentile 
+float   | rscale | =0. |   | 	Scale by this factor. 
+[DIRECTORY]
+system/main

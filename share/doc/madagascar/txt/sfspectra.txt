@@ -1,0 +1,13 @@
+Program sfspectra | Frequency spectra. 
+[SYNOPSIS]
+sfspectra < in.rsf > out.rsf all=n opt=y
+[COMMENTS]
+
+March 2012 program of the month:
+http://ahay.org/blog/2012/03/18/program-of-the-month-sfspectra/
+
+[PARAMETERS]
+bool    | all | =n |  [y/n] | 	if y, compute average spectrum for all traces 
+bool    | opt | =y |  [y/n] | 	if y, determine optimal size for efficiency 
+[DIRECTORY]
+system/generic

@@ -1,0 +1,15 @@
+Program sfmandelbrot | Generate Mandelbrot set. 
+[SYNOPSIS]
+sfmandelbrot > out.rsf n1=512 n2=512 x0=-2. y0=-1. xmax=0.5 ymax=1. niter=1000 dx=(xmax-x0)/(n1-1) dy=(ymax-y0)/(n2-1)
+[PARAMETERS]
+float   | dx | =(xmax-x0)/(n1-1) |   | 	
+float   | dy | =(ymax-y0)/(n2-1) |   | 	
+int     | n1 | =512 |   | 	
+int     | n2 | =512 |   | 	dimensions 
+int     | niter | =1000 |   | 	number of iterations 
+float   | x0 | =-2. |   | 	
+float   | xmax | =0.5 |   | 	
+float   | y0 | =-1. |   | 	set origin 
+float   | ymax | =1. |   | 	set maximum 
+[DIRECTORY]
+system/generic

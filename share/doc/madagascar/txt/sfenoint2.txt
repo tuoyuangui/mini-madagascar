@@ -1,0 +1,10 @@
+Program sfenoint2 | ENO interpolation in 2-D slices. 
+[SYNOPSIS]
+sfenoint2 < in.rsf > out.rsf head=head.rsf xkey= ykey= interp=2
+[PARAMETERS]
+file    | head | = |   | 	auxiliary input file name
+int     | interp | =2 |   | 	interpolation order 
+int     | xkey | = |   | 	x key number 
+int     | ykey | = |   | 	y key number 
+[DIRECTORY]
+system/generic

@@ -1,0 +1,29 @@
+Program sfbin | Data binning in 2-D slices. 
+[SYNOPSIS]
+sfbin < in.rsf > out.rsf fold=fold.rsf xkey=0 ykey=1 xmax= xmin= ymax= ymin= x0=xmin y0=ymin nx=(int) (xmax - xmin + 1.) ny=(int) (ymax - ymin + 1.) dx= dy= interp=1 norm=y clip=FLT_EPSILON head=
+[COMMENTS]
+
+December 2014 program of the month:
+http://ahay.org/blog/2014/12/01/program-of-the-month-sfbin/
+
+[PARAMETERS]
+float   | clip | =FLT_EPSILON |   | 	clip for fold normalization 
+float   | dx | = |   | 	bin size in x 
+float   | dy | = |   | 	bin size in y 
+string  | fold | = |   | 	output file for fold (optional) (auxiliary output file name)
+string  | head | = |   | 	header file 
+int     | interp | =1 |  [0,1,2] | 	interpolation method;
+       0: median, 1: nearest neighbor, 2: bi-linear,  
+bool    | norm | =y |  [y/n] | 	if normalize 
+int     | nx | =(int) (xmax - xmin + 1.) |   | 	Number of bins in x 
+int     | ny | =(int) (ymax - ymin + 1.) |   | 	Number of bins in y 
+float   | x0 | =xmin |   | 	x origin 
+int     | xkey | =0 |   | 	x key number 
+float   | xmax | = |   | 	x maximum 
+float   | xmin | = |   | 	x minimum 
+float   | y0 | =ymin |   | 	y origin 
+int     | ykey | =1 |   | 	y key number 
+float   | ymax | = |   | 	y maximum 
+float   | ymin | = |   | 	y minimum 
+[DIRECTORY]
+system/generic

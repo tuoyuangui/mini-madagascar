@@ -1,0 +1,10 @@
+Program sfmonof | Mono-frequency wavelet estimation.
+[SYNOPSIS]
+sfmonof < in.rsf > out.rsf ma=ma.rsf a0=1. niter=100 verb=n
+[PARAMETERS]
+float   | a0 | =1. |   | 	starting sharpness 
+file    | ma | = |   | 	auxiliary output file name
+int     | niter | =100 |   | 	number of iterations 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+system/generic

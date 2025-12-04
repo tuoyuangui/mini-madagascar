@@ -1,0 +1,13 @@
+Program sfagc | Automatic gain control. 
+[SYNOPSIS]
+sfagc < in.rsf > out.rsf repeat=1 rect#=(125,1,1,...)
+[COMMENTS]
+
+October 2011 program of the month:
+http://ahay.org/blog/2011/10/01/program-of-the-month-sfagc/
+
+[PARAMETERS]
+int     | rect# | =(125,1,1,...) |   | 	smoothing radius on #-th axis 
+int     | repeat | =1 |   | 	repeat filtering several times 
+[DIRECTORY]
+system/generic

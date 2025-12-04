@@ -1,0 +1,18 @@
+Program sfreverse | Reverse one or more axes in the data hypercube. 
+[SYNOPSIS]
+sfreverse < in.rsf > out.rsf which=-1 verb=n memsize=sf_memsize() opt=
+[PARAMETERS]
+int     | memsize | =sf_memsize() |   | 	Max amount of RAM (in Mb) to be used 
+string  | opt | = |   | 	If y, change o and d parameters on the reversed axis;
+       if i, don't change o and d 
+bool    | verb | =n |  [y/n] | 	Verbosity flag 
+int     | which | =-1 |   | 	Which axis to reverse.
+       To reverse a given axis, start with 0,
+       add 1 to number to reverse n1 dimension,
+       add 2 to number to reverse n2 dimension,
+       add 4 to number to reverse n3 dimension, etc.
+       Thus, which=7 would reverse the first three dimensions,
+       which=5 just n1 and n3, etc.
+       which=0 will just pass the input on through unchanged. 
+[DIRECTORY]
+system/main

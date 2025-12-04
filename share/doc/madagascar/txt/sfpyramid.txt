@@ -1,0 +1,11 @@
+Program sfpyramid | Pyramid transform 
+[SYNOPSIS]
+sfpyramid < in.rsf > out.rsf inv=n nu= du=dx u0=x0 eps=0.01
+[PARAMETERS]
+float   | du | =dx |   | 	
+float   | eps | =0.01 |   | 	stretch regularization 
+bool    | inv | =n |  [y/n] | 	inversion flag 
+int     | nu | = |   | 	
+float   | u0 | =x0 |   | 	
+[DIRECTORY]
+system/seismic

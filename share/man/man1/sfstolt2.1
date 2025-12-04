@@ -1,0 +1,28 @@
+.TH sfstolt2 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfstolt2 \- Post-stack Stolt modeling/migration. \n.SH SYNOPSIS
+.B sfstolt2 < in.rsf > out.rsf vel= pad=nt nf=2
+.SH COMMENTS
+
+Requires the input to be cosine-transformed over the lateral axes.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B nf
+.B =2
+.R  	Interpolation accuracy
+.TP
+.I int    
+.B pad
+.B =nt
+.R  	padding on the time axis
+.TP
+.I float  
+.B vel
+.B =
+.R  	Constant velocity (use negative velocity for modeling)
+.SH SOURCE
+.I system/seismic/Mstolt2.c
+.SH VERSION
+4.2

@@ -1,0 +1,14 @@
+Program sfpef | Wiener predictive error filtering 
+[SYNOPSIS]
+sfpef < inp.rsf > out.rsf wiener=wien.rsf mix= minlag= maxlag= pnoise=0.001 nmix=1 mincorr= maxcorr=
+[PARAMETERS]
+float   | maxcorr | = |   | 	end of autocorrelation window in sec 
+float   | maxlag | = |   | 	last lag of prediction filter (sec) 
+float   | mincorr | = |   | 	start of autocorrelation window in sec 
+float   | minlag | = |   | 	first lag of prediction filter (sec) 
+floats  | mix | = |   | 	weights for moving average of the autocorrelations  [nmix]
+int     | nmix | =1 |   | 	number of weights (floats) for moving averages 
+float   | pnoise | =0.001 |   | 	relative additive noise level 
+string  | wiener | = |   | 	file to output Wiener filter (auxiliary output file name)
+[DIRECTORY]
+su/main

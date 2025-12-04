@@ -1,0 +1,10 @@
+Program sfenvelope | None
+[SYNOPSIS]
+sfenvelope < in.rsf > out.rsf order=100 ref=1. hilb=n phase=90.
+[PARAMETERS]
+bool    | hilb | =n |  [y/n] | 	if y, compute Hilbert transform 
+int     | order | =100 |   | 	Hilbert transformer order 
+float   | phase | =90. |   | 	phase shift (in degrees) to use with hilb=y 
+float   | ref | =1. |   | 	Hilbert transformer reference (0.5 < ref <= 1) 
+[DIRECTORY]
+system/seismic

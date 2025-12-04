@@ -1,0 +1,10 @@
+Program sfitaupmo | Inverse normal moveout in tau-p domain. 
+[SYNOPSIS]
+sfitaupmo < cmp.rsf velocity=velocity.rsf > nmod.rsf eta=eta.rsf interval=y eps=0.01
+[PARAMETERS]
+float   | eps | =0.01 |   | 	stretch regularization 
+string  | eta | = |   | 	auxiliary input file name
+bool    | interval | =y |  [y/n] | 	use interval velocity 
+file    | velocity | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/seismic

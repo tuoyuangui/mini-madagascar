@@ -1,0 +1,5 @@
+Program sfvplotdiff | Vplot diff - see if 2 vplot files represent "identical" plots. 
+[SYNOPSIS]
+sfvplotdiff
+[DIRECTORY]
+plot/main

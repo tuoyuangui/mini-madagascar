@@ -1,0 +1,18 @@
+Program sfwindow | Window a portion of a dataset. 
+[SYNOPSIS]
+sfwindow < in.rsf > out.rsf verb=n squeeze=y j#=(1,...) d#=(d1,d2,...) f#=(0,...) min#=(o1,o2,,...) n#=(0,...) max#=(o1+(n1-1)*d1,o2+(n1-1)*d2,,...)
+[COMMENTS]
+
+Other parameters from the command line are passed to the output (similar to sfput).
+
+[PARAMETERS]
+float   | d# | =(d1,d2,...) |   | 	sampling in #-th dimension 
+largeint | f# | =(0,...) |   | 	window start in #-th dimension 
+int     | j# | =(1,...) |   | 	jump in #-th dimension 
+float   | max# | =(o1+(n1-1)*d1,o2+(n1-1)*d2,,...) |   | 	maximum in #-th dimension 
+float   | min# | =(o1,o2,,...) |   | 	minimum in #-th dimension 
+largeint | n# | =(0,...) |   | 	window size in #-th dimension 
+bool    | squeeze | =y |  [y/n] | 	if y, squeeze dimensions equal to 1 to the end 
+bool    | verb | =n |  [y/n] | 	Verbosity flag 
+[DIRECTORY]
+system/main

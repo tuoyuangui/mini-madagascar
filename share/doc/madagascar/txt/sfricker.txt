@@ -1,0 +1,10 @@
+Program sfricker | Ricker wavelet estimation. 
+[SYNOPSIS]
+sfricker < in.rsf > out.rsf ma=ma.rsf m=f0+0.25*(na-1)*df niter=100 verb=n
+[PARAMETERS]
+float   | m | =f0+0.25*(na-1)*df |   | 	initial frequency 
+file    | ma | = |   | 	auxiliary output file name
+int     | niter | =100 |   | 	number of iterations 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+system/seismic

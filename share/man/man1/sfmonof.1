@@ -1,0 +1,29 @@
+.TH sfmonof 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfmonof \- Mono-frequency wavelet estimation.\n.SH SYNOPSIS
+.B sfmonof < in.rsf > out.rsf ma=ma.rsf a0=1. niter=100 verb=n
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B a0
+.B =1.
+.R  	starting sharpness
+.TP
+.I file   
+.B ma
+.B =
+.R  	auxiliary output file name
+.TP
+.I int    
+.B niter
+.B =100
+.R  	number of iterations
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]	verbosity flag
+.SH SOURCE
+.I system/generic/Mmonof.c
+.SH VERSION
+4.2

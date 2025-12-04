@@ -1,0 +1,110 @@
+.TH sffold 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsffold \- Make a seismic foldplot/stacking chart. \n.SH SYNOPSIS
+.B sffold < in.rsf > out.rsf verbose=1 o1= o2= o3= n1= n2= n3= d1= d2= d3= label1= label2= label3=
+.SH COMMENTS
+
+This is a general 3D histogram program implemented to create foldplot or
+stacking charts on a 3d project from trace headers.  Axis1, 2 and 3 
+define the bins for the output fold map.  These are usually 
+(offset,xline,iline), but you might want to compute some other
+histogram.  This can be done by selecting other segy headers using 
+label1, 2 and 3.
+
+See also fold= option in sfbin for creating 2D histograms.
+
+EXAMPLES:
+
+To make a stacking chart movie showing fold(xline,offset) for each 
+iline from a 3D segyfile:
+
+sfsegyread tfile=tteapot.rsf hfile=teapot.asc bfile=teapot.bin \
+tape=npr3_field.sgy > teapot.rsf
+
+# read the tfile, which contains the segy trace headers
+< teapot_hdr.rsf sffold verbose=1        \
+o1=0 n1=96  d1=200 label1=offset \
+o2=1 n2=188 d2=1   label2=xline  \
+o3=1 n3=345 d3=1   label3=iline  \
+>foldplot.rsf
+<foldplot.rsf sfgrey title=foldplot pclip=100 \
+| sfpen 
+
+# transpose this data to plot foldmaps for each offset window:
+
+< foldplot.rsf sftransp plane=13          \
+| sftransp plane=12                       \
+| sfgrey title=foldplot_off gainpanel=all \
+| sfpen
+
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B d1
+.B =
+.R  	Delta label1 - usually delta offset
+.TP
+.I float  
+.B d2
+.B =
+.R  	Delta label2 - usually delta xline
+.TP
+.I float  
+.B d3
+.B =
+.R  	Delta label3 - usually delta iline
+.TP
+.I string 
+.B label1
+.B =
+.R  	header for axis1 - usually offset
+.TP
+.I string 
+.B label2
+.B =
+.R  	header for axis2 - usually xline or cdp
+.TP
+.I string 
+.B label3
+.B =
+.R  	header for axis3 - usually iline
+.TP
+.I int    
+.B n1
+.B =
+.R  	Number label1 - usually number offset
+.TP
+.I int    
+.B n2
+.B =
+.R  	Number label2 - usually number xline
+.TP
+.I int    
+.B n3
+.B =
+.R  	Number label3 - usually number iline
+.TP
+.I float  
+.B o1
+.B =
+.R  	Minimum label1 - usually min offset
+.TP
+.I float  
+.B o2
+.B =
+.R  	Minimum label2 - usually min xline
+.TP
+.I float  
+.B o3
+.B =
+.R  	Minimum label3 - usually min iline
+.TP
+.I int    
+.B verbose
+.B =1
+.R  	0 terse, 1 informative, 2 chatty, 3 debug
+.SH SOURCE
+.I system/seismic/Mfold.c
+.SH VERSION
+4.2

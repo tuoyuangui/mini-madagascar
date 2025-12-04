@@ -1,0 +1,7 @@
+Program sfcmp2shot | Convert CMPs to shots for regular 2-D geometry. 
+[SYNOPSIS]
+sfcmp2shot < in.rsf > out.rsf positive=y
+[PARAMETERS]
+bool    | positive | =y |  [y/n] | 	initial offset orientation 
+[DIRECTORY]
+system/seismic

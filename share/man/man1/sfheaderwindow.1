@@ -1,0 +1,27 @@
+.TH sfheaderwindow 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfheaderwindow \- Window a dataset based on a header mask.\n.SH SYNOPSIS
+.B sfheaderwindow mask=head.rsf < in.rsf > out.rsf inv=n
+.SH COMMENTS
+
+The input data is a collection of traces n1xn2,
+mask is an integer array os size n2, windowed is n1xm2,
+where m2 is the number of nonzero elements in mask.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B inv
+.B =n
+.R  [y/n]	inversion flag
+.TP
+.I file   
+.B mask
+.B =
+.R  	auxiliary input file name
+.SH SOURCE
+.I system/main/headerwindow.c
+.SH DOCUMENTATION
+.BR http://ahay.org/wiki/Guide_to_madagascar_programs#sfheaderwindow
+.SH VERSION
+4.2

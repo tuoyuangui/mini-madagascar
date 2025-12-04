@@ -1,0 +1,36 @@
+.TH sfmax1 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfmax1 \- Picking local maxima on the first axis. \n.SH SYNOPSIS
+.B sfmax1 < in.rsf > out.rsf min=o1 max=o1+(n1-1)*d1 np=n1 sorted=y
+.SH COMMENTS
+
+Outputs complex numbers (time,amplitude) 
+
+September 2014 program of the month:
+http://ahay.org/blog/2014/09/24/program-of-the-month-sfmax1/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B max
+.B =o1+(n1-1)*d1
+.R  	maximum value of time
+.TP
+.I float  
+.B min
+.B =o1
+.R  	minimum value of time
+.TP
+.I int    
+.B np
+.B =n1
+.R  	maximum number of picks
+.TP
+.I bool   
+.B sorted
+.B =y
+.R  [y/n]	if y, sort by amplitude
+.SH SOURCE
+.I system/generic/Mmax1.c
+.SH VERSION
+4.2

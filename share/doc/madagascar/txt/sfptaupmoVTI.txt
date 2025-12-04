@@ -1,0 +1,11 @@
+Program sfptaupmoVTI | Slope-based tau-p moveout in VTI. 
+[SYNOPSIS]
+sfptaupmoVTI < inp.rsf dip=dip.rsf ddip=ddip.rsf > nmod.rsf tau0=tau0.rsf cos2=cos2.rsf eps=0.01
+[PARAMETERS]
+file    | cos2 | = |   | 	auxiliary output file name
+string  | ddip | = |   | 	curvature field (auxiliary input file name)
+string  | dip | = |   | 	slope field (auxiliary input file name)
+float   | eps | =0.01 |   | 	stretch regularization 
+string  | tau0 | = |   | 	tau0(tau,p) (auxiliary output file name)
+[DIRECTORY]
+system/seismic

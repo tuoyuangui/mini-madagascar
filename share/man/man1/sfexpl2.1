@@ -1,0 +1,24 @@
+.TH sfexpl2 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfexpl2 \- 2-D anisotropic diffusion by box cascade. \n.SH SYNOPSIS
+.B sfexpl2 < in.rsf > out.rsf cycle=1 rect= pclip=50.
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B cycle
+.B =1
+.R  	number of cycles
+.TP
+.I float  
+.B pclip
+.B =50.
+.R  	percentage clip for the gradient
+.TP
+.I int    
+.B rect
+.B =
+.R  	vertical smoothing
+.SH SOURCE
+.I system/generic/Mexpl2.c
+.SH VERSION
+4.2

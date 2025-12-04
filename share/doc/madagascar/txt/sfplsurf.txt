@@ -1,0 +1,36 @@
+Program sfplsurf | Generate a surface plot. 
+[SYNOPSIS]
+sfplsurf < in.rsf wantaxis=y wantaxis1=y wantaxis2=y wantaxis3=y wanttitle=y labelsz=8.0 titlesz=10.0 labelfat=1 titlefat=1 font=2 minval=SF_HUGE maxval=-SF_HUGE alt=35.0 az=25.0 mesh=y meshc=VP_YELLOW sides=n bcontour=n scontour=n nc=10 faceted=n label1= label2= label3= unit1= unit2= unit3= title= wheretitle= color=
+[PARAMETERS]
+float   | alt | =35.0 |   | 	altitude [0;90] 
+float   | az | =25.0 |   | 	azimuth 
+bool    | bcontour | =n |  [y/n] | 	draw contour lines at the bottom 
+string  | color | = |   | 	color scheme (default is i) 
+bool    | faceted | =n |  [y/n] | 	each cell is faceted on the surface (surface mode only) 
+int     | font | =2 |   | 	font 
+string  | label1 | = |   | 	
+string  | label2 | = |   | 	
+string  | label3 | = |   | 	
+int     | labelfat | =1 |   | 	label fatness 
+float   | labelsz | =8.0 |   | 	label font size 
+float   | maxval | =-SF_HUGE |   | 	maximum value for the vertical axis (default is data maximum) 
+bool    | mesh | =y |  [y/n] | 	what to draw: true - mesh, false - shaded surface 
+int     | meshc | =VP_YELLOW |   | 	mesh color or surface contour color 
+float   | minval | =SF_HUGE |   | 	minimum value for the vertical axis (default is data minimum) 
+int     | nc | =10 |   | 	number of contour lines 
+bool    | scontour | =n |  [y/n] | 	draw contour lines on the surface (surface mode only) 
+bool    | sides | =n |  [y/n] | 	draw sides 
+string  | title | = |   | 	
+int     | titlefat | =1 |   | 	title fatness 
+float   | titlesz | =10.0 |   | 	title font size 
+string  | unit1 | = |   | 	
+string  | unit2 | = |   | 	
+string  | unit3 | = |   | 	
+bool    | wantaxis | =y |  [y/n] | 	if generate axes with ticks and labels 
+bool    | wantaxis1 | =y |  [y/n] | 	
+bool    | wantaxis2 | =y |  [y/n] | 	
+bool    | wantaxis3 | =y |  [y/n] | 	
+bool    | wanttitle | =y |  [y/n] | 	if include title 
+string  | wheretitle | = |   | 	where to put title (top,bottom) 
+[DIRECTORY]
+plot/plplot

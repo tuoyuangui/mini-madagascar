@@ -1,0 +1,7 @@
+Program sfgrad3 | 3-D smooth gradient. 
+[SYNOPSIS]
+sfgrad3 < in.rsf > out.rsf dim=0
+[PARAMETERS]
+int     | dim | =0 |   | 	dimension of the gradient, 0 for gradient squared 
+[DIRECTORY]
+system/generic

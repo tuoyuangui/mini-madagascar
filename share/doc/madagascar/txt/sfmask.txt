@@ -1,0 +1,15 @@
+Program sfmask | Create a mask.
+[SYNOPSIS]
+sfmask < in.rsf > out.rsf min= max= min= max=
+[COMMENTS]
+
+Mask is an integer data with ones and zeros. 
+Ones correspond to input values between min and max.
+
+The output can be used with sfheaderwindow.
+
+[PARAMETERS]
+int     | max | = |   | 	maximum header value 
+int     | min | = |   | 	minimum header value 
+[DIRECTORY]
+system/main

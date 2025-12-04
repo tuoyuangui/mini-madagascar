@@ -1,0 +1,15 @@
+Program sfmodrefl2 | Normal reflectivity modeling. 
+[SYNOPSIS]
+sfmodrefl2 < in.rsf > out.rsf nt= dt= nw=4
+[COMMENTS]
+
+In this version, the input contains Vp, Vs, and density into one file. 
+The output contains PP intercept, PP gradient, and PS gradient.
+
+
+[PARAMETERS]
+float   | dt | = |   | 	time sampling 
+int     | nt | = |   | 	time samples 
+int     | nw | =4 |   | 	interpolation length 
+[DIRECTORY]
+system/seismic

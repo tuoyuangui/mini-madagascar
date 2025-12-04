@@ -1,0 +1,45 @@
+.TH sfcat 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfcat \- Concatenate datasets. \n.SH SYNOPSIS
+.B sfcat > out.rsf order= space= axis=3 nspace=(int) (ni/(20*nin) + 1) o= d= [<file0.rsf] file1.rsf file2.rsf ... 
+.SH COMMENTS
+sfmerge inserts additional space between merged data.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B axis
+.B =3
+.R  	Axis being merged
+.TP
+.I float  
+.B d
+.B =
+.R  	axis sampling
+.TP
+.I int    
+.B nspace
+.B =(int) (ni/(20*nin) + 1)
+.R  	if space=y, number of traces to insert
+.TP
+.I float  
+.B o
+.B =
+.R  	axis origin
+.TP
+.I ints   
+.B order
+.B =
+.R  	concatenation order  [nin]
+.TP
+.I bool   
+.B space
+.B =
+.R  [y/n]	Insert additional space.
+	   y is default for sfmerge, n is default for sfcat
+.SH SOURCE
+.I system/main/cat.c
+.SH DOCUMENTATION
+.BR http://ahay.org/wiki/Guide_to_madagascar_programs#sfcat
+.SH VERSION
+4.2

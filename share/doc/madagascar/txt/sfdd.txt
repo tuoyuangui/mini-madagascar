@@ -1,0 +1,13 @@
+Program sfdd | Convert between different formats. 
+[SYNOPSIS]
+sfdd < in.rsf > out.rsf trunc=n line=8 strip=0 ibm=n form= type= format=
+[PARAMETERS]
+string  | form | = |   | 	ascii, native, xdr 
+string  | format | = |   | 	Element format (for conversion to ASCII) 
+bool    | ibm | =n |  [y/n] | 	Special case - assume integers actually represent IBM floats 
+int     | line | =8 |   | 	Number of numbers per line (for conversion to ASCII) 
+int     | strip | =0 |   | 	If strip characters from format at the end of the line 
+bool    | trunc | =n |  [y/n] | 	Truncate or round to nearest when converting from float to int/short 
+string  | type | = |   | 	int, float, complex, short, long 
+[DIRECTORY]
+system/main

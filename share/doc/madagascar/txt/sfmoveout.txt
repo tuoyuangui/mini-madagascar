@@ -1,0 +1,11 @@
+Program sfmoveout | Put spikes at an arbitrary moveout 
+[SYNOPSIS]
+sfmoveout < warp.rsf > out.rsf n1= d1=1. o1=0. eps=0.1 nw=10
+[PARAMETERS]
+float   | d1 | =1. |   | 	time sampling 
+float   | eps | =0.1 |   | 	stretch regularization 
+int     | n1 | = |   | 	time samples 
+int     | nw | =10 |   | 	wavelet length 
+float   | o1 | =0. |   | 	time origin 
+[DIRECTORY]
+system/seismic

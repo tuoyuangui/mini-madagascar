@@ -1,0 +1,29 @@
+.TH sfshotprop 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfshotprop \- Shot propagation. \n.SH SYNOPSIS
+.B sfshotprop < in.rsf > out.rsf ns= ds= eps=0.1 positive=y
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B ds
+.B =
+.R  	shot sampling
+.TP
+.I float  
+.B eps
+.B =0.1
+.R  	regularization parameter
+.TP
+.I int    
+.B ns
+.B =
+.R  	number of shots
+.TP
+.I bool   
+.B positive
+.B =y
+.R  [y/n]	initial offset orientation
+.SH SOURCE
+.I system/seismic/Mshotprop.c
+.SH VERSION
+4.2

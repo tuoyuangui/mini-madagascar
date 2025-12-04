@@ -1,0 +1,75 @@
+.TH sfdipfilter 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfdipfilter \- Filter data based on dip in 2-D or 3-D.\n.SH SYNOPSIS
+.B sfdipfilter < in.rsf > out.rsf dim=2 angle=n v=-1. ang1=-50. ang2=-45. ang3=45. ang4=50. v1=0. v2=0.1 v3=99999. v4=999999. pass=y
+.SH COMMENTS
+
+February 2014 program of the month:
+http://ahay.org/blog/2014/02/06/program-of-the-month-sfdipfilter/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B ang1
+.B =-50.
+.R  
+.TP
+.I float  
+.B ang2
+.B =-45.
+.R  
+.TP
+.I float  
+.B ang3
+.B =45.
+.R  
+.TP
+.I float  
+.B ang4
+.B =50.
+.R  	Angle gate (in degrees)
+.TP
+.I bool   
+.B angle
+.B =n
+.R  [y/n]	Filter based on angle (or velocity)
+.TP
+.I int    
+.B dim
+.B =2
+.R  [2,3]	Dimensionality: filter 2-D planes or 3-D cubes
+.TP
+.I bool   
+.B pass
+.B =y
+.R  [y/n]	Pass or reject band
+.TP
+.I float  
+.B v
+.B =-1.
+.R  	constant velocity (if angle-y)
+	   The default is d(frequency)/d(wavenumber)
+.TP
+.I float  
+.B v1
+.B =0.
+.R  
+.TP
+.I float  
+.B v2
+.B =0.1
+.R  
+.TP
+.I float  
+.B v3
+.B =99999.
+.R  
+.TP
+.I float  
+.B v4
+.B =999999.
+.R  	Velocity gate
+.SH SOURCE
+.I system/generic/Mdipfilter.c
+.SH VERSION
+4.2

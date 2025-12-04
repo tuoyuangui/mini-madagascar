@@ -1,0 +1,40 @@
+Program sfgrey | Generate raster plot.
+[SYNOPSIS]
+sfgrey < in.rsf > out.rsf > bar.rsf transp=y yreverse=y xreverse=n gpow= phalf= clip= pclip= gainstep=0.5+n1/256. allpos=n mean=n bias=0. polarity=n symcp=n verb=n scalebar=n minval= maxval= barreverse=n wantframenum=(bool) (n3 > 1) nreserve=8 gpow=1 gainpanel= bar= color= > (plot.vpl | char.rsf)
+[COMMENTS]
+Can input char values.
+If called "byte", outputs char values.
+
+If called "bar", outputs scalebar data.
+
+Run "sfdoc stdplot" for more parameters.
+
+March 2015 program of the month:
+http://ahay.org/blog/2015/03/04/program-of-the-month-sfgrey/
+
+[PARAMETERS]
+bool    | allpos | =n |  [y/n] | 	if y, assume positive data 
+string  | bar | = |   | 	file for scalebar data 
+bool    | barreverse | =n |  [y/n] | 	if y, go from small to large on the bar scale 
+float   | bias | =0. |   | 	value mapped to the center of the color table 
+float   | clip | = |   | 	data clip 
+string  | color | = |   | 	color scheme (default is i) 
+string  | gainpanel | = |   | 	gain reference: 'a' for all, 'e' for each, or number 
+int     | gainstep | =0.5+n1/256. |   | 	subsampling for gpow and clip estimation 
+float   | gpow | =1 |   | 	raise data to gpow power for display 
+float   | maxval | = |   | 	maximum value for scalebar (default is the data maximum) 
+bool    | mean | =n |  [y/n] | 	if y, bias on the mean value 
+float   | minval | = |   | 	minimum value for scalebar (default is the data minimum) 
+int     | nreserve | =8 |   | 	reserved colors 
+float   | pclip | = |   | 	data clip percentile (default is 99) 
+float   | phalf | = |   | 	percentage for estimating gpow 
+bool    | polarity | =n |  [y/n] | 	if y, reverse polarity (white is high by default) 
+bool    | scalebar | =n |  [y/n] | 	if y, draw scalebar 
+bool    | symcp | =n |  [y/n] | 	if y, assume symmetric color palette of 255 colors 
+bool    | transp | =y |  [y/n] | 	if y, transpose the display axes 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+bool    | wantframenum | =(bool) (n3 > 1) |  [y/n] | 	if y, display third axis position in the corner 
+bool    | xreverse | =n |  [y/n] | 	if y, reverse the horizontal axis 
+bool    | yreverse | =y |  [y/n] | 	if y, reverse the vertical axis 
+[DIRECTORY]
+plot/main

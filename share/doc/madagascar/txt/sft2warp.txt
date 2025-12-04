@@ -1,0 +1,10 @@
+Program sft2warp | Time-squared warping. 
+[SYNOPSIS]
+sft2warp < in.rsf > out.rsf inv=n adj=n pad=n1 eps=0.01
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	adjoint flag 
+float   | eps | =0.01 |   | 	stretch regularization 
+bool    | inv | =n |  [y/n] | 	inversion flag 
+int     | pad | =n1 |   | 	output time samples 
+[DIRECTORY]
+system/generic

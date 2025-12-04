@@ -1,0 +1,16 @@
+Program sfhwt2d | 2-D Huygens wavefront tracing traveltimes 
+[SYNOPSIS]
+sfhwt2d < Fv.rsf > Fw.rsf verb=n rays=n xsou=sf_o(ax) + nx*sf_d(ax)/2 zsou=sf_o(az) + nz*sf_d(az)/2 nt=100 ot=0 dt=0.001 ng=360 og=-180 dg=1
+[PARAMETERS]
+float   | dg | =1 |   | 	
+float   | dt | =0.001 |   | 	
+int     | ng | =360 |   | 	
+int     | nt | =100 |   | 	
+float   | og | =-180 |   | 	
+float   | ot | =0 |   | 	
+bool    | rays | =n |  [y/n] | 	velocity file 
+bool    | verb | =n |  [y/n] | 	
+float   | xsou | =sf_o(ax) + nx*sf_d(ax)/2 |   | 	
+float   | zsou | =sf_o(az) + nz*sf_d(az)/2 |   | 	
+[DIRECTORY]
+system/seismic

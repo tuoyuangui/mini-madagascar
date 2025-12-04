@@ -1,0 +1,21 @@
+Program sfspike | Generate simple data: spikes, boxes, planes, constants. 
+[SYNOPSIS]
+sfspike < in.rsf > spike.rsf mag= nsp=1 k#=[0,...] l#=[k1,k2,...] p#=[0,...] n#= o#=[0,0,...] d#=[0.004,0.1,0.1,...] label#=[Time,Distance,Distance,...] unit#=[s,km,km,...] title=
+[COMMENTS]
+
+Spike positioning is given in samples and starts with 1.
+
+[PARAMETERS]
+float   | d# | =[0.004,0.1,0.1,...] |   | 	sampling on #-th axis 
+ints    | k# | =[0,...] |   | 	spike starting position  [nsp]
+ints    | l# | =[k1,k2,...] |   | 	spike ending position  [nsp]
+string  | label# | =[Time,Distance,Distance,...] |   | 	label on #-th axis 
+floats  | mag | = |   | 	spike magnitudes  [nsp]
+int     | n# | = |   | 	size of #-th axis 
+int     | nsp | =1 |   | 	Number of spikes 
+float   | o# | =[0,0,...] |   | 	origin on #-th axis 
+floats  | p# | =[0,...] |   | 	spike inclination (in samples)  [nsp]
+string  | title | = |   | 	title for plots 
+string  | unit# | =[s,km,km,...] |   | 	unit on #-th axis 
+[DIRECTORY]
+system/main

@@ -1,0 +1,12 @@
+Program sfplotrays | Plot rays.
+[SYNOPSIS]
+sfplotrays frame=frame.rsf nt=n1*n2 jr=1 < rays.rsf > plot.vpl
+[COMMENTS]
+Run "sfdoc stdplot" for more parameters.
+
+[PARAMETERS]
+string  | frame | = |   | 	auxiliary input file name
+int     | jr | =1 |   | 	skip rays 
+int     | nt | =n1*n2 |   | 	maximum ray length 
+[DIRECTORY]
+plot/main

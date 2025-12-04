@@ -1,0 +1,12 @@
+Program sfsrseidel | Amplitude balancing of a 2-D amplitude map. 
+[SYNOPSIS]
+sfsrseidel < in.rsf > off.rsf src=src.rsf mid=mid.rsf rcv=rcv.rsf so=so.rsf rv=rv.rsf niter=1 
+[PARAMETERS]
+file    | mid | = |   | 	auxiliary output file name
+int     | niter | =1  |   | 	number of iterations 
+file    | rcv | = |   | 	auxiliary output file name
+file    | rv | = |   | 	auxiliary output file name
+file    | so | = |   | 	auxiliary output file name
+file    | src | = |   | 	auxiliary output file name
+[DIRECTORY]
+system/seismic

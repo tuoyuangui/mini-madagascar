@@ -1,0 +1,59 @@
+.TH sfc2r 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfc2r \- Cartesian-Coordinates to Riemannian-Coordinates interpolation \n.SH SYNOPSIS
+.B sfc2r < Fi.rsf rays=Fr.rsf > Fo.rsf verb=n adj=n linear=y a2n=1 a2o=0. a2d=1. a1n=1 a1o=0. a1d=1.
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B a1d
+.B =1.
+.R  
+.TP
+.I int    
+.B a1n
+.B =1
+.R  
+.TP
+.I float  
+.B a1o
+.B =0.
+.R  
+.TP
+.I float  
+.B a2d
+.B =1.
+.R  
+.TP
+.I int    
+.B a2n
+.B =1
+.R  
+.TP
+.I float  
+.B a2o
+.B =0.
+.R  
+.TP
+.I bool   
+.B adj
+.B =n
+.R  [y/n]
+.TP
+.I bool   
+.B linear
+.B =y
+.R  [y/n]
+.TP
+.I file   
+.B rays
+.B =
+.R  	auxiliary input file name
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]
+.SH SOURCE
+.I system/seismic/Mc2r.c
+.SH VERSION
+4.2

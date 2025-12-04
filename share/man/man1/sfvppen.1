@@ -1,0 +1,347 @@
+.TH sfvppen 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfvppen \- Vplot filter for the virtual vplot device.\n.SH SYNOPSIS
+.B sfvppen gridnum= gridsize= colormask= red= green= blue= dumb=n blast=y bit=0 grid=-1 xsize=0. ysize=0. big= vpstyle= mono=n endpause= cachepipe= shade= wantras= window= frame= overlay= invras= txsquare= serifs= background= redpow=1.0 greenpow=1.0 bluepow=1.0 dither= greyc=1.0 pixc=1.0 txfont= txprec= txovly= xcenter= ycenter= patternmult=1. pause=0 fatmult= rotate=0 txscale=1.0 mkscale=1.0 dashscale=1.0 scale=1.0 xscale=1.0 yscale=1.0 xshift=0. yshift=0. xwmax= ywmax= xwmin= ywmin= fat=0 gridnum= stat=n out#= align= outN= erase= break= interact= style= size=
+.SH COMMENTS
+
+Although it is perhaps not obvious, this program can be used to
+"Capture the screen". Ie, you play with Pen options until you
+get something you like, and then you can use those options with
+this program to make a new vplot file that without any options
+will draw the same thing.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I string 
+.B align
+.B =
+.R  	aligns plot accoording to xy:
+       x is one of l, r, c, u for left, right, center, unaligned
+       y is one of b, t, c, u for bottom, top, center, unaligned.
+       In all cases the given point is aligned to have coordinate zero.
+.TP
+.I bool   
+.B background
+.B =
+.R  [y/n]
+.TP
+.I bool   
+.B big
+.B =
+.R  [y/n]	if y, expand the size of the device's screen (and hence
+       outermost clipping window) to nearly infinity (bad for rotated
+       style!)
+.TP
+.I int    
+.B bit
+.B =0
+.R  	if > 0,  then bit raster is used with bit the color
+.TP
+.I bool   
+.B blast
+.B =y
+.R  [y/n]	if y, don't try to compact the output.  If n, compaction will
+       be done.  Compaction does run-length encoding and compacts repeated
+       lines.  Compaction can make the vplot file considerably smaller, but
+       it also takes longer to create the file.
+.TP
+.I floats 
+.B blue
+.B =
+.R  	 [4]
+.TP
+.I float  
+.B bluepow
+.B =1.0
+.R  
+.TP
+.I string 
+.B break
+.B =
+.R  
+.TP
+.I bool   
+.B cachepipe
+.B =
+.R  [y/n]
+.TP
+.I bools  
+.B colormask
+.B =
+.R  	 [5]
+.TP
+.I float  
+.B dashscale
+.B =1.0
+.R  
+.TP
+.I int    
+.B dither
+.B =
+.R  	dithering to improve raster display, see "man vplotraster"
+                    0    No dither,
+                    1    Random Dither
+                    2    Ordered Dither
+                    3    Minimized Average Error Method
+                    4    Digital Halftoning
+.TP
+.I bool   
+.B dumb
+.B =n
+.R  [y/n]	if y, causes output to only be vectors, erases, and color changes
+.TP
+.I bool   
+.B endpause
+.B =
+.R  [y/n]
+.TP
+.I string 
+.B erase
+.B =
+.R  
+.TP
+.I int    
+.B fat
+.B =0
+.R  	base line fatness
+.TP
+.I float  
+.B fatmult
+.B =
+.R  
+.TP
+.I bool   
+.B frame
+.B =
+.R  [y/n]
+.TP
+.I floats 
+.B green
+.B =
+.R  	 [4]
+.TP
+.I float  
+.B greenpow
+.B =1.0
+.R  
+.TP
+.I float  
+.B greyc
+.B =1.0
+.R  	"grey correction" modifies the grey scale used to display a raster to simulate the nonlinearity of displays, see "man vplotraster"
+.TP
+.I int    
+.B grid
+.B =-1
+.R  	turns on drawing a grid, with the specified fatness
+.TP
+.I ints   
+.B gridnum
+.B =
+.R  	grids the screen, each part has gridsize=xwidth,ywidth
+      numy defaults to numx. [xy]size default to [xy]screensize /
+      num[xy]  [2]
+.TP
+.I floats 
+.B gridsize
+.B =
+.R  	 [2]
+.TP
+.I string 
+.B interact
+.B =
+.R  
+.TP
+.I bool   
+.B invras
+.B =
+.R  [y/n]
+.TP
+.I float  
+.B mkscale
+.B =1.0
+.R  
+.TP
+.I bool   
+.B mono
+.B =n
+.R  [y/n]	no color
+.TP
+.I string 
+.B out#
+.B =
+.R  	redirect frame # to corresponding file
+.TP
+.I string 
+.B outN
+.B =
+.R  
+.TP
+.I bool   
+.B overlay
+.B =
+.R  [y/n]
+.TP
+.I float  
+.B patternmult
+.B =1.
+.R  
+.TP
+.I int    
+.B pause
+.B =0
+.R  
+.TP
+.I float  
+.B pixc
+.B =1.0
+.R  	"pixel  correction" controls  alteration of the grey scale, see "man vplotraster".
+.TP
+.I floats 
+.B red
+.B =
+.R  	 [4]
+.TP
+.I float  
+.B redpow
+.B =1.0
+.R  
+.TP
+.I int    
+.B rotate
+.B =0
+.R  
+.TP
+.I float  
+.B scale
+.B =1.0
+.R  
+.TP
+.I bool   
+.B serifs
+.B =
+.R  [y/n]
+.TP
+.I bool   
+.B shade
+.B =
+.R  [y/n]
+.TP
+.I string 
+.B size
+.B =
+.R  
+.TP
+.I string 
+.B stat
+.B =
+.R  	if y, print plot statistics; if l, insert extra spaces
+.TP
+.I string 
+.B style
+.B =
+.R  
+.TP
+.I int    
+.B txfont
+.B =
+.R  
+.TP
+.I int    
+.B txovly
+.B =
+.R  
+.TP
+.I int    
+.B txprec
+.B =
+.R  
+.TP
+.I float  
+.B txscale
+.B =1.0
+.R  
+.TP
+.I bool   
+.B txsquare
+.B =
+.R  [y/n]
+.TP
+.I bool   
+.B vpstyle
+.B =
+.R  [y/n]	if n, omit declaring absolute style in the output file
+.TP
+.I bool   
+.B wantras
+.B =
+.R  [y/n]
+.TP
+.I bool   
+.B window
+.B =
+.R  [y/n]
+.TP
+.I float  
+.B xcenter
+.B =
+.R  
+.TP
+.I float  
+.B xscale
+.B =1.0
+.R  
+.TP
+.I float  
+.B xshift
+.B =0.
+.R  
+.TP
+.I float  
+.B xsize
+.B =0.
+.R  
+.TP
+.I float  
+.B xwmax
+.B =
+.R  
+.TP
+.I float  
+.B xwmin
+.B =
+.R  
+.TP
+.I float  
+.B ycenter
+.B =
+.R  
+.TP
+.I float  
+.B yscale
+.B =1.0
+.R  
+.TP
+.I float  
+.B yshift
+.B =0.
+.R  
+.TP
+.I float  
+.B ysize
+.B =0.
+.R  	scale the vplot image to fit within a given size rectangle
+.TP
+.I float  
+.B ywmax
+.B =
+.R  
+.TP
+.I float  
+.B ywmin
+.B =
+.R  
+.SH SOURCE
+.I pens/main/vppen.c
+.SH VERSION
+4.2

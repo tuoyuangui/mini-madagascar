@@ -1,0 +1,5 @@
+Program sftraces | Make traces with reverberations for testing deconvolution. 
+[SYNOPSIS]
+sftraces > traces.rsf
+[DIRECTORY]
+su/main

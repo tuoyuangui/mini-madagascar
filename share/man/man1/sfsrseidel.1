@@ -1,0 +1,39 @@
+.TH sfsrseidel 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfsrseidel \- Amplitude balancing of a 2-D amplitude map. \n.SH SYNOPSIS
+.B sfsrseidel < in.rsf > off.rsf src=src.rsf mid=mid.rsf rcv=rcv.rsf so=so.rsf rv=rv.rsf niter=1 
+.SH PARAMETERS
+.PD 0
+.TP
+.I file   
+.B mid
+.B =
+.R  	auxiliary output file name
+.TP
+.I int    
+.B niter
+.B =1 
+.R  	number of iterations
+.TP
+.I file   
+.B rcv
+.B =
+.R  	auxiliary output file name
+.TP
+.I file   
+.B rv
+.B =
+.R  	auxiliary output file name
+.TP
+.I file   
+.B so
+.B =
+.R  	auxiliary output file name
+.TP
+.I file   
+.B src
+.B =
+.R  	auxiliary output file name
+.SH SOURCE
+.I system/seismic/Msrseidel.c
+.SH VERSION
+4.2

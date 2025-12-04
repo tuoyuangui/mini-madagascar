@@ -1,0 +1,29 @@
+.TH sft2warp 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsft2warp \- Time-squared warping. \n.SH SYNOPSIS
+.B sft2warp < in.rsf > out.rsf inv=n adj=n pad=n1 eps=0.01
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B adj
+.B =n
+.R  [y/n]	adjoint flag
+.TP
+.I float  
+.B eps
+.B =0.01
+.R  	stretch regularization
+.TP
+.I bool   
+.B inv
+.B =n
+.R  [y/n]	inversion flag
+.TP
+.I int    
+.B pad
+.B =n1
+.R  	output time samples
+.SH SOURCE
+.I system/generic/Mt2warp.c
+.SH VERSION
+4.2

@@ -1,0 +1,69 @@
+.TH sfcgscan 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfcgscan \- Hyperbolic Radon transform with conjugate-directions inversion \n.SH SYNOPSIS
+.B sfcgscan < in.rsf > out.rsf error=err.rsf mask=msk.rsf adj=n niter=0 miter=2 psun1=1 psun2=1 anti=1. s02=0. ncycle=0 perc=50.0 fact=0.5
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B adj
+.B =n
+.R  [y/n]	adjoint flag
+.TP
+.I float  
+.B anti
+.B =1.
+.R  	antialiasing
+.TP
+.I string 
+.B error
+.B =
+.R  	auxiliary output file name
+.TP
+.I float  
+.B fact
+.B =0.5
+.R  	factor for sharpening
+.TP
+.I string 
+.B mask
+.B =
+.R  	auxiliary input file name
+.TP
+.I int    
+.B miter
+.B =2
+.R  	conjugate-direction memory
+.TP
+.I int    
+.B ncycle
+.B =0
+.R  	number of sharpening cycles
+.TP
+.I int    
+.B niter
+.B =0
+.R  	number of iterations
+.TP
+.I float  
+.B perc
+.B =50.0
+.R  	percentage for sharpening
+.TP
+.I int    
+.B psun1
+.B =1
+.R  	amplitude type for adjoint
+.TP
+.I int    
+.B psun2
+.B =1
+.R  	amplitude type for forward
+.TP
+.I float  
+.B s02
+.B =0.
+.R  	reference slowness squared (for antialiasing)
+.SH SOURCE
+.I system/seismic/Mcgscan.c
+.SH VERSION
+4.2

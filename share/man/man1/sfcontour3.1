@@ -1,0 +1,139 @@
+.TH sfcontour3 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfcontour3 \- Generate 3-D contour plot.\n.SH SYNOPSIS
+.B sfcontour3 < in.rsf c= min1=o1 min2=o2 min3=o3 max1=o1+(n1-1)*d1 max2=o2+(n2-1)*d2 max3=o3+(n3-1)*d3 yreverse=y nc=50 dc= c0= point1=0.5 point2=0.5 frame1=0 frame2=n2-1 frame3=0 movie=0 dframe=1 n1pix=n1/point1+n3/(1.-point1) n2pix=n2/point2+n3/(1.-point2) flat=y scalebar=n minval= maxval= barreverse=n cfile= > plot.vpl
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B barreverse
+.B =n
+.R  [y/n]	if y, go from small to large on the bar scale
+.TP
+.I floats 
+.B c
+.B =
+.R  	 [nc]
+.TP
+.I float  
+.B c0
+.B =
+.R  	first contour
+.TP
+.I string 
+.B cfile
+.B =
+.R  	contours in a file
+.TP
+.I float  
+.B dc
+.B =
+.R  	contour increment
+.TP
+.I int    
+.B dframe
+.B =1
+.R  	frame increment in a movie
+.TP
+.I bool   
+.B flat
+.B =y
+.R  [y/n]	if n, display perspective view
+.TP
+.I int    
+.B frame1
+.B =0
+.R  
+.TP
+.I int    
+.B frame2
+.B =n2-1
+.R  
+.TP
+.I int    
+.B frame3
+.B =0
+.R  	frame numbers for cube faces
+.TP
+.I float  
+.B max1
+.B =o1+(n1-1)*d1
+.R  
+.TP
+.I float  
+.B max2
+.B =o2+(n2-1)*d2
+.R  
+.TP
+.I float  
+.B max3
+.B =o3+(n3-1)*d3
+.R  	data window to plot
+.TP
+.I float  
+.B maxval
+.B =
+.R  	maximum value for scalebar (default is the data maximum)
+.TP
+.I float  
+.B min1
+.B =o1
+.R  
+.TP
+.I float  
+.B min2
+.B =o2
+.R  
+.TP
+.I float  
+.B min3
+.B =o3
+.R  
+.TP
+.I float  
+.B minval
+.B =
+.R  	minimum value for scalebar (default is the data minimum)
+.TP
+.I int    
+.B movie
+.B =0
+.R  	0: no movie, 1: movie over axis 1, 2: axis 2, 3: axis 3
+.TP
+.I int    
+.B n1pix
+.B =n1/point1+n3/(1.-point1)
+.R  	number of vertical pixels
+.TP
+.I int    
+.B n2pix
+.B =n2/point2+n3/(1.-point2)
+.R  	number of horizontal pixels
+.TP
+.I int    
+.B nc
+.B =50
+.R  	number of contours
+.TP
+.I float  
+.B point1
+.B =0.5
+.R  	fraction of the vertical axis for front face
+.TP
+.I float  
+.B point2
+.B =0.5
+.R  	fraction of the horizontal axis for front face
+.TP
+.I bool   
+.B scalebar
+.B =n
+.R  [y/n]	if y, draw scalebar
+.TP
+.I bool   
+.B yreverse
+.B =y
+.R  [y/n]	if y, reverse the first axis
+.SH SOURCE
+.I plot/main/contour3.c
+.SH VERSION
+4.2

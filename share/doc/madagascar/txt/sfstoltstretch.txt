@@ -1,0 +1,12 @@
+Program sfstoltstretch | Stolt stretch. 
+[SYNOPSIS]
+sfstoltstretch < in.rsf > st.rsf velocity=vel.rsf inv=n nstretch=1 pad=nt eps=0.01 vel=
+[PARAMETERS]
+float   | eps | =0.01 |   | 	stretch regularization 
+bool    | inv | =n |  [y/n] | 	if y, inverse stretch 
+int     | nstretch | =1 |   | 	number of steps 
+int     | pad | =nt |   | 	time axis padding 
+float   | vel | = |   | 	reference velocity 
+file    | velocity | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/seismic

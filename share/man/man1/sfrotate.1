@@ -1,0 +1,26 @@
+.TH sfrotate 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfrotate \- Rotate a portion of one or more axes in the data hypercube. \n.SH SYNOPSIS
+.B sfrotate < in.rsf > out.rsf verb=n memsize=sf_memsize() rot#=(0,0,...)
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B memsize
+.B =sf_memsize()
+.R  	Max amount of RAM (in Mb) to be used
+.TP
+.I int    
+.B rot#
+.B =(0,0,...)
+.R  	length of #-th axis that is moved to the end
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]	Verbosity flag
+.SH SOURCE
+.I system/main/rotate.c
+.SH DOCUMENTATION
+.BR http://ahay.org/wiki/Guide_to_madagascar_programs#sfrotate
+.SH VERSION
+4.2 rotate.c 1729 2006-03-12 10:00:32Z fomels

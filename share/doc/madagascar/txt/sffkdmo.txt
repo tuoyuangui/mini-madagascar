@@ -1,0 +1,9 @@
+Program sffkdmo | Offset continuation by log-stretch F-K operator. 
+[SYNOPSIS]
+sffkdmo < in.rsf > out.rsf h= nh=1 h0=0.
+[PARAMETERS]
+float   | h | = |   | 	final offset 
+float   | h0 | =0. |   | 	initial offset 
+int     | nh | =1 |   | 	number of offset steps 
+[DIRECTORY]
+system/seismic

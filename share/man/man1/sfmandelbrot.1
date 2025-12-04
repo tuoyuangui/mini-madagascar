@@ -1,0 +1,54 @@
+.TH sfmandelbrot 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfmandelbrot \- Generate Mandelbrot set. \n.SH SYNOPSIS
+.B sfmandelbrot > out.rsf n1=512 n2=512 x0=-2. y0=-1. xmax=0.5 ymax=1. niter=1000 dx=(xmax-x0)/(n1-1) dy=(ymax-y0)/(n2-1)
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B dx
+.B =(xmax-x0)/(n1-1)
+.R  
+.TP
+.I float  
+.B dy
+.B =(ymax-y0)/(n2-1)
+.R  
+.TP
+.I int    
+.B n1
+.B =512
+.R  
+.TP
+.I int    
+.B n2
+.B =512
+.R  	dimensions
+.TP
+.I int    
+.B niter
+.B =1000
+.R  	number of iterations
+.TP
+.I float  
+.B x0
+.B =-2.
+.R  
+.TP
+.I float  
+.B xmax
+.B =0.5
+.R  
+.TP
+.I float  
+.B y0
+.B =-1.
+.R  	set origin
+.TP
+.I float  
+.B ymax
+.B =1.
+.R  	set maximum
+.SH SOURCE
+.I system/generic/Mmandelbrot.c
+.SH VERSION
+4.2

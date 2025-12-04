@@ -1,0 +1,9 @@
+Program sfrotate | Rotate a portion of one or more axes in the data hypercube. 
+[SYNOPSIS]
+sfrotate < in.rsf > out.rsf verb=n memsize=sf_memsize() rot#=(0,0,...)
+[PARAMETERS]
+int     | memsize | =sf_memsize() |   | 	Max amount of RAM (in Mb) to be used 
+int     | rot# | =(0,0,...) |   | 	length of #-th axis that is moved to the end 
+bool    | verb | =n |  [y/n] | 	Verbosity flag 
+[DIRECTORY]
+system/main

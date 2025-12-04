@@ -1,0 +1,709 @@
+file /mnt/e/small_mada/madagascar-4.2/SConstruct,line 47:
+	Configure(confdir = .sconf_temp)
+scons: Configure: checking platform ... 
+scons: Configure: (cached) linux [ubuntu]
+
+scons: Configure: checking for C compiler ... 
+scons: Configure: (cached) gcc
+
+scons: Configure: checking if gcc works ... 
+.sconf_temp/conftest_0317295b1936c406f44aff9bc36db225_0.c <-
+  |
+  |    int main(int argc,char* argv[]) {
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_0317295b1936c406f44aff9bc36db225_0.o -c -O2 .sconf_temp/conftest_0317295b1936c406f44aff9bc36db225_0.c
+gcc -o .sconf_temp/sfconftest_0317295b1936c406f44aff9bc36db225_0_26ae59f309dce265b11b34397622203a .sconf_temp/conftest_0317295b1936c406f44aff9bc36db225_0.o
+scons: Configure: yes
+
+scons: Configure: checking if gcc accepts '-x c -std=gnu17 -Wall -pedantic' ... 
+.sconf_temp/conftest_0317295b1936c406f44aff9bc36db225_1.c <-
+  |
+  |    int main(int argc,char* argv[]) {
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_0317295b1936c406f44aff9bc36db225_1_91f9339eed682c379567e06eb7aecdb7.o -c -O2 -x c -std=gnu17 -Wall -pedantic .sconf_temp/conftest_0317295b1936c406f44aff9bc36db225_1.c
+scons: Configure: yes
+
+scons: Configure: checking for ar ... 
+scons: Configure: (cached) ar
+
+scons: Configure: checking for rpc ... 
+.sconf_temp/conftest_ddb52a7fd3d903f2e227b2466f140f8c_0.c <-
+  |
+  |    #include <rpc/types.h>
+  |    #include <rpc/xdr.h>
+  |    int main(int argc,char* argv[]) {
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_ddb52a7fd3d903f2e227b2466f140f8c_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -I/usr/include/tirpc .sconf_temp/conftest_ddb52a7fd3d903f2e227b2466f140f8c_0.c
+gcc -o .sconf_temp/sfconftest_ddb52a7fd3d903f2e227b2466f140f8c_0_b96bdba034e323189b7d40e7f893b802 .sconf_temp/conftest_ddb52a7fd3d903f2e227b2466f140f8c_0.o -lm -ltirpc
+scons: Configure: ['m', 'tirpc']
+
+scons: Configure: checking complex support ... 
+.sconf_temp/conftest_01f4576b53bf027d4005e691710fe4ef_0.c <-
+  |
+  |    #include <complex.h>
+  |    #include <math.h>
+  |    int main(int argc,char* argv[]) {
+  |    float complex c;
+  |    float f;
+  |    c = 0.0;
+  |    f = cabsf(ccosf(c));
+  |    return (int) f;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_01f4576b53bf027d4005e691710fe4ef_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -I/usr/include/tirpc .sconf_temp/conftest_01f4576b53bf027d4005e691710fe4ef_0.c
+gcc -o .sconf_temp/sfconftest_01f4576b53bf027d4005e691710fe4ef_0_8a2cc90b7a2bc5b5d36dea93d374f35f .sconf_temp/conftest_01f4576b53bf027d4005e691710fe4ef_0.o -lm -ltirpc
+scons: Configure: yes
+
+scons: Configure: checking for X11 headers ... 
+.sconf_temp/conftest_d7a2021897d6e674e00c251ffb69c8a7_0.c <-
+  |
+  |    #include <X11/Intrinsic.h>
+  |    #include <X11/Xaw/Label.h>
+  |    int main(int argc,char* argv[]) {
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_d7a2021897d6e674e00c251ffb69c8a7_0_cb990e4f3867dd1e200c134b28371ad2.o -c -O2 -x c -std=gnu17 -Wall -pedantic -I/usr/include/tirpc -I/usr/include .sconf_temp/conftest_d7a2021897d6e674e00c251ffb69c8a7_0.c
+scons: Configure: /usr/include
+
+scons: Configure: checking for X11 libraries ... 
+.sconf_temp/conftest_d7a2021897d6e674e00c251ffb69c8a7_1.c <-
+  |
+  |    #include <X11/Intrinsic.h>
+  |    #include <X11/Xaw/Label.h>
+  |    int main(int argc,char* argv[]) {
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_d7a2021897d6e674e00c251ffb69c8a7_1.o -c -O2 -x c -std=gnu17 -Wall -pedantic -I/usr/include/tirpc -I/usr/include .sconf_temp/conftest_d7a2021897d6e674e00c251ffb69c8a7_1.c
+gcc -o .sconf_temp/sfconftest_d7a2021897d6e674e00c251ffb69c8a7_1_5e0cf3b2a71dab24794e5e8cd1716e1b .sconf_temp/conftest_d7a2021897d6e674e00c251ffb69c8a7_1.o -L/usr/lib/X11 -lm -ltirpc
+scons: Configure: /usr/lib/X11
+
+scons: Configure: checking for OpenGL ... 
+.sconf_temp/conftest_4a22d99e153149148bf8dd1b1f3ea6ea_0.c <-
+  |
+  |    #ifdef __APPLE__
+  |    #include <OpenGL/glu.h>
+  |    #include <GLUT/glut.h>
+  |    #else
+  |    #include <GL/glu.h>
+  |    #include <GL/glut.h>
+  |    #endif
+  |    int main(int argc,char* argv[]) {
+  |    glutInit (&argc, argv);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_4a22d99e153149148bf8dd1b1f3ea6ea_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -I/usr/include/tirpc .sconf_temp/conftest_4a22d99e153149148bf8dd1b1f3ea6ea_0.c
+gcc -o .sconf_temp/sfconftest_4a22d99e153149148bf8dd1b1f3ea6ea_0_98747e5f913f7540355b27c74cd2b42b .sconf_temp/conftest_4a22d99e153149148bf8dd1b1f3ea6ea_0.o -lm -ltirpc -lGL -lGLU -lglut
+scons: Configure: yes
+
+scons: Configure: checking for sfpen ... 
+scons: Configure: (cached) xtpen
+
+scons: Configure: checking for ppm ... 
+.sconf_temp/conftest_45afe928ece05726e02f32c1a54be631_0.c <-
+  |
+  |    #include <ppm.h>
+  |    int main(int argc,char* argv[]) {
+  |    ppm_init(&argc,argv);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_45afe928ece05726e02f32c1a54be631_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -I/usr/include/tirpc -I/usr/include/netpbm .sconf_temp/conftest_45afe928ece05726e02f32c1a54be631_0.c
+gcc -o .sconf_temp/sfconftest_45afe928ece05726e02f32c1a54be631_0_22e185976717949b9f2f31e02c63c2c5 .sconf_temp/conftest_45afe928ece05726e02f32c1a54be631_0.o -lm -ltirpc -lnetpbm
+scons: Configure: yes
+
+scons: Configure: checking for tiff ... 
+.sconf_temp/conftest_27d86b58ca69c9cbb4cbb2835620d0a2_0.c <-
+  |
+  |    #include <tiffio.h>
+  |    int main(int argc,char* argv[]) {
+  |    TIFF *tiffout;
+  |    tiffout = TIFFOpen("test.tif","wb");
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_27d86b58ca69c9cbb4cbb2835620d0a2_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -I/usr/include/tirpc .sconf_temp/conftest_27d86b58ca69c9cbb4cbb2835620d0a2_0.c
+.sconf_temp/conftest_27d86b58ca69c9cbb4cbb2835620d0a2_0.c: In function 'main':
+.sconf_temp/conftest_27d86b58ca69c9cbb4cbb2835620d0a2_0.c:4:11: warning: variable 'tiffout' set but not used [-Wunused-but-set-variable]
+    4 |     TIFF *tiffout;
+      |           ^~~~~~~
+gcc -o .sconf_temp/sfconftest_27d86b58ca69c9cbb4cbb2835620d0a2_0_1afad8750886e41824d24bd340549585 .sconf_temp/conftest_27d86b58ca69c9cbb4cbb2835620d0a2_0.o -lm -ltirpc -ltiff
+scons: Configure: yes
+
+scons: Configure: checking for GD (PNG) ... 
+.sconf_temp/conftest_34658d070943b6cbb7f48377c86946d9_0.c <-
+  |
+  |    #include <gd.h>
+  |    int main(int argc,char* argv[]) {
+  |    gdImagePtr image;
+  |    image = gdImageCreate(10,10);
+  |    gdImageSetClip(image,0,0,1,1);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_34658d070943b6cbb7f48377c86946d9_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -I/usr/include/tirpc .sconf_temp/conftest_34658d070943b6cbb7f48377c86946d9_0.c
+gcc -o .sconf_temp/sfconftest_34658d070943b6cbb7f48377c86946d9_0_92fb067d9214f65c596f2eb4230a4243 .sconf_temp/conftest_34658d070943b6cbb7f48377c86946d9_0.o -lm -ltirpc -lgd
+scons: Configure: yes
+
+scons: Configure: checking for GD (GIF) ... 
+.sconf_temp/conftest_6f7b441b256e558f53799a58cec36e63_0.c <-
+  |
+  |        #include <stdio.h>
+  |        #include <gd.h>
+  |        int main(int argc,char* argv[]) {
+  |        gdImagePtr image;
+  |        image = gdImageCreate(10,10);
+  |        gdImageGifAnimBegin(image, stdout, 1, 0);
+  |        return 0;
+  |        }
+  |
+gcc -o .sconf_temp/conftest_6f7b441b256e558f53799a58cec36e63_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -I/usr/include/tirpc .sconf_temp/conftest_6f7b441b256e558f53799a58cec36e63_0.c
+gcc -o .sconf_temp/sfconftest_6f7b441b256e558f53799a58cec36e63_0_acbba6e38ce1be070fff8364be896cc3 .sconf_temp/conftest_6f7b441b256e558f53799a58cec36e63_0.o -lm -ltirpc -lgd
+scons: Configure: yes
+
+scons: Configure: checking for plplot ... 
+.sconf_temp/conftest_8545379bbf7e79e5839ae349727fc5c8_0.c <-
+  |
+  |    #include <plplot.h>
+  |    #include <plplotP.h>
+  |    #include <plstrm.h>
+  |    int main (int argc, char *argv[]) {
+  |    plinit ();
+  |    pladv (0);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_8545379bbf7e79e5839ae349727fc5c8_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -I/usr/include/tirpc -I/usr/include/plplot .sconf_temp/conftest_8545379bbf7e79e5839ae349727fc5c8_0.c
+gcc -o .sconf_temp/sfconftest_8545379bbf7e79e5839ae349727fc5c8_0_463251b25fe97227cd3dde2d3d6cc608 .sconf_temp/conftest_8545379bbf7e79e5839ae349727fc5c8_0.o -lm -ltirpc -lplplot -lltdl
+scons: Configure: yes
+
+scons: Configure: checking for ffmpeg ... 
+.sconf_temp/conftest_b7dadb12b0d3925c5290be2c66b2d70e_0.c <-
+  |
+  |    #include <avcodec.h>
+  |    int main (int argc, char *argv[]) {
+  |    #if LIBAVCODEC_VERSION_MAJOR < 54
+  |    avcodec_init ();
+  |    #endif
+  |    #if LIBAVCODEC_VERSION_MAJOR < 58
+  |    avcodec_register_all ();
+  |    #endif
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_b7dadb12b0d3925c5290be2c66b2d70e_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -I/usr/include/tirpc -I/usr/include/x86_64-linux-gnu/libavcodec .sconf_temp/conftest_b7dadb12b0d3925c5290be2c66b2d70e_0.c
+gcc -o .sconf_temp/sfconftest_b7dadb12b0d3925c5290be2c66b2d70e_0_7b08815748591834681de4fafc32693d .sconf_temp/conftest_b7dadb12b0d3925c5290be2c66b2d70e_0.o -lm -ltirpc -lavcodec -lavutil
+scons: Configure: yes
+
+scons: Configure: checking for cairo (PNG) ... 
+.sconf_temp/conftest_7a887e5941e1aa936e15451596994d28_0.c <-
+  |
+  |    #include <cairo.h>
+  |    int main(int argc,char* argv[]) {
+  |    cairo_surface_t *surface;
+  |    surface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, 10, 10);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_7a887e5941e1aa936e15451596994d28_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -I/usr/include/tirpc -I/usr/include/cairo .sconf_temp/conftest_7a887e5941e1aa936e15451596994d28_0.c
+.sconf_temp/conftest_7a887e5941e1aa936e15451596994d28_0.c: In function 'main':
+.sconf_temp/conftest_7a887e5941e1aa936e15451596994d28_0.c:4:22: warning: variable 'surface' set but not used [-Wunused-but-set-variable]
+    4 |     cairo_surface_t *surface;
+      |                      ^~~~~~~
+gcc -o .sconf_temp/sfconftest_7a887e5941e1aa936e15451596994d28_0_f9f03004fc32f63f785fe062c37304fe .sconf_temp/conftest_7a887e5941e1aa936e15451596994d28_0.o -lm -ltirpc -lcairo
+scons: Configure: yes
+
+scons: Configure: checking for cairo (SVG) ... 
+.sconf_temp/conftest_6dfbf10c32dff007fdce6efe49d88e63_0.c <-
+  |
+  |            #include <cairo.h>
+  |            #include <cairo-svg.h>
+  |            int main(int argc,char* argv[]) {
+  |            cairo_surface_t *surface;
+  |            surface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, 10, 10);
+  |            return 0;
+  |            }
+  |
+gcc -o .sconf_temp/conftest_6dfbf10c32dff007fdce6efe49d88e63_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -I/usr/include/tirpc -I/usr/include/cairo .sconf_temp/conftest_6dfbf10c32dff007fdce6efe49d88e63_0.c
+.sconf_temp/conftest_6dfbf10c32dff007fdce6efe49d88e63_0.c: In function 'main':
+.sconf_temp/conftest_6dfbf10c32dff007fdce6efe49d88e63_0.c:5:30: warning: variable 'surface' set but not used [-Wunused-but-set-variable]
+    5 |             cairo_surface_t *surface;
+      |                              ^~~~~~~
+gcc -o .sconf_temp/sfconftest_6dfbf10c32dff007fdce6efe49d88e63_0_626256e4574b4df2b39ba6427825c9d0 .sconf_temp/conftest_6dfbf10c32dff007fdce6efe49d88e63_0.o -lm -ltirpc -lcairo
+scons: Configure: yes
+
+scons: Configure: checking for cairo (PDF) ... 
+.sconf_temp/conftest_c81df28203aee16b58158f62f1a54a6d_0.c <-
+  |
+  |            #include <cairo.h>
+  |            #include <cairo-pdf.h>
+  |            int main(int argc,char* argv[]) {
+  |            cairo_surface_t *surface;
+  |            surface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, 10, 10);
+  |            return 0;
+  |            }
+  |
+gcc -o .sconf_temp/conftest_c81df28203aee16b58158f62f1a54a6d_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -I/usr/include/tirpc -I/usr/include/cairo .sconf_temp/conftest_c81df28203aee16b58158f62f1a54a6d_0.c
+.sconf_temp/conftest_c81df28203aee16b58158f62f1a54a6d_0.c: In function 'main':
+.sconf_temp/conftest_c81df28203aee16b58158f62f1a54a6d_0.c:5:30: warning: variable 'surface' set but not used [-Wunused-but-set-variable]
+    5 |             cairo_surface_t *surface;
+      |                              ^~~~~~~
+gcc -o .sconf_temp/sfconftest_c81df28203aee16b58158f62f1a54a6d_0_e071beef24e4281dc07c645637c80ed6 .sconf_temp/conftest_c81df28203aee16b58158f62f1a54a6d_0.o -lm -ltirpc -lcairo
+scons: Configure: yes
+
+scons: Configure: checking for jpeg ... 
+.sconf_temp/conftest_1f929c548578ce285219947f44d60af2_0.c <-
+  |
+  |    #include <stdio.h>
+  |    #include <jpeglib.h>
+  |    int main(int argc,char* argv[]) {
+  |    struct jpeg_compress_struct jpeg;
+  |    struct jpeg_error_mgr jpeg_err;
+  |    jpeg.err = jpeg_std_error(&jpeg_err);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_1f929c548578ce285219947f44d60af2_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -I/usr/include/tirpc .sconf_temp/conftest_1f929c548578ce285219947f44d60af2_0.c
+.sconf_temp/conftest_1f929c548578ce285219947f44d60af2_0.c: In function 'main':
+.sconf_temp/conftest_1f929c548578ce285219947f44d60af2_0.c:5:33: warning: variable 'jpeg' set but not used [-Wunused-but-set-variable]
+    5 |     struct jpeg_compress_struct jpeg;
+      |                                 ^~~~
+gcc -o .sconf_temp/sfconftest_1f929c548578ce285219947f44d60af2_0_08188c20f171c18298434ba3366d863c .sconf_temp/conftest_1f929c548578ce285219947f44d60af2_0.o -lm -ltirpc -ljpeg
+scons: Configure: yes
+
+scons: Configure: checking for BLAS ... 
+.sconf_temp/conftest_812ed1ac8798ed2038ec6e8d38984195_0.c <-
+  |
+  |    #ifdef __APPLE__
+  |    #include <Accelerate/Accelerate.h>
+  |    #else
+  |    #ifdef HAVE_MKL
+  |    #include <mkl.h>
+  |    #else
+  |    #include <cblas.h>
+  |    #endif
+  |    #endif
+  |    int main(int argc,char* argv[]) {
+  |    float d, x[]={1.,2.,3.}, y[]={3.,2.,1.};
+  |    d = cblas_sdot(3,x,1,y,1);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_812ed1ac8798ed2038ec6e8d38984195_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -I/usr/include/tirpc .sconf_temp/conftest_812ed1ac8798ed2038ec6e8d38984195_0.c
+.sconf_temp/conftest_812ed1ac8798ed2038ec6e8d38984195_0.c: In function 'main':
+.sconf_temp/conftest_812ed1ac8798ed2038ec6e8d38984195_0.c:12:11: warning: variable 'd' set but not used [-Wunused-but-set-variable]
+   12 |     float d, x[]={1.,2.,3.}, y[]={3.,2.,1.};
+      |           ^
+gcc -o .sconf_temp/sfconftest_812ed1ac8798ed2038ec6e8d38984195_0_d2d943421ca6ebf28523bbb9637e9bcd .sconf_temp/conftest_812ed1ac8798ed2038ec6e8d38984195_0.o -lm -ltirpc
+/bin/ld: .sconf_temp/conftest_812ed1ac8798ed2038ec6e8d38984195_0.o: in function `main':
+conftest_812ed1ac8798ed2038ec6e8d38984195_0.c:(.text.startup+0x5b): undefined reference to `cblas_sdot'
+collect2: error: ld returned 1 exit status
+.sconf_temp/conftest_812ed1ac8798ed2038ec6e8d38984195_1.c <-
+  |
+  |    #ifdef __APPLE__
+  |    #include <Accelerate/Accelerate.h>
+  |    #else
+  |    #ifdef HAVE_MKL
+  |    #include <mkl.h>
+  |    #else
+  |    #include <cblas.h>
+  |    #endif
+  |    #endif
+  |    int main(int argc,char* argv[]) {
+  |    float d, x[]={1.,2.,3.}, y[]={3.,2.,1.};
+  |    d = cblas_sdot(3,x,1,y,1);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_812ed1ac8798ed2038ec6e8d38984195_1.o -c -O2 -x c -std=gnu17 -Wall -pedantic -I/usr/include/tirpc .sconf_temp/conftest_812ed1ac8798ed2038ec6e8d38984195_1.c
+.sconf_temp/conftest_812ed1ac8798ed2038ec6e8d38984195_1.c: In function 'main':
+.sconf_temp/conftest_812ed1ac8798ed2038ec6e8d38984195_1.c:12:11: warning: variable 'd' set but not used [-Wunused-but-set-variable]
+   12 |     float d, x[]={1.,2.,3.}, y[]={3.,2.,1.};
+      |           ^
+gcc -o .sconf_temp/sfconftest_812ed1ac8798ed2038ec6e8d38984195_1_5f12478102f6d78f51d7797c1a75c6bd .sconf_temp/conftest_812ed1ac8798ed2038ec6e8d38984195_1.o -lm -ltirpc -lblas
+scons: Configure: yes
+
+scons: Configure: checking for LAPACK ... 
+.sconf_temp/conftest_08e9edd7c43ac78344115f639dab72b7_0.c <-
+  |
+  |    void dgesv_(int *n, int *nrhs, double *a,
+  |    int *lda, int *ipiv, double *b, int *ldb, int *info);
+  |    int main(int argc,char* argv[]) {
+  |    int N=2, NRHS=1, LDA=2, LDB=2;
+  |    double A[]={0.0,1.0,2.0,3.0};
+  |    double B[]={0.0,1.0};
+  |    int IPIV[2], INFO;
+  |    dgesv_(&N, &NRHS, A, &LDA, &IPIV, B, &LDB, &INFO);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_08e9edd7c43ac78344115f639dab72b7_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -I/usr/include/tirpc .sconf_temp/conftest_08e9edd7c43ac78344115f639dab72b7_0.c
+.sconf_temp/conftest_08e9edd7c43ac78344115f639dab72b7_0.c: In function 'main':
+.sconf_temp/conftest_08e9edd7c43ac78344115f639dab72b7_0.c:9:32: warning: passing argument 5 of 'dgesv_' from incompatible pointer type [-Wincompatible-pointer-types]
+    9 |     dgesv_(&N, &NRHS, A, &LDA, &IPIV, B, &LDB, &INFO);
+      |                                ^~~~~
+      |                                |
+      |                                int (*)[2]
+.sconf_temp/conftest_08e9edd7c43ac78344115f639dab72b7_0.c:3:20: note: expected 'int *' but argument is of type 'int (*)[2]'
+    3 |     int *lda, int *ipiv, double *b, int *ldb, int *info);
+      |               ~~~~~^~~~
+gcc -o .sconf_temp/sfconftest_08e9edd7c43ac78344115f639dab72b7_0_785535ce32a8ec9af5724ac8362ec9e4 .sconf_temp/conftest_08e9edd7c43ac78344115f639dab72b7_0.o -lm -ltirpc -lblas
+/bin/ld: .sconf_temp/conftest_08e9edd7c43ac78344115f639dab72b7_0.o: in function `main':
+conftest_08e9edd7c43ac78344115f639dab72b7_0.c:(.text.startup+0x82): undefined reference to `dgesv_'
+collect2: error: ld returned 1 exit status
+.sconf_temp/conftest_08e9edd7c43ac78344115f639dab72b7_1.c <-
+  |
+  |    void dgesv_(int *n, int *nrhs, double *a,
+  |    int *lda, int *ipiv, double *b, int *ldb, int *info);
+  |    int main(int argc,char* argv[]) {
+  |    int N=2, NRHS=1, LDA=2, LDB=2;
+  |    double A[]={0.0,1.0,2.0,3.0};
+  |    double B[]={0.0,1.0};
+  |    int IPIV[2], INFO;
+  |    dgesv_(&N, &NRHS, A, &LDA, &IPIV, B, &LDB, &INFO);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_08e9edd7c43ac78344115f639dab72b7_1.o -c -O2 -x c -std=gnu17 -Wall -pedantic -I/usr/include/tirpc .sconf_temp/conftest_08e9edd7c43ac78344115f639dab72b7_1.c
+.sconf_temp/conftest_08e9edd7c43ac78344115f639dab72b7_1.c: In function 'main':
+.sconf_temp/conftest_08e9edd7c43ac78344115f639dab72b7_1.c:9:32: warning: passing argument 5 of 'dgesv_' from incompatible pointer type [-Wincompatible-pointer-types]
+    9 |     dgesv_(&N, &NRHS, A, &LDA, &IPIV, B, &LDB, &INFO);
+      |                                ^~~~~
+      |                                |
+      |                                int (*)[2]
+.sconf_temp/conftest_08e9edd7c43ac78344115f639dab72b7_1.c:3:20: note: expected 'int *' but argument is of type 'int (*)[2]'
+    3 |     int *lda, int *ipiv, double *b, int *ldb, int *info);
+      |               ~~~~~^~~~
+gcc -o .sconf_temp/sfconftest_08e9edd7c43ac78344115f639dab72b7_1_fee53608b6d05c46646f34279b6dc4b7 .sconf_temp/conftest_08e9edd7c43ac78344115f639dab72b7_1.o -lm -ltirpc -lblas -llapack -lblas
+scons: Configure: yes
+
+scons: Configure: checking for SWIG ... 
+scons: Configure: (cached) /usr/bin/swig
+
+scons: Configure: checking for numpy ... 
+scons: Configure: (cached) yes
+
+scons: Configure: checking API options ... 
+scons: Configure: (cached) []
+
+scons: Configure: checking for C++ compiler ... 
+scons: Configure: (cached) g++
+
+scons: Configure: checking if g++ works ... 
+.sconf_temp/conftest_33f5deccb7e481d655d28237fbbf89c2_0.cc <-
+  |
+  |        #include <valarray>
+  |        int main(int argc,char* argv[]) {
+  |        return 0;
+  |        }
+  |
+g++ -o .sconf_temp/conftest_33f5deccb7e481d655d28237fbbf89c2_0.o -c -O2 -I/usr/include/tirpc .sconf_temp/conftest_33f5deccb7e481d655d28237fbbf89c2_0.cc
+g++ -o .sconf_temp/sfconftest_33f5deccb7e481d655d28237fbbf89c2_0_de93731fe5124c101d470585342ecc42 .sconf_temp/conftest_33f5deccb7e481d655d28237fbbf89c2_0.o -lm -ltirpc -lblas -llapack -lblas
+scons: Configure: yes
+
+scons: Configure: checking if g++ accepts '-std=gnu++17 -U__STRICT_ANSI__ -Wall -pedantic' ... 
+.sconf_temp/conftest_33f5deccb7e481d655d28237fbbf89c2_1.cc <-
+  |
+  |        #include <valarray>
+  |        int main(int argc,char* argv[]) {
+  |        return 0;
+  |        }
+  |
+g++ -o .sconf_temp/conftest_33f5deccb7e481d655d28237fbbf89c2_1_bd01e1e71328ee4a383fa2e739605b17.o -c -O2 -std=gnu++17 -U__STRICT_ANSI__ -Wall -pedantic -I/usr/include/tirpc .sconf_temp/conftest_33f5deccb7e481d655d28237fbbf89c2_1.cc
+scons: Configure: yes
+
+scons: Configure: checking for MPICC ... 
+scons: Configure: (cached) /usr/bin/mpicc
+
+scons: Configure: checking if /usr/bin/mpicc works ... 
+.sconf_temp/conftest_ffd082af3376448b2a6fb2bfd6227d1a_0.c <-
+  |
+  |        #include <mpi.h>
+  |        int main(int argc,char* argv[]) {
+  |        MPI_Init(&argc,&argv);
+  |        MPI_Finalize();
+  |        }
+  |
+/usr/bin/mpicc -o .sconf_temp/conftest_ffd082af3376448b2a6fb2bfd6227d1a_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -I/usr/include/tirpc .sconf_temp/conftest_ffd082af3376448b2a6fb2bfd6227d1a_0.c
+/usr/bin/mpicc -o .sconf_temp/sfconftest_ffd082af3376448b2a6fb2bfd6227d1a_0_a1417b3740e7a3be652ce05413260e59 .sconf_temp/conftest_ffd082af3376448b2a6fb2bfd6227d1a_0.o -lm -ltirpc -lblas -llapack -lblas
+scons: Configure: yes
+
+scons: Configure: checking for MPICXX ... 
+scons: Configure: (cached) /usr/bin/mpicxx
+
+scons: Configure: checking if /usr/bin/mpicxx works ... 
+.sconf_temp/conftest_ffd082af3376448b2a6fb2bfd6227d1a_1.cc <-
+  |
+  |        #include <mpi.h>
+  |        int main(int argc,char* argv[]) {
+  |        MPI_Init(&argc,&argv);
+  |        MPI_Finalize();
+  |        }
+  |
+/usr/bin/mpicxx -o .sconf_temp/conftest_ffd082af3376448b2a6fb2bfd6227d1a_1.o -c -O2 -std=gnu++17 -U__STRICT_ANSI__ -Wall -pedantic -I/usr/include/tirpc .sconf_temp/conftest_ffd082af3376448b2a6fb2bfd6227d1a_1.cc
+/usr/bin/mpicxx -o .sconf_temp/sfconftest_ffd082af3376448b2a6fb2bfd6227d1a_1_9e7fc2ae7520c7d611660e7d9269d3ae .sconf_temp/conftest_ffd082af3376448b2a6fb2bfd6227d1a_1.o -lm -ltirpc -lblas -llapack -lblas
+scons: Configure: yes
+
+scons: Configure: checking for MPIRUN ... 
+scons: Configure: (cached) /usr/bin/mpirun
+
+scons: Configure: checking for Posix threads ... 
+.sconf_temp/conftest_e67f624213583bacd967c4c64114c633_0.c <-
+  |
+  |    #include <pthread.h>
+  |    #include <stdlib.h>
+  |    int main(void) {
+  |    pthread_t peers;
+  |    pthread_create(&peers, NULL, NULL, NULL);
+  |    return 0;
+  |    }
+  |    
+gcc -o .sconf_temp/conftest_e67f624213583bacd967c4c64114c633_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -I/usr/include/tirpc .sconf_temp/conftest_e67f624213583bacd967c4c64114c633_0.c
+.sconf_temp/conftest_e67f624213583bacd967c4c64114c633_0.c: In function 'main':
+.sconf_temp/conftest_e67f624213583bacd967c4c64114c633_0.c:6:5: warning: argument 3 null where non-null expected [-Wnonnull]
+    6 |     pthread_create(&peers, NULL, NULL, NULL);
+      |     ^~~~~~~~~~~~~~
+In file included from .sconf_temp/conftest_e67f624213583bacd967c4c64114c633_0.c:2:
+/usr/include/pthread.h:202:12: note: in a call to function 'pthread_create' declared 'nonnull'
+  202 | extern int pthread_create (pthread_t *__restrict __newthread,
+      |            ^~~~~~~~~~~~~~
+gcc -o .sconf_temp/sfconftest_e67f624213583bacd967c4c64114c633_0_079c40b258d8ede8343cacb29538e24c -pthread .sconf_temp/conftest_e67f624213583bacd967c4c64114c633_0.o -lm -ltirpc -lblas -llapack -lblas
+scons: Configure: yes
+
+scons: Configure: checking for OpenMP ... 
+.sconf_temp/conftest_5580fade967db10e66c29d92c9838afc_0.c <-
+  |
+  |    #include <omp.h>
+  |    int main(void) {
+  |    int nt;
+  |#pragma omp parallel
+  |{
+  |    nt = omp_get_num_threads();
+  |}
+  |    return 0;
+  |    }
+  |    
+gcc -o .sconf_temp/conftest_5580fade967db10e66c29d92c9838afc_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -fopenmp -I/usr/include/tirpc .sconf_temp/conftest_5580fade967db10e66c29d92c9838afc_0.c
+.sconf_temp/conftest_5580fade967db10e66c29d92c9838afc_0.c: In function 'main':
+.sconf_temp/conftest_5580fade967db10e66c29d92c9838afc_0.c:4:9: warning: variable 'nt' set but not used [-Wunused-but-set-variable]
+    4 |     int nt;
+      |         ^~
+gcc -o .sconf_temp/sfconftest_5580fade967db10e66c29d92c9838afc_0_def2cb6ad76aacfe12880140c9d9c051 -pthread -fopenmp .sconf_temp/conftest_5580fade967db10e66c29d92c9838afc_0.o -lm -ltirpc -lblas -llapack -lblas -lgomp
+scons: Configure: yes
+
+.sconf_temp/conftest_af28a39b6f1e4000d58dfaf06f7877f3_0.f90 <-
+  |
+  |program main
+  |  use omp_lib
+  |
+  |  integer nt
+  |  nt = omp_get_num_threads()
+  |  stop
+  |end
+  |    
+gfortran -o .sconf_temp/conftest_af28a39b6f1e4000d58dfaf06f7877f3_0.o -c -O2 -fopenmp .sconf_temp/conftest_af28a39b6f1e4000d58dfaf06f7877f3_0.f90
+gfortran -o .sconf_temp/sfconftest_af28a39b6f1e4000d58dfaf06f7877f3_0_706f122b27776c58a5d115a996cfc282 -pthread -fopenmp .sconf_temp/conftest_af28a39b6f1e4000d58dfaf06f7877f3_0.o -lm -ltirpc -lblas -llapack -lblas -lgomp
+scons: Configure: checking for CUDA ... 
+scons: Configure: (cached) no
+
+scons: Configure: checking for FFTW ... 
+.sconf_temp/conftest_0c46a2a96952db7f43919c6fc31987be_0.c <-
+  |
+  |    #include <fftw3.h>
+  |    int main(int argc,char* argv[]) {
+  |    fftwf_complex *in;
+  |    fftwf_plan p;
+  |    in = (fftwf_complex*) fftwf_malloc(sizeof(fftwf_complex) * 10);
+  |    p = fftwf_plan_dft_1d(10, in, in, FFTW_FORWARD, FFTW_ESTIMATE);
+  |    fftwf_destroy_plan(p);
+  |    fftwf_free(in);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_0c46a2a96952db7f43919c6fc31987be_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -fopenmp -I/usr/include/tirpc .sconf_temp/conftest_0c46a2a96952db7f43919c6fc31987be_0.c
+gcc -o .sconf_temp/sfconftest_0c46a2a96952db7f43919c6fc31987be_0_7bfe9059c72186136f5645e7bb948b92 -pthread -fopenmp .sconf_temp/conftest_0c46a2a96952db7f43919c6fc31987be_0.o -lm -ltirpc -lblas -llapack -lblas -lgomp
+/bin/ld: .sconf_temp/conftest_0c46a2a96952db7f43919c6fc31987be_0.o: in function `main':
+conftest_0c46a2a96952db7f43919c6fc31987be_0.c:(.text.startup+0xb): undefined reference to `fftwf_malloc'
+/bin/ld: conftest_0c46a2a96952db7f43919c6fc31987be_0.c:(.text.startup+0x29): undefined reference to `fftwf_plan_dft_1d'
+/bin/ld: conftest_0c46a2a96952db7f43919c6fc31987be_0.c:(.text.startup+0x31): undefined reference to `fftwf_destroy_plan'
+/bin/ld: conftest_0c46a2a96952db7f43919c6fc31987be_0.c:(.text.startup+0x39): undefined reference to `fftwf_free'
+collect2: error: ld returned 1 exit status
+.sconf_temp/conftest_0c46a2a96952db7f43919c6fc31987be_1.c <-
+  |
+  |    #include <fftw3.h>
+  |    int main(int argc,char* argv[]) {
+  |    fftwf_complex *in;
+  |    fftwf_plan p;
+  |    in = (fftwf_complex*) fftwf_malloc(sizeof(fftwf_complex) * 10);
+  |    p = fftwf_plan_dft_1d(10, in, in, FFTW_FORWARD, FFTW_ESTIMATE);
+  |    fftwf_destroy_plan(p);
+  |    fftwf_free(in);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_0c46a2a96952db7f43919c6fc31987be_1.o -c -O2 -x c -std=gnu17 -Wall -pedantic -fopenmp -I/usr/include/tirpc .sconf_temp/conftest_0c46a2a96952db7f43919c6fc31987be_1.c
+gcc -o .sconf_temp/sfconftest_0c46a2a96952db7f43919c6fc31987be_1_f9f7de6514cffc5e3aec8f5e1947a692 -pthread -fopenmp .sconf_temp/conftest_0c46a2a96952db7f43919c6fc31987be_1.o -lm -ltirpc -lblas -llapack -lblas -lgomp -lfftw3f
+scons: Configure: yes
+
+.sconf_temp/conftest_5ace1eaa7c0ef941859cb086c5f6d9e8_0.c <-
+  |
+  |    #include <fftw3.h>
+  |    int main(int argc,char* argv[]) {
+  |    fftw_complex *in;
+  |    fftw_plan p;
+  |    in = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * 10);
+  |    p = fftw_plan_dft_1d(10, in, in, FFTW_FORWARD, FFTW_ESTIMATE);
+  |    fftw_destroy_plan(p);
+  |    fftw_free(in);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_5ace1eaa7c0ef941859cb086c5f6d9e8_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -fopenmp -I/usr/include/tirpc .sconf_temp/conftest_5ace1eaa7c0ef941859cb086c5f6d9e8_0.c
+gcc -o .sconf_temp/sfconftest_5ace1eaa7c0ef941859cb086c5f6d9e8_0_8a6c8ea5af54da38bf953c9ce31fc122 -pthread -fopenmp .sconf_temp/conftest_5ace1eaa7c0ef941859cb086c5f6d9e8_0.o -lm -ltirpc -lblas -llapack -lblas -lgomp -lfftw3f
+/bin/ld: .sconf_temp/conftest_5ace1eaa7c0ef941859cb086c5f6d9e8_0.o: in function `main':
+conftest_5ace1eaa7c0ef941859cb086c5f6d9e8_0.c:(.text.startup+0xb): undefined reference to `fftw_malloc'
+/bin/ld: conftest_5ace1eaa7c0ef941859cb086c5f6d9e8_0.c:(.text.startup+0x29): undefined reference to `fftw_plan_dft_1d'
+/bin/ld: conftest_5ace1eaa7c0ef941859cb086c5f6d9e8_0.c:(.text.startup+0x31): undefined reference to `fftw_destroy_plan'
+/bin/ld: conftest_5ace1eaa7c0ef941859cb086c5f6d9e8_0.c:(.text.startup+0x39): undefined reference to `fftw_free'
+collect2: error: ld returned 1 exit status
+.sconf_temp/conftest_5ace1eaa7c0ef941859cb086c5f6d9e8_1.c <-
+  |
+  |    #include <fftw3.h>
+  |    int main(int argc,char* argv[]) {
+  |    fftw_complex *in;
+  |    fftw_plan p;
+  |    in = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * 10);
+  |    p = fftw_plan_dft_1d(10, in, in, FFTW_FORWARD, FFTW_ESTIMATE);
+  |    fftw_destroy_plan(p);
+  |    fftw_free(in);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_5ace1eaa7c0ef941859cb086c5f6d9e8_1.o -c -O2 -x c -std=gnu17 -Wall -pedantic -fopenmp -I/usr/include/tirpc .sconf_temp/conftest_5ace1eaa7c0ef941859cb086c5f6d9e8_1.c
+gcc -o .sconf_temp/sfconftest_5ace1eaa7c0ef941859cb086c5f6d9e8_1_33e06175800208780f93324792e2f012 -pthread -fopenmp .sconf_temp/conftest_5ace1eaa7c0ef941859cb086c5f6d9e8_1.o -lm -ltirpc -lblas -llapack -lblas -lgomp -lfftw3f -lfftw3
+scons: Configure: checking if FFTW supports threads ... 
+.sconf_temp/conftest_8695e8e306f3cf7cbb2f9b862a530c07_0.c <-
+  |
+  |    #include <fftw3.h>
+  |    int main(int argc,char* argv[]) {
+  |    fftwf_init_threads();
+  |    fftwf_plan_with_nthreads(1);
+  |    fftwf_cleanup_threads();
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_8695e8e306f3cf7cbb2f9b862a530c07_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -fopenmp -I/usr/include/tirpc .sconf_temp/conftest_8695e8e306f3cf7cbb2f9b862a530c07_0.c
+gcc -o .sconf_temp/sfconftest_8695e8e306f3cf7cbb2f9b862a530c07_0_3d3a0accddaf937c01ffa43a3d094e34 -pthread -fopenmp .sconf_temp/conftest_8695e8e306f3cf7cbb2f9b862a530c07_0.o -lm -ltirpc -lblas -llapack -lblas -lgomp -lfftw3f -lfftw3
+/bin/ld: .sconf_temp/conftest_8695e8e306f3cf7cbb2f9b862a530c07_0.o: in function `main':
+conftest_8695e8e306f3cf7cbb2f9b862a530c07_0.c:(.text.startup+0x9): undefined reference to `fftwf_init_threads'
+/bin/ld: conftest_8695e8e306f3cf7cbb2f9b862a530c07_0.c:(.text.startup+0x13): undefined reference to `fftwf_plan_with_nthreads'
+/bin/ld: conftest_8695e8e306f3cf7cbb2f9b862a530c07_0.c:(.text.startup+0x18): undefined reference to `fftwf_cleanup_threads'
+collect2: error: ld returned 1 exit status
+.sconf_temp/conftest_8695e8e306f3cf7cbb2f9b862a530c07_1.c <-
+  |
+  |    #include <fftw3.h>
+  |    int main(int argc,char* argv[]) {
+  |    fftwf_init_threads();
+  |    fftwf_plan_with_nthreads(1);
+  |    fftwf_cleanup_threads();
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_8695e8e306f3cf7cbb2f9b862a530c07_1.o -c -O2 -x c -std=gnu17 -Wall -pedantic -fopenmp -I/usr/include/tirpc .sconf_temp/conftest_8695e8e306f3cf7cbb2f9b862a530c07_1.c
+gcc -o .sconf_temp/sfconftest_8695e8e306f3cf7cbb2f9b862a530c07_1_f05669ffb2ba181f269a745b2a46344b -pthread -fopenmp .sconf_temp/conftest_8695e8e306f3cf7cbb2f9b862a530c07_1.o -lm -ltirpc -lblas -llapack -lblas -lgomp -lfftw3f -lfftw3 -lfftw3f_threads
+scons: Configure: yes
+
+.sconf_temp/conftest_b358eb5bcbc0c35d9cea82c384917329_0.c <-
+  |
+  |    #include <fftw3.h>
+  |    int main(int argc,char* argv[]) {
+  |    fftw_init_threads();
+  |    fftw_plan_with_nthreads(1);
+  |    fftw_cleanup_threads();
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_b358eb5bcbc0c35d9cea82c384917329_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -fopenmp -I/usr/include/tirpc .sconf_temp/conftest_b358eb5bcbc0c35d9cea82c384917329_0.c
+gcc -o .sconf_temp/sfconftest_b358eb5bcbc0c35d9cea82c384917329_0_bace0d375b9d0ebd71c1fad53d697ae8 -pthread -fopenmp .sconf_temp/conftest_b358eb5bcbc0c35d9cea82c384917329_0.o -lm -ltirpc -lblas -llapack -lblas -lgomp -lfftw3f -lfftw3 -lfftw3f_threads
+/bin/ld: .sconf_temp/conftest_b358eb5bcbc0c35d9cea82c384917329_0.o: in function `main':
+conftest_b358eb5bcbc0c35d9cea82c384917329_0.c:(.text.startup+0x9): undefined reference to `fftw_init_threads'
+/bin/ld: conftest_b358eb5bcbc0c35d9cea82c384917329_0.c:(.text.startup+0x13): undefined reference to `fftw_plan_with_nthreads'
+/bin/ld: conftest_b358eb5bcbc0c35d9cea82c384917329_0.c:(.text.startup+0x18): undefined reference to `fftw_cleanup_threads'
+collect2: error: ld returned 1 exit status
+.sconf_temp/conftest_b358eb5bcbc0c35d9cea82c384917329_1.c <-
+  |
+  |    #include <fftw3.h>
+  |    int main(int argc,char* argv[]) {
+  |    fftw_init_threads();
+  |    fftw_plan_with_nthreads(1);
+  |    fftw_cleanup_threads();
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_b358eb5bcbc0c35d9cea82c384917329_1.o -c -O2 -x c -std=gnu17 -Wall -pedantic -fopenmp -I/usr/include/tirpc .sconf_temp/conftest_b358eb5bcbc0c35d9cea82c384917329_1.c
+gcc -o .sconf_temp/sfconftest_b358eb5bcbc0c35d9cea82c384917329_1_9a7b107ceecdf67125fdd74eddf4a43e -pthread -fopenmp .sconf_temp/conftest_b358eb5bcbc0c35d9cea82c384917329_1.o -lm -ltirpc -lblas -llapack -lblas -lgomp -lfftw3f -lfftw3 -lfftw3f_threads -lfftw3_threads
+scons: Configure: checking for SuiteSparse ... 
+.sconf_temp/conftest_124fb8513eb7ef3719a3fbaaa6bd0bfa_0.c <-
+  |
+  |    #include <umfpack.h>
+  |    /* #include <lbfgs.h> */
+  |    int main(void) {
+  |    int    n = 3;
+  |    int    Ap [ ] = {0,2,4,6};
+  |    int    Ai [ ] = {0,1,0,2,1,2};
+  |    double Ax [ ] = {2.,3.,3.,-1.,4.,-3.};
+  |    double *null = (double *) NULL;
+  |    void *Symbolic;
+  |    /* lbfgs_parameter_t param; */
+  |    (void) umfpack_di_symbolic (n, n, Ap, Ai, Ax, &Symbolic, null, null);
+  |    umfpack_di_free_symbolic (&Symbolic) ;
+  |    /* lbfgs_parameter_init (&param); */
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_124fb8513eb7ef3719a3fbaaa6bd0bfa_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -fopenmp -I/usr/include/tirpc -I/usr/include/suitesparse .sconf_temp/conftest_124fb8513eb7ef3719a3fbaaa6bd0bfa_0.c
+gcc -o .sconf_temp/sfconftest_124fb8513eb7ef3719a3fbaaa6bd0bfa_0_cfc17e841ad757fd52eed40205558157 -pthread -fopenmp .sconf_temp/conftest_124fb8513eb7ef3719a3fbaaa6bd0bfa_0.o -lm -ltirpc -lblas -llapack -lblas -lgomp -lfftw3f -lfftw3 -lfftw3f_threads -lfftw3_threads -lumfpack -lcholmod -lamd -lcamd -lcolamd -lccolamd
+scons: Configure: yes
+
+.sconf_temp/conftest_ff6d14cc49a6fd0149de95efd62a6593_0.c <-
+  |
+  |        #include <fftw3.h>
+  |        int main(int argc,char* argv[]) {
+  |        fftwf_complex *in;
+  |        fftwf_plan p;
+  |        in = (fftwf_complex*) fftwf_malloc(sizeof(fftwf_complex) * 10);
+  |        p = fftwf_plan_dft_1d(10, in, in, FFTW_FORWARD, FFTW_ESTIMATE);
+  |        fftwf_destroy_plan(p);
+  |        fftwf_free(in);
+  |        return 0;
+  |        }
+  |
+gcc -o .sconf_temp/conftest_ff6d14cc49a6fd0149de95efd62a6593_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -fopenmp -I/usr/include/tirpc .sconf_temp/conftest_ff6d14cc49a6fd0149de95efd62a6593_0.c
+gcc -o .sconf_temp/sfconftest_ff6d14cc49a6fd0149de95efd62a6593_0_9d3e15dc1c3ef3be5977665c4a90686a -pthread -fopenmp .sconf_temp/conftest_ff6d14cc49a6fd0149de95efd62a6593_0.o -lm -ltirpc -lblas -llapack -lblas -lgomp -lfftw3f -lfftw3 -lfftw3f_threads -lfftw3_threads
+scons: Configure: checking for pfft ... 
+.sconf_temp/conftest_33710f8990a7309a46d30ffd8aa9e1f8_0.c <-
+  |
+  |            #include <pfft.h>
+  |            int main(int argc, char **argv){
+  |            MPI_Init(&argc, &argv);
+  |            pfftf_init();
+  |            MPI_Finalize();
+  |            return 0;
+  |            }
+  |
+/usr/bin/mpicc -o .sconf_temp/conftest_33710f8990a7309a46d30ffd8aa9e1f8_0.o -c -O2 -x c -std=gnu17 -Wall -pedantic -fopenmp -I/usr/include/tirpc -I/usr/local/include .sconf_temp/conftest_33710f8990a7309a46d30ffd8aa9e1f8_0.c
+.sconf_temp/conftest_33710f8990a7309a46d30ffd8aa9e1f8_0.c:2:22: fatal error: pfft.h: No such file or directory
+    2 |             #include <pfft.h>
+      |                      ^~~~~~~~
+compilation terminated.
+scons: Configure: no
+
+

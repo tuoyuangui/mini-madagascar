@@ -1,0 +1,12 @@
+Program sfradial2 | Another version of radial transform. 
+[SYNOPSIS]
+sfradial2 < in.rsf > out.rsf inv=n eps=0.01 tp=t0 nv= vmin= vmax=
+[PARAMETERS]
+float   | eps | =0.01 |   | 	stretch regularization 
+bool    | inv | =n |  [y/n] | 	if y, do inverse transform 
+int     | nv | = |   | 	number of velocities (if inv=n) 
+float   | tp | =t0 |   | 	
+float   | vmax | = |   | 	maximum velocity (if inv=n) 
+float   | vmin | = |   | 	minimum velocity (if inv=n) 
+[DIRECTORY]
+system/seismic

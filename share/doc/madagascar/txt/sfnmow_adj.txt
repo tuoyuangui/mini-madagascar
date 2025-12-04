@@ -1,0 +1,9 @@
+Program sfnmow_adj | None
+[SYNOPSIS]
+sfnmow_adj < inp.rsf > out.rsf gather=gather.rsf adj=n nw=3
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	
+file    | gather | = |   | 	auxiliary input file name
+int     | nw | =3 |   | 	
+[DIRECTORY]
+system/seismic

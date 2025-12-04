@@ -1,0 +1,13 @@
+Program sftaupmo | Normal moveout in tau-p domain. 
+[SYNOPSIS]
+sftaupmo < taup.rsf velocity=velocity.rsf > nmod.rsf slope=slope.rsf velx=velocityx.rsf mute=12 str=0.5 extend=4 interval=y
+[PARAMETERS]
+int     | extend | =4 |   | 	interpolation accuracy 
+bool    | interval | =y |  [y/n] | 	use interval velocity 
+int     | mute | =12 |   | 	mute zone 
+string  | slope | = |   | 	auxiliary input file name
+float   | str | =0.5 |   | 	maximum stretch 
+file    | velocity | = |   | 	auxiliary input file name
+string  | velx | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/seismic

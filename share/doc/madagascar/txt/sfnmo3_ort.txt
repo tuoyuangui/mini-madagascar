@@ -1,0 +1,18 @@
+Program sfnmo3_ort | 3-D Normal moveout using orthogonal parametrization
+[SYNOPSIS]
+sfnmo3_ort < cmp.rsf > nmod.rsf velocity=vel.rsf offset=offset.rsf half=y eps=0.01 mute=12 extend=8
+[COMMENTS]
+
+input data has gathers along *4th* axis; 
+velocity file contains slowness squared with n2=3 (Wavg,Wcos,Wsin);
+offset file contains x,y offset pairs for input data
+
+[PARAMETERS]
+float   | eps | =0.01 |   | 	stretch regularization 
+int     | extend | =8 |   | 	trace extension 
+bool    | half | =y |  [y/n] | 	if y, the second and third axes are half-offset instead of full offset 
+int     | mute | =12 |   | 	mute zone 
+string  | offset | = |   | 	auxiliary input file name
+file    | velocity | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/seismic

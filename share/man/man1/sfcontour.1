@@ -1,0 +1,85 @@
+.TH sfcontour 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfcontour \- Contour plot.\n.SH SYNOPSIS
+.B sfcontour < in.rsf c= min1=o1 min2=o2 max1=o1+(n1-1)*d1 max2=o2+(n2-1)*d2 nc=50 dc= c0= transp=y minval= maxval= allpos=y cfile= barlabel= > plot.vpl
+.SH COMMENTS
+Run "sfdoc stdplot" for more parameters.
+
+December 2011 program of the month:
+http://ahay.org/blog/2011/12/03/programs-of-the-month-sfcontour/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B allpos
+.B =y
+.R  [y/n]	contour positive values only
+.TP
+.I string 
+.B barlabel
+.B =
+.R  	scale bar label
+.TP
+.I floats 
+.B c
+.B =
+.R  	 [nc]
+.TP
+.I float  
+.B c0
+.B =
+.R  	first contour
+.TP
+.I string 
+.B cfile
+.B =
+.R  	contours in a file
+.TP
+.I float  
+.B dc
+.B =
+.R  	contour increment
+.TP
+.I float  
+.B max1
+.B =o1+(n1-1)*d1
+.R  	maximum on 1st axis
+.TP
+.I float  
+.B max2
+.B =o2+(n2-1)*d2
+.R  	maximum on 2nd axis
+.TP
+.I float  
+.B maxval
+.B =
+.R  	maximum value for scalebar (default is the data maximum)
+.TP
+.I float  
+.B min1
+.B =o1
+.R  	minimum on 1st axis
+.TP
+.I float  
+.B min2
+.B =o2
+.R  	minimum on 2nd axis
+.TP
+.I float  
+.B minval
+.B =
+.R  	minimum value for scalebar (default is the data minimum)
+.TP
+.I int    
+.B nc
+.B =50
+.R  	number of contours
+.TP
+.I bool   
+.B transp
+.B =y
+.R  [y/n]	if y, transpose the axes
+.SH SOURCE
+.I plot/main/contour.c
+.SH VERSION
+4.2

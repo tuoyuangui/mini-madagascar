@@ -1,0 +1,14 @@
+Program sfkirchnew | Kirchhoff 2-D post-stack time migration and modeling with antialiasing. 
+[SYNOPSIS]
+sfkirchnew < in.rsf > out.rsf velocity=vel.rsf adj=y hd=y sw=0 v0=
+[COMMENTS]
+
+Antialiasing by reparameterization. 
+[PARAMETERS]
+bool    | adj | =y |  [y/n] | 	yes: migration, no: modeling 
+bool    | hd | =y |  [y/n] | 	if y, apply half-derivative filter 
+int     | sw | =0 |   | 	if > 0, select a branch of the antialiasing operation 
+float   | v0 | = |   | 	constant velocity (if no velocity=) 
+string  | velocity | = |   | 	velocity file (auxiliary input file name)
+[DIRECTORY]
+system/seismic

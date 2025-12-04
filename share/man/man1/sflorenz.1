@@ -1,0 +1,54 @@
+.TH sflorenz 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsflorenz \- Generate Lorenz attractor. \n.SH SYNOPSIS
+.B sflorenz > out.rsf niter=1000 n=niter rho=28.00 sigma=10.00 beta=8.00/3.00 x0=3.051522 y0=1.582542 z0=15.62388 dt=0.0001
+.SH PARAMETERS
+.PD 0
+.TP
+.I double 
+.B beta
+.B =8.00/3.00
+.R  	Beta reference
+.TP
+.I double 
+.B dt
+.B =0.0001
+.R  	time step
+.TP
+.I int    
+.B n
+.B =niter
+.R  	set maximum
+.TP
+.I int    
+.B niter
+.B =1000
+.R  	number of iterations
+.TP
+.I double 
+.B rho
+.B =28.00
+.R  	Rayleigh number
+.TP
+.I double 
+.B sigma
+.B =10.00
+.R  	Prandtl number
+.TP
+.I double 
+.B x0
+.B =3.051522
+.R  	intial x coordinate
+.TP
+.I double 
+.B y0
+.B =1.582542
+.R  	intial y coordinate
+.TP
+.I double 
+.B z0
+.B =15.62388
+.R  	intial z coordinate
+.SH SOURCE
+.I system/generic/Mlorenz.c
+.SH VERSION
+4.2

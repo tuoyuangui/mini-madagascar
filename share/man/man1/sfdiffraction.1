@@ -1,0 +1,29 @@
+.TH sfdiffraction 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfdiffraction \- Generate diffractions in zero-offset data. \n.SH SYNOPSIS
+.B sfdiffraction < w1.rsf w2=w2.rsf w12=w12.rsf spikes=spikes.rsf > data.rsf freq=0.2/dt
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B freq
+.B =0.2/dt
+.R  	peak frequency for Ricker wavelet
+.TP
+.I file   
+.B spikes
+.B =
+.R  	auxiliary input file name
+.TP
+.I file   
+.B w12
+.B =
+.R  	auxiliary input file name
+.TP
+.I file   
+.B w2
+.B =
+.R  	auxiliary input file name
+.SH SOURCE
+.I system/seismic/Mdiffraction.c
+.SH VERSION
+4.2

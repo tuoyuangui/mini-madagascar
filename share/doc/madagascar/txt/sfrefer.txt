@@ -1,0 +1,7 @@
+Program sfrefer | Subtract a reference from a grid. 
+[SYNOPSIS]
+sfrefer < in.rsf > out.rsf ref=ref.rsf
+[PARAMETERS]
+file    | ref | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/seismic

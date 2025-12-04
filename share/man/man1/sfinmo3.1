@@ -1,0 +1,33 @@
+.TH sfinmo3 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfinmo3 \- 3-D Inverse normal moveout.\n.SH SYNOPSIS
+.B sfinmo3 < cmp.rsf > nmod.rsf velocity=vel.rsf half=y eps=0.01 extend=8
+.SH COMMENTS
+
+velocity file contains slowness squared with n2=3 (wx,wy,wxy)
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B eps
+.B =0.01
+.R  	stretch regularization
+.TP
+.I int    
+.B extend
+.B =8
+.R  	trace extension
+.TP
+.I bool   
+.B half
+.B =y
+.R  [y/n]	if y, the second and third axes are half-offset instead of full offset
+.TP
+.I file   
+.B velocity
+.B =
+.R  	auxiliary input file name
+.SH SOURCE
+.I system/seismic/Minmo3.c
+.SH VERSION
+4.2

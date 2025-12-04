@@ -1,0 +1,54 @@
+.TH sfiwarp2 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfiwarp2 \- Inverse 2-D warping \n.SH SYNOPSIS
+.B sfiwarp2 < in.rsf > out.rsf warp=warp.rsf inv=y n1=nt n2=nx eps=0.01 d1=1 o1=0 d2=1 o2=0
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B d1
+.B =1
+.R  	output sampling - for inv=y
+.TP
+.I float  
+.B d2
+.B =1
+.R  	output sampling - for inv=y
+.TP
+.I float  
+.B eps
+.B =0.01
+.R  	stretch regularization
+.TP
+.I bool   
+.B inv
+.B =y
+.R  [y/n]	inversion flag
+.TP
+.I int    
+.B n1
+.B =nt
+.R  
+.TP
+.I int    
+.B n2
+.B =nx
+.R  	output samples - for inv=y
+.TP
+.I float  
+.B o1
+.B =0
+.R  	output origin - for inv=y
+.TP
+.I float  
+.B o2
+.B =0
+.R  	output origin - for inv=y
+.TP
+.I file   
+.B warp
+.B =
+.R  	auxiliary input file name
+.SH SOURCE
+.I system/seismic/Miwarp2.c
+.SH VERSION
+4.2

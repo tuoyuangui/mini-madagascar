@@ -1,0 +1,291 @@
+.TH sfimage 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfimage \- X IMAGE plot of a uniformly-sampled function f(x1,x2).\n.SH SYNOPSIS
+.B sfimage < in.rsf curve= npair= curvecolor= curvecolor= ncurve=0 ncurvecolor=0 clip= clip= perc=100.0 balance=n bclip= bperc=perc wclip= wperc=100.0-perc verbose=y blockinterp=n legend=n blank=0.0f xbox=50 ybox=50 wbox=550 hbox=700 lwidth=16 lheight=hbox/3 lx=3 ly=(hbox-lheight)/3 x1beg=x1min x1end=x1max d1num=0.0 f1num=x1min n1tic=1 x2beg=x2min x2end=x2max d2num=0.0 f2num=0.0 n2tic=1 labelsize=18.0 titlesize=24.0 mpicks= cmap= units= legendfont= grid1= label1= grid2= label2= labelfont= title= titlefont= style= titlecolor= labelcolor= gridcolor= windowtitle=
+.SH COMMENTS
+X Functionality:							
+Button 1	Zoom with rubberband box				
+Button 2	Show mouse (x1,x2) coordinates while pressed		
+q or Q key	Quit							
+s key		Save current mouse (x1,x2) location to file		
+a or page up keys		enhance clipping by 10%			
+c or page down keys		reduce clipping by 10%			
+up,down,left,right keys	move zoom window by half width/height	
+i or +(keypad) 		zoom in by factor 2 			
+o or -(keypad) 		zoom out by factor 2 			
+									
+... change colormap interactively					
+r	     install next RGB - colormap				
+R	     install previous RGB - colormap				
+h	     install next HSV - colormap				
+H	     install previous HSV - colormap				
+H	     install previous HSV - colormap				
+(Move mouse cursor out and back into window for r,R,h,H to take effect)
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B balance
+.B =n
+.R  [y/n]	if false, determine bclip & wclip individually; 
+	   else set them to the same abs value
+.TP
+.I float  
+.B bclip
+.B =
+.R  
+.TP
+.I float  
+.B blank
+.B =0.0f
+.R  	portion of the lower range to blank out
+.TP
+.I bool   
+.B blockinterp
+.B =n
+.R  [y/n]	whether to use block interpolation
+.TP
+.I float  
+.B bperc
+.B =perc
+.R  	percentile for determining black clip value
+.TP
+.I float  
+.B clip
+.B =
+.R  
+.TP
+.I string 
+.B cmap
+.B =
+.R  	colormap specification (hsv# or rgb#)
+.TP
+.I strings
+.B curve
+.B =
+.R  	file(s) containing points to draw curve(s)  [curve]
+.TP
+.I strings
+.B curvecolor
+.B =
+.R  	color(s) for curve(s)  [ncurvecolor]
+.TP
+.I float  
+.B d1num
+.B =0.0
+.R  	numbered tic interval on axis 1 (0.0 for automatic)
+.TP
+.I float  
+.B d2num
+.B =0.0
+.R  	numbered tic interval on axis 2 (0.0 for automatic)
+.TP
+.I float  
+.B f1num
+.B =x1min
+.R  	first numbered tic on axis 1 (used if d1num not 0.0)
+.TP
+.I float  
+.B f2num
+.B =0.0
+.R  	first numbered tic on axis 2 (used if d2num not 0.0)
+.TP
+.I string 
+.B grid1
+.B =
+.R  	grid lines on axis 1 (none, dot, dash, or solid)
+.TP
+.I string 
+.B grid2
+.B =
+.R  	grid lines on axis 2 (none, dot, dash, or solid)
+.TP
+.I string 
+.B gridcolor
+.B =
+.R  	color for grid lines
+.TP
+.I int    
+.B hbox
+.B =700
+.R  	height in pixels of window
+.TP
+.I string 
+.B label1
+.B =
+.R  	label on axis 1
+.TP
+.I string 
+.B label2
+.B =
+.R  	label on axis 2
+.TP
+.I string 
+.B labelcolor
+.B =
+.R  	color for axes labels
+.TP
+.I string 
+.B labelfont
+.B =
+.R  	font name for axes labels
+.TP
+.I float  
+.B labelsize
+.B =18.0
+.R  
+.TP
+.I bool   
+.B legend
+.B =n
+.R  [y/n]	if display the color scale
+.TP
+.I string 
+.B legendfont
+.B =
+.R  	font name for legend
+.TP
+.I int    
+.B lheight
+.B =hbox/3
+.R  	colorscale (legend) height in pixels
+.TP
+.I int    
+.B lwidth
+.B =16
+.R  	colorscale (legend) width in pixels
+.TP
+.I int    
+.B lx
+.B =3
+.R  	colorscale (legend) x-position in pixels
+.TP
+.I int    
+.B ly
+.B =(hbox-lheight)/3
+.R  	colorscale (legend) y-position in pixels
+.TP
+.I string 
+.B mpicks
+.B =
+.R  	file to save mouse picks
+.TP
+.I int    
+.B n1tic
+.B =1
+.R  	number of tics per numbered tic on axis 1
+.TP
+.I int    
+.B n2tic
+.B =1
+.R  	number of tics per numbered tic on axis 2
+.TP
+.I int    
+.B ncurve
+.B =0
+.R  	number of curves to draw
+.TP
+.I int    
+.B ncurvecolor
+.B =0
+.R  	number of curve colors
+.TP
+.I ints   
+.B npair
+.B =
+.R  	number(s) of pairs in each curve file  [curve]
+.TP
+.I float  
+.B perc
+.B =100.0
+.R  	percentile used to determine clip
+.TP
+.I string 
+.B style
+.B =
+.R  	normal (axis 1 horizontal, axis 2 vertical) 
+	or  seismic (axis 1 vertical, axis 2 horizontal)
+.TP
+.I string 
+.B title
+.B =
+.R  	title of plot
+.TP
+.I string 
+.B titlecolor
+.B =
+.R  	color for title
+.TP
+.I string 
+.B titlefont
+.B =
+.R  	font name for title
+.TP
+.I float  
+.B titlesize
+.B =24.0
+.R  
+.TP
+.I string 
+.B units
+.B =
+.R  	unit label for legend
+.TP
+.I bool   
+.B verbose
+.B =y
+.R  [y/n]	verbose mode
+.TP
+.I int    
+.B wbox
+.B =550
+.R  	width in pixels of window
+.TP
+.I float  
+.B wclip
+.B =
+.R  
+.TP
+.I string 
+.B windowtitle
+.B =
+.R  	title on window
+.TP
+.I float  
+.B wperc
+.B =100.0-perc
+.R  	percentile for determining white clip value
+.TP
+.I float  
+.B x1beg
+.B =x1min
+.R  	value at which axis 1 begins
+.TP
+.I float  
+.B x1end
+.B =x1max
+.R  	value at which axis 1 ends
+.TP
+.I float  
+.B x2beg
+.B =x2min
+.R  	value at which axis 2 begins
+.TP
+.I float  
+.B x2end
+.B =x2max
+.R  	value at which axis 2 ends
+.TP
+.I int    
+.B xbox
+.B =50
+.R  	x in pixels of upper left corner of window
+.TP
+.I int    
+.B ybox
+.B =50
+.R  	y in pixels of upper left corner of window
+.SH SOURCE
+.I su/plot/Ximage.c
+.SH VERSION
+4.2

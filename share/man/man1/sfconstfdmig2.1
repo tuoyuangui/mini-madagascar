@@ -1,0 +1,39 @@
+.TH sfconstfdmig2 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfconstfdmig2 \- 2-D implicit finite-difference migration in constant velocity. \n.SH SYNOPSIS
+.B sfconstfdmig2 < data.rsf > imag.rsf movie=movie.rsf nz=2*(nw-1) dz=1./(nz*dw) vel= hi=y sixth=1./12
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B dz
+.B =1./(nz*dw)
+.R  	vertical time sampling
+.TP
+.I bool   
+.B hi
+.B =y
+.R  [y/n]	if y, use 45-degree; n, 15-degree
+.TP
+.I string 
+.B movie
+.B =
+.R  	auxiliary output file name
+.TP
+.I int    
+.B nz
+.B =2*(nw-1)
+.R  	vertical time samples
+.TP
+.I float  
+.B sixth
+.B =1./12
+.R  	one-sixth trick
+.TP
+.I float  
+.B vel
+.B =
+.R  	constant velocity
+.SH SOURCE
+.I system/seismic/Mconstfdmig2.c
+.SH VERSION
+4.2

@@ -1,0 +1,49 @@
+.TH sfdmo 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfdmo \- Kirchhoff DMO with antialiasing by reparameterization. \n.SH SYNOPSIS
+.B sfdmo < in.rsf > out.rsf mint=2 n=32 adj=y inv=n type=1 h= half=y velhalf=0.75
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B adj
+.B =y
+.R  [y/n]	adjoint flag
+.TP
+.I float  
+.B h
+.B =
+.R  
+.TP
+.I bool   
+.B half
+.B =y
+.R  [y/n]	if y, the third axis is half-offset instead of full offset
+.TP
+.I bool   
+.B inv
+.B =n
+.R  [y/n]	inversion flag
+.TP
+.I int    
+.B mint
+.B =2
+.R  	starting time sample
+.TP
+.I int    
+.B n
+.B =32
+.R  	number of offset samples
+.TP
+.I int    
+.B type
+.B =1
+.R  	type of amplitude (0,1,2,3)
+.TP
+.I float  
+.B velhalf
+.B =0.75
+.R  	half-velocity
+.SH SOURCE
+.I system/seismic/Mdmo.c
+.SH VERSION
+4.2

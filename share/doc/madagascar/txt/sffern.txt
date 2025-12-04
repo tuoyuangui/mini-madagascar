@@ -1,0 +1,9 @@
+Program sffern | Generate fractal fern. 
+[SYNOPSIS]
+sffern > out.rsf n=1000 seed=time(NULL) angle=y
+[PARAMETERS]
+bool    | angle | =y |  [y/n] | 	if y, use more angular fern 
+int     | n | =1000 |   | 	number of points 
+int     | seed | =time(NULL) |   | 	random seed 
+[DIRECTORY]
+system/generic

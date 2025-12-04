@@ -1,0 +1,16 @@
+Program sfcat | Concatenate datasets. 
+[SYNOPSIS]
+sfcat > out.rsf order= space= axis=3 nspace=(int) (ni/(20*nin) + 1) o= d= [<file0.rsf] file1.rsf file2.rsf ... 
+[COMMENTS]
+sfmerge inserts additional space between merged data.
+
+[PARAMETERS]
+int     | axis | =3 |   | 	Axis being merged 
+float   | d | = |   | 	axis sampling 
+int     | nspace | =(int) (ni/(20*nin) + 1) |   | 	if space=y, number of traces to insert 
+float   | o | = |   | 	axis origin 
+ints    | order | = |   | 	concatenation order  [nin]
+bool    | space | = |  [y/n] | 	Insert additional space.
+	   y is default for sfmerge, n is default for sfcat 
+[DIRECTORY]
+system/main

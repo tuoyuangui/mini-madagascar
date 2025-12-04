@@ -1,0 +1,13 @@
+Program sfcosft | Multi-dimensional cosine transform.
+[SYNOPSIS]
+sfcosft < in.rsf > out.rsf sign#=0
+[COMMENTS]
+
+The input and output are real and have the same dimensions. 
+Pad the data if you need to suppress wrap-around effects.
+
+[PARAMETERS]
+int     | sign# | =0 |   | 	transform along #-th dimension 
+	  [+1 forward or -1 backward] 
+[DIRECTORY]
+system/generic

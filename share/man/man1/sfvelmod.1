@@ -1,0 +1,28 @@
+.TH sfvelmod 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfvelmod \- Velocity transform.\n.SH SYNOPSIS
+.B sfvelmod < scan.rsf > cmp.rsf half=y extend=4 slowness=n
+.SH COMMENTS
+
+Inverse of sfvscan.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B extend
+.B =4
+.R  	trace extension
+.TP
+.I bool   
+.B half
+.B =y
+.R  [y/n]	if y, the second axis is half-offset instead of full offset
+.TP
+.I bool   
+.B slowness
+.B =n
+.R  [y/n]	if y, use slowness instead of velocity
+.SH SOURCE
+.I system/seismic/Mvelmod.c
+.SH VERSION
+4.2

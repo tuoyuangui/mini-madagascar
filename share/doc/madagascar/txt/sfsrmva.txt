@@ -1,0 +1,19 @@
+Program sfsrmva | 3-D S/R WEMVA with extended split-step 
+[SYNOPSIS]
+sfsrmva slo=Bs.rsf swf=Bw_s.rsf rwf=Bw_r.rsf < Pi.rsf > Ps.rsf verb=y eps=0.01 adj=n twoway=y nrmax=1 dtmax=0.004 pmx=0 pmy=0 tmx=0 tmy=0
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	y=ADJ scat; n=FWD scat 
+float   | dtmax | =0.004 |   | 	max time error 
+float   | eps | =0.01 |   | 	stability parameter 
+int     | nrmax | =1 |   | 	max number of refs 
+int     | pmx | =0 |   | 	padding on x 
+int     | pmy | =0 |   | 	padding on y 
+file    | rwf | = |   | 	auxiliary input file name
+file    | slo | = |   | 	auxiliary input file name
+file    | swf | = |   | 	auxiliary input file name
+int     | tmx | =0 |   | 	taper on x   
+int     | tmy | =0 |   | 	taper on y   
+bool    | twoway | =y |  [y/n] | 	two-way traveltime 
+bool    | verb | =y |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+system/seismic

@@ -1,0 +1,15 @@
+Program sflineiko | Iterative solution of the linearized eikonal equation. 
+[SYNOPSIS]
+sflineiko < time.rsf > dtime.rsf time=time0.rsf slow=slow.rsf mask=mask.rsf squared=y adj=n inv=n niter=1 tol=0.001 what=
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	adjoint flag (for what=linear) 
+bool    | inv | =n |  [y/n] | 	inverse flag (for what=linear) 
+string  | mask | = |   | 	auxiliary input file name
+int     | niter | =1 |   | 	maximum number of iterations 
+file    | slow | = |   | 	auxiliary input file name
+bool    | squared | =y |  [y/n] | 	if slowness is squared 
+string  | time | = |   | 	auxiliary input file name
+float   | tol | =0.001 |   | 	tolerance for convergence 
+string  | what | = |   | 	what to compute 
+[DIRECTORY]
+system/seismic

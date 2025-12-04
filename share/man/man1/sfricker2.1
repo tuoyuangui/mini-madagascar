@@ -1,0 +1,49 @@
+.TH sfricker2 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfricker2 \- Nonstationary convolution with a Ricker wavelet. Phase and Frequency can be time-varying. \n.SH SYNOPSIS
+.B sfricker2 < in.rsf > out.rsf tfreq=tfre.rsf tphase=tpha.rsf frequency= freq=0.2 esp=0. norm=n hiborder=6 hibref=1.
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B esp
+.B =0.
+.R  	if norm=y, stable parameter
+.TP
+.I float  
+.B freq
+.B =0.2
+.R  	peak frequency for Ricker wavelet (as fraction of Nyquist)
+.TP
+.I float  
+.B frequency
+.B =
+.R  	peak frequency for Ricker wavelet (in Hz)
+.TP
+.I int    
+.B hiborder
+.B =6
+.R  	Hilbert transformer order
+.TP
+.I float  
+.B hibref
+.B =1.
+.R  
+.TP
+.I bool   
+.B norm
+.B =n
+.R  [y/n]
+.TP
+.I file   
+.B tfreq
+.B =
+.R  	auxiliary input file name
+.TP
+.I string 
+.B tphase
+.B =
+.R  	auxiliary input file name
+.SH SOURCE
+.I system/seismic/Mricker2.c
+.SH VERSION
+4.2

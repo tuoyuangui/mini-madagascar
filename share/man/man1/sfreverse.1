@@ -1,0 +1,39 @@
+.TH sfreverse 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfreverse \- Reverse one or more axes in the data hypercube. \n.SH SYNOPSIS
+.B sfreverse < in.rsf > out.rsf which=-1 verb=n memsize=sf_memsize() opt=
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B memsize
+.B =sf_memsize()
+.R  	Max amount of RAM (in Mb) to be used
+.TP
+.I string 
+.B opt
+.B =
+.R  	If y, change o and d parameters on the reversed axis;
+       if i, don't change o and d
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]	Verbosity flag
+.TP
+.I int    
+.B which
+.B =-1
+.R  	Which axis to reverse.
+       To reverse a given axis, start with 0,
+       add 1 to number to reverse n1 dimension,
+       add 2 to number to reverse n2 dimension,
+       add 4 to number to reverse n3 dimension, etc.
+       Thus, which=7 would reverse the first three dimensions,
+       which=5 just n1 and n3, etc.
+       which=0 will just pass the input on through unchanged.
+.SH SOURCE
+.I system/main/reverse.c
+.SH DOCUMENTATION
+.BR http://ahay.org/wiki/Guide_to_madagascar_programs#sfreverse
+.SH VERSION
+4.2

@@ -1,0 +1,31 @@
+Program sfstretch | Stretch of the time axis. 
+[SYNOPSIS]
+sfstretch < in.rsf > out.rsf datum=dat.rsf inv=n dens=1 verb=y v0= half=y CDPtype= delay= tdelay= hdelay= scale= nout=dens*n1 extend=4 mute=0 maxstr=0 rule=
+[PARAMETERS]
+int     | CDPtype | = |   | 	
+file    | datum | = |   | 	auxiliary input file name
+float   | delay | = |   | 	time delay for rule=lmo 
+int     | dens | =1 |   | 	axis stretching factor 
+int     | extend | =4 |   | 	trace extension 
+bool    | half | =y |  [y/n] | 	if y, the second axis is half-offset instead of full offset 
+float   | hdelay | = |   | 	offset delay for rule=rad 
+bool    | inv | =n |  [y/n] | 	if y, do inverse stretching 
+float   | maxstr | =0 |   | 	maximum stretch 
+int     | mute | =0 |   | 	tapering size 
+int     | nout | =dens*n1 |   | 	output axis length (if inv=n) 
+string  | rule | = |   | 	Stretch rule:
+	   n - constant-velocity normal moveout (nmostretch), default
+	   l - linear moveout (lmostretch)
+	   L - logarithmic stretch (logstretch)
+	   2 - t^2 stretch (t2stretch)
+	   c - t^2 chebyshev stretch (t2chebstretch)
+	   r - radial moveout (radstretch)
+	   d - datuming (datstretch)
+	   s - s*t scaling stretch (scalestretch)
+	
+float   | scale | = |   | 	scaling factor for rule=scale 
+float   | tdelay | = |   | 	time delay for rule=rad 
+float   | v0 | = |   | 	moveout velocity 
+bool    | verb | =y |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+system/seismic

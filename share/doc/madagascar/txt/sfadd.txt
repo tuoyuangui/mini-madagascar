@@ -1,0 +1,33 @@
+Program sfadd | Add, multiply, or divide  RSF datasets.
+[SYNOPSIS]
+sfadd > out.rsf scale= add= sqrt= abs= log= exp= mode= [< file0.rsf] file1.rsf file2.rsf ...
+[COMMENTS]
+The various operations, if selected, occur in the following order:
+
+(1) Take absolute value, abs=
+(2) Add a scalar, add=
+(3) Take the natural logarithm, log=
+(4) Take the square root, sqrt=
+(5) Multiply by a scalar, scale=
+(6) Compute the base-e exponential, exp=
+(7) Add, multiply, or divide the data sets, mode=
+
+sfadd operates on integer, float, or complex data, but all the input
+and output files must be of the same data type.
+
+An alternative to sfadd is sfmath, which is more versatile, but may be
+less efficient.
+
+[PARAMETERS]
+bools   | abs | = |   | 	If true take absolute value  [nin]
+floats  | add | = |   | 	Scalar values to add to each dataset  [nin]
+bools   | exp | = |   | 	If true compute exponential  [nin]
+bools   | log | = |   | 	If true take logarithm  [nin]
+string  | mode | = |   | 	'a' means add (default), 
+	  'p' or 'm' means multiply, 
+	  'd' means divide 
+       
+floats  | scale | = |   | 	Scalar values to multiply each dataset with  [nin]
+bools   | sqrt | = |   | 	If true take square root  [nin]
+[DIRECTORY]
+system/main

@@ -1,0 +1,29 @@
+.TH sfricker 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfricker \- Ricker wavelet estimation. \n.SH SYNOPSIS
+.B sfricker < in.rsf > out.rsf ma=ma.rsf m=f0+0.25*(na-1)*df niter=100 verb=n
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B m
+.B =f0+0.25*(na-1)*df
+.R  	initial frequency
+.TP
+.I file   
+.B ma
+.B =
+.R  	auxiliary output file name
+.TP
+.I int    
+.B niter
+.B =100
+.R  	number of iterations
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]	verbosity flag
+.SH SOURCE
+.I system/seismic/Mricker.c
+.SH VERSION
+4.2

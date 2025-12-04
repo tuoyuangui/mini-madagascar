@@ -1,0 +1,86 @@
+.TH sfmath 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfmath \- Mathematical operations on data files.\n.SH SYNOPSIS
+.B sfmath > out.rsf nostdin=n n#= d#=(1,1,...) o#=(0,0,...) label#= unit#= type= label= unit= output=
+.SH COMMENTS
+
+Known functions: 
+cos,  sin,  tan,  acos,  asin,  atan, 
+cosh, sinh, tanh, acosh, asinh, atanh,
+exp,  log,  sqrt, abs,
+erf,  erfc, sign (for float data),
+arg,  conj, real, imag (for complex data).
+
+sfmath will work on float or complex data, but all the input and output
+files must be of the same data type.
+
+An alternative to sfmath is sfadd, which may be more efficient, but is
+less versatile.
+
+Examples:
+
+sfmath x=file1.rsf y=file2.rsf power=file3.rsf output='sin((x+2*y)^power)' > out.rsf
+sfmath < file1.rsf tau=file2.rsf output='exp(tau*input)' > out.rsf
+sfmath n1=100 type=complex output="exp(I*x1)" > out.rsf
+
+Arguments which are not treated as variables in mathematical expressions:
+datapath=, type=, out=
+
+See also: sfheadermath.
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B d#
+.B =(1,1,...)
+.R  	sampling on #-th axis
+.TP
+.I string 
+.B label
+.B =
+.R  	data label
+.TP
+.I string 
+.B label#
+.B =
+.R  	label on #-th axis
+.TP
+.I largeint
+.B n#
+.B =
+.R  	size of #-th axis
+.TP
+.I bool   
+.B nostdin
+.B =n
+.R  [y/n]	y - ignore stdin
+.TP
+.I float  
+.B o#
+.B =(0,0,...)
+.R  	origin on #-th axis
+.TP
+.I string 
+.B output
+.B =
+.R  	Mathematical description of the output
+.TP
+.I string 
+.B type
+.B =
+.R  	output data type [float,complex]
+.TP
+.I string 
+.B unit
+.B =
+.R  	data unit
+.TP
+.I string 
+.B unit#
+.B =
+.R  	unit on #-th axis
+.SH SOURCE
+.I system/main/math.c
+.SH DOCUMENTATION
+.BR http://ahay.org/wiki/Guide_to_madagascar_programs#sfmath
+.SH VERSION
+4.2

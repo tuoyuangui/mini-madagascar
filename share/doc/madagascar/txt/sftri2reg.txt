@@ -1,0 +1,18 @@
+Program sftri2reg | Interpolate triangulated triplets to a regular grid. 
+[SYNOPSIS]
+sftri2reg < in.rsf > out.rsf pattern=pattern.rsf edgein=edge.rsf nodeout=out2.rsf edgeout=edge2.rsf n1= n2= d1=1. d2=1. o1=0. o2=0. zero=0. nr=0
+[PARAMETERS]
+float   | d1 | =1. |   | 	
+float   | d2 | =1. |   | 	
+string  | edgein | = |   | 	input edge file (auxiliary input file name)
+string  | edgeout | = |   | 	auxiliary output file name
+int     | n1 | = |   | 	
+int     | n2 | = |   | 	
+string  | nodeout | = |   | 	auxiliary output file name
+int     | nr | =0 |   | 	number of refinements 
+float   | o1 | =0. |   | 	
+float   | o2 | =0. |   | 	
+string  | pattern | = |   | 	pattern file for output dimensions (auxiliary input file name)
+float   | zero | =0. |   | 	level surface 
+[DIRECTORY]
+system/generic

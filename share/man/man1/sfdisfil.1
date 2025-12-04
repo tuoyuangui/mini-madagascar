@@ -1,0 +1,48 @@
+.TH sfdisfil 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfdisfil \- Print out data values.\n.SH SYNOPSIS
+.B sfdisfil < in.rsf number=y col=0 format= header= trailer=
+.SH COMMENTS
+
+Alternatively, use sfdd and convert to ASCII form.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B col
+.B =0
+.R  	Number of columns.
+       The default depends on the data type:
+       10 for int and char,
+       5 for float,
+       3 for complex
+.TP
+.I string 
+.B format
+.B =
+.R  	Format for numbers (printf-style).
+       The default depends on the data type:
+       "%4d " for int and char,
+       "%13.4g" for float,
+       "%10.4g,%10.4gi" for complex
+.TP
+.I string 
+.B header
+.B =
+.R  	Optional header string to output before data
+.TP
+.I bool   
+.B number
+.B =y
+.R  [y/n]	If number the elements
+.TP
+.I string 
+.B trailer
+.B =
+.R  	Optional trailer string to output after data
+.SH SOURCE
+.I system/main/disfil.c
+.SH DOCUMENTATION
+.BR http://ahay.org/wiki/Guide_to_madagascar_programs#sfdisfil
+.SH VERSION
+4.2

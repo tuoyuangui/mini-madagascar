@@ -1,0 +1,24 @@
+Program sfgrey4 | Generate movie of 3-D cube plots.
+[SYNOPSIS]
+sfgrey4 < in.rsf point1=0.5 point2=0.5 frame1=0 frame2=n2-1 frame3=0 n1pix=n1/point1+n3/(1.-point1) n2pix=n2/point2+n3/(1.-point2) flat=y scalebar=n minval= maxval= barreverse=n nreserve=8 bar= color= > plot.vpl
+[COMMENTS]
+Requires an "unsigned char" input (the output of sfbyte).
+
+[PARAMETERS]
+string  | bar | = |   | 	file for scalebar data 
+bool    | barreverse | =n |  [y/n] | 	if y, go from small to large on the bar scale 
+string  | color | = |   | 	color scheme (default is i) 
+bool    | flat | =y |  [y/n] | 	if n, display perspective view 
+int     | frame1 | =0 |   | 	top frame number 
+int     | frame2 | =n2-1 |   | 	side frame number 
+int     | frame3 | =0 |   | 	front frame number 
+float   | maxval | = |   | 	maximum value for scalebar (default is the data maximum) 
+float   | minval | = |   | 	minimum value for scalebar (default is the data minimum) 
+int     | n1pix | =n1/point1+n3/(1.-point1) |   | 	number of vertical pixels 
+int     | n2pix | =n2/point2+n3/(1.-point2) |   | 	number of horizontal pixels 
+int     | nreserve | =8 |   | 	reserved colors 
+float   | point1 | =0.5 |   | 	fraction of the vertical axis for front face 
+float   | point2 | =0.5 |   | 	fraction of the horizontal axis for front face 
+bool    | scalebar | =n |  [y/n] | 	if y, draw scalebar 
+[DIRECTORY]
+plot/main

@@ -1,0 +1,8 @@
+Program sfigrad | Gradient on the first axis. 
+[SYNOPSIS]
+sfigrad < in.rsf > out.rsf square=n adj=n
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	adjoint flag 
+bool    | square | =n |  [y/n] | 	if y, use gradient squared 
+[DIRECTORY]
+system/generic

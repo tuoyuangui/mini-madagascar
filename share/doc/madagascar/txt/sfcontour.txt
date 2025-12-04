@@ -1,0 +1,26 @@
+Program sfcontour | Contour plot.
+[SYNOPSIS]
+sfcontour < in.rsf c= min1=o1 min2=o2 max1=o1+(n1-1)*d1 max2=o2+(n2-1)*d2 nc=50 dc= c0= transp=y minval= maxval= allpos=y cfile= barlabel= > plot.vpl
+[COMMENTS]
+Run "sfdoc stdplot" for more parameters.
+
+December 2011 program of the month:
+http://ahay.org/blog/2011/12/03/programs-of-the-month-sfcontour/
+
+[PARAMETERS]
+bool    | allpos | =y |  [y/n] | 	contour positive values only 
+string  | barlabel | = |   | 	scale bar label 
+floats  | c | = |   | 	 [nc]
+float   | c0 | = |   | 	first contour 
+string  | cfile | = |   | 	contours in a file 
+float   | dc | = |   | 	contour increment 
+float   | max1 | =o1+(n1-1)*d1 |   | 	maximum on 1st axis 
+float   | max2 | =o2+(n2-1)*d2 |   | 	maximum on 2nd axis 
+float   | maxval | = |   | 	maximum value for scalebar (default is the data maximum) 
+float   | min1 | =o1 |   | 	minimum on 1st axis 
+float   | min2 | =o2 |   | 	minimum on 2nd axis 
+float   | minval | = |   | 	minimum value for scalebar (default is the data minimum) 
+int     | nc | =50 |   | 	number of contours 
+bool    | transp | =y |  [y/n] | 	if y, transpose the axes 
+[DIRECTORY]
+plot/main

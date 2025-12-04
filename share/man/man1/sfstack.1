@@ -1,0 +1,50 @@
+.TH sfstack 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfstack \- Stack a dataset over one of the dimensions.\n.SH SYNOPSIS
+.B sfstack < in.rsf > out.rsf scale= axis=2 rms=n norm=y min=n max=n prod=n
+.SH COMMENTS
+
+This operation is adjoint to sfspray.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B axis
+.B =2
+.R  	which axis to stack. If axis=0, stack over all dimensions
+.TP
+.I bool   
+.B max
+.B =n
+.R  [y/n]	If y, find maximum instead of stack. Ignores rms and norm.
+.TP
+.I bool   
+.B min
+.B =n
+.R  [y/n]	If y, find minimum instead of stack. Ignores rms and norm.
+.TP
+.I bool   
+.B norm
+.B =y
+.R  [y/n]	If y, normalize by fold.
+.TP
+.I bool   
+.B prod
+.B =n
+.R  [y/n]	If y, find product instead of stack. Ignores rms and norm.
+.TP
+.I bool   
+.B rms
+.B =n
+.R  [y/n]	If y, compute the root-mean-square instead of stack.
+.TP
+.I floats 
+.B scale
+.B =
+.R  	 [nAXIS]
+.SH SOURCE
+.I system/main/stack.c
+.SH DOCUMENTATION
+.BR http://ahay.org/wiki/Guide_to_madagascar_programs#sfstack
+.SH VERSION
+4.2

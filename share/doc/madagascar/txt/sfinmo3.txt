@@ -1,0 +1,14 @@
+Program sfinmo3 | 3-D Inverse normal moveout.
+[SYNOPSIS]
+sfinmo3 < cmp.rsf > nmod.rsf velocity=vel.rsf half=y eps=0.01 extend=8
+[COMMENTS]
+
+velocity file contains slowness squared with n2=3 (wx,wy,wxy)
+
+[PARAMETERS]
+float   | eps | =0.01 |   | 	stretch regularization 
+int     | extend | =8 |   | 	trace extension 
+bool    | half | =y |  [y/n] | 	if y, the second and third axes are half-offset instead of full offset 
+file    | velocity | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/seismic

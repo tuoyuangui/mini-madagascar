@@ -1,0 +1,9 @@
+Program sfpostfilter2 | Convert B-spline coefficients to data in 2-D. 
+[SYNOPSIS]
+sfpostfilter2 < in.rsf > out.rsf nw= vert=y horz=y
+[PARAMETERS]
+bool    | horz | =y |  [y/n] | 	include filter on the second axis 
+int     | nw | = |   | 	filter size 
+bool    | vert | =y |  [y/n] | 	include filter on the first axis 
+[DIRECTORY]
+system/generic

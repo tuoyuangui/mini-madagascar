@@ -1,0 +1,28 @@
+.TH sfcconjgradmpi 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfcconjgradmpi \- Generic conjugate-gradient solver for linear inversion.\n.SH SYNOPSIS
+.B sfcconjgradmpi mod=mod.rsf x0=x0.rsf niter=1
+.SH COMMENTS
+
+In this version, the linear operator program uses --input and --output instead of stdin and stdout.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I file   
+.B mod
+.B =
+.R  	auxiliary input file name
+.TP
+.I int    
+.B niter
+.B =1
+.R  	number of iterations
+.TP
+.I string 
+.B x0
+.B =
+.R  	auxiliary input file name
+.SH SOURCE
+.I system/main/cconjgradmpi.c
+.SH VERSION
+4.2

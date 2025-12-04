@@ -1,0 +1,80 @@
+.TH sfgraph 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfgraph \- Graph plot.\n.SH SYNOPSIS
+.B sfgraph < in.rsf depth=depth.rsf symbolsz= scalebar=n wantframenum=(bool) (n3 > 1) nreserve=8 minval= maxval= barreverse=n pclip=100. transp=n color= bar= symbol= > plot.vpl
+.SH COMMENTS
+Run "sfdoc stdplot" for more parameters.
+
+August 2011 program of the month:
+http://ahay.org/blog/2011/08/09/program-of-the-month-sfgraph/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I string 
+.B bar
+.B =
+.R  	file for scalebar data
+.TP
+.I bool   
+.B barreverse
+.B =n
+.R  [y/n]	if y, go from small to large on the bar scale
+.TP
+.I string 
+.B color
+.B =
+.R  	color scheme (default is j)
+.TP
+.I string 
+.B depth
+.B =
+.R  	auxiliary input file name
+.TP
+.I float  
+.B maxval
+.B =
+.R  	maximum value for scalebar (default is the data maximum)
+.TP
+.I float  
+.B minval
+.B =
+.R  	minimum value for scalebar (default is the data minimum)
+.TP
+.I int    
+.B nreserve
+.B =8
+.R  	reserved colors
+.TP
+.I float  
+.B pclip
+.B =100.
+.R  	clip percentile
+.TP
+.I bool   
+.B scalebar
+.B =n
+.R  [y/n]	if y, draw scalebar
+.TP
+.I string 
+.B symbol
+.B =
+.R  	if set, plot with symbols instead of lines
+.TP
+.I floats 
+.B symbolsz
+.B =
+.R  	symbol size (default is 2)  [n2]
+.TP
+.I bool   
+.B transp
+.B =n
+.R  [y/n]	if y, transpose the axes
+.TP
+.I bool   
+.B wantframenum
+.B =(bool) (n3 > 1)
+.R  [y/n]	if y, display third axis position in the corner
+.SH SOURCE
+.I plot/main/graph.c
+.SH VERSION
+4.2

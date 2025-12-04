@@ -1,0 +1,12 @@
+Program sfheadercut | Zero a portion of a dataset based on a header mask.
+[SYNOPSIS]
+sfheadercut mask=head.rsf < in.rsf > out.rsf
+[COMMENTS]
+
+The input data is a collection of traces n1xn2,
+mask is an integer array of size n2.
+
+[PARAMETERS]
+file    | mask | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/main

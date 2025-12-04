@@ -1,0 +1,13 @@
+Program sfradial | Radial transform. 
+[SYNOPSIS]
+sfradial < in.rsf > out.rsf inv=n nw=2 tp=t0 xp=0. nv= vmin= vmax=
+[PARAMETERS]
+bool    | inv | =n |  [y/n] | 	if y, do inverse transform 
+int     | nv | = |   | 	number of velocities (if inv=n) 
+int     | nw | =2 |   | 	accuracy level 
+float   | tp | =t0 |   | 	
+float   | vmax | = |   | 	maximum velocity (if inv=n) 
+float   | vmin | = |   | 	minimum velocity (if inv=n) 
+float   | xp | =0. |   | 	
+[DIRECTORY]
+system/seismic

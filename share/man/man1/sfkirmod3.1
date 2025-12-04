@@ -1,0 +1,139 @@
+.TH sfkirmod3 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfkirmod3 \- Kirchhoff 3-D modeling with analytical Green's functions. \n.SH SYNOPSIS
+.B sfkirmod3 < curv.rsf > modl.rsf head=head.rsf refl=refl.rsf verb=y nt= dt=0.004 t0=0. absoff=n nsx=nx s0x=x0 dsx=dx nsy=ny s0y=y0 dsy=dy nhx=nx h0x=0. dhx=dx nhy=ny h0y=0. dhy=dy r0=1. aper=hypotf(nx*dx,ny*dy) freq=0.2/dt rgrad= dipx= dipy= type=
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B absoff
+.B =n
+.R  [y/n]	y - h0x, h0y - are not in shot coordinate system
+.TP
+.I float  
+.B aper
+.B =hypotf(nx*dx,ny*dy)
+.R  	aperture
+.TP
+.I float  
+.B dhx
+.B =dx
+.R  	inline offset increment
+.TP
+.I float  
+.B dhy
+.B =dy
+.R  	crossline offset increment
+.TP
+.I string 
+.B dipx
+.B =
+.R  
+.TP
+.I string 
+.B dipy
+.B =
+.R  
+.TP
+.I float  
+.B dsx
+.B =dx
+.R  	inline shot increment
+.TP
+.I float  
+.B dsy
+.B =dy
+.R  	crossline shot increment
+.TP
+.I float  
+.B dt
+.B =0.004
+.R  	time sampling
+.TP
+.I float  
+.B freq
+.B =0.2/dt
+.R  	peak frequency for Ricker wavelet
+.TP
+.I float  
+.B h0x
+.B =0.
+.R  	first inline offset
+.TP
+.I float  
+.B h0y
+.B =0.
+.R  	first crossline offset
+.TP
+.I string 
+.B head
+.B =
+.R  	source-receiver geometry (optional) (auxiliary input file name)
+.TP
+.I int    
+.B nhx
+.B =nx
+.R  	number of inline offsets
+.TP
+.I int    
+.B nhy
+.B =ny
+.R  	number of crossline offsets
+.TP
+.I int    
+.B nsx
+.B =nx
+.R  	number of inline shots
+.TP
+.I int    
+.B nsy
+.B =ny
+.R  	number of crossline shots
+.TP
+.I int    
+.B nt
+.B =
+.R  	time samples
+.TP
+.I float  
+.B r0
+.B =1.
+.R  	constant reflectivity
+.TP
+.I string 
+.B refl
+.B =
+.R  	auxiliary input file name
+.TP
+.I string 
+.B rgrad
+.B =
+.R  
+.TP
+.I float  
+.B s0x
+.B =x0
+.R  	first inline shot
+.TP
+.I float  
+.B s0y
+.B =y0
+.R  	first crossline shot
+.TP
+.I float  
+.B t0
+.B =0.
+.R  	time origin
+.TP
+.I string 
+.B type
+.B =
+.R  	type of velocity ('c': constant, 's': linear sloth, 'v': linear velocity)
+.TP
+.I bool   
+.B verb
+.B =y
+.R  [y/n]	verbosity
+.SH SOURCE
+.I system/seismic/Mkirmod3.c
+.SH VERSION
+4.2

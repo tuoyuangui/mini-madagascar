@@ -1,0 +1,29 @@
+.TH sfricker1 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfricker1 \- Convolution with a Ricker wavelet. \n.SH SYNOPSIS
+.B sfricker1 < in.rsf > out.rsf frequency= freq=0.2 deriv=n
+.SH COMMENTS
+
+January 2013 program of the month:
+http://ahay.org/blog/2013/01/08/program-of-the-month-sfricker1/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B deriv
+.B =n
+.R  [y/n]	apply a half-order derivative filter
+.TP
+.I float  
+.B freq
+.B =0.2
+.R  	peak frequency for Ricker wavelet (as fraction of Nyquist)
+.TP
+.I float  
+.B frequency
+.B =
+.R  	peak frequency for Ricker wavelet (in Hz)
+.SH SOURCE
+.I system/seismic/Mricker1.c
+.SH VERSION
+4.2

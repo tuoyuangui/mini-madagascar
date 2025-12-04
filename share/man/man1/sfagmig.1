@@ -1,0 +1,39 @@
+.TH sfagmig 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfagmig \- Angle-gather constant-velocity time migration. \n.SH SYNOPSIS
+.B sfagmig < in.rsf > out.rsf vel= ng= dg= g0= na=nx a=80.
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B a
+.B =80.
+.R  	maximum dip angle
+.TP
+.I float  
+.B dg
+.B =
+.R  	reflection angle sampling
+.TP
+.I float  
+.B g0
+.B =
+.R  	reflection angle origin
+.TP
+.I int    
+.B na
+.B =nx
+.R  	number of dip angles
+.TP
+.I int    
+.B ng
+.B =
+.R  	number of reflection angles
+.TP
+.I float  
+.B vel
+.B =
+.R  	velocity
+.SH SOURCE
+.I system/seismic/Magmig.c
+.SH VERSION
+4.2

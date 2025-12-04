@@ -1,0 +1,69 @@
+#!/usr/bin/env python
+
+'''
+>>> from __future__ import print_function
+>>> import m8r
+>>> par = m8r.Par(["prog","a=5","b=as","a=100"])
+>>> par.int("a")
+100
+>>> par.int("c")
+>>> par.int("c",10)
+10
+>>> spike = m8r.spike(n1=10)[0]
+>>> filtered = m8r.put(d1=0.1).bandpass(fhi=1).apply(spike)
+>>> spike.mean()
+1.0
+>>> spike[0]
+1.0
+>>> spike[2]
+1.0
+>>> spike.samples()
+10.0
+>>> spike.nonzero()
+10.0
+>>> spike2 = spike+spike
+>>> spike2.rms()
+2.0
+>>> spike3 = spike2*spike2+spike
+>>> spike3.max()
+5.0
+>>> print(spike3.dot(spike2))
+100.0
+>>> spike[5]
+1.0
+>>> spike12 = m8r.spike(n1=10,n2=3)[0]
+>>> spike12.size()
+30
+>>> spike12.size(1)
+3
+>>> spike12.shape()
+(3, 10)
+>>> spike21 = spike12.reshape([10,1,3])
+>>> spike21.shape()
+(10, 1, 3)
+>>> spike1 = spike12.reshape()
+>>> spike1.shape()
+(30,)
+>>> import os, numpy
+>>> os.system('sfspike n1=5 n2=5 k1=3 > spike.rsf')
+0
+>>> f = m8r.Input('spike.rsf')
+>>> a = numpy.zeros((3,5),dtype='float32')
+>>> f.read(a)
+>>> a[0][0]
+0.0
+>>> a[1][2]
+1.0
+>>> f2 = m8r.File(a,name='a.rsf')
+>>> f2.mean()
+0.2
+>>> b = m8r.spike(k1=2)[a]
+>>> b[2][1]
+1.0
+'''
+
+import doctest
+doctest.testmod()
+
+#>>> spike[5:7]
+#array([ 1.,  1.], dtype=float32)

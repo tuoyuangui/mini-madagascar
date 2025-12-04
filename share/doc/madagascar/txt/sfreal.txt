@@ -1,0 +1,5 @@
+Program sfreal | Extract real (sfreal) or imaginary (sfimag) part of a complex dataset. 
+[SYNOPSIS]
+sfreal < cmplx.rsf > real.rsf
+[DIRECTORY]
+system/main

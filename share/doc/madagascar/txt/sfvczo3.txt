@@ -1,0 +1,13 @@
+Program sfvczo3 | Post-stack 3-D velocity continuation. 
+[SYNOPSIS]
+sfvczo3 < in.rsf > out.rsf eps=0.01 pad=n1 pad2=2*kiss_fft_next_fast_size((n2+1)/2) verb=y nv= dv= v0=
+[PARAMETERS]
+float   | dv | = |   | 	velocity step size 
+float   | eps | =0.01 |   | 	regularization 
+int     | nv | = |   | 	velocity steps 
+int     | pad | =n1 |   | 	padding for stretch 
+int     | pad2 | =2*kiss_fft_next_fast_size((n2+1)/2) |   | 	padding for FFT 
+float   | v0 | = |   | 	starting velocity 
+bool    | verb | =y |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+system/seismic

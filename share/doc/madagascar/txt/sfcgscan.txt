@@ -1,0 +1,18 @@
+Program sfcgscan | Hyperbolic Radon transform with conjugate-directions inversion 
+[SYNOPSIS]
+sfcgscan < in.rsf > out.rsf error=err.rsf mask=msk.rsf adj=n niter=0 miter=2 psun1=1 psun2=1 anti=1. s02=0. ncycle=0 perc=50.0 fact=0.5
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	adjoint flag 
+float   | anti | =1. |   | 	antialiasing 
+string  | error | = |   | 	auxiliary output file name
+float   | fact | =0.5 |   | 	factor for sharpening 
+string  | mask | = |   | 	auxiliary input file name
+int     | miter | =2 |   | 	conjugate-direction memory 
+int     | ncycle | =0 |   | 	number of sharpening cycles 
+int     | niter | =0 |   | 	number of iterations 
+float   | perc | =50.0 |   | 	percentage for sharpening 
+int     | psun1 | =1 |   | 	amplitude type for adjoint 
+int     | psun2 | =1 |   | 	amplitude type for forward 
+float   | s02 | =0. |   | 	reference slowness squared (for antialiasing) 
+[DIRECTORY]
+system/seismic

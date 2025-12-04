@@ -1,0 +1,33 @@
+.TH sfclip2 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfclip2 \- One- or two-sided data clipping.\n.SH SYNOPSIS
+.B sfclip2 < in.rsf > out.rsf upper=+FLT_MAX lower=-FLT_MAX
+.SH COMMENTS
+
+sfclip2 is a generalization of sfclip.
+
+Clip values above xu:         sfclip2 < in.rsf > out.rsf upper=xu
+Clip values below xl:         sfclip2 < in.rsf > out.rsf lower=xl
+Clip values outside [xu,xl]:  sfclip2 < in.rsf > out.rsf upper=xu lower=xl
+
+sfclip2 < in.rsf > out.rsf upper=x lower=-x
+
+is equivalent to
+
+sfclip < in.rsf > out.rsf clip=x
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B lower
+.B =-FLT_MAX
+.R  	lower clip value
+.TP
+.I float  
+.B upper
+.B =+FLT_MAX
+.R  	upper clip value
+.SH SOURCE
+.I system/generic/Mclip2.c
+.SH VERSION
+4.2

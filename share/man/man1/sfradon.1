@@ -1,0 +1,104 @@
+.TH sfradon 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfradon \- High-resolution Radon transform. \n.SH SYNOPSIS
+.B sfradon < in.rsf > out.rsf offset=offset.rsf adj=y inv=adj spk=inv verb=n np= dp= p0= nx= eps=1. ns=1 tol=1.e-6 perc=50.0 fact=0.5 ox= dx= parab=n x0=1. niter=100
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B adj
+.B =y
+.R  [y/n]	if y, perform adjoint operation
+.TP
+.I float  
+.B dp
+.B =
+.R  	p sampling (if adj=y)
+.TP
+.I float  
+.B dx
+.B =
+.R  
+.TP
+.I float  
+.B eps
+.B =1.
+.R  
+.TP
+.I float  
+.B fact
+.B =0.5
+.R  	percentage for sharpening
+.TP
+.I bool   
+.B inv
+.B =adj
+.R  [y/n]	if y, perform inverse operation
+.TP
+.I int    
+.B niter
+.B =100
+.R  
+.TP
+.I int    
+.B np
+.B =
+.R  	number of p values (if adj=y)
+.TP
+.I int    
+.B ns
+.B =1
+.R  	number of sharpening cycles
+.TP
+.I int    
+.B nx
+.B =
+.R  	number of offsets (if adj=n)
+.TP
+.I string 
+.B offset
+.B =
+.R  	auxiliary input file name
+.TP
+.I float  
+.B ox
+.B =
+.R  
+.TP
+.I float  
+.B p0
+.B =
+.R  	p origin (if adj=y)
+.TP
+.I bool   
+.B parab
+.B =n
+.R  [y/n]	if y, parabolic Radon transform
+.TP
+.I float  
+.B perc
+.B =50.0
+.R  	percentage for sharpening
+.TP
+.I bool   
+.B spk
+.B =inv
+.R  [y/n]	if y, use spiking (hi-res) inversion
+.TP
+.I float  
+.B tol
+.B =1.e-6
+.R  	inversion tolerance
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]	verbosity flag
+.TP
+.I float  
+.B x0
+.B =1.
+.R  	reference offset
+.SH SOURCE
+.I system/seismic/Mradon.c
+.SH VERSION
+4.2

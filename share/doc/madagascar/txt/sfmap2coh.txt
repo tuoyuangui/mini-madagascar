@@ -1,0 +1,15 @@
+Program sfmap2coh | From parameter's attribute map (veltran) to coherency-like plots. 
+[SYNOPSIS]
+sfmap2coh < cmp.rsf map=map.rsf > coh.rsf nv= v0= dv= min2=o2 max2=o2+d2*(n2-1) nw=4
+[COMMENTS]
+(eventually masked) 
+[PARAMETERS]
+float   | dv | = |   | 	velocity sampling 
+string  | map | = |   | 	parameters map (auxiliary input file name)
+float   | max2 | =o2+d2*(n2-1) |   | 	max2 
+float   | min2 | =o2 |   | 	min2 
+int     | nv | = |   | 	number of velocities 
+int     | nw | =4 |   | 	interpolator size (2,3,4,6,8) 
+float   | v0 | = |   | 	velocity origin 
+[DIRECTORY]
+system/seismic

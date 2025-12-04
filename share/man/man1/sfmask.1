@@ -1,0 +1,28 @@
+.TH sfmask 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfmask \- Create a mask.\n.SH SYNOPSIS
+.B sfmask < in.rsf > out.rsf min= max= min= max=
+.SH COMMENTS
+
+Mask is an integer data with ones and zeros. 
+Ones correspond to input values between min and max.
+
+The output can be used with sfheaderwindow.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B max
+.B =
+.R  	maximum header value
+.TP
+.I int    
+.B min
+.B =
+.R  	minimum header value
+.SH SOURCE
+.I system/main/mask.c
+.SH DOCUMENTATION
+.BR http://ahay.org/wiki/Guide_to_madagascar_programs#sfmask
+.SH VERSION
+4.2

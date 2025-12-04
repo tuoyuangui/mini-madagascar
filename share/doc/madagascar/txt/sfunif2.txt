@@ -1,0 +1,25 @@
+Program sfunif2 | Generate 2-D layered velocity model from specified interfaces. 
+[SYNOPSIS]
+sfunif2 < surface.rsf > model.rsf x0= z0= v00= dvdx= dvdz= n1= d1= o1=0. label1= unit1=
+[COMMENTS]
+
+In each layer, velocity is a linear function of position.
+
+Inspired by SU's unif2.
+
+October 2013 program of the month:
+http://ahay.org/blog/2013/10/03/program-of-the-month-sfunif2/
+
+[PARAMETERS]
+float   | d1 | = |   | 	Sampling of the depth axis 
+floats  | dvdx | = |   | 	 [ninf]
+floats  | dvdz | = |   | 	 [ninf]
+string  | label1 | = |   | 	depth axis label 
+int     | n1 | = |   | 	Number of samples on the depth axis 
+float   | o1 | =0. |   | 	Origin of the depth axis 
+string  | unit1 | = |   | 	
+floats  | v00 | = |   | 	 [ninf]
+floats  | x0 | = |   | 	 [ninf]
+floats  | z0 | = |   | 	 [ninf]
+[DIRECTORY]
+system/generic

@@ -1,0 +1,49 @@
+.TH sfsrsyn 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfsrsyn \- Synthesize shot/receiver wavefields for 3-D SR migration \n.SH SYNOPSIS
+.B sfsrsyn < Fr.rsf wav=Fs.rsf swf=Fsw.rsf > Frw.rsf nx= dx= ox= ny=1 dy=1 oy=0
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B dx
+.B =
+.R  	x sampling
+.TP
+.I float  
+.B dy
+.B =1
+.R  	y sampling
+.TP
+.I int    
+.B nx
+.B =
+.R  	x samples
+.TP
+.I int    
+.B ny
+.B =1
+.R  	y samples
+.TP
+.I float  
+.B ox
+.B =
+.R  	x origin
+.TP
+.I float  
+.B oy
+.B =0
+.R  	y origin
+.TP
+.I file   
+.B swf
+.B =
+.R  	auxiliary output file name
+.TP
+.I file   
+.B wav
+.B =
+.R  	auxiliary input file name
+.SH SOURCE
+.I system/seismic/Msrsyn.c
+.SH VERSION
+4.2

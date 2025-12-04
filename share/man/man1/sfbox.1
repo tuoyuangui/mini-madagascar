@@ -1,0 +1,118 @@
+.TH sfbox 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfbox \- Draw a balloon-style label.\n.SH SYNOPSIS
+.B sfbox lab_color=VP_WHITE lab_fat=0 pscale=1. pointer=y reverse=n lat=0. long=90. angle=0. x0=0. y0=0. scale0=1. xt=2. yt=0. x_oval=0. y_oval=0. boxit=y length= scalet= size=.25 font=VP_NO_CHANGE label= > out.vpl
+.SH COMMENTS
+May 2015 program of the month:
+http://ahay.org/blog/2015/05/01/program-of-the-month-sfbox/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B angle
+.B =0.
+.R  	longitude of floating label in 3-D
+.TP
+.I bool   
+.B boxit
+.B =y
+.R  [y/n]	if y, create a box around text
+.TP
+.I int    
+.B font
+.B =VP_NO_CHANGE
+.R  	text font
+.TP
+.I int    
+.B lab_color
+.B =VP_WHITE
+.R  	label color
+.TP
+.I int    
+.B lab_fat
+.B =0
+.R  	label fatness
+.TP
+.I string 
+.B label
+.B =
+.R  	text for label
+.TP
+.I float  
+.B lat
+.B =0.
+.R  	latitude of viewpoint in 3-D
+.TP
+.I float  
+.B length
+.B =
+.R  	normalization for xt and yt
+.TP
+.I float  
+.B long
+.B =90.
+.R  	longitude of viewpoint in 3-D
+.TP
+.I bool   
+.B pointer
+.B =y
+.R  [y/n]	if y, create arrow pointer
+.TP
+.I float  
+.B pscale
+.B =1.
+.R  	scale factor for width of pointer
+.TP
+.I bool   
+.B reverse
+.B =n
+.R  [y/n]	if reverse
+.TP
+.I float  
+.B scale0
+.B =1.
+.R  	scale factor for x0 and y0
+.TP
+.I float  
+.B scalet
+.B =
+.R  	( scalet scale factor for xt and yt (if length is not set) )
+.TP
+.I float  
+.B size
+.B =.25
+.R  	text height in inches
+.TP
+.I float  
+.B x0
+.B =0.
+.R  	x position of the pointer tip
+.TP
+.I float  
+.B x_oval
+.B =0.
+.R  	x size of the oval around pointer
+.TP
+.I float  
+.B xt
+.B =2.
+.R  	relative position of text in x
+.TP
+.I float  
+.B y0
+.B =0.
+.R  	y position of the pointer tip
+.TP
+.I float  
+.B y_oval
+.B =0.
+.R  	y size of the oval around pointer
+.TP
+.I float  
+.B yt
+.B =0.
+.R  	relative position of text in y
+.SH SOURCE
+.I plot/main/box.c
+.SH VERSION
+4.2

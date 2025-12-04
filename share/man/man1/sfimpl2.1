@@ -1,0 +1,64 @@
+.TH sfimpl2 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfimpl2 \- 2-D anisotropic diffusion. \n.SH SYNOPSIS
+.B sfimpl2 < in.rsf > out.rsf rect1= rect2= tau=0.1 pclip=50. up=n verb=n nsnap=1 lin=n adj=n dist= snap=
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B adj
+.B =n
+.R  [y/n]	adjoint flag
+.TP
+.I string 
+.B dist
+.B =
+.R  	inverse distance file (input)
+.TP
+.I bool   
+.B lin
+.B =n
+.R  [y/n]	if linear operator
+.TP
+.I int    
+.B nsnap
+.B =1
+.R  	number of snapshots
+.TP
+.I float  
+.B pclip
+.B =50.
+.R  	percentage clip for the gradient
+.TP
+.I float  
+.B rect1
+.B =
+.R  	vertical smoothing
+.TP
+.I float  
+.B rect2
+.B =
+.R  	horizontal smoothing
+.TP
+.I string 
+.B snap
+.B =
+.R  	snapshot file (output)
+.TP
+.I float  
+.B tau
+.B =0.1
+.R  	smoothing time
+.TP
+.I bool   
+.B up
+.B =n
+.R  [y/n]	smoothing style
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]	verbosity flag
+.SH SOURCE
+.I system/generic/Mimpl2.c
+.SH VERSION
+4.2

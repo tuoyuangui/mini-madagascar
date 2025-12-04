@@ -1,0 +1,13 @@
+Program sftransp | Transpose two axes in a dataset. 
+[SYNOPSIS]
+sftransp < in.rsf > out.rsf memsize=sf_memsize() plane=
+[COMMENTS]
+
+If you get a "Cannot allocate memory" error, give the program a
+memsize=1 command-line parameter to force out-of-core operation.
+
+[PARAMETERS]
+int     | memsize | =sf_memsize() |   | 	Max amount of RAM (in Mb) to be used 
+int     | plane | = |   | 	Two-digit number with axes to transpose. The default is 12 
+[DIRECTORY]
+system/main

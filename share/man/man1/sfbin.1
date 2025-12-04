@@ -1,0 +1,100 @@
+.TH sfbin 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfbin \- Data binning in 2-D slices. \n.SH SYNOPSIS
+.B sfbin < in.rsf > out.rsf fold=fold.rsf xkey=0 ykey=1 xmax= xmin= ymax= ymin= x0=xmin y0=ymin nx=(int) (xmax - xmin + 1.) ny=(int) (ymax - ymin + 1.) dx= dy= interp=1 norm=y clip=FLT_EPSILON head=
+.SH COMMENTS
+
+December 2014 program of the month:
+http://ahay.org/blog/2014/12/01/program-of-the-month-sfbin/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B clip
+.B =FLT_EPSILON
+.R  	clip for fold normalization
+.TP
+.I float  
+.B dx
+.B =
+.R  	bin size in x
+.TP
+.I float  
+.B dy
+.B =
+.R  	bin size in y
+.TP
+.I string 
+.B fold
+.B =
+.R  	output file for fold (optional) (auxiliary output file name)
+.TP
+.I string 
+.B head
+.B =
+.R  	header file
+.TP
+.I int    
+.B interp
+.B =1
+.R  [0,1,2]	interpolation method;
+       0: median, 1: nearest neighbor, 2: bi-linear,
+.TP
+.I bool   
+.B norm
+.B =y
+.R  [y/n]	if normalize
+.TP
+.I int    
+.B nx
+.B =(int) (xmax - xmin + 1.)
+.R  	Number of bins in x
+.TP
+.I int    
+.B ny
+.B =(int) (ymax - ymin + 1.)
+.R  	Number of bins in y
+.TP
+.I float  
+.B x0
+.B =xmin
+.R  	x origin
+.TP
+.I int    
+.B xkey
+.B =0
+.R  	x key number
+.TP
+.I float  
+.B xmax
+.B =
+.R  	x maximum
+.TP
+.I float  
+.B xmin
+.B =
+.R  	x minimum
+.TP
+.I float  
+.B y0
+.B =ymin
+.R  	y origin
+.TP
+.I int    
+.B ykey
+.B =1
+.R  	y key number
+.TP
+.I float  
+.B ymax
+.B =
+.R  	y maximum
+.TP
+.I float  
+.B ymin
+.B =
+.R  	y minimum
+.SH SOURCE
+.I system/generic/Mbin.c
+.SH VERSION
+4.2

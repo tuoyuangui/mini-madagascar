@@ -1,0 +1,100 @@
+.TH sfgrey3 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfgrey3 \- Generate 3-D cube plot.\n.SH SYNOPSIS
+.B sfgrey3 < in.rsf point1=0.5 point2=0.5 frame1=0 frame2=n2-1 frame3=0 movie=0 dframe=1 n1pix=n1/point1+n3/(1.-point1) n2pix=n2/point2+n3/(1.-point2) flat=y scalebar=n minval= maxval= barreverse=n nreserve=8 bar= color= > plot.vpl
+.SH COMMENTS
+Requires an "unsigned char" input (the output of sfbyte).
+
+April 2012 program of the month:
+http://ahay.org/blog/2012/04/01/program-of-the-month-sfgrey3/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I string 
+.B bar
+.B =
+.R  	file for scalebar data
+.TP
+.I bool   
+.B barreverse
+.B =n
+.R  [y/n]	if y, go from small to large on the bar scale
+.TP
+.I string 
+.B color
+.B =
+.R  	color scheme (default is i)
+.TP
+.I int    
+.B dframe
+.B =1
+.R  	frame increment in a movie
+.TP
+.I bool   
+.B flat
+.B =y
+.R  [y/n]	if n, display perspective view
+.TP
+.I int    
+.B frame1
+.B =0
+.R  	top frame number
+.TP
+.I int    
+.B frame2
+.B =n2-1
+.R  	side frame number
+.TP
+.I int    
+.B frame3
+.B =0
+.R  	front frame number
+.TP
+.I float  
+.B maxval
+.B =
+.R  	maximum value for scalebar (default is the data maximum)
+.TP
+.I float  
+.B minval
+.B =
+.R  	minimum value for scalebar (default is the data minimum)
+.TP
+.I int    
+.B movie
+.B =0
+.R  	0: no movie, 1: movie over axis 1, 2: axis 2, 3: axis 3
+.TP
+.I int    
+.B n1pix
+.B =n1/point1+n3/(1.-point1)
+.R  	number of vertical pixels
+.TP
+.I int    
+.B n2pix
+.B =n2/point2+n3/(1.-point2)
+.R  	number of horizontal pixels
+.TP
+.I int    
+.B nreserve
+.B =8
+.R  	reserved colors
+.TP
+.I float  
+.B point1
+.B =0.5
+.R  	fraction of the vertical axis for front face
+.TP
+.I float  
+.B point2
+.B =0.5
+.R  	fraction of the horizontal axis for front face
+.TP
+.I bool   
+.B scalebar
+.B =n
+.R  [y/n]	if y, draw scalebar
+.SH SOURCE
+.I plot/main/grey3.c
+.SH VERSION
+4.2

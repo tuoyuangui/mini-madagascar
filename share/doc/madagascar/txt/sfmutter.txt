@@ -1,0 +1,29 @@
+Program sfmutter | Muting.
+[SYNOPSIS]
+sfmutter < in.rsf > out.rsf offset=offset.rsf half=y nan=n tp=0.150 t0=0. v0=1.45 slope0=1./v0 slopep=slope0 x0=0. abs=y inner=n hyper=n
+[COMMENTS]
+
+Data is smoothly weighted inside the mute zone.
+The weight is zero for t <       (x-x0) * slope0
+The weight is one  for t >  tp + (x-x0) * slopep
+
+The signs are reversed for inner=y.
+
+July 2015 program of the month:
+http://ahay.org/blog/2015/07/10/program-of-the-month-sfmutter/
+
+[PARAMETERS]
+bool    | abs | =y |  [y/n] | 	if y, use absolute value |x-x0| 
+bool    | half | =y |  [y/n] | 	if y, the second axis is half-offset instead of full offset 
+bool    | hyper | =n |  [y/n] | 	if y, do hyperbolic mute 
+bool    | inner | =n |  [y/n] | 	if y, do inner muter 
+bool    | nan | =n |  [y/n] | 	if y, put  nans instead of zeros 
+string  | offset | = |   | 	auxiliary input file name
+float   | slope0 | =1./v0 |   | 	slope 
+float   | slopep | =slope0 |   | 	end slope 
+float   | t0 | =0. |   | 	starting time 
+float   | tp | =0.150 |   | 	end time 
+float   | v0 | =1.45 |   | 	velocity 
+float   | x0 | =0. |   | 	starting space 
+[DIRECTORY]
+system/generic

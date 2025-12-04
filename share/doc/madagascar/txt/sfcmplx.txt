@@ -1,0 +1,8 @@
+Program sfcmplx | Create a complex dataset from its real and imaginary parts.
+[SYNOPSIS]
+sfcmplx < real.rsf > cmplx.rsf real.rsf imag.rsf
+[COMMENTS]
+There has to be only two input files specified and no additional parameters.
+
+[DIRECTORY]
+system/main

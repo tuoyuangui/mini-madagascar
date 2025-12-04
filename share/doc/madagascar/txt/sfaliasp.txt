@@ -1,0 +1,11 @@
+Program sfaliasp | Aliasing test. 
+[SYNOPSIS]
+sfaliasp > out.rsf n1=600 n2=24 cycles=10. ix0=0 slow=0.1
+[PARAMETERS]
+float   | cycles | =10. |   | 	wave frequency 
+int     | ix0 | =0 |   | 	central trace 
+int     | n1 | =600 |   | 	
+int     | n2 | =24 |   | 	dimensions 
+float   | slow | =0.1 |   | 	slowness 
+[DIRECTORY]
+system/generic

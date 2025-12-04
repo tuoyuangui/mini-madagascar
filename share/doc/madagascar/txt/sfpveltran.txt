@@ -1,0 +1,14 @@
+Program sfpveltran | Slope-based velocity transform. 
+[SYNOPSIS]
+sfpveltran < cmp.rsf dip=dip.rsf > vel.rsf dipt=dipt.rsf half=y nv= v0= dv= interval=n eps=0.1
+[PARAMETERS]
+file    | dip | = |   | 	auxiliary input file name
+file    | dipt | = |   | 	auxiliary input file name
+float   | dv | = |   | 	velocity sampling 
+float   | eps | =0.1 |   | 	stretch regularization 
+bool    | half | =y |  [y/n] | 	if y, the second axis is half-offset instead of full offset 
+bool    | interval | =n |  [y/n] | 	if y, compute interval velocity 
+int     | nv | = |   | 	number of velocities 
+float   | v0 | = |   | 	velocity origin 
+[DIRECTORY]
+system/seismic

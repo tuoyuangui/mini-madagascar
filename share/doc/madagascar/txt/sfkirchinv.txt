@@ -1,0 +1,18 @@
+Program sfkirchinv | Kirchhoff 2-D post-stack least-squares time migration with antialiasing. 
+[SYNOPSIS]
+sfkirchinv < in.rsf > out.rsf fweight=fwght.rsf weight=wght.rsf velocity=vel.rsf model0=in0.rsf hd=y ps=y sw=0 niter=10 err=
+[COMMENTS]
+
+Antialiasing by reparameterization. 
+[PARAMETERS]
+string  | err | = |   | 	output file for error 
+string  | fweight | = |   | 	auxiliary input file name
+bool    | hd | =y |  [y/n] | 	if y, apply half-derivative filter 
+string  | model0 | = |   | 	auxiliary input file name
+int     | niter | =10 |   | 	number of iterations 
+bool    | ps | =y |  [y/n] | 	if y, apply pseudo-unitary weighting 
+int     | sw | =0 |   | 	if > 0, select a branch of the antialiasing operation 
+file    | velocity | = |   | 	auxiliary input file name
+file    | weight | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/seismic

@@ -1,0 +1,32 @@
+Program sfkirmod3 | Kirchhoff 3-D modeling with analytical Green's functions. 
+[SYNOPSIS]
+sfkirmod3 < curv.rsf > modl.rsf head=head.rsf refl=refl.rsf verb=y nt= dt=0.004 t0=0. absoff=n nsx=nx s0x=x0 dsx=dx nsy=ny s0y=y0 dsy=dy nhx=nx h0x=0. dhx=dx nhy=ny h0y=0. dhy=dy r0=1. aper=hypotf(nx*dx,ny*dy) freq=0.2/dt rgrad= dipx= dipy= type=
+[PARAMETERS]
+bool    | absoff | =n |  [y/n] | 	y - h0x, h0y - are not in shot coordinate system 
+float   | aper | =hypotf(nx*dx,ny*dy) |   | 	aperture 
+float   | dhx | =dx |   | 	inline offset increment 
+float   | dhy | =dy |   | 	crossline offset increment 
+string  | dipx | = |   | 	
+string  | dipy | = |   | 	
+float   | dsx | =dx |   | 	inline shot increment 
+float   | dsy | =dy |   | 	crossline shot increment 
+float   | dt | =0.004 |   | 	time sampling 
+float   | freq | =0.2/dt |   | 	peak frequency for Ricker wavelet 
+float   | h0x | =0. |   | 	first inline offset 
+float   | h0y | =0. |   | 	first crossline offset 
+string  | head | = |   | 	source-receiver geometry (optional) (auxiliary input file name)
+int     | nhx | =nx |   | 	number of inline offsets 
+int     | nhy | =ny |   | 	number of crossline offsets 
+int     | nsx | =nx |   | 	number of inline shots 
+int     | nsy | =ny |   | 	number of crossline shots 
+int     | nt | = |   | 	time samples 
+float   | r0 | =1. |   | 	constant reflectivity 
+string  | refl | = |   | 	auxiliary input file name
+string  | rgrad | = |   | 	
+float   | s0x | =x0 |   | 	first inline shot 
+float   | s0y | =y0 |   | 	first crossline shot 
+float   | t0 | =0. |   | 	time origin 
+string  | type | = |   | 	type of velocity ('c': constant, 's': linear sloth, 'v': linear velocity) 
+bool    | verb | =y |  [y/n] | 	verbosity 
+[DIRECTORY]
+system/seismic

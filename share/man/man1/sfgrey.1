@@ -1,0 +1,135 @@
+.TH sfgrey 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfgrey \- Generate raster plot.\n.SH SYNOPSIS
+.B sfgrey < in.rsf > out.rsf > bar.rsf transp=y yreverse=y xreverse=n gpow= phalf= clip= pclip= gainstep=0.5+n1/256. allpos=n mean=n bias=0. polarity=n symcp=n verb=n scalebar=n minval= maxval= barreverse=n wantframenum=(bool) (n3 > 1) nreserve=8 gpow=1 gainpanel= bar= color= > (plot.vpl | char.rsf)
+.SH COMMENTS
+Can input char values.
+If called "byte", outputs char values.
+
+If called "bar", outputs scalebar data.
+
+Run "sfdoc stdplot" for more parameters.
+
+March 2015 program of the month:
+http://ahay.org/blog/2015/03/04/program-of-the-month-sfgrey/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B allpos
+.B =n
+.R  [y/n]	if y, assume positive data
+.TP
+.I string 
+.B bar
+.B =
+.R  	file for scalebar data
+.TP
+.I bool   
+.B barreverse
+.B =n
+.R  [y/n]	if y, go from small to large on the bar scale
+.TP
+.I float  
+.B bias
+.B =0.
+.R  	value mapped to the center of the color table
+.TP
+.I float  
+.B clip
+.B =
+.R  	data clip
+.TP
+.I string 
+.B color
+.B =
+.R  	color scheme (default is i)
+.TP
+.I string 
+.B gainpanel
+.B =
+.R  	gain reference: 'a' for all, 'e' for each, or number
+.TP
+.I int    
+.B gainstep
+.B =0.5+n1/256.
+.R  	subsampling for gpow and clip estimation
+.TP
+.I float  
+.B gpow
+.B =1
+.R  	raise data to gpow power for display
+.TP
+.I float  
+.B maxval
+.B =
+.R  	maximum value for scalebar (default is the data maximum)
+.TP
+.I bool   
+.B mean
+.B =n
+.R  [y/n]	if y, bias on the mean value
+.TP
+.I float  
+.B minval
+.B =
+.R  	minimum value for scalebar (default is the data minimum)
+.TP
+.I int    
+.B nreserve
+.B =8
+.R  	reserved colors
+.TP
+.I float  
+.B pclip
+.B =
+.R  	data clip percentile (default is 99)
+.TP
+.I float  
+.B phalf
+.B =
+.R  	percentage for estimating gpow
+.TP
+.I bool   
+.B polarity
+.B =n
+.R  [y/n]	if y, reverse polarity (white is high by default)
+.TP
+.I bool   
+.B scalebar
+.B =n
+.R  [y/n]	if y, draw scalebar
+.TP
+.I bool   
+.B symcp
+.B =n
+.R  [y/n]	if y, assume symmetric color palette of 255 colors
+.TP
+.I bool   
+.B transp
+.B =y
+.R  [y/n]	if y, transpose the display axes
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]	verbosity flag
+.TP
+.I bool   
+.B wantframenum
+.B =(bool) (n3 > 1)
+.R  [y/n]	if y, display third axis position in the corner
+.TP
+.I bool   
+.B xreverse
+.B =n
+.R  [y/n]	if y, reverse the horizontal axis
+.TP
+.I bool   
+.B yreverse
+.B =y
+.R  [y/n]	if y, reverse the vertical axis
+.SH SOURCE
+.I plot/main/grey.c
+.SH VERSION
+4.2

@@ -1,0 +1,49 @@
+.TH sffreqlet 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsffreqlet \- 1-D seislet frame \n.SH SYNOPSIS
+.B sffreqlet < in.rsf > out.rsf freq=w.rsf inv=n verb=y decomp=n ncycle=0 niter=1 perc=50.0 type=
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B decomp
+.B =n
+.R  [y/n]	do decomposition
+.TP
+.I file   
+.B freq
+.B =
+.R  	auxiliary input file name
+.TP
+.I bool   
+.B inv
+.B =n
+.R  [y/n]	if y, do inverse transform
+.TP
+.I int    
+.B ncycle
+.B =0
+.R  	number of iterations
+.TP
+.I int    
+.B niter
+.B =1
+.R  	number of Bregman iterations
+.TP
+.I float  
+.B perc
+.B =50.0
+.R  	percentage for sharpening
+.TP
+.I string 
+.B type
+.B =
+.R  	[haar,linear,biorthogonal] wavelet type, the default is linear
+.TP
+.I bool   
+.B verb
+.B =y
+.R  [y/n]	verbosity flag
+.SH SOURCE
+.I system/seismic/Mfreqlet.c
+.SH VERSION
+4.2

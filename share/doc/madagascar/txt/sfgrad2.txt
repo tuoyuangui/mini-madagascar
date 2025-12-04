@@ -1,0 +1,5 @@
+Program sfgrad2 | 2-D smooth gradient. 
+[SYNOPSIS]
+sfgrad2 < in.rsf > out.rsf
+[DIRECTORY]
+system/generic

@@ -1,0 +1,19 @@
+.TH sfboxsmooth 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfboxsmooth \- Multi-dimensional smoothing with boxes. \n.SH SYNOPSIS
+.B sfboxsmooth < in.rsf > out.rsf repeat=1 rect#=(1,1,...)
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B rect#
+.B =(1,1,...)
+.R  	smoothing radius on #-th axis
+.TP
+.I int    
+.B repeat
+.B =1
+.R  	repeat filtering several times
+.SH SOURCE
+.I system/generic/Mboxsmooth.c
+.SH VERSION
+4.2

@@ -1,0 +1,235 @@
+.TH sfwigb 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfwigb \- X WIGgle-trace plot of f(x1,x2) via Bitmap.\n.SH SYNOPSIS
+.B sfwigb < in.rsf x2= bias=0.0 clip= perc=100.0 verbose=y wt=1 va=1 xcur=1.0 wigclip=0 xbox=50 ybox=50 wbox=550 hbox=700 x1beg=x1min x1end=x1max d1num=0.0 f1num=x1min n1tic=1 x2beg=x2min x2end=x2max d2num=0.0 f2num=x2min n2tic=1 labelsize=18.0 titlesize=24.0 endian= interp=n mpicks= grid1= label1= grid2= label2= labelfont= title= titlefont= style= titlecolor= labelcolor= gridcolor= windowtitle=
+.SH COMMENTS
+
+X Functionality:							
+Button 1	Zoom with rubberband box				
+Button 2	Show mouse (x1,x2) coordinates while pressed		
+q or Q key	Quit							
+s key		Save current mouse (x1,x2) location to file		
+p or P key	Plot current window with pswigb (only from disk files)	
+a or page up keys		enhance clipping by 10%			
+c or page down keys		reduce clipping by 10%			
+up,down,left,right keys	move zoom window by half width/height	
+i or +(keypad) 		zoom in by factor 2 			
+o or -(keypad) 		zoom out by factor 2 			
+l 				lock the zoom while moving the coursor	
+u 				unlock the zoom 			
+1,2,...,9	Zoom/Move factor of the window size			
+									
+Notes:								
+	Reaching the window limits while moving within changes the zoom	
+	factor in this direction. The use of zoom locking(l) disables it
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B bias
+.B =0.0
+.R  	data value corresponding to location along axis 2
+.TP
+.I float  
+.B clip
+.B =
+.R  	data values < bias+clip and > bias-clip are clipped
+.TP
+.I float  
+.B d1num
+.B =0.0
+.R  	numbered tic interval on axis 1 (0.0 for automatic)
+.TP
+.I float  
+.B d2num
+.B =0.0
+.R  	numbered tic interval on axis 2 (0.0 for automatic)
+.TP
+.I int    
+.B endian
+.B =
+.R  	endian for display =0 little endian =1 big endian
+.TP
+.I float  
+.B f1num
+.B =x1min
+.R  	first numbered tic on axis 1 (used if d1num not 0.0)
+.TP
+.I float  
+.B f2num
+.B =x2min
+.R  	first numbered tic on axis 2 (used if d2num not 0.0)
+.TP
+.I string 
+.B grid1
+.B =
+.R  	grid lines on axis 1 - none, dot, dash, or solid
+.TP
+.I string 
+.B grid2
+.B =
+.R  	grid lines on axis 2 - none, dot, dash, or solid
+.TP
+.I string 
+.B gridcolor
+.B =
+.R  
+.TP
+.I int    
+.B hbox
+.B =700
+.R  	height in pixels of window
+.TP
+.I bool   
+.B interp
+.B =n
+.R  [y/n]	if y, use interpolation
+.TP
+.I string 
+.B label1
+.B =
+.R  
+.TP
+.I string 
+.B label2
+.B =
+.R  
+.TP
+.I string 
+.B labelcolor
+.B =
+.R  
+.TP
+.I string 
+.B labelfont
+.B =
+.R  	font name for axes labels
+.TP
+.I float  
+.B labelsize
+.B =18.0
+.R  
+.TP
+.I string 
+.B mpicks
+.B =
+.R  	file to save mouse picks in
+.TP
+.I int    
+.B n1tic
+.B =1
+.R  	number of tics per numbered tic on axis 1
+.TP
+.I int    
+.B n2tic
+.B =1
+.R  	number of tics per numbered tic on axis 2
+.TP
+.I float  
+.B perc
+.B =100.0
+.R  	percentile for determining clip
+.TP
+.I string 
+.B style
+.B =
+.R  
+.TP
+.I string 
+.B title
+.B =
+.R  
+.TP
+.I string 
+.B titlecolor
+.B =
+.R  
+.TP
+.I string 
+.B titlefont
+.B =
+.R  
+.TP
+.I float  
+.B titlesize
+.B =24.0
+.R  
+.TP
+.I int    
+.B va
+.B =1
+.R  	=0 for no variable-area; 
+       =1 for variable-area fill;
+       =2 for variable area, solid/grey fill
+.TP
+.I bool   
+.B verbose
+.B =y
+.R  [y/n]	y for info printed on stderr (n for no info)
+.TP
+.I int    
+.B wbox
+.B =550
+.R  	width in pixels of window
+.TP
+.I int    
+.B wigclip
+.B =0
+.R  	If 0, the plot box is expanded to accommodate	
+       the larger wiggles created by xcur>1. If this 
+       flag is non-zero, the extra-large wiggles are	
+       are clipped at the boundary of the plot box.
+.TP
+.I string 
+.B windowtitle
+.B =
+.R  	initialize zoom box parameters
+.TP
+.I int    
+.B wt
+.B =1
+.R  	=0 for no wiggle-trace; =1 for wiggle-trace
+.TP
+.I float  
+.B x1beg
+.B =x1min
+.R  	value at which axis 1 begins
+.TP
+.I float  
+.B x1end
+.B =x1max
+.R  	value at which axis 1 ends
+.TP
+.I floats 
+.B x2
+.B =
+.R  	array of sampled values in 2nd dimension  [n2]
+.TP
+.I float  
+.B x2beg
+.B =x2min
+.R  	value at which axis 2 begins
+.TP
+.I float  
+.B x2end
+.B =x2max
+.R  	value at which axis 2 ends
+.TP
+.I int    
+.B xbox
+.B =50
+.R  	x in pixels of upper left corner of window
+.TP
+.I float  
+.B xcur
+.B =1.0
+.R  	wiggle excursion in traces corresponding to clip
+.TP
+.I int    
+.B ybox
+.B =50
+.R  	y in pixels of upper left corner of window
+.SH SOURCE
+.I su/plot/Xwigb.c
+.SH VERSION
+4.2

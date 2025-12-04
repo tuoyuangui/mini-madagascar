@@ -1,0 +1,13 @@
+Program sfstolt2 | Post-stack Stolt modeling/migration. 
+[SYNOPSIS]
+sfstolt2 < in.rsf > out.rsf vel= pad=nt nf=2
+[COMMENTS]
+
+Requires the input to be cosine-transformed over the lateral axes.
+
+[PARAMETERS]
+int     | nf | =2 |   | 	Interpolation accuracy 
+int     | pad | =nt |   | 	padding on the time axis 
+float   | vel | = |   | 	Constant velocity (use negative velocity for modeling) 
+[DIRECTORY]
+system/seismic

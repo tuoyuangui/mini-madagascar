@@ -1,0 +1,7 @@
+Program sftrapez | Convolution with a trapezoidal filter. 
+[SYNOPSIS]
+sftrapez < in.rsf > out.rsf frequency=
+[PARAMETERS]
+floats  | frequency | = |   | 	frequencies (in Hz), default: (0.1,0.15,0.45,0.5)*Nyquist  [4]
+[DIRECTORY]
+system/generic

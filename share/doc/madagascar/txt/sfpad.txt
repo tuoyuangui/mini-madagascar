@@ -1,0 +1,15 @@
+Program sfpad | Pad a dataset with zeros.
+[SYNOPSIS]
+sfpad < in.rsf > out.rsf beg#=0 end#=0 n#=
+[COMMENTS]
+
+n#out is equivalent to n#, both of them overwrite end#.
+
+Other parameters from the command line are passed to the output (similar to sfput).
+
+[PARAMETERS]
+int     | beg# | =0 |   | 	the number of zeros to add before the beginning of #-th axis 
+int     | end# | =0 |   | 	the number of zeros to add after the end of #-th axis 
+int     | n# | = |   | 	the output length of #-th axis - padding at the end 
+[DIRECTORY]
+system/main

@@ -1,0 +1,59 @@
+.TH sfbin1 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfbin1 \- Data binning in 1-D slices. \n.SH SYNOPSIS
+.B sfbin1 < in.rsf > out.rsf pattern=pattern.rsf fold=fold.rsf xmin= xmax= nx= x0=xmin dx= interp=1 clip=FLT_EPSILON head=
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B clip
+.B =FLT_EPSILON
+.R  	clip for fold normalization
+.TP
+.I float  
+.B dx
+.B =
+.R  	grid spacing
+.TP
+.I string 
+.B fold
+.B =
+.R  	output fold file (optional) (auxiliary output file name)
+.TP
+.I string 
+.B head
+.B =
+.R  
+.TP
+.I int    
+.B interp
+.B =1
+.R  [1,2]	interpolation method, 1: nearest neighbor, 2: linear
+.TP
+.I int    
+.B nx
+.B =
+.R  	Number of bins
+.TP
+.I string 
+.B pattern
+.B =
+.R  	auxiliary input file name
+.TP
+.I float  
+.B x0
+.B =xmin
+.R  	grid origin
+.TP
+.I float  
+.B xmax
+.B =
+.R  
+.TP
+.I float  
+.B xmin
+.B =
+.R  	grid dimensions
+.SH SOURCE
+.I system/generic/Mbin1.c
+.SH VERSION
+4.2

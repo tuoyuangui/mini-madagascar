@@ -1,0 +1,10 @@
+Program sfdiffraction | Generate diffractions in zero-offset data. 
+[SYNOPSIS]
+sfdiffraction < w1.rsf w2=w2.rsf w12=w12.rsf spikes=spikes.rsf > data.rsf freq=0.2/dt
+[PARAMETERS]
+float   | freq | =0.2/dt |   | 	peak frequency for Ricker wavelet 
+file    | spikes | = |   | 	auxiliary input file name
+file    | w12 | = |   | 	auxiliary input file name
+file    | w2 | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/seismic

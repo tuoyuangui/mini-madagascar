@@ -1,0 +1,10 @@
+Program sfroots | Find roots of a complex polynomial. 
+[SYNOPSIS]
+sfroots < poly.rsf > root.rsf niter=10 tol=1.0e-6 verb=y sort=
+[PARAMETERS]
+int     | niter | =10 |   | 	number of iterations 
+string  | sort | = |   | 	attribute for sorting (phase,amplitude,real,imaginary) 
+float   | tol | =1.0e-6 |   | 	tolerance for convergence 
+bool    | verb | =y |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+system/generic

@@ -1,0 +1,27 @@
+Program sfdsr | Prestack 2-D VTI v(z) modeling/migration by DSR with angle gathers. 
+[SYNOPSIS]
+sfdsr < in.rsf > out.rsf velocity=vel.rsf velz=velz.rsf eta=eta.rsf inv=n eps=0.01 depth=n na=1 da=90. nt= dt= t0=0. nh= dh= nz=nt dz=dt vel= vz=v0 n=0.0 nw=nt2/2+1 rule= arule=
+[PARAMETERS]
+string  | arule | = |   | 	angle gather rule 
+float   | da | =90. |   | 	angle sampling (in degrees) 
+bool    | depth | =n |  [y/n] | 	if true, depth migration 
+float   | dh | = |   | 	Offset sampling (for modeling) 
+float   | dt | = |   | 	Sampling of time axis (for modeling) 
+float   | dz | =dt |   | 	Sampling of depth axis (for migration, if no velocity file) 
+float   | eps | =0.01 |   | 	Stabilization parameter 
+string  | eta | = |   | 	auxiliary input file name
+bool    | inv | =n |  [y/n] | 	If y, modeling; If n, migration 
+float   | n | =0.0 |   | 	Constant eta (if no velocity file) 
+int     | na | =1 |   | 	number of angles 
+int     | nh | = |   | 	Number of offsets (for modeling) 
+int     | nt | = |   | 	Length of time axis (for modeling) 
+int     | nw | =nt2/2+1 |   | 	Maximum number of frequencies 
+int     | nz | =nt |   | 	Length of depth axis (for migration, if no velocity file) 
+string  | rule | = |   | 	phase-shift interpolation rule (simple, midpoint, linear, anisotropic, dti) 
+float   | t0 | =0. |   | 	
+float   | vel | = |   | 	Constant velocity (if no velocity file) 
+string  | velocity | = |   | 	file with velocity (file with velocity (auxiliary input file name))
+string  | velz | = |   | 	auxiliary input file name
+float   | vz | =v0 |   | 	Constant vertical velocity (if no velocity file) 
+[DIRECTORY]
+system/seismic

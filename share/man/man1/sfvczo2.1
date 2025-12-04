@@ -1,0 +1,29 @@
+.TH sfvczo2 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfvczo2 \- Post-stack 2-D velocity continuation in the time-stretch frequency domain. \n.SH SYNOPSIS
+.B sfvczo2 < in.rsf > out.rsf verb=y nv= dv= v0=
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B dv
+.B =
+.R  	velocity step size
+.TP
+.I int    
+.B nv
+.B =
+.R  	velocity steps
+.TP
+.I float  
+.B v0
+.B =
+.R  	starting velocity
+.TP
+.I bool   
+.B verb
+.B =y
+.R  [y/n]	verbosity flag
+.SH SOURCE
+.I system/seismic/Mvczo2.c
+.SH VERSION
+4.2

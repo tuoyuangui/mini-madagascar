@@ -1,0 +1,14 @@
+Program sfintshow | Output interpolation filter. 
+[SYNOPSIS]
+sfintshow > filt.rsf nw= x= kai=4.0 interp=
+[COMMENTS]
+
+See also: inttest1.
+
+[PARAMETERS]
+string  | interp | = |   | 	interpolation (lagrange,cubic,kaiser,lanczos,cosine,welch,spline,mom) 
+float   | kai | =4.0 |   | 	Kaiser window parameter 
+int     | nw | = |   | 	interpolator size 
+float   | x | = |   | 	interpolation shift 
+[DIRECTORY]
+system/generic

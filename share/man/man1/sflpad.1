@@ -1,0 +1,26 @@
+.TH sflpad 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsflpad \- Pad and interleave traces.\n.SH SYNOPSIS
+.B sflpad < in.rsf > out.rsf mask=mask.rsf jump=2
+.SH COMMENTS
+
+Each initial trace is followed by "jump" zero traces, the same for planes.
+
+March 2014 program of the month:
+http://ahay.org/blog/2014/03/11/program-of-the-month-sflpad/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B jump
+.B =2
+.R  	aliasing
+.TP
+.I file   
+.B mask
+.B =
+.R  	auxiliary output file name
+.SH SOURCE
+.I system/generic/Mlpad.c
+.SH VERSION
+4.2

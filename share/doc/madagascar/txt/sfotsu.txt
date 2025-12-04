@@ -1,0 +1,5 @@
+Program sfotsu | Compute a threshold value from histogram using Otsu's algorithm. 
+[SYNOPSIS]
+sfotsu < in.rsf
+[DIRECTORY]
+system/generic

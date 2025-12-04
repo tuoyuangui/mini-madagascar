@@ -1,0 +1,7 @@
+Program sfinterleave | Combine several datasets by interleaving.
+[SYNOPSIS]
+sfinterleave > out.rsf axis=3 [< file0.rsf] file1.rsf file2.rsf ...
+[PARAMETERS]
+int     | axis | =3 |   | 	Axis for interleaving 
+[DIRECTORY]
+system/main

@@ -1,0 +1,8 @@
+Program sfget | Output parameters from the header.
+[SYNOPSIS]
+sfget parform=y all=n par1 par2 ...
+[PARAMETERS]
+bool    | all | =n |  [y/n] | 	If output all values. 
+bool    | parform | =y |  [y/n] | 	If y, print out parameter=value. If n, print out value. 
+[DIRECTORY]
+system/main

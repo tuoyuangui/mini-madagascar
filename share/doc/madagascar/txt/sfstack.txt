@@ -1,0 +1,17 @@
+Program sfstack | Stack a dataset over one of the dimensions.
+[SYNOPSIS]
+sfstack < in.rsf > out.rsf scale= axis=2 rms=n norm=y min=n max=n prod=n
+[COMMENTS]
+
+This operation is adjoint to sfspray.
+
+[PARAMETERS]
+int     | axis | =2 |   | 	which axis to stack. If axis=0, stack over all dimensions 
+bool    | max | =n |  [y/n] | 	If y, find maximum instead of stack. Ignores rms and norm. 
+bool    | min | =n |  [y/n] | 	If y, find minimum instead of stack. Ignores rms and norm. 
+bool    | norm | =y |  [y/n] | 	If y, normalize by fold. 
+bool    | prod | =n |  [y/n] | 	If y, find product instead of stack. Ignores rms and norm. 
+bool    | rms | =n |  [y/n] | 	If y, compute the root-mean-square instead of stack. 
+floats  | scale | = |   | 	 [nAXIS]
+[DIRECTORY]
+system/main

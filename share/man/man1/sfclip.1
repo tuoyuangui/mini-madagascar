@@ -1,0 +1,31 @@
+.TH sfclip 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfclip \- Clip the data.\n.SH SYNOPSIS
+.B sfclip < in.rsf > out.rsf clip= value=clip
+.SH COMMENTS
+
+The output is 
+clip if input > clip
+-clip if input < -clip
+input if |input| < clip 
+
+See also sfclip2.
+
+September 2011 program of the month:
+http://ahay.org/blog/2011/09/03/program-of-the-month-sfclip/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B clip
+.B =
+.R  	clip value
+.TP
+.I float  
+.B value
+.B =clip
+.R  	replacement value
+.SH SOURCE
+.I system/generic/Mclip.c
+.SH VERSION
+4.2

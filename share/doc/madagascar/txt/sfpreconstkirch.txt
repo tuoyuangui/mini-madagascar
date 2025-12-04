@@ -1,0 +1,17 @@
+Program sfpreconstkirch | Prestack Kirchhoff modeling/migration in constant velocity. 
+[SYNOPSIS]
+sfpreconstkirch < in.rsf > out.rsf inv=n zero=n aal=y nh= dh= h0= vel=
+[COMMENTS]
+
+Requires the input to be in (time,cmp x,cmp y,offset)
+
+[PARAMETERS]
+bool    | aal | =y |  [y/n] | 	if y, apply antialiasing 
+float   | dh | = |   | 	offset sampling 
+float   | h0 | = |   | 	offset origin 
+bool    | inv | =n |  [y/n] | 	if y, modeling; if n, migration 
+int     | nh | = |   | 	number of offsets 
+float   | vel | = |   | 	velocity 
+bool    | zero | =n |  [y/n] | 	if y, stack in migration 
+[DIRECTORY]
+system/seismic

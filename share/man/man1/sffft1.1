@@ -1,0 +1,39 @@
+.TH sffft1 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsffft1 \- Fast Fourier Transform along the first axis. \n.SH SYNOPSIS
+.B sffft1 < Fin.rsf > Fou.rsf ot=Fot.rsf verb=n inv=n sym=n opt=y memsize=1000.0
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B inv
+.B =n
+.R  [y/n]	y, inverse transform
+.TP
+.I float  
+.B memsize
+.B =1000.0
+.R  
+.TP
+.I bool   
+.B opt
+.B =y
+.R  [y/n]	y, determine optimal size for efficiency
+.TP
+.I string 
+.B ot
+.B =
+.R  	auxiliary input file name
+.TP
+.I bool   
+.B sym
+.B =n
+.R  [y/n]	y, symmetric scaling for Hermitian FFT
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]	verbosity flag
+.SH SOURCE
+.I system/generic/Mfft1.c
+.SH VERSION
+4.2

@@ -1,0 +1,32 @@
+.TH sfpad 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfpad \- Pad a dataset with zeros.\n.SH SYNOPSIS
+.B sfpad < in.rsf > out.rsf beg#=0 end#=0 n#=
+.SH COMMENTS
+
+n#out is equivalent to n#, both of them overwrite end#.
+
+Other parameters from the command line are passed to the output (similar to sfput).
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B beg#
+.B =0
+.R  	the number of zeros to add before the beginning of #-th axis
+.TP
+.I int    
+.B end#
+.B =0
+.R  	the number of zeros to add after the end of #-th axis
+.TP
+.I int    
+.B n#
+.B =
+.R  	the output length of #-th axis - padding at the end
+.SH SOURCE
+.I system/main/pad.c
+.SH DOCUMENTATION
+.BR http://ahay.org/wiki/Guide_to_madagascar_programs#sfpad
+.SH VERSION
+4.2

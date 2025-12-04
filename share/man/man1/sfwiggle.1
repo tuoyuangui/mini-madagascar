@@ -1,0 +1,95 @@
+.TH sfwiggle 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfwiggle \- Plot data with wiggly traces. \n.SH SYNOPSIS
+.B sfwiggle < in.rsf xpos=xpos.rsf xmax= xmin= poly=n polyneg=n fatp=1 xmask=1 ymask=1 pclip=98. zplot=0.75 clip=0. seemean=n verb=n transp=n yreverse=n xreverse=n > plot.vpl
+.SH COMMENTS
+Run "sfdoc stdplot" for more parameters.
+
+June 2013 program of the month:
+http://www.ahay.org/blog/2013/06/12/program-of-the-month-sfwiggle/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B clip
+.B =0.
+.R  	data clip (estimated from pclip by default
+.TP
+.I int    
+.B fatp
+.B =1
+.R  	polygon border fatness
+.TP
+.I float  
+.B pclip
+.B =98.
+.R  	clip percentile
+.TP
+.I bool   
+.B poly
+.B =n
+.R  [y/n]	if draw polygons
+.TP
+.I bool   
+.B polyneg
+.B =n
+.R  [y/n]	if polygons for negative values
+.TP
+.I bool   
+.B seemean
+.B =n
+.R  [y/n]	if y, plot mean lines of traces
+.TP
+.I bool   
+.B transp
+.B =n
+.R  [y/n]	if y, transpose the axes
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]	verbosity flag
+.TP
+.I int    
+.B xmask
+.B =1
+.R  	polygon filling
+.TP
+.I float  
+.B xmax
+.B =
+.R  	maximum trace position (if using xpos)
+.TP
+.I float  
+.B xmin
+.B =
+.R  	minimum trace position (if using xpos)
+.TP
+.I string 
+.B xpos
+.B =
+.R  	optional header file with trace positions (auxiliary input file name)
+.TP
+.I bool   
+.B xreverse
+.B =n
+.R  [y/n]	if y, reverse the horizontal axis
+.TP
+.I int    
+.B ymask
+.B =1
+.R  	polygon filling
+.TP
+.I bool   
+.B yreverse
+.B =n
+.R  [y/n]	if y, reverse the vertical axis
+.TP
+.I float  
+.B zplot
+.B =0.75
+.R  	vertical separation
+.SH SOURCE
+.I plot/main/wiggle.c
+.SH VERSION
+4.2

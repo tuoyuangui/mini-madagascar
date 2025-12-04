@@ -1,0 +1,69 @@
+.TH sfslant 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfslant \- Time-space-domain Radon transform (slant stack) \n.SH SYNOPSIS
+.B sfslant < in.rsf > out.rsf verb=n adj=n rho=y anti=1. np= dp= p0= x0= dx= nx= p1=0.
+.SH COMMENTS
+
+April 2015 program of the month:
+http://ahay.org/blog/2015/04/21/program-of-the-month-sfslant/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B adj
+.B =n
+.R  [y/n]	adjoint flag
+.TP
+.I float  
+.B anti
+.B =1.
+.R  	antialiasing
+.TP
+.I float  
+.B dp
+.B =
+.R  	p sampling (if adj=y)
+.TP
+.I float  
+.B dx
+.B =
+.R  	offset sampling
+.TP
+.I int    
+.B np
+.B =
+.R  	number of p values (if adj=y)
+.TP
+.I int    
+.B nx
+.B =
+.R  	number of offsets
+.TP
+.I float  
+.B p0
+.B =
+.R  	p origin (if adj=y)
+.TP
+.I float  
+.B p1
+.B =0.
+.R  	reference slope
+.TP
+.I bool   
+.B rho
+.B =y
+.R  [y/n]	rho filtering
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]	verbosity flag
+.TP
+.I float  
+.B x0
+.B =
+.R  	offset origin
+.SH SOURCE
+.I system/seismic/Mslant.c
+.SH VERSION
+4.2

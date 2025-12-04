@@ -1,0 +1,39 @@
+.TH sfpnmo3d 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfpnmo3d \- Slope-based normal moveout for 3-D CMP geometry. \n.SH SYNOPSIS
+.B sfpnmo3d < cmp.rsf dipx=dipx.rsf dipy=dipy.rsf > nmod.rsf vel=vel.rsf half=y eps=0.01 extend=8
+.SH PARAMETERS
+.PD 0
+.TP
+.I file   
+.B dipx
+.B =
+.R  	auxiliary input file name
+.TP
+.I file   
+.B dipy
+.B =
+.R  	auxiliary input file name
+.TP
+.I float  
+.B eps
+.B =0.01
+.R  	stretch regularization
+.TP
+.I int    
+.B extend
+.B =8
+.R  	trace extension
+.TP
+.I bool   
+.B half
+.B =y
+.R  [y/n]	if y, the second axis is half-offset instead of full offset
+.TP
+.I file   
+.B vel
+.B =
+.R  	auxiliary output file name
+.SH SOURCE
+.I system/seismic/Mpnmo3d.c
+.SH VERSION
+4.2

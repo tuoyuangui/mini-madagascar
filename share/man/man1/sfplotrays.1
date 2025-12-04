@@ -1,0 +1,27 @@
+.TH sfplotrays 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfplotrays \- Plot rays.\n.SH SYNOPSIS
+.B sfplotrays frame=frame.rsf nt=n1*n2 jr=1 < rays.rsf > plot.vpl
+.SH COMMENTS
+Run "sfdoc stdplot" for more parameters.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I string 
+.B frame
+.B =
+.R  	auxiliary input file name
+.TP
+.I int    
+.B jr
+.B =1
+.R  	skip rays
+.TP
+.I int    
+.B nt
+.B =n1*n2
+.R  	maximum ray length
+.SH SOURCE
+.I plot/main/plotrays.c
+.SH VERSION
+4.2

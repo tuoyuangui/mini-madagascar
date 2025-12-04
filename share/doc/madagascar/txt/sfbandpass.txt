@@ -1,0 +1,17 @@
+Program sfbandpass | Bandpass filtering. 
+[SYNOPSIS]
+sfbandpass < in.rsf > out.rsf flo= fhi= phase=n verb=n nplo=6 nphi=6
+[COMMENTS]
+
+November 2012 program of the month:
+http://ahay.org/blog/2012/11/03/program-of-the-month-sfbandpass/
+
+[PARAMETERS]
+float   | fhi | = |   | 	High frequency in band, default is Nyquist 
+float   | flo | = |   | 	Low frequency in band, default is 0 
+int     | nphi | =6 |   | 	number of poles for high cutoff 
+int     | nplo | =6 |   | 	number of poles for low cutoff 
+bool    | phase | =n |  [y/n] | 	y: minimum phase, n: zero phase 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+system/generic

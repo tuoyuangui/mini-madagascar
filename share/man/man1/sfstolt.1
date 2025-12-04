@@ -1,0 +1,46 @@
+.TH sfstolt 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfstolt \- Post-stack Stolt modeling/migration. \n.SH SYNOPSIS
+.B sfstolt < in.rsf > out.rsf vel= pad=nt extend=4 mute=12 minstr=0.0 stretch=1
+.SH COMMENTS
+
+Requires the input to be cosine-transformed over the lateral axes.
+
+August 2014 program of the month:
+http://ahay.org/blog/2014/08/03/program-of-the-month-sfstolt/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B extend
+.B =4
+.R  	trace extension
+.TP
+.I float  
+.B minstr
+.B =0.0
+.R  	minimum stretch allowed
+.TP
+.I int    
+.B mute
+.B =12
+.R  	mute zone
+.TP
+.I int    
+.B pad
+.B =nt
+.R  	padding on the time axis
+.TP
+.I float  
+.B stretch
+.B =1
+.R  	Stolt stretch parameter
+.TP
+.I float  
+.B vel
+.B =
+.R  	Constant velocity (use negative velocity for modeling)
+.SH SOURCE
+.I system/seismic/Mstolt.c
+.SH VERSION
+4.2

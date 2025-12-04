@@ -1,0 +1,12 @@
+Program sfconstfdmig2 | 2-D implicit finite-difference migration in constant velocity. 
+[SYNOPSIS]
+sfconstfdmig2 < data.rsf > imag.rsf movie=movie.rsf nz=2*(nw-1) dz=1./(nz*dw) vel= hi=y sixth=1./12
+[PARAMETERS]
+float   | dz | =1./(nz*dw) |   | 	vertical time sampling 
+bool    | hi | =y |  [y/n] | 	if y, use 45-degree; n, 15-degree 
+string  | movie | = |   | 	auxiliary output file name
+int     | nz | =2*(nw-1) |   | 	vertical time samples 
+float   | sixth | =1./12 |   | 	one-sixth trick 
+float   | vel | = |   | 	constant velocity 
+[DIRECTORY]
+system/seismic

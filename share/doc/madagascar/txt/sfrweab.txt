@@ -1,0 +1,12 @@
+Program sfrweab | Riemannian Wavefield Extrapolation: a,b coefficients 
+[SYNOPSIS]
+sfrweab < Fi.rsf slo=Fs.rsf > Fo.rsf abr=Fr.rsf verb=n naref=1 nbref=1 peps=0.01
+[PARAMETERS]
+file    | abr | = |   | 	auxiliary output file name
+int     | naref | =1 |   | 	
+int     | nbref | =1 |   | 	
+float   | peps | =0.01 |   | 	
+file    | slo | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	
+[DIRECTORY]
+system/seismic

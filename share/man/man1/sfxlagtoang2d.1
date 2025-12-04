@@ -1,0 +1,49 @@
+.TH sfxlagtoang2d 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfxlagtoang2d \- SS(x-lag) to angle transformation (PP or PS waves) \n.SH SYNOPSIS
+.B sfxlagtoang2d < Fstk.rsf > Fang.rsf vpvs=Fgam.rsf dip=Fdip.rsf verb=n inv=n na=sf_n(axs) da=1./(sf_n(axs)-1) oa=0. extend=4
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B da
+.B =1./(sf_n(axs)-1)
+.R  
+.TP
+.I file   
+.B dip
+.B =
+.R  	auxiliary input file name
+.TP
+.I int    
+.B extend
+.B =4
+.R  	tmp extension
+.TP
+.I bool   
+.B inv
+.B =n
+.R  [y/n]	inverse transformation flag
+.TP
+.I int    
+.B na
+.B =sf_n(axs)
+.R  
+.TP
+.I float  
+.B oa
+.B =0.
+.R  
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]	verbosity flag
+.TP
+.I file   
+.B vpvs
+.B =
+.R  	auxiliary input file name
+.SH SOURCE
+.I system/seismic/Mxlagtoang2d.c
+.SH VERSION
+4.2

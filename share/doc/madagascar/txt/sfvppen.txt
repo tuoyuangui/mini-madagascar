@@ -1,0 +1,92 @@
+Program sfvppen | Vplot filter for the virtual vplot device.
+[SYNOPSIS]
+sfvppen gridnum= gridsize= colormask= red= green= blue= dumb=n blast=y bit=0 grid=-1 xsize=0. ysize=0. big= vpstyle= mono=n endpause= cachepipe= shade= wantras= window= frame= overlay= invras= txsquare= serifs= background= redpow=1.0 greenpow=1.0 bluepow=1.0 dither= greyc=1.0 pixc=1.0 txfont= txprec= txovly= xcenter= ycenter= patternmult=1. pause=0 fatmult= rotate=0 txscale=1.0 mkscale=1.0 dashscale=1.0 scale=1.0 xscale=1.0 yscale=1.0 xshift=0. yshift=0. xwmax= ywmax= xwmin= ywmin= fat=0 gridnum= stat=n out#= align= outN= erase= break= interact= style= size=
+[COMMENTS]
+
+Although it is perhaps not obvious, this program can be used to
+"Capture the screen". Ie, you play with Pen options until you
+get something you like, and then you can use those options with
+this program to make a new vplot file that without any options
+will draw the same thing.
+
+[PARAMETERS]
+string  | align | = |   | 	aligns plot accoording to xy:
+       x is one of l, r, c, u for left, right, center, unaligned
+       y is one of b, t, c, u for bottom, top, center, unaligned.
+       In all cases the given point is aligned to have coordinate zero. 
+bool    | background | = |  [y/n] | 	
+bool    | big | = |  [y/n] | 	if y, expand the size of the device's screen (and hence
+       outermost clipping window) to nearly infinity (bad for rotated
+       style!) 
+int     | bit | =0 |   | 	if > 0,  then bit raster is used with bit the color 
+bool    | blast | =y |  [y/n] | 	if y, don't try to compact the output.  If n, compaction will
+       be done.  Compaction does run-length encoding and compacts repeated
+       lines.  Compaction can make the vplot file considerably smaller, but
+       it also takes longer to create the file. 
+floats  | blue | = |   | 	 [4]
+float   | bluepow | =1.0 |   | 	
+string  | break | = |   | 	
+bool    | cachepipe | = |  [y/n] | 	
+bools   | colormask | = |   | 	 [5]
+float   | dashscale | =1.0 |   | 	
+int     | dither | = |   | 	dithering to improve raster display, see "man vplotraster"
+                    0    No dither,
+                    1    Random Dither
+                    2    Ordered Dither
+                    3    Minimized Average Error Method
+                    4    Digital Halftoning 
+bool    | dumb | =n |  [y/n] | 	if y, causes output to only be vectors, erases, and color changes 
+bool    | endpause | = |  [y/n] | 	
+string  | erase | = |   | 	
+int     | fat | =0 |   | 	base line fatness 
+float   | fatmult | = |   | 	
+bool    | frame | = |  [y/n] | 	
+floats  | green | = |   | 	 [4]
+float   | greenpow | =1.0 |   | 	
+float   | greyc | =1.0 |   | 	"grey correction" modifies the grey scale used to display a raster to simulate the nonlinearity of displays, see "man vplotraster" 
+int     | grid | =-1 |   | 	turns on drawing a grid, with the specified fatness 
+ints    | gridnum | = |   | 	grids the screen, each part has gridsize=xwidth,ywidth
+      numy defaults to numx. [xy]size default to [xy]screensize /
+      num[xy]  [2]
+floats  | gridsize | = |   | 	 [2]
+string  | interact | = |   | 	
+bool    | invras | = |  [y/n] | 	
+float   | mkscale | =1.0 |   | 	
+bool    | mono | =n |  [y/n] | 	no color 
+string  | out# | = |   | 	redirect frame # to corresponding file 
+string  | outN | = |   | 	
+bool    | overlay | = |  [y/n] | 	
+float   | patternmult | =1. |   | 	
+int     | pause | =0 |   | 	
+float   | pixc | =1.0 |   | 	"pixel  correction" controls  alteration of the grey scale, see "man vplotraster". 
+floats  | red | = |   | 	 [4]
+float   | redpow | =1.0 |   | 	
+int     | rotate | =0 |   | 	
+float   | scale | =1.0 |   | 	
+bool    | serifs | = |  [y/n] | 	
+bool    | shade | = |  [y/n] | 	
+string  | size | = |   | 	
+string  | stat | = |   | 	if y, print plot statistics; if l, insert extra spaces
+string  | style | = |   | 	
+int     | txfont | = |   | 	
+int     | txovly | = |   | 	
+int     | txprec | = |   | 	
+float   | txscale | =1.0 |   | 	
+bool    | txsquare | = |  [y/n] | 	
+bool    | vpstyle | = |  [y/n] | 	if n, omit declaring absolute style in the output file 
+bool    | wantras | = |  [y/n] | 	
+bool    | window | = |  [y/n] | 	
+float   | xcenter | = |   | 	
+float   | xscale | =1.0 |   | 	
+float   | xshift | =0. |   | 	
+float   | xsize | =0. |   | 	
+float   | xwmax | = |   | 	
+float   | xwmin | = |   | 	
+float   | ycenter | = |   | 	
+float   | yscale | =1.0 |   | 	
+float   | yshift | =0. |   | 	
+float   | ysize | =0. |   | 	scale the vplot image to fit within a given size rectangle 
+float   | ywmax | = |   | 	
+float   | ywmin | = |   | 	
+[DIRECTORY]
+pens/main

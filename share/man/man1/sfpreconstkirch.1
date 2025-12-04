@@ -1,0 +1,48 @@
+.TH sfpreconstkirch 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfpreconstkirch \- Prestack Kirchhoff modeling/migration in constant velocity. \n.SH SYNOPSIS
+.B sfpreconstkirch < in.rsf > out.rsf inv=n zero=n aal=y nh= dh= h0= vel=
+.SH COMMENTS
+
+Requires the input to be in (time,cmp x,cmp y,offset)
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B aal
+.B =y
+.R  [y/n]	if y, apply antialiasing
+.TP
+.I float  
+.B dh
+.B =
+.R  	offset sampling
+.TP
+.I float  
+.B h0
+.B =
+.R  	offset origin
+.TP
+.I bool   
+.B inv
+.B =n
+.R  [y/n]	if y, modeling; if n, migration
+.TP
+.I int    
+.B nh
+.B =
+.R  	number of offsets
+.TP
+.I float  
+.B vel
+.B =
+.R  	velocity
+.TP
+.I bool   
+.B zero
+.B =n
+.R  [y/n]	if y, stack in migration
+.SH SOURCE
+.I system/seismic/Mpreconstkirch.c
+.SH VERSION
+4.2

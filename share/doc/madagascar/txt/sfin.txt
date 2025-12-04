@@ -1,0 +1,16 @@
+Program sfin | Display basic information about RSF files.
+[SYNOPSIS]
+sfin info=y check=2. trail=y [<file0.rsf] file1.rsf file2.rsf ...
+[COMMENTS]
+n1,n2,... are data dimensions
+o1,o2,... are axis origins
+d1,d2,... are axis sampling intervals
+label1,label2,... are axis labels
+unit1,unit2,... are axis units
+
+[PARAMETERS]
+float   | check | =2. |   | 	Portion of the data (in Mb) to check for zero values. 
+bool    | info | =y |  [y/n] | 	If n, only display the name of the data file. 
+bool    | trail | =y |  [y/n] | 	If n, skip trailing dimensions of  one 
+[DIRECTORY]
+system/main

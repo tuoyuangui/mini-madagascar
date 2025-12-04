@@ -1,0 +1,17 @@
+Program sfiwarp | Inverse 1-D warping. 
+[SYNOPSIS]
+sfiwarp < in.rsf > out.rsf warp=warp.rsf inv=y n1=nt eps=0.01 d1=1 o1=0
+[COMMENTS]
+
+September 2012 program of the month:
+http://ahay.org/blog/2012/09/03/program-of-the-month-sfiwarp/
+
+[PARAMETERS]
+float   | d1 | =1 |   | 	output sampling - for inv=y 
+float   | eps | =0.01 |   | 	stretch regularization 
+bool    | inv | =y |  [y/n] | 	inversion flag 
+int     | n1 | =nt |   | 	output samples - for inv=y 
+float   | o1 | =0 |   | 	output origin - for inv=y 
+file    | warp | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/generic

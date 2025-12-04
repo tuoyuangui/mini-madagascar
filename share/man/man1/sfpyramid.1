@@ -1,0 +1,34 @@
+.TH sfpyramid 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfpyramid \- Pyramid transform \n.SH SYNOPSIS
+.B sfpyramid < in.rsf > out.rsf inv=n nu= du=dx u0=x0 eps=0.01
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B du
+.B =dx
+.R  
+.TP
+.I float  
+.B eps
+.B =0.01
+.R  	stretch regularization
+.TP
+.I bool   
+.B inv
+.B =n
+.R  [y/n]	inversion flag
+.TP
+.I int    
+.B nu
+.B =
+.R  
+.TP
+.I float  
+.B u0
+.B =x0
+.R  
+.SH SOURCE
+.I system/seismic/Mpyramid.c
+.SH VERSION
+4.2

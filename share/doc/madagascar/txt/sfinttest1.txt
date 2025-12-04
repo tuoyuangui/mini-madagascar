@@ -1,0 +1,16 @@
+Program sfinttest1 | Interpolation from a regular grid in 1-D. 
+[SYNOPSIS]
+sfinttest1 < in.rsf > out.rsf coord=crd.rsf nw= same=y kai=4.0 interp=
+[COMMENTS]
+
+January 2014 program of the month:
+http://ahay.org/blog/2014/01/09/program-of-the-month-sfinttest1/
+
+[PARAMETERS]
+file    | coord | = |   | 	auxiliary input file name
+string  | interp | = |   | 	interpolation (lagrange,cubic,kaiser,lanczos,cosine,welch,spline,mom) 
+float   | kai | =4.0 |   | 	Kaiser window parameter 
+int     | nw | = |   | 	interpolator size 
+bool    | same | =y |  [y/n] | 	same or different coordinates for each trace 
+[DIRECTORY]
+system/generic

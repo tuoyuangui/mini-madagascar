@@ -1,0 +1,11 @@
+Program vp7ab | 
+[SYNOPSIS]
+vp7ab c=c.rsf d=d.rsf > plot.vpl top=5. c1=0.5 c2=5.
+[PARAMETERS]
+string  | c | = |   | 	auxiliary output file name
+float   | c1 | =0.5 |   | 	
+float   | c2 | =5. |   | 	
+string  | d | = |   | 	auxiliary output file name
+float   | top | =5. |   | 	
+[DIRECTORY]
+plot/test

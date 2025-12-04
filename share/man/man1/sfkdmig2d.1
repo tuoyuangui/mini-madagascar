@@ -1,0 +1,149 @@
+.TH sfkdmig2d 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfkdmig2d \- 2-D Prestack Kirchhoff depth migration (SU version). \n.SH SYNOPSIS
+.B sfkdmig2d < infp.rsf > outfp.rsf verb=n dxm=0.5*ds rscale=RSCALE_KDMIG nxo=(nxt-1)*2+1 fxo=fxt dxo=dxt*0.5 nzo=(nzt-1)*5+1 fzo=fzt dzo=dzt*0.2 v0=1.5 dvz=0 angmax=60. aperx=0.5*nxt*dxt offmax=3.0 fmax=0.25/dt noff=1 off0=0. doff=0.1 ls=1 absoff=0 limoff=0 ntr=sf_leftsize (infp, 1) mtr=100 npv=0 ttfile= tvfile= csfile= outfile1=
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B absoff
+.B =0
+.R  	1 - use absolute value of offset, 0 - use offset =gx-sx
+.TP
+.I float  
+.B angmax
+.B =60.
+.R  	migration angle aperature from vertical
+.TP
+.I float  
+.B aperx
+.B =0.5*nxt*dxt
+.R  	migration lateral aperature
+.TP
+.I string 
+.B csfile
+.B =
+.R  	input file of cosine tables
+.TP
+.I float  
+.B doff
+.B =0.1
+.R  	offset increment in output
+.TP
+.I float  
+.B dvz
+.B =0
+.R  	reference velocity vertical gradient
+.TP
+.I float  
+.B dxm
+.B =0.5*ds
+.R  	sampling interval of midpoints
+.TP
+.I float  
+.B dxo
+.B =dxt*0.5
+.R  	horizontal spacing of output trace
+.TP
+.I float  
+.B dzo
+.B =dzt*0.2
+.R  	vertical spacing of output trace
+.TP
+.I float  
+.B fmax
+.B =0.25/dt
+.R  	frequency-highcut for input traces
+.TP
+.I float  
+.B fxo
+.B =fxt
+.R  	x-coordinate of first output trace
+.TP
+.I float  
+.B fzo
+.B =fzt
+.R  	z-coordinate of first point in output trace
+.TP
+.I int    
+.B limoff
+.B =0
+.R  	1 - limit traces used by offset, 0 - use all traces
+.TP
+.I int    
+.B ls
+.B =1
+.R  	flag for line source
+.TP
+.I int    
+.B mtr
+.B =100
+.R  	print verbal information at every mtr traces
+.TP
+.I int    
+.B noff
+.B =1
+.R  	number of offsets in output
+.TP
+.I int    
+.B npv
+.B =0
+.R  	1 - compute quantities for velocity analysis
+.TP
+.I int    
+.B ntr
+.B =sf_leftsize (infp, 1)
+.R  	maximum number of input traces to be migrated
+.TP
+.I int    
+.B nxo
+.B =(nxt-1)*2+1
+.R  	number of output traces
+.TP
+.I int    
+.B nzo
+.B =(nzt-1)*5+1
+.R  	number of points in output trace
+.TP
+.I float  
+.B off0
+.B =0.
+.R  	first offest in output
+.TP
+.I float  
+.B offmax
+.B =3.0
+.R  	maximum absolute offset allowed in migration
+.TP
+.I string 
+.B outfile1
+.B =
+.R  	file containning additional migration output
+.TP
+.I float  
+.B rscale
+.B =RSCALE_KDMIG
+.R  	scaling for roundoff error suppression
+.TP
+.I string 
+.B ttfile
+.B =
+.R  	input traveltime tables
+.TP
+.I string 
+.B tvfile
+.B =
+.R  	input file of traveltime variation tables
+.TP
+.I float  
+.B v0
+.B =1.5
+.R  	reference velocity value at surface
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]	verbosity flag
+.SH SOURCE
+.I su/main/kdmig2d.c
+.SH VERSION
+4.2

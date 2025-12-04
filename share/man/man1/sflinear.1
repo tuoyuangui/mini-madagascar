@@ -1,0 +1,58 @@
+.TH sflinear 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsflinear \- 1-D linear interpolation.\n.SH SYNOPSIS
+.B sflinear < in.rsf > out.rsf pattern=pattern.rsf sort=n niter=0 rect=1 nw=2 n1= d1= o1=
+.SH COMMENTS
+
+The input should have n2=2 (coordinates,values)
+
+For output, specify either n1= o1= d1= or pattern=
+
+March 2016 program of the month:
+http://ahay.org/blog/2016/03/23/program-of-the-month-sflinear/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B d1
+.B =
+.R  	Output sampling
+.TP
+.I string 
+.B n1
+.B =
+.R  	Output grid size
+.TP
+.I int    
+.B niter
+.B =0
+.R  	number of iterations
+.TP
+.I int    
+.B nw
+.B =2
+.R  	interpolator size
+.TP
+.I float  
+.B o1
+.B =
+.R  	Output origin
+.TP
+.I string 
+.B pattern
+.B =
+.R  	auxiliary input file name
+.TP
+.I int    
+.B rect
+.B =1
+.R  	smoothing regularization
+.TP
+.I bool   
+.B sort
+.B =n
+.R  [y/n]	if y, the coordinates need sorting
+.SH SOURCE
+.I system/generic/Mlinear.c
+.SH VERSION
+4.2

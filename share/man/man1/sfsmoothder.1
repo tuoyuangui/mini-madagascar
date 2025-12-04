@@ -1,0 +1,18 @@
+.TH sfsmoothder 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfsmoothder \- Smooth first derivative on the first axis.\n.SH SYNOPSIS
+.B sfsmoothder < in.rsf > der.rsf eps=0.2
+.SH COMMENTS
+
+Applies D/(I + eps*D'D)
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B eps
+.B =0.2
+.R  	smoothness parameter
+.SH SOURCE
+.I system/generic/Msmoothder.c
+.SH VERSION
+4.2

@@ -1,0 +1,14 @@
+Program sfsrsyn | Synthesize shot/receiver wavefields for 3-D SR migration 
+[SYNOPSIS]
+sfsrsyn < Fr.rsf wav=Fs.rsf swf=Fsw.rsf > Frw.rsf nx= dx= ox= ny=1 dy=1 oy=0
+[PARAMETERS]
+float   | dx | = |   | 	x sampling 
+float   | dy | =1 |   | 	y sampling 
+int     | nx | = |   | 	x samples 
+int     | ny | =1 |   | 	y samples 
+float   | ox | = |   | 	x origin 
+float   | oy | =0 |   | 	y origin 
+file    | swf | = |   | 	auxiliary output file name
+file    | wav | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/seismic

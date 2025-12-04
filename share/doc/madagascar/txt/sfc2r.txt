@@ -1,0 +1,16 @@
+Program sfc2r | Cartesian-Coordinates to Riemannian-Coordinates interpolation 
+[SYNOPSIS]
+sfc2r < Fi.rsf rays=Fr.rsf > Fo.rsf verb=n adj=n linear=y a2n=1 a2o=0. a2d=1. a1n=1 a1o=0. a1d=1.
+[PARAMETERS]
+float   | a1d | =1. |   | 	
+int     | a1n | =1 |   | 	
+float   | a1o | =0. |   | 	
+float   | a2d | =1. |   | 	
+int     | a2n | =1 |   | 	
+float   | a2o | =0. |   | 	
+bool    | adj | =n |  [y/n] | 	
+bool    | linear | =y |  [y/n] | 	
+file    | rays | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	
+[DIRECTORY]
+system/seismic

@@ -1,0 +1,14 @@
+Program sfxlagtoang2d | SS(x-lag) to angle transformation (PP or PS waves) 
+[SYNOPSIS]
+sfxlagtoang2d < Fstk.rsf > Fang.rsf vpvs=Fgam.rsf dip=Fdip.rsf verb=n inv=n na=sf_n(axs) da=1./(sf_n(axs)-1) oa=0. extend=4
+[PARAMETERS]
+float   | da | =1./(sf_n(axs)-1) |   | 	
+file    | dip | = |   | 	auxiliary input file name
+int     | extend | =4 |   | 	tmp extension 
+bool    | inv | =n |  [y/n] | 	inverse transformation flag 
+int     | na | =sf_n(axs) |   | 	
+float   | oa | =0. |   | 	
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+file    | vpvs | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/seismic

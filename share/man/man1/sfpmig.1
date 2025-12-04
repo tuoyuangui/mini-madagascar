@@ -1,0 +1,34 @@
+.TH sfpmig 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfpmig \- Slope-based prestack time migration. \n.SH SYNOPSIS
+.B sfpmig < cmp.rsf xdip=xdip.rsf hdip=hdip.rsf > mig.rsf half=y mzo=n eps=1.0
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B eps
+.B =1.0
+.R  	stretch regularization
+.TP
+.I bool   
+.B half
+.B =y
+.R  [y/n]	if y, the second axis is half-offset instead of full offset
+.TP
+.I file   
+.B hdip
+.B =
+.R  	auxiliary input file name
+.TP
+.I bool   
+.B mzo
+.B =n
+.R  [y/n]	do migration to zero offset
+.TP
+.I file   
+.B xdip
+.B =
+.R  	auxiliary input file name
+.SH SOURCE
+.I system/seismic/Mpmig.c
+.SH VERSION
+4.2

@@ -1,0 +1,10 @@
+Program sfveltran | Hyperbolic Radon transform 
+[SYNOPSIS]
+sfveltran < in.rsf > out.rsf adj=n anti=1. s02=0. pull=y
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	adjoint flag 
+float   | anti | =1. |   | 	antialiasing 
+bool    | pull | =y |  [y/n] | 	pull or push operator 
+float   | s02 | =0. |   | 	reference slowness squared (for antialiasing) 
+[DIRECTORY]
+system/seismic

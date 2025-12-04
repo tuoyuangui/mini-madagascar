@@ -1,0 +1,8 @@
+Program sfvoft | V(t) function for a linear V(Z) profile.
+[SYNOPSIS]
+sfvoft < in.rsf > out.rsf v0=1.5 alpha=0.5
+[PARAMETERS]
+float   | alpha | =0.5 |   | 	velocity gradient 
+float   | v0 | =1.5 |   | 	initial velocity 
+[DIRECTORY]
+system/seismic

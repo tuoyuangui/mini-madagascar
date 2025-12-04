@@ -1,0 +1,16 @@
+Program sfremap1 | 1-D ENO interpolation. 
+[SYNOPSIS]
+sfremap1 < in.rsf > out.rsf pattern=pattern.rsf n1=n1 d1=d1 o1=o1 order=3
+[COMMENTS]
+
+November 2013 program of the month:
+http://ahay.org/blog/2013/11/03/program-of-the-month-sfremap1/
+
+[PARAMETERS]
+float   | d1 | =d1 |   | 	Output sampling 
+int     | n1 | =n1 |   | 	Number of output samples 
+float   | o1 | =o1 |   | 	Output origin 
+int     | order | =3 |   | 	Interpolation order 
+string  | pattern | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/generic

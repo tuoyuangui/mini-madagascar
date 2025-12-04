@@ -1,0 +1,165 @@
+Program sfxtpen | Vplot filter for X windows using the X Toolkit (Xt). 
+[SYNOPSIS]
+sfxtpen colormask= red= green= blue= pause= depth=app_data.vis_depth aspect= ppi= numcol=app_data.num_col buttons=(bool) app_data.buttons labels=(bool) app_data.labels want_text=(bool) app_data.textpane stretchy=(bool) app_data.stretchy boxy=n see_progress=n images=(bool) app_data.images pixmaps=(bool) app_data.pixmaps mono=n endpause= cachepipe= shade= wantras= window= frame= overlay= invras= txsquare= serifs= background= redpow=1.0 greenpow=1.0 bluepow=1.0 dither= greyc=1.0 pixc=1.0 txfont= txprec= txovly= xcenter= ycenter= patternmult=1. pause=0 fatmult= rotate=0 txscale=1.0 mkscale=1.0 dashscale=1.0 scale=1.0 xscale=1.0 yscale=1.0 xshift=0. yshift=0. xwmax= ywmax= xwmin= ywmin= fat=0 interact= message= bgcolor= erase= break= style= size=
+[COMMENTS]
+
+This pen takes all the standard X-toolkit options
+E.g. -geometry 500x400 -font fixed
+
+The pen has two display modes
+
+RUNNING MODE: Runs through all the frames in a loop
+Active buttons are:
+QUIT : quits the program
+STOP : enter frame mode
+
+FRAME MODE (pause=-1): Pauses after each frame
+Active buttons are:
+NEXT : next frame
+PREV : previous frame
+QUIT : quits the program
+RESTART : go to the first frame
+RUN  : enter running mode
+STRETCHY/RIGID : make plot fill the frame or preserve aspect ratio
+FORWARDS/BACKWARDS/BOTH-WAYS : change direction of frame flipping
+Note that a backwards run will only show those frames already plotted
+It is advisable to run once through all the frames forwards.
+
+The following actions are available for binding to keystrokes;
+xt_quit(): quit program   xt_next(): next frame   xt_prev(): prev frame
+xt_run(): run mode        xt_stop(): frame mode   xt_restart(): first frame
+xt_faster(): reduce pause between frames in run mode
+xt_slower(): increase pause between frames in run mode
+xt_stretchy(): toggle between stretchy and rigid modes
+xt_number(digit): enter a digit in the current number
+xt_reset_number(): reset the current number
+xt_goto_frame(): goto the frame number given by the current number
+xt_print_coord(): Print mouse coords in the file given by interact=
+
+The default key bindings are:
+<Btn1Down>:            xt_print_coord()  
+<KeyPress>n:           xt_stop() xt_reset_number() xt_next()  
+<KeyPress>m:           xt_stop() xt_reset_number() xt_prev()  
+<KeyPress>r:           xt_run()  
+<KeyPress>q:           xt_quit()  
+<KeyPress>.:           xt_stop()  
+<KeyPress>f:           xt_faster()  
+<KeyPress>s:           xt_slower()  
+<KeyPress>t:           xt_stretchy()  
+<KeyPress>0:           xt_number(0)  
+......                  .......
+<KeyPress>9:           xt_number(9)  
+<KeyPress>Return:      xt_goto_frame() xt_reset_number()  
+<KeyPress>Escape:      xt_reset_number()
+
+Here is an example of overriding these in your ~/.Xdefaults file
+this binds the keypad number 1 to skip to the first frame
+xtpen*translations: #override
+<KeyPress>Q:       xt_quit() 
+<KeyPress>KP_1:       xt_number(1) xt_goto_frame() xt_reset_number()
+
+N.B using prev when you are at the first frame takes you to the last
+frame plotted so far; this is not necessarily the last frame!
+You can only jump to a frame if it has already been plotted once.
+If you give an invalid frame number it will jump to the next frame.
+
+Many parameters may have their defaults set in the Xresource database
+Here are the equivalent names:
+option name          X-Resource name         Type
+===========          ===============         ====
+stretchy              XTpen.stretchy         Boolean
+images                XTpen.useImages        Boolean
+pixmaps               XTpen.usePixmaps       Boolean
+buttons               XTpen.showButtons      Boolean
+labels                XTpen.showLabels       Boolean
+want_text             XTpen.showText         Boolean
+numcol                XTpen.numCol           int
+pause                 XTpen.pause            int
+
+E.g. If you want xtpen to come up in stretchy mode as a default
+put this line in your Xdefaults file:
+XTpen.stretchy: True
+
+[PARAMETERS]
+float   | aspect | = |   | 	aspect ratio 
+bool    | background | = |  [y/n] | 	
+string  | bgcolor | = |   | 	background color 
+floats  | blue | = |   | 	 [4]
+float   | bluepow | =1.0 |   | 	
+bool    | boxy | =n |  [y/n] | 	output coordinates and labels suitable for sfbox 
+string  | break | = |   | 	
+bool    | buttons | =(bool) app_data.buttons |  [y/n] | 	if y, display a panel of buttons on top of the plot 
+bool    | cachepipe | = |  [y/n] | 	
+bools   | colormask | = |   | 	 [5]
+float   | dashscale | =1.0 |   | 	
+int     | depth | =app_data.vis_depth |   | 	Choose a visual 
+int     | dither | = |   | 	dithering to improve raster display, see "man vplotraster"
+                    0    No dither,
+                    1    Random Dither
+                    2    Ordered Dither
+                    3    Minimized Average Error Method
+                    4    Digital Halftoning 
+bool    | endpause | = |  [y/n] | 	
+string  | erase | = |   | 	
+int     | fat | =0 |   | 	base line fatness 
+float   | fatmult | = |   | 	
+bool    | frame | = |  [y/n] | 	
+floats  | green | = |   | 	 [4]
+float   | greenpow | =1.0 |   | 	
+float   | greyc | =1.0 |   | 	"grey correction" modifies the grey scale used to display a raster to simulate the nonlinearity of displays, see "man vplotraster" 
+bool    | images | =(bool) app_data.images |  [y/n] | 	copy the image created by plotting each frame and save it in
+       the client program (xtpen). This will increase memory usage in
+       the machine that runs the pen command. If you have a fast
+       connection to your X-server it will make redisplay of frames
+       faster. If you have a slow connection, it may make replotting
+       slower. 
+string  | interact | = |   | 	* save the command line arguments
+bool    | invras | = |  [y/n] | 	
+bool    | labels | =(bool) app_data.labels |  [y/n] | 	if y, display frame number and inter-frame delay at the top of plot 
+string  | message | = |   | 	
+float   | mkscale | =1.0 |   | 	
+bool    | mono | =n |  [y/n] | 	no color 
+int     | numcol | =app_data.num_col |   | 	number of colors (take a default from the resource database) 
+bool    | overlay | = |  [y/n] | 	
+float   | patternmult | =1. |   | 	
+int     | pause | =0 |   | 	
+float   | pixc | =1.0 |   | 	"pixel  correction" controls  alteration of the grey scale, see "man vplotraster". 
+bool    | pixmaps | =(bool) app_data.pixmaps |  [y/n] | 	Copy the image created by plotting each frame and save it in
+       the X-server. This will increase memory usage of the machine that
+       displays the window! Redisplay of frames will be very fast and
+       the network traffic is very low so this is a suitable option for
+       slow connections.  If your X-server is a workstation with plenty
+       of memory and swap space then this option should be very useful.
+       If your X-server has limited memory, this option may have
+       undesirable effects on the response of your terminal. 
+float   | ppi | = |   | 	pixels per inch 
+floats  | red | = |   | 	 [4]
+float   | redpow | =1.0 |   | 	
+int     | rotate | =0 |   | 	
+float   | scale | =1.0 |   | 	
+bool    | see_progress | =n |  [y/n] | 	show progress of each frame, slow 
+bool    | serifs | = |  [y/n] | 	
+bool    | shade | = |  [y/n] | 	
+string  | size | = |   | 	
+bool    | stretchy | =(bool) app_data.stretchy |  [y/n] | 	if y, use the stretchy mode and fill the window 
+string  | style | = |   | 	
+int     | txfont | = |   | 	
+int     | txovly | = |   | 	
+int     | txprec | = |   | 	
+float   | txscale | =1.0 |   | 	
+bool    | txsquare | = |  [y/n] | 	
+bool    | want_text | =(bool) app_data.textpane |  [y/n] | 	if y, display a message window 
+bool    | wantras | = |  [y/n] | 	
+bool    | window | = |  [y/n] | 	
+float   | xcenter | = |   | 	
+float   | xscale | =1.0 |   | 	
+float   | xshift | =0. |   | 	
+float   | xwmax | = |   | 	
+float   | xwmin | = |   | 	
+float   | ycenter | = |   | 	
+float   | yscale | =1.0 |   | 	
+float   | yshift | =0. |   | 	
+float   | ywmax | = |   | 	
+float   | ywmin | = |   | 	
+[DIRECTORY]
+pens/main

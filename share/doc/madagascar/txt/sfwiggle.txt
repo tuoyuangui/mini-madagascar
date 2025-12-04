@@ -1,0 +1,28 @@
+Program sfwiggle | Plot data with wiggly traces. 
+[SYNOPSIS]
+sfwiggle < in.rsf xpos=xpos.rsf xmax= xmin= poly=n polyneg=n fatp=1 xmask=1 ymask=1 pclip=98. zplot=0.75 clip=0. seemean=n verb=n transp=n yreverse=n xreverse=n > plot.vpl
+[COMMENTS]
+Run "sfdoc stdplot" for more parameters.
+
+June 2013 program of the month:
+http://www.ahay.org/blog/2013/06/12/program-of-the-month-sfwiggle/
+
+[PARAMETERS]
+float   | clip | =0. |   | 	data clip (estimated from pclip by default 
+int     | fatp | =1 |   | 	polygon border fatness 
+float   | pclip | =98. |   | 	clip percentile 
+bool    | poly | =n |  [y/n] | 	if draw polygons 
+bool    | polyneg | =n |  [y/n] | 	if polygons for negative values 
+bool    | seemean | =n |  [y/n] | 	if y, plot mean lines of traces 
+bool    | transp | =n |  [y/n] | 	if y, transpose the axes 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+int     | xmask | =1 |   | 	polygon filling 
+float   | xmax | = |   | 	maximum trace position (if using xpos) 
+float   | xmin | = |   | 	minimum trace position (if using xpos) 
+string  | xpos | = |   | 	optional header file with trace positions (auxiliary input file name)
+bool    | xreverse | =n |  [y/n] | 	if y, reverse the horizontal axis 
+int     | ymask | =1 |   | 	polygon filling 
+bool    | yreverse | =n |  [y/n] | 	if y, reverse the vertical axis 
+float   | zplot | =0.75 |   | 	vertical separation 
+[DIRECTORY]
+plot/main

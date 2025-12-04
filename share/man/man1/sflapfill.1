@@ -1,0 +1,29 @@
+.TH sflapfill 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsflapfill \- Missing data interpolation in 2-D by Laplacian regularization. \n.SH SYNOPSIS
+.B sflapfill < in.rsf > out.rsf mask=mask.rsf niter=200 grad=n verb=n
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B grad
+.B =n
+.R  [y/n]	if y, use gradient instead of laplacian
+.TP
+.I string 
+.B mask
+.B =
+.R  	optional mask file with zeroes for missing data locations (auxiliary input file name)
+.TP
+.I int    
+.B niter
+.B =200
+.R  	number of iterations
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]	verbosity flag
+.SH SOURCE
+.I system/generic/Mlapfill.c
+.SH VERSION
+4.2

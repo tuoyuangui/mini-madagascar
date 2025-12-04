@@ -1,0 +1,20 @@
+.TH sfcosft 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfcosft \- Multi-dimensional cosine transform.\n.SH SYNOPSIS
+.B sfcosft < in.rsf > out.rsf sign#=0
+.SH COMMENTS
+
+The input and output are real and have the same dimensions. 
+Pad the data if you need to suppress wrap-around effects.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B sign#
+.B =0
+.R  	transform along #-th dimension 
+	  [+1 forward or -1 backward]
+.SH SOURCE
+.I system/generic/Mcosft.c
+.SH VERSION
+4.2

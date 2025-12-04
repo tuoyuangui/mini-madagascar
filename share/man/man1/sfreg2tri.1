@@ -1,0 +1,24 @@
+.TH sfreg2tri 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfreg2tri \- Decimate a regular grid to triplets for triangulation. \n.SH SYNOPSIS
+.B sfreg2tri < in.rsf > out.rsf edgeout=edge.rsf nt= zero=0.
+.SH PARAMETERS
+.PD 0
+.TP
+.I string 
+.B edgeout
+.B =
+.R  	auxiliary output file name
+.TP
+.I int    
+.B nt
+.B =
+.R  	number of triplets
+.TP
+.I float  
+.B zero
+.B =0.
+.R  	level surface
+.SH SOURCE
+.I system/generic/Mreg2tri.c
+.SH VERSION
+4.2

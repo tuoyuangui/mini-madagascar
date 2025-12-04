@@ -1,0 +1,12 @@
+Program sfthreshold | Soft thresholding. 
+[SYNOPSIS]
+sfthreshold < in.rsf > out.rsf pclip=
+[COMMENTS]
+
+November 2014 program of the month:
+http://ahay.org/blog/2014/11/12/program-of-the-month-sfthreshold/
+
+[PARAMETERS]
+float   | pclip | = |   | 	percentage to clip 
+[DIRECTORY]
+system/generic

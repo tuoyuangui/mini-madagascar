@@ -1,0 +1,57 @@
+.TH sfkirchinv 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfkirchinv \- Kirchhoff 2-D post-stack least-squares time migration with antialiasing. \n.SH SYNOPSIS
+.B sfkirchinv < in.rsf > out.rsf fweight=fwght.rsf weight=wght.rsf velocity=vel.rsf model0=in0.rsf hd=y ps=y sw=0 niter=10 err=
+.SH COMMENTS
+
+Antialiasing by reparameterization. 
+.SH PARAMETERS
+.PD 0
+.TP
+.I string 
+.B err
+.B =
+.R  	output file for error
+.TP
+.I string 
+.B fweight
+.B =
+.R  	auxiliary input file name
+.TP
+.I bool   
+.B hd
+.B =y
+.R  [y/n]	if y, apply half-derivative filter
+.TP
+.I string 
+.B model0
+.B =
+.R  	auxiliary input file name
+.TP
+.I int    
+.B niter
+.B =10
+.R  	number of iterations
+.TP
+.I bool   
+.B ps
+.B =y
+.R  [y/n]	if y, apply pseudo-unitary weighting
+.TP
+.I int    
+.B sw
+.B =0
+.R  	if > 0, select a branch of the antialiasing operation
+.TP
+.I file   
+.B velocity
+.B =
+.R  	auxiliary input file name
+.TP
+.I file   
+.B weight
+.B =
+.R  	auxiliary input file name
+.SH SOURCE
+.I system/seismic/Mkirchinv.c
+.SH VERSION
+4.2

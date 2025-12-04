@@ -1,0 +1,59 @@
+.TH sftime2depth 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsftime2depth \- Time-to-depth conversion in V(z). \n.SH SYNOPSIS
+.B sftime2depth < in.rsf velocity=velocity.rsf > out.rsf intime=n nz= dz= z0=0. extend=4 slow=n twoway=y eps=0.01
+.SH COMMENTS
+
+July 2013 program of the month:
+http://www.ahay.org/blog/2013/07/01/program-of-the-month-sftime2depth/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B dz
+.B =
+.R  	Depth sampling (default: d1)
+.TP
+.I float  
+.B eps
+.B =0.01
+.R  	stretch regularization
+.TP
+.I int    
+.B extend
+.B =4
+.R  	Interpolation accuracy
+.TP
+.I bool   
+.B intime
+.B =n
+.R  [y/n]	y if velocity is in time rather than depth
+.TP
+.I int    
+.B nz
+.B =
+.R  	Number of depth samples (default: n1)
+.TP
+.I bool   
+.B slow
+.B =n
+.R  [y/n]	If y, input slowness; if n, velocity
+.TP
+.I bool   
+.B twoway
+.B =y
+.R  [y/n]	if y, two-way traveltime
+.TP
+.I file   
+.B velocity
+.B =
+.R  	auxiliary input file name
+.TP
+.I float  
+.B z0
+.B =0.
+.R  	Depth origin
+.SH SOURCE
+.I system/seismic/Mtime2depth.c
+.SH VERSION
+4.2

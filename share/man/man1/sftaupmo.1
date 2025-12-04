@@ -1,0 +1,44 @@
+.TH sftaupmo 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsftaupmo \- Normal moveout in tau-p domain. \n.SH SYNOPSIS
+.B sftaupmo < taup.rsf velocity=velocity.rsf > nmod.rsf slope=slope.rsf velx=velocityx.rsf mute=12 str=0.5 extend=4 interval=y
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B extend
+.B =4
+.R  	interpolation accuracy
+.TP
+.I bool   
+.B interval
+.B =y
+.R  [y/n]	use interval velocity
+.TP
+.I int    
+.B mute
+.B =12
+.R  	mute zone
+.TP
+.I string 
+.B slope
+.B =
+.R  	auxiliary input file name
+.TP
+.I float  
+.B str
+.B =0.5
+.R  	maximum stretch
+.TP
+.I file   
+.B velocity
+.B =
+.R  	auxiliary input file name
+.TP
+.I string 
+.B velx
+.B =
+.R  	auxiliary input file name
+.SH SOURCE
+.I system/seismic/Mtaupmo.c
+.SH VERSION
+4.2

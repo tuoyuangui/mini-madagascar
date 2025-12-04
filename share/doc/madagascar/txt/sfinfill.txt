@@ -1,0 +1,8 @@
+Program sfinfill | Shot interpolation. 
+[SYNOPSIS]
+sfinfill < in.rsf > out.rsf eps=0.1 positive=y
+[PARAMETERS]
+float   | eps | =0.1 |   | 	regularization parameter 
+bool    | positive | =y |  [y/n] | 	initial offset orientation 
+[DIRECTORY]
+system/seismic

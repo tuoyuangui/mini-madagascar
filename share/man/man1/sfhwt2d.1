@@ -1,0 +1,59 @@
+.TH sfhwt2d 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfhwt2d \- 2-D Huygens wavefront tracing traveltimes \n.SH SYNOPSIS
+.B sfhwt2d < Fv.rsf > Fw.rsf verb=n rays=n xsou=sf_o(ax) + nx*sf_d(ax)/2 zsou=sf_o(az) + nz*sf_d(az)/2 nt=100 ot=0 dt=0.001 ng=360 og=-180 dg=1
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B dg
+.B =1
+.R  
+.TP
+.I float  
+.B dt
+.B =0.001
+.R  
+.TP
+.I int    
+.B ng
+.B =360
+.R  
+.TP
+.I int    
+.B nt
+.B =100
+.R  
+.TP
+.I float  
+.B og
+.B =-180
+.R  
+.TP
+.I float  
+.B ot
+.B =0
+.R  
+.TP
+.I bool   
+.B rays
+.B =n
+.R  [y/n]	velocity file
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]
+.TP
+.I float  
+.B xsou
+.B =sf_o(ax) + nx*sf_d(ax)/2
+.R  
+.TP
+.I float  
+.B zsou
+.B =sf_o(az) + nz*sf_d(az)/2
+.R  
+.SH SOURCE
+.I system/seismic/Mhwt2d.c
+.SH VERSION
+4.2

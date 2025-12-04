@@ -1,0 +1,19 @@
+.TH sfomp 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfomp \- OpenMP wrapper for embarassingly parallel jobs. \n.SH SYNOPSIS
+.B sfomp < inp.rsf > out.rsf split=ndim join=axis
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B join
+.B =axis
+.R  	axis to join (0 means add)
+.TP
+.I int    
+.B split
+.B =ndim
+.R  	axis to split
+.SH SOURCE
+.I system/main/omp.c
+.SH VERSION
+4.2

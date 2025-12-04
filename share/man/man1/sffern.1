@@ -1,0 +1,24 @@
+.TH sffern 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsffern \- Generate fractal fern. \n.SH SYNOPSIS
+.B sffern > out.rsf n=1000 seed=time(NULL) angle=y
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B angle
+.B =y
+.R  [y/n]	if y, use more angular fern
+.TP
+.I int    
+.B n
+.B =1000
+.R  	number of points
+.TP
+.I int    
+.B seed
+.B =time(NULL)
+.R  	random seed
+.SH SOURCE
+.I system/generic/Mfern.c
+.SH VERSION
+4.2

@@ -1,0 +1,96 @@
+.TH sfzomig 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfzomig \- 3-D zero-offset modeling/migration with extended split-step\n.SH SYNOPSIS
+.B sfzomig slo=Fs.rsf < Fd.rsf > Fw.rsf < Fi.rsf verb=n incore=y eps=0.01 inv=n causal=n twoway=y nrmax=1 dtmax=0.004 pmx=0 pmy=0 tmx=0 tmy=0 nw= dw= ow=0. mode=
+.SH COMMENTS
+To be deprecated in favor of zomig3 
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B causal
+.B =n
+.R  [y/n]	y=causal; n=anti-causal
+.TP
+.I float  
+.B dtmax
+.B =0.004
+.R  	time error
+.TP
+.I float  
+.B dw
+.B =
+.R  
+.TP
+.I float  
+.B eps
+.B =0.01
+.R  	stability parameter
+.TP
+.I bool   
+.B incore
+.B =y
+.R  [y/n]	in core execution
+.TP
+.I bool   
+.B inv
+.B =n
+.R  [y/n]	y=modeling; n=migration
+.TP
+.I string 
+.B mode
+.B =
+.R  
+.TP
+.I int    
+.B nrmax
+.B =1
+.R  	maximum references
+.TP
+.I int    
+.B nw
+.B =
+.R  
+.TP
+.I float  
+.B ow
+.B =0.
+.R  
+.TP
+.I int    
+.B pmx
+.B =0
+.R  	padding on x
+.TP
+.I int    
+.B pmy
+.B =0
+.R  	padding on y
+.TP
+.I file   
+.B slo
+.B =
+.R  	auxiliary input file name
+.TP
+.I int    
+.B tmx
+.B =0
+.R  	taper on x
+.TP
+.I int    
+.B tmy
+.B =0
+.R  	taper on y
+.TP
+.I bool   
+.B twoway
+.B =y
+.R  [y/n]	two-way traveltime
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]	verbosity flag
+.SH SOURCE
+.I system/seismic/Mzomig.c
+.SH VERSION
+4.2

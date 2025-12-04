@@ -1,0 +1,8 @@
+Program sfheat | Finite-difference solution of 2-D heat-flow equation 
+[SYNOPSIS]
+sfheat > out.rsf impl=n alpha=1.
+[PARAMETERS]
+float   | alpha | =1. |   | 	
+bool    | impl | =n |  [y/n] | 	if y, use implicit scheme 
+[DIRECTORY]
+system/generic

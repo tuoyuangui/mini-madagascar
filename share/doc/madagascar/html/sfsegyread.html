@@ -1,0 +1,442 @@
+
+    <!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+    <html><head><title>RSF: sfsegyread</title>
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>sfsegyread</strong></big></big> (4.2)</font></td
+    ><td align=right valign=bottom
+    ><font color="#ffffff" face="helvetica, arial"><a href="./index.html">index</a><br><a href="https://github.com/ahay/src/blob/madagascar-4.2/system/seismic/Msegyread.c">system/seismic/Msegyread.c</a><br><a href="http://ahay.org/wiki/Guide_to_madagascar_programs#sfsegyread">Documentation</a></font></td></tr></table>
+    Convert a SEG-Y or SU dataset to RSF.
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Synopsis</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">sfsegyread mask=msk.rsf > out.rsf tfile=hdr.rsf verb=n su= suxdr=n endian=y n2=0 format= ns=0 nsbyte=0 tape= hfile= bfile= read=</td></tr></table><br>
+Data headers and trace headers are separated from the data.<br>
+<br>
+"suread" is equivalent to "segyread su=y"<br>
+<br>
+<br>
+SEGY key names:<br>
+<br>
+tracl: trace sequence number within line 0<br>
+<br>
+tracr: trace sequence number within reel 4<br>
+<br>
+fldr:     field record number 8 <br>
+<br>
+tracf:    trace number within field record 12 <br>
+<br>
+ep:       energy source point number 16 <br>
+<br>
+cdp:      CDP ensemble number 20 <br>
+<br>
+cdpt:     trace number within CDP ensemble 24 <br>
+<br>
+trid:     trace identification code:<br>
+1 = seismic data<br>
+2 = dead<br>
+3 = dummy<br>
+4 = time break<br>
+5 = uphole<br>
+6 = sweep<br>
+7 = timing<br>
+8 = water break<br>
+9---, N = optional use (N = 32,767) 28 <br>
+<br>
+nvs:      number of vertically summed traces 30 <br>
+<br>
+nhs:      number of horizontally summed traces 32 <br>
+<br>
+duse:     data use:<br>
+1 = production<br>
+2 = test 34<br>
+<br>
+offset:   distance from source point to receiver<br>
+group (negative if opposite to direction<br>
+in which the line was shot) 36 <br>
+<br>
+gelev:    receiver group elevation from sea level<br>
+(above sea level is positive) 40 <br>
+<br>
+selev:    source elevation from sea level<br>
+(above sea level is positive) 44 <br>
+<br>
+sdepth:   source depth (positive) 48 <br>
+<br>
+gdel:     datum elevation at receiver group 52 <br>
+<br>
+sdel:     datum elevation at source 56 <br>
+<br>
+swdep:    water depth at source 60 <br>
+<br>
+gwdep:    water depth at receiver group 64 <br>
+<br>
+scalel:   scale factor for previous 7 entries<br>
+with value plus or minus 10 to the<br>
+power 0, 1, 2, 3, or 4 (if positive,<br>
+multiply, if negative divide) 68 <br>
+<br>
+scalco:   scale factor for next 4 entries<br>
+with value plus or minus 10 to the<br>
+power 0, 1, 2, 3, or 4 (if positive,<br>
+multiply, if negative divide) 70 <br>
+<br>
+sx:       X source coordinate 72 <br>
+<br>
+sy:       Y source coordinate 76 <br>
+<br>
+gx:       X group coordinate 80 <br>
+<br>
+gy:       Y group coordinate 84 <br>
+<br>
+counit:   coordinate units code:<br>
+for previous four entries<br>
+1 = length (meters or feet)<br>
+2 = seconds of arc (in this case, the<br>
+X values are unsigned longitude and the Y values<br>
+are latitude, a positive value designates<br>
+the number of seconds east of Greenwich<br>
+or north of the equator 88 <br>
+<br>
+wevel:     weathering velocity 90 <br>
+<br>
+swevel:    subweathering velocity 92 <br>
+<br>
+sut:       uphole time at source 94 <br>
+<br>
+gut:       uphole time at receiver group 96 <br>
+<br>
+sstat:     source static correction 98 <br>
+<br>
+gstat:     group static correction 100 <br>
+<br>
+tstat:     total static applied 102 <br>
+<br>
+laga:      lag time A, time in ms between end of 240-<br>
+byte trace identification header and time<br>
+break, positive if time break occurs after<br>
+end of header, time break is defined as<br>
+the initiation pulse which maybe recorded<br>
+on an auxiliary trace or as otherwise<br>
+specified by the recording system 104 <br>
+<br>
+lagb:      lag time B, time in ms between the time<br>
+break and the initiation time of the energy source,<br>
+may be positive or negative 106 <br>
+<br>
+delrt:     delay recording time, time in ms between<br>
+initiation time of energy source and time<br>
+when recording of data samples begins<br>
+(for deep water work if recording does not<br>
+start at zero time) 108 <br>
+<br>
+muts:      mute time--start 110 <br>
+<br>
+mute:      mute time--end 112 <br>
+<br>
+ns:        number of samples in this trace 114 <br>
+<br>
+dt:        sample interval, in micro-seconds 116 <br>
+<br>
+gain:      gain type of field instruments code:<br>
+1 = fixed<br>
+2 = binary<br>
+3 = floating point<br>
+4 ---- N = optional use 118 <br>
+<br>
+igc:       instrument gain constant 120 <br>
+<br>
+igi:       instrument early or initial gain 122 <br>
+<br>
+corr:      correlated:<br>
+1 = no<br>
+2 = yes 124<br>
+<br>
+sfs:       sweep frequency at start 126 <br>
+<br>
+sfe:       sweep frequency at end 128 <br>
+<br>
+slen:      sweep length in ms 130 <br>
+<br>
+styp:      sweep type code:<br>
+1 = linear<br>
+2 = cos-squared<br>
+3 = other 132<br>
+<br>
+stas:      sweep trace length at start in ms 134 <br>
+<br>
+stae:      sweep trace length at end in ms 136 <br>
+<br>
+tatyp:     taper type: 1=linear, 2=cos^2, 3=other 138 <br>
+<br>
+afilf:     alias filter frequency if used 140 <br>
+<br>
+afils:     alias filter slope 142 <br>
+<br>
+nofilf:    notch filter frequency if used 144 <br>
+<br>
+nofils:    notch filter slope 146 <br>
+<br>
+lcf:       low cut frequency if used 148 <br>
+<br>
+hcf:       high cut frequncy if used 150 <br>
+<br>
+lcs:       low cut slope 152 <br>
+<br>
+hcs:       high cut slope 154 <br>
+<br>
+year:      year data recorded 156 <br>
+<br>
+day:       day of year 158 <br>
+<br>
+hour:      hour of day (24 hour clock) 160 <br>
+<br>
+minute:    minute of hour 162 <br>
+<br>
+sec:       second of minute 164 <br>
+<br>
+timbas:    time basis code:<br>
+1 = local<br>
+2 = GMT<br>
+3 = other 166<br>
+<br>
+trwf:      trace weighting factor, defined as 1/2^N<br>
+volts for the least sigificant bit 168 <br>
+<br>
+grnors:    geophone group number of roll switch<br>
+position one 170<br>
+<br>
+grnofr:    geophone group number of trace one within<br>
+original field record 172<br>
+<br>
+grnlof:    geophone group number of last trace within<br>
+original field record 174<br>
+<br>
+gaps:      gap size (total number of groups dropped) 176 <br>
+<br>
+otrav:     overtravel taper code: <br>
+1 = down (or behind)<br>
+2 = up (or ahead) 178<br>
+<br>
+cdpx:   X coordinate of CDP 180<br>
+<br>
+cdpy:   Y coordinate of CDP 184<br>
+<br>
+iline:  in-line number 188 <br>
+<br>
+xline:  cross-line number 192<br>
+<br>
+shnum:  shotpoint number 196<br>
+<br>
+shsca:  shotpoint scalar 200<br>
+<br>
+tval:   trace value meas. 202<br>
+<br>
+tconst4: transduction const 204<br>
+<br>
+tconst2: transduction const 208<br>
+<br>
+tunits:  transduction units 210<br>
+<br>
+device:  device identifier 212<br>
+<br>
+tscalar: time scalar 214<br>
+<br>
+stype:   source type 216<br>
+<br>
+sendir:  source energy dir. 218<br>
+<br>
+unknown: unknown 222<br>
+<br>
+smeas4:  source measurement 224<br>
+<br>
+smeas2:  source measurement 228<br>
+<br>
+smeasu:  source measurement unit 230 <br>
+<br>
+unass1:  unassigned 232<br>
+<br>
+unass2:  unassigned 236<br>
+<br>
+additional keys can be created in the output trace headers<br>
+The parameters key1, key2, ... key# are used to additional keys.   <br>
+The keys must be unique and different from the SEGY key names above.<br>
+The input header byte location and lengths must also be defined.  <br>
+This capability is described in an example that defines a new keys <br>
+iline1 from byte 220 and xline1 from byte 224:<br>
+	  key1=iline1 iline1=220 key1_len=4 \ <br>
+key2=xline1 xline1=224 key2_len=4 \<br>
+<br>
+key#_len defaults to 4<br>
+
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parameters</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>bfile=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	output binary data header file <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>endian=y</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Whether to automatically estimate endianness or not <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>format=</strong> [1,2,3,5]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Data format. <br>
+           The default is taken from binary header for segy input.<br>
+	   Default is 5 for su input.<br>
+	   1 is IBM floating point<br>
+	   2 is 4-byte integer<br>
+	   3 is 2-byte integer<br>
+	   5 is IEEE floating point<br>
+       6 is native_float (same as RSF binary default)<br>
+	   7 is 1-byte integer<br>
+	<br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>hfile=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	output text data header file <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>mask=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	optional header mask for reading only selected traces (auxiliary input file name)<br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>n2=0</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	number of traces to read (if 0, read all traces) <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>ns=0</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Number of samples. The default is taken from binary header <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>nsbyte=0</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	byte number for ns in binary header <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>read=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	what to read: h - header, d - data, b - both (default) <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>su=</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	y if input is SU, n if input is SEGY <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>suxdr=n</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	y, SU has XDR support.  <br>
+           SU with xdr on (as downloaded), use endian=y suxdr=y<br>
+           SU with xdr off in the makefiles, use endian=n suxdr=n   <br>
+        <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>tape=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	input data <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>tfile=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	output trace header file (auxiliary output file name)<br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>verb=n</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Verbosity flag <br>
+</font></td></tr></table>
+    
+</td></tr></table>
+    </body></html>

@@ -1,0 +1,14 @@
+Program sfhalfint | Half-order integration or differentiation. 
+[SYNOPSIS]
+sfhalfint < in.rsf > out.rsf adj=n inv=n rho=1.-1./n1
+[COMMENTS]
+
+December 2012 program of the month:
+http://ahay.org/blog/2012/12/23/program-of-the-month-sfhalfint/
+
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	If y, apply adjoint 
+bool    | inv | =n |  [y/n] | 	If y, do differentiation instead of integration 
+float   | rho | =1.-1./n1 |   | 	Leaky integration constant 
+[DIRECTORY]
+system/seismic

@@ -1,0 +1,7 @@
+Program sfcmatmult2 | Multiplication of two complex matrices 
+[SYNOPSIS]
+sfcmatmult2 < in.rsf > out.rsf mat=mat.rsf
+[PARAMETERS]
+file    | mat | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/generic

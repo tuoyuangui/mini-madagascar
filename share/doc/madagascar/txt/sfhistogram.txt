@@ -1,0 +1,17 @@
+Program sfhistogram | Compute a histogram of integer- or float-valued input data.
+[SYNOPSIS]
+sfhistogram < in.rsf > out.rsf n1= o1= d1=
+[COMMENTS]
+
+The output grid is not centered on the bins; it marks their "left edge".
+I.e., the first sample holds the number of values between o1 and o1+d1. 
+
+February 2015 program of the month:
+http://ahay.org/blog/2015/03/01/program-of-the-month-sfhistogram/
+
+[PARAMETERS]
+float   | d1 | = |   | 	histogram sampling 
+int     | n1 | = |   | 	number of histogram samples 
+float   | o1 | = |   | 	histogram origin 
+[DIRECTORY]
+system/generic

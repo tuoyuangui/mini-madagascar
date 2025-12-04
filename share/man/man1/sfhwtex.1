@@ -1,0 +1,39 @@
+.TH sfhwtex 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfhwtex \- Huygens wavefront tracing traveltimes \n.SH SYNOPSIS
+.B sfhwtex < Fv.rsf sou=Fs.rsf > Fw.rsf verb=n wini=n nt=100 ot=0 dt=0.001
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B dt
+.B =0.001
+.R  
+.TP
+.I int    
+.B nt
+.B =100
+.R  
+.TP
+.I float  
+.B ot
+.B =0
+.R  
+.TP
+.I file   
+.B sou
+.B =
+.R  	auxiliary input file name
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]	verbosity flag
+.TP
+.I bool   
+.B wini
+.B =n
+.R  [y/n]	initialize two wavefronts
+.SH SOURCE
+.I system/seismic/Mhwtex.c
+.SH VERSION
+4.2

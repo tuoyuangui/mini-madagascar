@@ -1,0 +1,12 @@
+Program sftan2ang | tangent to angle transformation 
+[SYNOPSIS]
+sftan2ang < Fstk.rsf > Fang.rsf velocity=velocity.rsf na=nt da=90/(nt-1) a0=0. extend=4 top=n
+[PARAMETERS]
+float   | a0 | =0. |   | 	
+float   | da | =90/(nt-1) |   | 	
+int     | extend | =4 |   | 	tmp extension 
+int     | na | =nt |   | 	
+bool    | top | =n |  [y/n] | 	
+file    | velocity | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/seismic

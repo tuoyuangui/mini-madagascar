@@ -1,0 +1,44 @@
+.TH sfspray 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfspray \- Extend a dataset by duplicating in the specified axis dimension.\n.SH SYNOPSIS
+.B sfspray < in.rsf > out.rsf axis=2 n= d= o= label= unit=
+.SH COMMENTS
+This operation is adjoint to sfstack.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B axis
+.B =2
+.R  	which axis to spray
+.TP
+.I float  
+.B d
+.B =
+.R  	Sampling of the newly created dimension
+.TP
+.I string 
+.B label
+.B =
+.R  	Label of the newly created dimension
+.TP
+.I int    
+.B n
+.B =
+.R  	Size of the newly created dimension
+.TP
+.I float  
+.B o
+.B =
+.R  	Origin of the newly created dimension
+.TP
+.I string 
+.B unit
+.B =
+.R  	Units of the newly created dimension
+.SH SOURCE
+.I system/main/spray.c
+.SH DOCUMENTATION
+.BR http://ahay.org/wiki/Guide_to_madagascar_programs#sfspray
+.SH VERSION
+4.2

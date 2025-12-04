@@ -1,0 +1,29 @@
+.TH sfenvelope 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfenvelope \- None\n.SH SYNOPSIS
+.B sfenvelope < in.rsf > out.rsf order=100 ref=1. hilb=n phase=90.
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B hilb
+.B =n
+.R  [y/n]	if y, compute Hilbert transform
+.TP
+.I int    
+.B order
+.B =100
+.R  	Hilbert transformer order
+.TP
+.I float  
+.B phase
+.B =90.
+.R  	phase shift (in degrees) to use with hilb=y
+.TP
+.I float  
+.B ref
+.B =1.
+.R  	Hilbert transformer reference (0.5 < ref <= 1)
+.SH SOURCE
+.I system/seismic/Menvelope.c
+.SH VERSION
+4.2

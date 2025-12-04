@@ -1,0 +1,25 @@
+Program sfgraph | Graph plot.
+[SYNOPSIS]
+sfgraph < in.rsf depth=depth.rsf symbolsz= scalebar=n wantframenum=(bool) (n3 > 1) nreserve=8 minval= maxval= barreverse=n pclip=100. transp=n color= bar= symbol= > plot.vpl
+[COMMENTS]
+Run "sfdoc stdplot" for more parameters.
+
+August 2011 program of the month:
+http://ahay.org/blog/2011/08/09/program-of-the-month-sfgraph/
+
+[PARAMETERS]
+string  | bar | = |   | 	file for scalebar data 
+bool    | barreverse | =n |  [y/n] | 	if y, go from small to large on the bar scale 
+string  | color | = |   | 	color scheme (default is j) 
+string  | depth | = |   | 	auxiliary input file name
+float   | maxval | = |   | 	maximum value for scalebar (default is the data maximum) 
+float   | minval | = |   | 	minimum value for scalebar (default is the data minimum) 
+int     | nreserve | =8 |   | 	reserved colors 
+float   | pclip | =100. |   | 	clip percentile 
+bool    | scalebar | =n |  [y/n] | 	if y, draw scalebar 
+string  | symbol | = |   | 	if set, plot with symbols instead of lines 
+floats  | symbolsz | = |   | 	symbol size (default is 2)  [n2]
+bool    | transp | =n |  [y/n] | 	if y, transpose the axes 
+bool    | wantframenum | =(bool) (n3 > 1) |  [y/n] | 	if y, display third axis position in the corner 
+[DIRECTORY]
+plot/main

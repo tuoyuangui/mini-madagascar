@@ -1,0 +1,33 @@
+.TH sfintshow 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfintshow \- Output interpolation filter. \n.SH SYNOPSIS
+.B sfintshow > filt.rsf nw= x= kai=4.0 interp=
+.SH COMMENTS
+
+See also: inttest1.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I string 
+.B interp
+.B =
+.R  	interpolation (lagrange,cubic,kaiser,lanczos,cosine,welch,spline,mom)
+.TP
+.I float  
+.B kai
+.B =4.0
+.R  	Kaiser window parameter
+.TP
+.I int    
+.B nw
+.B =
+.R  	interpolator size
+.TP
+.I float  
+.B x
+.B =
+.R  	interpolation shift
+.SH SOURCE
+.I system/generic/Mintshow.c
+.SH VERSION
+4.2

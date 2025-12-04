@@ -1,0 +1,14 @@
+Program sftshift | Compute angle gathers for time-shift imaging condition 
+[SYNOPSIS]
+sftshift < Fstk.rsf velocity=Fvel.rsf dip=Fdip.rsf > Fang.rsf na=nv da=1./(nv-1) a0=0. extend=4 cos=n
+[PARAMETERS]
+float   | a0 | =0. |   | 	
+bool    | cos | =n |  [y/n] | 	if n, convert pseudo-v to pseudo-tan(theta); 
+       if y, compute cos(theta) from 1/|pm| 
+float   | da | =1./(nv-1) |   | 	
+file    | dip | = |   | 	auxiliary input file name
+int     | extend | =4 |   | 	tmp extension 
+int     | na | =nv |   | 	
+file    | velocity | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/seismic

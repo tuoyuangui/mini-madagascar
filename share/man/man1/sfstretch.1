@@ -1,0 +1,99 @@
+.TH sfstretch 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfstretch \- Stretch of the time axis. \n.SH SYNOPSIS
+.B sfstretch < in.rsf > out.rsf datum=dat.rsf inv=n dens=1 verb=y v0= half=y CDPtype= delay= tdelay= hdelay= scale= nout=dens*n1 extend=4 mute=0 maxstr=0 rule=
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B CDPtype
+.B =
+.R  
+.TP
+.I file   
+.B datum
+.B =
+.R  	auxiliary input file name
+.TP
+.I float  
+.B delay
+.B =
+.R  	time delay for rule=lmo
+.TP
+.I int    
+.B dens
+.B =1
+.R  	axis stretching factor
+.TP
+.I int    
+.B extend
+.B =4
+.R  	trace extension
+.TP
+.I bool   
+.B half
+.B =y
+.R  [y/n]	if y, the second axis is half-offset instead of full offset
+.TP
+.I float  
+.B hdelay
+.B =
+.R  	offset delay for rule=rad
+.TP
+.I bool   
+.B inv
+.B =n
+.R  [y/n]	if y, do inverse stretching
+.TP
+.I float  
+.B maxstr
+.B =0
+.R  	maximum stretch
+.TP
+.I int    
+.B mute
+.B =0
+.R  	tapering size
+.TP
+.I int    
+.B nout
+.B =dens*n1
+.R  	output axis length (if inv=n)
+.TP
+.I string 
+.B rule
+.B =
+.R  	Stretch rule:
+	   n - constant-velocity normal moveout (nmostretch), default
+	   l - linear moveout (lmostretch)
+	   L - logarithmic stretch (logstretch)
+	   2 - t^2 stretch (t2stretch)
+	   c - t^2 chebyshev stretch (t2chebstretch)
+	   r - radial moveout (radstretch)
+	   d - datuming (datstretch)
+	   s - s*t scaling stretch (scalestretch)
+.TP
+.I float  
+.B scale
+.B =
+.R  	scaling factor for rule=scale
+.TP
+.I float  
+.B tdelay
+.B =
+.R  	time delay for rule=rad
+.TP
+.I float  
+.B v0
+.B =
+.R  	moveout velocity
+.TP
+.I bool   
+.B verb
+.B =y
+.R  [y/n]	verbosity flag
+.SH SOURCE
+.I system/seismic/Mstretch.c
+.SH DOCUMENTATION
+.BR http://ahay.org/wiki/Guide_to_madagascar_programs#sfstretch
+.SH VERSION
+4.2

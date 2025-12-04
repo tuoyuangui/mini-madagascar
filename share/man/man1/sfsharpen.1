@@ -1,0 +1,24 @@
+.TH sfsharpen 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfsharpen \- Sharpening operator \n.SH SYNOPSIS
+.B sfsharpen < in.rsf > out.rsf other=other.rsf perc=50.0 fact=0.5
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B fact
+.B =0.5
+.R  	factor for sharpening
+.TP
+.I string 
+.B other
+.B =
+.R  	auxiliary input file name
+.TP
+.I float  
+.B perc
+.B =50.0
+.R  	percentage for sharpening
+.SH SOURCE
+.I system/generic/Msharpen.c
+.SH VERSION
+4.2

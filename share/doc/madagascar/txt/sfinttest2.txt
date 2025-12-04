@@ -1,0 +1,10 @@
+Program sfinttest2 | Interpolation from a regular grid in 2-D. 
+[SYNOPSIS]
+sfinttest2 < in.rsf > out.rsf coord=crd.rsf nw= kai=4.0 interp=
+[PARAMETERS]
+file    | coord | = |   | 	auxiliary input file name
+string  | interp | = |   | 	interpolation (lagrange,cubic,kaiser,lanczos,cosine,welch,spline) 
+float   | kai | =4.0 |   | 	Kaiser window parameter 
+int     | nw | = |   | 	interpolator size 
+[DIRECTORY]
+system/generic

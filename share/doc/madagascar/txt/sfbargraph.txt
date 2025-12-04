@@ -1,0 +1,14 @@
+Program sfbargraph | Bar plot.
+[SYNOPSIS]
+sfbargraph < in.rsf wantframenum=(bool) (n3 > 1) pclip=100. width=0.8 stack=y transp=n > plot.vpl
+[COMMENTS]
+Run "sfdoc stdplot" for more parameters.
+
+[PARAMETERS]
+float   | pclip | =100. |   | 	clip percentile 
+bool    | stack | =y |  [y/n] | 	if stack bars on top 
+bool    | transp | =n |  [y/n] | 	if y, transpose the axes 
+bool    | wantframenum | =(bool) (n3 > 1) |  [y/n] | 	if y, display third axis position in the corner 
+float   | width | =0.8 |   | 	bar width 
+[DIRECTORY]
+plot/main

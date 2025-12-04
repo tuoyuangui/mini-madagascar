@@ -1,0 +1,10 @@
+Program sfextract | Forward interpolation in 2-D slices. 
+[SYNOPSIS]
+sfextract < in.rsf > out.rsf head=head.rsf xkey=0 ykey=1 interp=2
+[PARAMETERS]
+file    | head | = |   | 	auxiliary input file name
+int     | interp | =2 |  [1,2] | 	interpolation method, 1: nearest neighbor, 2: bi-linear 
+int     | xkey | =0 |   | 	x key number 
+int     | ykey | =1 |   | 	y key number 
+[DIRECTORY]
+system/generic

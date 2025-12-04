@@ -1,0 +1,11 @@
+Program sfrtoc | Convert real data to complex (by adding zero imaginary part).
+[SYNOPSIS]
+sfrtoc < real.rsf > cmplx.rsf pair=n
+[COMMENTS]
+
+See also: sfcmplx
+
+[PARAMETERS]
+bool    | pair | =n |  [y/n] | 	y - use odd elements for real part and even ones for imaginary part 
+[DIRECTORY]
+system/main

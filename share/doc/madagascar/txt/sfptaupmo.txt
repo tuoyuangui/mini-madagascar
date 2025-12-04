@@ -1,0 +1,12 @@
+Program sfptaupmo | Slope-based tau-p moveout. 
+[SYNOPSIS]
+sfptaupmo < inp.rsf dip=dip.rsf dipt=dipt.rsf > nmod.rsf vel2=vel2.rsf eps=0.01 v0=0. type=
+[PARAMETERS]
+file    | dip | = |   | 	auxiliary input file name
+file    | dipt | = |   | 	auxiliary input file name
+float   | eps | =0.01 |   | 	stretch regularization 
+string  | type | = |   | 	transform type 
+float   | v0 | =0. |   | 	initial velocity 
+file    | vel2 | = |   | 	auxiliary output file name
+[DIRECTORY]
+system/seismic

@@ -1,0 +1,11 @@
+Program sfsmoothder | Smooth first derivative on the first axis.
+[SYNOPSIS]
+sfsmoothder < in.rsf > der.rsf eps=0.2
+[COMMENTS]
+
+Applies D/(I + eps*D'D)
+
+[PARAMETERS]
+float   | eps | =0.2 |   | 	smoothness parameter 
+[DIRECTORY]
+system/generic

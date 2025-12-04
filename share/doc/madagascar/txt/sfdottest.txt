@@ -1,0 +1,8 @@
+Program sfdottest | Generic dot-product test for linear operators with adjoints 
+[SYNOPSIS]
+sfdottest mod=mod.rsf dat=dat.rsf > pip.rsf
+[PARAMETERS]
+file    | dat | = |   | 	auxiliary input file name
+file    | mod | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/main

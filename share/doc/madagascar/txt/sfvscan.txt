@@ -1,0 +1,34 @@
+Program sfvscan | Velocity analysis.
+[SYNOPSIS]
+sfvscan < cmp.rsf > scan.rsf offset=offset.rsf mask=msk.rsf grad=grd.rsf semblance=n diffsemblance=n avosemblance=n nb=2 weight=y half=y smax=2.0 ns=1 slowness=n squared=n v1= extend=4 mute=12 str=0.5 v0= dv= nv= v1= type=
+[COMMENTS]
+
+Inverse of sfvelmod.
+
+May 2013 program of the month:
+http://www.ahay.org/blog/2013/05/04/program-of-the-month-sfvscan/
+
+[PARAMETERS]
+bool    | avosemblance | =n |  [y/n] | 	if y, compute AVO-friendly semblance 
+bool    | diffsemblance | =n |  [y/n] | 	if y, compute differential semblance 
+float   | dv | = |   | 	step in velocity 
+int     | extend | =4 |   | 	trace extension 
+string  | grad | = |   | 	auxiliary input file name
+bool    | half | =y |  [y/n] | 	if y, the second axis is half-offset instead of full offset 
+string  | mask | = |   | 	optional mask file (auxiliary input file name)
+int     | mute | =12 |   | 	mute zone 
+int     | nb | =2 |   | 	semblance averaging 
+int     | ns | =1 |   | 	number of heterogeneity scans 
+int     | nv | = |   | 	number of scanned velocities 
+string  | offset | = |   | 	auxiliary input file name
+bool    | semblance | =n |  [y/n] | 	if y, compute semblance; if n, stack 
+bool    | slowness | =n |  [y/n] | 	if y, use slowness instead of velocity 
+float   | smax | =2.0 |   | 	maximum heterogeneity 
+bool    | squared | =n |  [y/n] | 	if y, the slowness or velocity is squared 
+float   | str | =0.5 |   | 	maximum stretch allowed 
+string  | type | = |   | 	type of semblance (avo,diff,sembl,power,weighted) 
+float   | v0 | = |   | 	first scanned velocity 
+float   | v1 | = |   | 	reference velocity 
+bool    | weight | =y |  [y/n] | 	if y, apply pseudo-unitary weighting 
+[DIRECTORY]
+system/seismic

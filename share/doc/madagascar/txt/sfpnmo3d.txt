@@ -1,0 +1,12 @@
+Program sfpnmo3d | Slope-based normal moveout for 3-D CMP geometry. 
+[SYNOPSIS]
+sfpnmo3d < cmp.rsf dipx=dipx.rsf dipy=dipy.rsf > nmod.rsf vel=vel.rsf half=y eps=0.01 extend=8
+[PARAMETERS]
+file    | dipx | = |   | 	auxiliary input file name
+file    | dipy | = |   | 	auxiliary input file name
+float   | eps | =0.01 |   | 	stretch regularization 
+int     | extend | =8 |   | 	trace extension 
+bool    | half | =y |  [y/n] | 	if y, the second axis is half-offset instead of full offset 
+file    | vel | = |   | 	auxiliary output file name
+[DIRECTORY]
+system/seismic

@@ -1,0 +1,13 @@
+Program sfpow | Apply power gain. 
+[SYNOPSIS]
+sfpow < in.rsf > out.rsf tpow= pow#=(0,0,...)
+[COMMENTS]
+
+March 2013 program of the month:
+http://www.ahay.org/blog/2013/03/10/program-of-the-month-sfpow/
+
+[PARAMETERS]
+float   | pow# | =(0,0,...) |   | 	power on #-th axis 
+float   | tpow | = |   | 	
+[DIRECTORY]
+system/generic

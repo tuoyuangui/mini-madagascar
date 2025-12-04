@@ -1,0 +1,14 @@
+Program sfricker2 | Nonstationary convolution with a Ricker wavelet. Phase and Frequency can be time-varying. 
+[SYNOPSIS]
+sfricker2 < in.rsf > out.rsf tfreq=tfre.rsf tphase=tpha.rsf frequency= freq=0.2 esp=0. norm=n hiborder=6 hibref=1.
+[PARAMETERS]
+float   | esp | =0. |   | 	if norm=y, stable parameter
+float   | freq | =0.2 |   | 	peak frequency for Ricker wavelet (as fraction of Nyquist) 
+float   | frequency | = |   | 	peak frequency for Ricker wavelet (in Hz) 
+int     | hiborder | =6 |   | 	Hilbert transformer order 
+float   | hibref | =1. |   | 	
+bool    | norm | =n |  [y/n] | 	
+file    | tfreq | = |   | 	auxiliary input file name
+string  | tphase | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/seismic

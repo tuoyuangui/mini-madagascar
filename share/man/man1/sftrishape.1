@@ -1,0 +1,84 @@
+.TH sftrishape 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsftrishape \- 2-D irregular data interpolation using triangulation and shaping regularization. \n.SH SYNOPSIS
+.B sftrishape < in.rsf > out.rsf pattern=pattern.rsf n1= n2= d1=1. d2=1. o1=0. o2=0. zero=0. niter=0 rect1=1 rect2=1 nw=2 fast=n sym=n tol=1e-3
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B d1
+.B =1.
+.R  
+.TP
+.I float  
+.B d2
+.B =1.
+.R  
+.TP
+.I bool   
+.B fast
+.B =n
+.R  [y/n]	if y, use GMRES inversion
+.TP
+.I int    
+.B n1
+.B =
+.R  
+.TP
+.I int    
+.B n2
+.B =
+.R  
+.TP
+.I int    
+.B niter
+.B =0
+.R  	number of iterations
+.TP
+.I int    
+.B nw
+.B =2
+.R  	interpolator size
+.TP
+.I float  
+.B o1
+.B =0.
+.R  
+.TP
+.I float  
+.B o2
+.B =0.
+.R  
+.TP
+.I string 
+.B pattern
+.B =
+.R  	pattern file for output dimensions (auxiliary input file name)
+.TP
+.I int    
+.B rect1
+.B =1
+.R  
+.TP
+.I int    
+.B rect2
+.B =1
+.R  	smoothing regularization
+.TP
+.I bool   
+.B sym
+.B =n
+.R  [y/n]	if y, use symmetric shaping
+.TP
+.I float  
+.B tol
+.B =1e-3
+.R  	tolerance for stopping iteration
+.TP
+.I float  
+.B zero
+.B =0.
+.R  	level surface
+.SH SOURCE
+.I system/generic/Mtrishape.c
+.SH VERSION
+4.2

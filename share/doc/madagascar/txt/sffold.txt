@@ -1,0 +1,55 @@
+Program sffold | Make a seismic foldplot/stacking chart. 
+[SYNOPSIS]
+sffold < in.rsf > out.rsf verbose=1 o1= o2= o3= n1= n2= n3= d1= d2= d3= label1= label2= label3=
+[COMMENTS]
+
+This is a general 3D histogram program implemented to create foldplot or
+stacking charts on a 3d project from trace headers.  Axis1, 2 and 3 
+define the bins for the output fold map.  These are usually 
+(offset,xline,iline), but you might want to compute some other
+histogram.  This can be done by selecting other segy headers using 
+label1, 2 and 3.
+
+See also fold= option in sfbin for creating 2D histograms.
+
+EXAMPLES:
+
+To make a stacking chart movie showing fold(xline,offset) for each 
+iline from a 3D segyfile:
+
+sfsegyread tfile=tteapot.rsf hfile=teapot.asc bfile=teapot.bin \
+tape=npr3_field.sgy > teapot.rsf
+
+# read the tfile, which contains the segy trace headers
+< teapot_hdr.rsf sffold verbose=1        \
+o1=0 n1=96  d1=200 label1=offset \
+o2=1 n2=188 d2=1   label2=xline  \
+o3=1 n3=345 d3=1   label3=iline  \
+>foldplot.rsf
+<foldplot.rsf sfgrey title=foldplot pclip=100 \
+| sfpen 
+
+# transpose this data to plot foldmaps for each offset window:
+
+< foldplot.rsf sftransp plane=13          \
+| sftransp plane=12                       \
+| sfgrey title=foldplot_off gainpanel=all \
+| sfpen
+
+
+[PARAMETERS]
+float   | d1 | = |   | 	Delta label1 - usually delta offset  
+float   | d2 | = |   | 	Delta label2 - usually delta xline  
+float   | d3 | = |   | 	Delta label3 - usually delta iline  
+string  | label1 | = |   | 	header for axis1 - usually offset 
+string  | label2 | = |   | 	header for axis2 - usually xline or cdp  
+string  | label3 | = |   | 	header for axis3 - usually iline  
+int     | n1 | = |   | 	Number label1 - usually number offset 
+int     | n2 | = |   | 	Number label2 - usually number xline 
+int     | n3 | = |   | 	Number label3 - usually number iline 
+float   | o1 | = |   | 	Minimum label1 - usually min offset 
+float   | o2 | = |   | 	Minimum label2 - usually min xline  
+float   | o3 | = |   | 	Minimum label3 - usually min iline 
+int     | verbose | =1 |   | 	0 terse, 1 informative, 2 chatty, 3 debug 
+[DIRECTORY]
+system/seismic

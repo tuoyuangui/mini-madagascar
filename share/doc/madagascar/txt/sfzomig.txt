@@ -1,0 +1,25 @@
+Program sfzomig | 3-D zero-offset modeling/migration with extended split-step
+[SYNOPSIS]
+sfzomig slo=Fs.rsf < Fd.rsf > Fw.rsf < Fi.rsf verb=n incore=y eps=0.01 inv=n causal=n twoway=y nrmax=1 dtmax=0.004 pmx=0 pmy=0 tmx=0 tmy=0 nw= dw= ow=0. mode=
+[COMMENTS]
+To be deprecated in favor of zomig3 
+[PARAMETERS]
+bool    | causal | =n |  [y/n] | 	y=causal; n=anti-causal 
+float   | dtmax | =0.004 |   | 	time error 
+float   | dw | = |   | 	
+float   | eps | =0.01 |   | 	stability parameter 
+bool    | incore | =y |  [y/n] | 	in core execution 
+bool    | inv | =n |  [y/n] | 	y=modeling; n=migration 
+string  | mode | = |   | 	
+int     | nrmax | =1 |   | 	maximum references 
+int     | nw | = |   | 	
+float   | ow | =0. |   | 	
+int     | pmx | =0 |   | 	padding on x 
+int     | pmy | =0 |   | 	padding on y
+file    | slo | = |   | 	auxiliary input file name
+int     | tmx | =0 |   | 	taper on x
+int     | tmy | =0 |   | 	taper on y 
+bool    | twoway | =y |  [y/n] | 	two-way traveltime 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+system/seismic

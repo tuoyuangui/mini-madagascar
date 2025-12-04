@@ -1,0 +1,33 @@
+.TH sfovczo 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfovczo \- Post-stack 2-D oriented velocity continuation. \n.SH SYNOPSIS
+.B sfovczo < in.rsf > out.rsf verb=y nv= dv= v0=
+.SH COMMENTS
+
+Axes: (Omega,k,p) -> (Omega,v,k,p)
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B dv
+.B =
+.R  	velocity step size
+.TP
+.I int    
+.B nv
+.B =
+.R  	velocity steps
+.TP
+.I float  
+.B v0
+.B =
+.R  	starting velocity
+.TP
+.I bool   
+.B verb
+.B =y
+.R  [y/n]	verbosity flag
+.SH SOURCE
+.I system/seismic/Movczo.c
+.SH VERSION
+4.2

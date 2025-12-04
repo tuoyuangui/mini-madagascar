@@ -1,0 +1,11 @@
+Program sfsinc | 1-D sinc interpolation.
+[SYNOPSIS]
+sfsinc < in.rsf > out.rsf pattern=pattern.rsf
+[COMMENTS]
+
+Specify either n1= o1= d1= or pattern=
+
+[PARAMETERS]
+string  | pattern | = |   | 	auxiliary input file name
+[DIRECTORY]
+su/main

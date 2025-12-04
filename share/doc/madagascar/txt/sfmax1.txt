@@ -1,0 +1,17 @@
+Program sfmax1 | Picking local maxima on the first axis. 
+[SYNOPSIS]
+sfmax1 < in.rsf > out.rsf min=o1 max=o1+(n1-1)*d1 np=n1 sorted=y
+[COMMENTS]
+
+Outputs complex numbers (time,amplitude) 
+
+September 2014 program of the month:
+http://ahay.org/blog/2014/09/24/program-of-the-month-sfmax1/
+
+[PARAMETERS]
+float   | max | =o1+(n1-1)*d1 |   | 	maximum value of time 
+float   | min | =o1 |   | 	minimum value of time 
+int     | np | =n1 |   | 	maximum number of picks 
+bool    | sorted | =y |  [y/n] | 	if y, sort by amplitude 
+[DIRECTORY]
+system/generic

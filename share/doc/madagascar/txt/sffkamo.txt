@@ -1,0 +1,11 @@
+Program sffkamo | Computes Azimuth Move-Out (AMO) operator in the f-k log-stretch domain 
+[SYNOPSIS]
+sffkamo < in.rsf > out.rsf h1= h2= f1= f2= maxe=10.
+[PARAMETERS]
+float   | f1 | = |   | 	input azimuth in degrees 
+float   | f2 | = |   | 	output azimuth in degrees 
+float   | h1 | = |   | 	input offset 
+float   | h2 | = |   | 	output offset 
+float   | maxe | =10. |   | 	stability constraint 
+[DIRECTORY]
+system/seismic

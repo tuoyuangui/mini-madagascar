@@ -1,0 +1,9 @@
+Program sfsharpen | Sharpening operator 
+[SYNOPSIS]
+sfsharpen < in.rsf > out.rsf other=other.rsf perc=50.0 fact=0.5
+[PARAMETERS]
+float   | fact | =0.5 |   | 	factor for sharpening 
+string  | other | = |   | 	auxiliary input file name
+float   | perc | =50.0 |   | 	percentage for sharpening 
+[DIRECTORY]
+system/generic

@@ -1,0 +1,7 @@
+Program sfheadersort | Sort a dataset according to a header key. 
+[SYNOPSIS]
+sfheadersort < in.rsf > out.rsf head=
+[PARAMETERS]
+string  | head | = |   | 	header file 
+[DIRECTORY]
+system/main

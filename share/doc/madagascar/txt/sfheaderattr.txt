@@ -1,0 +1,12 @@
+Program sfheaderattr | Display header attributes. 
+[SYNOPSIS]
+sfheaderattr < head.rsf segy=y desc=n
+[COMMENTS]
+
+Only nonzero values are reported.
+
+[PARAMETERS]
+bool    | desc | =n |  [y/n] | 	if describe keys 
+bool    | segy | =y |  [y/n] | 	if SEGY headers 
+[DIRECTORY]
+system/seismic

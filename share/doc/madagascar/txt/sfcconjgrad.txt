@@ -1,0 +1,9 @@
+Program sfcconjgrad | Generic conjugate-gradient solver for linear inversion with complex data 
+[SYNOPSIS]
+sfcconjgrad < dat.rsf mod=mod.rsf mwt=mwt.rsf > to.rsf < from.rsf > out.rsf niter=1
+[PARAMETERS]
+file    | mod | = |   | 	auxiliary input file name
+string  | mwt | = |   | 	auxiliary input file name
+int     | niter | =1 |   | 	number of iterations 
+[DIRECTORY]
+system/main

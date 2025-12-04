@@ -1,0 +1,15 @@
+Program sflorenz | Generate Lorenz attractor. 
+[SYNOPSIS]
+sflorenz > out.rsf niter=1000 n=niter rho=28.00 sigma=10.00 beta=8.00/3.00 x0=3.051522 y0=1.582542 z0=15.62388 dt=0.0001
+[PARAMETERS]
+double  | beta | =8.00/3.00 |   | 	Beta reference 
+double  | dt | =0.0001 |   | 	time step 
+int     | n | =niter |   | 	set maximum 
+int     | niter | =1000 |   | 	number of iterations 
+double  | rho | =28.00 |   | 	Rayleigh number 
+double  | sigma | =10.00 |   | 	Prandtl number 
+double  | x0 | =3.051522 |   | 	intial x coordinate 
+double  | y0 | =1.582542 |   | 	intial y coordinate 
+double  | z0 | =15.62388 |   | 	intial z coordinate 
+[DIRECTORY]
+system/generic

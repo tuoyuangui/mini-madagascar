@@ -1,0 +1,8 @@
+Program sfomp | OpenMP wrapper for embarassingly parallel jobs. 
+[SYNOPSIS]
+sfomp < inp.rsf > out.rsf split=ndim join=axis
+[PARAMETERS]
+int     | join | =axis |   | 	axis to join (0 means add) 
+int     | split | =ndim |   | 	axis to split 
+[DIRECTORY]
+system/main

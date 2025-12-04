@@ -1,0 +1,159 @@
+.TH sfplsurf 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfplsurf \- Generate a surface plot. \n.SH SYNOPSIS
+.B sfplsurf < in.rsf wantaxis=y wantaxis1=y wantaxis2=y wantaxis3=y wanttitle=y labelsz=8.0 titlesz=10.0 labelfat=1 titlefat=1 font=2 minval=SF_HUGE maxval=-SF_HUGE alt=35.0 az=25.0 mesh=y meshc=VP_YELLOW sides=n bcontour=n scontour=n nc=10 faceted=n label1= label2= label3= unit1= unit2= unit3= title= wheretitle= color=
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B alt
+.B =35.0
+.R  	altitude [0;90]
+.TP
+.I float  
+.B az
+.B =25.0
+.R  	azimuth
+.TP
+.I bool   
+.B bcontour
+.B =n
+.R  [y/n]	draw contour lines at the bottom
+.TP
+.I string 
+.B color
+.B =
+.R  	color scheme (default is i)
+.TP
+.I bool   
+.B faceted
+.B =n
+.R  [y/n]	each cell is faceted on the surface (surface mode only)
+.TP
+.I int    
+.B font
+.B =2
+.R  	font
+.TP
+.I string 
+.B label1
+.B =
+.R  
+.TP
+.I string 
+.B label2
+.B =
+.R  
+.TP
+.I string 
+.B label3
+.B =
+.R  
+.TP
+.I int    
+.B labelfat
+.B =1
+.R  	label fatness
+.TP
+.I float  
+.B labelsz
+.B =8.0
+.R  	label font size
+.TP
+.I float  
+.B maxval
+.B =-SF_HUGE
+.R  	maximum value for the vertical axis (default is data maximum)
+.TP
+.I bool   
+.B mesh
+.B =y
+.R  [y/n]	what to draw: true - mesh, false - shaded surface
+.TP
+.I int    
+.B meshc
+.B =VP_YELLOW
+.R  	mesh color or surface contour color
+.TP
+.I float  
+.B minval
+.B =SF_HUGE
+.R  	minimum value for the vertical axis (default is data minimum)
+.TP
+.I int    
+.B nc
+.B =10
+.R  	number of contour lines
+.TP
+.I bool   
+.B scontour
+.B =n
+.R  [y/n]	draw contour lines on the surface (surface mode only)
+.TP
+.I bool   
+.B sides
+.B =n
+.R  [y/n]	draw sides
+.TP
+.I string 
+.B title
+.B =
+.R  
+.TP
+.I int    
+.B titlefat
+.B =1
+.R  	title fatness
+.TP
+.I float  
+.B titlesz
+.B =10.0
+.R  	title font size
+.TP
+.I string 
+.B unit1
+.B =
+.R  
+.TP
+.I string 
+.B unit2
+.B =
+.R  
+.TP
+.I string 
+.B unit3
+.B =
+.R  
+.TP
+.I bool   
+.B wantaxis
+.B =y
+.R  [y/n]	if generate axes with ticks and labels
+.TP
+.I bool   
+.B wantaxis1
+.B =y
+.R  [y/n]
+.TP
+.I bool   
+.B wantaxis2
+.B =y
+.R  [y/n]
+.TP
+.I bool   
+.B wantaxis3
+.B =y
+.R  [y/n]
+.TP
+.I bool   
+.B wanttitle
+.B =y
+.R  [y/n]	if include title
+.TP
+.I string 
+.B wheretitle
+.B =
+.R  	where to put title (top,bottom)
+.SH SOURCE
+.I plot/plplot/plsurf.c
+.SH VERSION
+4.2

@@ -1,0 +1,12 @@
+Program sfagmig | Angle-gather constant-velocity time migration. 
+[SYNOPSIS]
+sfagmig < in.rsf > out.rsf vel= ng= dg= g0= na=nx a=80.
+[PARAMETERS]
+float   | a | =80. |   | 	maximum dip angle 
+float   | dg | = |   | 	reflection angle sampling 
+float   | g0 | = |   | 	reflection angle origin 
+int     | na | =nx |   | 	number of dip angles 
+int     | ng | = |   | 	number of reflection angles 
+float   | vel | = |   | 	velocity 
+[DIRECTORY]
+system/seismic

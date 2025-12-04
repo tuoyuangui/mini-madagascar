@@ -1,0 +1,12 @@
+Program sfaastack | Stack with antialiasing 
+[SYNOPSIS]
+sfaastack < inp.rsf > out.rsf adj=n inv=n n2=15 n2=1 vel=1.5 antialias=1. box=n
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	adjoint flag 
+float   | antialias | =1. |   | 	antialiasing 
+bool    | box | =n |  [y/n] | 	box antialiasing 
+bool    | inv | =n |  [y/n] | 	inverse flag 
+int     | n2 | =1 |   | 	
+float   | vel | =1.5 |   | 	velocity 
+[DIRECTORY]
+system/seismic

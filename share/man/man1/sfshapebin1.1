@@ -1,0 +1,79 @@
+.TH sfshapebin1 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfshapebin1 \- 1-D inverse interpolation with shaping regularization. \n.SH SYNOPSIS
+.B sfshapebin1 < in.rsf > out.rsf verb=y nx= xmin= xmax= x0=xmin dx= interp=2 filter=3. niter=nx eps=1./nd pef=n gauss=n pad=0 head=
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B dx
+.B =
+.R  	grid sampling
+.TP
+.I float  
+.B eps
+.B =1./nd
+.R  	regularization parameter
+.TP
+.I float  
+.B filter
+.B =3.
+.R  	smoothing length
+.TP
+.I bool   
+.B gauss
+.B =n
+.R  [y/n]	if y, use Gaussian shaping
+.TP
+.I string 
+.B head
+.B =
+.R  
+.TP
+.I int    
+.B interp
+.B =2
+.R  [1,2]	forward interpolation method, 1: nearest neighbor, 2: linear
+.TP
+.I int    
+.B niter
+.B =nx
+.R  	number of conjugate-gradient iterations
+.TP
+.I int    
+.B nx
+.B =
+.R  	number of bins
+.TP
+.I int    
+.B pad
+.B =0
+.R  	padding for Gaussian shaping
+.TP
+.I bool   
+.B pef
+.B =n
+.R  [y/n]	if y, use monofrequency regularization
+.TP
+.I bool   
+.B verb
+.B =y
+.R  [y/n]	verbosity flag
+.TP
+.I float  
+.B x0
+.B =xmin
+.R  	grid origin
+.TP
+.I float  
+.B xmax
+.B =
+.R  
+.TP
+.I float  
+.B xmin
+.B =
+.R  	grid size
+.SH SOURCE
+.I system/generic/Mshapebin1.c
+.SH VERSION
+4.2

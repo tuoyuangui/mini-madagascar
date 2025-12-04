@@ -1,0 +1,25 @@
+Program sfradon | High-resolution Radon transform. 
+[SYNOPSIS]
+sfradon < in.rsf > out.rsf offset=offset.rsf adj=y inv=adj spk=inv verb=n np= dp= p0= nx= eps=1. ns=1 tol=1.e-6 perc=50.0 fact=0.5 ox= dx= parab=n x0=1. niter=100
+[PARAMETERS]
+bool    | adj | =y |  [y/n] | 	if y, perform adjoint operation 
+float   | dp | = |   | 	p sampling (if adj=y) 
+float   | dx | = |   | 	
+float   | eps | =1. |   | 	
+float   | fact | =0.5 |   | 	percentage for sharpening 
+bool    | inv | =adj |  [y/n] | 	if y, perform inverse operation 
+int     | niter | =100 |   | 	
+int     | np | = |   | 	number of p values (if adj=y) 
+int     | ns | =1 |   | 	number of sharpening cycles 
+int     | nx | = |   | 	number of offsets (if adj=n) 
+string  | offset | = |   | 	auxiliary input file name
+float   | ox | = |   | 	
+float   | p0 | = |   | 	p origin (if adj=y) 
+bool    | parab | =n |  [y/n] | 	if y, parabolic Radon transform 
+float   | perc | =50.0 |   | 	percentage for sharpening 
+bool    | spk | =inv |  [y/n] | 	if y, use spiking (hi-res) inversion 
+float   | tol | =1.e-6 |   | 	inversion tolerance 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+float   | x0 | =1. |   | 	reference offset 
+[DIRECTORY]
+system/seismic

@@ -1,0 +1,22 @@
+Program sfgazdag | Post-stack 2-D/3-D v(z) time modeling/migration with Gazdag phase-shift. 
+[SYNOPSIS]
+sfgazdag < in.rsf > out.rsf velocity=vel.rsf velz=velz.rsf eta=eta.rsf inv=n eps=0.01 verb=n depth=n nt= dt= nz= dz= vel= vz=v0 n=0.0 pad=2*kiss_fft_next_fast_size((nt+1)/2) rule=
+[PARAMETERS]
+bool    | depth | =n |  [y/n] | 	if true, depth migration 
+float   | dt | = |   | 	Sampling of time axis (for modeling) 
+float   | dz | = |   | 	Sampling of depth axis (for migration, if no velocity file) 
+float   | eps | =0.01 |   | 	stabilization parameter 
+string  | eta | = |   | 	auxiliary input file name
+bool    | inv | =n |  [y/n] | 	if y, modeling; if n, migration 
+float   | n | =0.0 |   | 	Constant eta (if no velocity file) 
+int     | nt | = |   | 	Length of time axis (for modeling) 
+int     | nz | = |   | 	Length of depth axis (for migration, if no velocity file) 
+int     | pad | =2*kiss_fft_next_fast_size((nt+1)/2) |   | 	
+string  | rule | = |   | 	phase-shift interpolation rule (simple, midpoint, linear) 
+float   | vel | = |   | 	Constant velocity (if no velocity file) 
+string  | velocity | = |   | 	auxiliary input file name
+string  | velz | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+float   | vz | =v0 |   | 	Constant vertical velocity (if no velocity file) 
+[DIRECTORY]
+system/seismic

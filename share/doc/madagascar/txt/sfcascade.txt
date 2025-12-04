@@ -1,0 +1,9 @@
+Program sfcascade | Velocity partitioning for cascaded migrations. 
+[SYNOPSIS]
+sfcascade < in.rsf > out.rsf ntcut= tcut= ncut=1
+[PARAMETERS]
+int     | ncut | =1 |   | 	number of cuts 
+ints    | ntcut | = |   | 	 [ncut]
+floats  | tcut | = |   | 	time cuts  [ncut]
+[DIRECTORY]
+system/seismic

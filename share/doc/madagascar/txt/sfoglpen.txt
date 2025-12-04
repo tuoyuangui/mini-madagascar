@@ -1,0 +1,66 @@
+Program sfoglpen | vplot filter for OpenGL. 
+[SYNOPSIS]
+sfoglpen colormask= red= green= blue= aspect= ppi= stretchy=n aalias=n aawidth=1 mono=n endpause= cachepipe= shade= wantras= window= frame= overlay= invras= txsquare= serifs= background= redpow=1.0 greenpow=1.0 bluepow=1.0 dither= greyc=1.0 pixc=1.0 txfont= txprec= txovly= xcenter= ycenter= patternmult=1. pause=0 fatmult= rotate=0 txscale=1.0 mkscale=1.0 dashscale=1.0 scale=1.0 xscale=1.0 yscale=1.0 xshift=0. yshift=0. xwmax= ywmax= xwmin= ywmin= fat=0 bgcolor= erase= break= interact= style= size=
+[PARAMETERS]
+bool    | aalias | =n |  [y/n] | 	y - draw lines, points, polygons with antialialing 
+int     | aawidth | =1 |   | 	width of transition areas when aalias=y 
+float   | aspect | = |   | 	aspect ratio 
+bool    | background | = |  [y/n] | 	
+string  | bgcolor | = |   | 	background color (black,white,light,dark) 
+floats  | blue | = |   | 	 [4]
+float   | bluepow | =1.0 |   | 	
+string  | break | = |   | 	
+bool    | cachepipe | = |  [y/n] | 	
+bools   | colormask | = |   | 	 [5]
+float   | dashscale | =1.0 |   | 	
+int     | dither | = |   | 	dithering to improve raster display, see "man vplotraster"
+                    0    No dither,
+                    1    Random Dither
+                    2    Ordered Dither
+                    3    Minimized Average Error Method
+                    4    Digital Halftoning 
+bool    | endpause | = |  [y/n] | 	
+string  | erase | = |   | 	
+int     | fat | =0 |   | 	base line fatness 
+float   | fatmult | = |   | 	
+bool    | frame | = |  [y/n] | 	
+floats  | green | = |   | 	 [4]
+float   | greenpow | =1.0 |   | 	
+float   | greyc | =1.0 |   | 	"grey correction" modifies the grey scale used to display a raster to simulate the nonlinearity of displays, see "man vplotraster" 
+string  | interact | = |   | 	
+bool    | invras | = |  [y/n] | 	
+float   | mkscale | =1.0 |   | 	
+bool    | mono | =n |  [y/n] | 	no color 
+bool    | overlay | = |  [y/n] | 	
+float   | patternmult | =1. |   | 	
+int     | pause | =0 |   | 	
+float   | pixc | =1.0 |   | 	"pixel  correction" controls  alteration of the grey scale, see "man vplotraster". 
+float   | ppi | = |   | 	pixels per inch 
+floats  | red | = |   | 	 [4]
+float   | redpow | =1.0 |   | 	
+int     | rotate | =0 |   | 	
+float   | scale | =1.0 |   | 	
+bool    | serifs | = |  [y/n] | 	
+bool    | shade | = |  [y/n] | 	
+string  | size | = |   | 	
+bool    | stretchy | =n |  [y/n] | 	y - stretch plot to all borders of the drawing area 
+string  | style | = |   | 	
+int     | txfont | = |   | 	
+int     | txovly | = |   | 	
+int     | txprec | = |   | 	
+float   | txscale | =1.0 |   | 	
+bool    | txsquare | = |  [y/n] | 	
+bool    | wantras | = |  [y/n] | 	
+bool    | window | = |  [y/n] | 	
+float   | xcenter | = |   | 	
+float   | xscale | =1.0 |   | 	
+float   | xshift | =0. |   | 	
+float   | xwmax | = |   | 	
+float   | xwmin | = |   | 	
+float   | ycenter | = |   | 	
+float   | yscale | =1.0 |   | 	
+float   | yshift | =0. |   | 	
+float   | ywmax | = |   | 	
+float   | ywmin | = |   | 	
+[DIRECTORY]
+pens/main

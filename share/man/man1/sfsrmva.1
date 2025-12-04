@@ -1,0 +1,74 @@
+.TH sfsrmva 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfsrmva \- 3-D S/R WEMVA with extended split-step \n.SH SYNOPSIS
+.B sfsrmva slo=Bs.rsf swf=Bw_s.rsf rwf=Bw_r.rsf < Pi.rsf > Ps.rsf verb=y eps=0.01 adj=n twoway=y nrmax=1 dtmax=0.004 pmx=0 pmy=0 tmx=0 tmy=0
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B adj
+.B =n
+.R  [y/n]	y=ADJ scat; n=FWD scat
+.TP
+.I float  
+.B dtmax
+.B =0.004
+.R  	max time error
+.TP
+.I float  
+.B eps
+.B =0.01
+.R  	stability parameter
+.TP
+.I int    
+.B nrmax
+.B =1
+.R  	max number of refs
+.TP
+.I int    
+.B pmx
+.B =0
+.R  	padding on x
+.TP
+.I int    
+.B pmy
+.B =0
+.R  	padding on y
+.TP
+.I file   
+.B rwf
+.B =
+.R  	auxiliary input file name
+.TP
+.I file   
+.B slo
+.B =
+.R  	auxiliary input file name
+.TP
+.I file   
+.B swf
+.B =
+.R  	auxiliary input file name
+.TP
+.I int    
+.B tmx
+.B =0
+.R  	taper on x
+.TP
+.I int    
+.B tmy
+.B =0
+.R  	taper on y
+.TP
+.I bool   
+.B twoway
+.B =y
+.R  [y/n]	two-way traveltime
+.TP
+.I bool   
+.B verb
+.B =y
+.R  [y/n]	verbosity flag
+.SH SOURCE
+.I system/seismic/Msrmva.c
+.SH VERSION
+4.2

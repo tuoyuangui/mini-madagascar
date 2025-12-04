@@ -1,0 +1,45 @@
+.TH sfnmo3_ort 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfnmo3_ort \- 3-D Normal moveout using orthogonal parametrization\n.SH SYNOPSIS
+.B sfnmo3_ort < cmp.rsf > nmod.rsf velocity=vel.rsf offset=offset.rsf half=y eps=0.01 mute=12 extend=8
+.SH COMMENTS
+
+input data has gathers along *4th* axis; 
+velocity file contains slowness squared with n2=3 (Wavg,Wcos,Wsin);
+offset file contains x,y offset pairs for input data
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B eps
+.B =0.01
+.R  	stretch regularization
+.TP
+.I int    
+.B extend
+.B =8
+.R  	trace extension
+.TP
+.I bool   
+.B half
+.B =y
+.R  [y/n]	if y, the second and third axes are half-offset instead of full offset
+.TP
+.I int    
+.B mute
+.B =12
+.R  	mute zone
+.TP
+.I string 
+.B offset
+.B =
+.R  	auxiliary input file name
+.TP
+.I file   
+.B velocity
+.B =
+.R  	auxiliary input file name
+.SH SOURCE
+.I system/seismic/Mnmo3_ort.c
+.SH VERSION
+4.2

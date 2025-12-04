@@ -1,0 +1,17 @@
+Program sfimpl2 | 2-D anisotropic diffusion. 
+[SYNOPSIS]
+sfimpl2 < in.rsf > out.rsf rect1= rect2= tau=0.1 pclip=50. up=n verb=n nsnap=1 lin=n adj=n dist= snap=
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	adjoint flag 
+string  | dist | = |   | 	inverse distance file (input) 
+bool    | lin | =n |  [y/n] | 	if linear operator 
+int     | nsnap | =1 |   | 	number of snapshots 
+float   | pclip | =50. |   | 	percentage clip for the gradient 
+float   | rect1 | = |   | 	vertical smoothing 
+float   | rect2 | = |   | 	horizontal smoothing 
+string  | snap | = |   | 	snapshot file (output) 
+float   | tau | =0.1 |   | 	smoothing time 
+bool    | up | =n |  [y/n] | 	smoothing style 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+system/generic

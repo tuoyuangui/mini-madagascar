@@ -1,0 +1,33 @@
+.TH sfin 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfin \- Display basic information about RSF files.\n.SH SYNOPSIS
+.B sfin info=y check=2. trail=y [<file0.rsf] file1.rsf file2.rsf ...
+.SH COMMENTS
+n1,n2,... are data dimensions
+o1,o2,... are axis origins
+d1,d2,... are axis sampling intervals
+label1,label2,... are axis labels
+unit1,unit2,... are axis units
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B check
+.B =2.
+.R  	Portion of the data (in Mb) to check for zero values.
+.TP
+.I bool   
+.B info
+.B =y
+.R  [y/n]	If n, only display the name of the data file.
+.TP
+.I bool   
+.B trail
+.B =y
+.R  [y/n]	If n, skip trailing dimensions of  one
+.SH SOURCE
+.I system/main/in.c
+.SH DOCUMENTATION
+.BR http://ahay.org/wiki/Guide_to_madagascar_programs#sfin
+.SH VERSION
+4.2

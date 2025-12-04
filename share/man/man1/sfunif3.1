@@ -1,0 +1,71 @@
+.TH sfunif3 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfunif3 \- Generate 3-D layered velocity model from specified interfaces. \n.SH SYNOPSIS
+.B sfunif3 < surface.rsf > model.rsf x0= y0= z0= v00= dvdx= dvdy= dvdz= n1= d1= o1=0. layers=
+.SH COMMENTS
+
+Unless layers= is specified, velocity is a linear function of position inside
+each layer.
+
+Inspired by SU's unif2.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B d1
+.B =
+.R  	Sampling of the depth axis
+.TP
+.I floats 
+.B dvdx
+.B =
+.R  	 [ninf]
+.TP
+.I floats 
+.B dvdy
+.B =
+.R  	 [ninf]
+.TP
+.I floats 
+.B dvdz
+.B =
+.R  	 [ninf]
+.TP
+.I string 
+.B layers
+.B =
+.R  	file with layer properties
+.TP
+.I int    
+.B n1
+.B =
+.R  	Number of samples on the depth axis
+.TP
+.I float  
+.B o1
+.B =0.
+.R  	Origin of the depth axis
+.TP
+.I floats 
+.B v00
+.B =
+.R  	 [ninf]
+.TP
+.I floats 
+.B x0
+.B =
+.R  	 [ninf]
+.TP
+.I floats 
+.B y0
+.B =
+.R  	 [ninf]
+.TP
+.I floats 
+.B z0
+.B =
+.R  	 [ninf]
+.SH SOURCE
+.I system/generic/Munif3.c
+.SH VERSION
+4.2

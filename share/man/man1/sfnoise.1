@@ -1,0 +1,44 @@
+.TH sfnoise 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfnoise \- Add random noise to the data.\n.SH SYNOPSIS
+.B sfnoise < in.rsf > out.rsf seed=time(NULL) type=y var= range= mean=0 rep=n
+.SH COMMENTS
+
+July 2011 program of the month:
+http://ahay.org/blog/2011/07/03/program-of-the-month-sfnoise/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B mean
+.B =0
+.R  	noise mean
+.TP
+.I float  
+.B range
+.B =
+.R  	noise range (default=1)
+.TP
+.I bool   
+.B rep
+.B =n
+.R  [y/n]	if y, replace data with noise
+.TP
+.I int    
+.B seed
+.B =time(NULL)
+.R  
+.TP
+.I bool   
+.B type
+.B =y
+.R  [y/n]	noise distribution, y: normal, n: uniform
+.TP
+.I float  
+.B var
+.B =
+.R  	noise variance
+.SH SOURCE
+.I system/generic/Mnoise.c
+.SH VERSION
+4.2

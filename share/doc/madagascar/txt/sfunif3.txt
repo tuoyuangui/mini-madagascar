@@ -1,0 +1,24 @@
+Program sfunif3 | Generate 3-D layered velocity model from specified interfaces. 
+[SYNOPSIS]
+sfunif3 < surface.rsf > model.rsf x0= y0= z0= v00= dvdx= dvdy= dvdz= n1= d1= o1=0. layers=
+[COMMENTS]
+
+Unless layers= is specified, velocity is a linear function of position inside
+each layer.
+
+Inspired by SU's unif2.
+
+[PARAMETERS]
+float   | d1 | = |   | 	Sampling of the depth axis 
+floats  | dvdx | = |   | 	 [ninf]
+floats  | dvdy | = |   | 	 [ninf]
+floats  | dvdz | = |   | 	 [ninf]
+string  | layers | = |   | 	file with layer properties 
+int     | n1 | = |   | 	Number of samples on the depth axis 
+float   | o1 | =0. |   | 	Origin of the depth axis 
+floats  | v00 | = |   | 	 [ninf]
+floats  | x0 | = |   | 	 [ninf]
+floats  | y0 | = |   | 	 [ninf]
+floats  | z0 | = |   | 	 [ninf]
+[DIRECTORY]
+system/generic

@@ -1,0 +1,24 @@
+.TH sfagc 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfagc \- Automatic gain control. \n.SH SYNOPSIS
+.B sfagc < in.rsf > out.rsf repeat=1 rect#=(125,1,1,...)
+.SH COMMENTS
+
+October 2011 program of the month:
+http://ahay.org/blog/2011/10/01/program-of-the-month-sfagc/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B rect#
+.B =(125,1,1,...)
+.R  	smoothing radius on #-th axis
+.TP
+.I int    
+.B repeat
+.B =1
+.R  	repeat filtering several times
+.SH SOURCE
+.I system/generic/Magc.c
+.SH VERSION
+4.2

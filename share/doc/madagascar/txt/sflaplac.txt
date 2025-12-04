@@ -1,0 +1,7 @@
+Program sflaplac | 2-D finite-difference Laplacian operation. 
+[SYNOPSIS]
+sflaplac < in.rsf > out.rsf adj=n
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	adjoint flag 
+[DIRECTORY]
+system/generic

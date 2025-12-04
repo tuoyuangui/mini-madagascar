@@ -1,0 +1,29 @@
+.TH sffincon 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsffincon \- Offset continuation by finite differences \n.SH SYNOPSIS
+.B sffincon < input.rsf > output.rsf nh= dh= h0= all=n
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B all
+.B =n
+.R  [y/n]	if y, output all offsets
+.TP
+.I float  
+.B dh
+.B =
+.R  	Offset step size
+.TP
+.I float  
+.B h0
+.B =
+.R  	Initial offset
+.TP
+.I int    
+.B nh
+.B =
+.R  	Number of steps in offset
+.SH SOURCE
+.I system/seismic/Mfincon.c
+.SH VERSION
+4.2

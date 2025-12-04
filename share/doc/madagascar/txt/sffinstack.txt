@@ -1,0 +1,5 @@
+Program sffinstack | DMO and stack by finite-difference offset continuation. 
+[SYNOPSIS]
+sffinstack < cmp.rsf > stk.rsf
+[DIRECTORY]
+system/seismic

@@ -1,0 +1,19 @@
+Program sfstolt | Post-stack Stolt modeling/migration. 
+[SYNOPSIS]
+sfstolt < in.rsf > out.rsf vel= pad=nt extend=4 mute=12 minstr=0.0 stretch=1
+[COMMENTS]
+
+Requires the input to be cosine-transformed over the lateral axes.
+
+August 2014 program of the month:
+http://ahay.org/blog/2014/08/03/program-of-the-month-sfstolt/
+
+[PARAMETERS]
+int     | extend | =4 |   | 	trace extension 
+float   | minstr | =0.0 |   | 	minimum stretch allowed 
+int     | mute | =12 |   | 	mute zone 
+int     | pad | =nt |   | 	padding on the time axis 
+float   | stretch | =1 |   | 	Stolt stretch parameter 
+float   | vel | = |   | 	Constant velocity (use negative velocity for modeling) 
+[DIRECTORY]
+system/seismic

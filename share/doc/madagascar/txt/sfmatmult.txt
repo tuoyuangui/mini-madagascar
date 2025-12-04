@@ -1,0 +1,8 @@
+Program sfmatmult | Simple matrix multiplication 
+[SYNOPSIS]
+sfmatmult < in.rsf > out.rsf mat=mat.rsf adj=n
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	
+file    | mat | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/generic

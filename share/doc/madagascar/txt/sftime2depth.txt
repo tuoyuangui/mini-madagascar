@@ -1,0 +1,20 @@
+Program sftime2depth | Time-to-depth conversion in V(z). 
+[SYNOPSIS]
+sftime2depth < in.rsf velocity=velocity.rsf > out.rsf intime=n nz= dz= z0=0. extend=4 slow=n twoway=y eps=0.01
+[COMMENTS]
+
+July 2013 program of the month:
+http://www.ahay.org/blog/2013/07/01/program-of-the-month-sftime2depth/
+
+[PARAMETERS]
+float   | dz | = |   | 	Depth sampling (default: d1) 
+float   | eps | =0.01 |   | 	stretch regularization 
+int     | extend | =4 |   | 	Interpolation accuracy 
+bool    | intime | =n |  [y/n] | 	y if velocity is in time rather than depth 
+int     | nz | = |   | 	Number of depth samples (default: n1) 
+bool    | slow | =n |  [y/n] | 	If y, input slowness; if n, velocity 
+bool    | twoway | =y |  [y/n] | 	if y, two-way traveltime 
+file    | velocity | = |   | 	auxiliary input file name
+float   | z0 | =0. |   | 	Depth origin 
+[DIRECTORY]
+system/seismic

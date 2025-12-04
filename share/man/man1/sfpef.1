@@ -1,0 +1,49 @@
+.TH sfpef 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfpef \- Wiener predictive error filtering \n.SH SYNOPSIS
+.B sfpef < inp.rsf > out.rsf wiener=wien.rsf mix= minlag= maxlag= pnoise=0.001 nmix=1 mincorr= maxcorr=
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B maxcorr
+.B =
+.R  	end of autocorrelation window in sec
+.TP
+.I float  
+.B maxlag
+.B =
+.R  	last lag of prediction filter (sec)
+.TP
+.I float  
+.B mincorr
+.B =
+.R  	start of autocorrelation window in sec
+.TP
+.I float  
+.B minlag
+.B =
+.R  	first lag of prediction filter (sec)
+.TP
+.I floats 
+.B mix
+.B =
+.R  	weights for moving average of the autocorrelations  [nmix]
+.TP
+.I int    
+.B nmix
+.B =1
+.R  	number of weights (floats) for moving averages
+.TP
+.I float  
+.B pnoise
+.B =0.001
+.R  	relative additive noise level
+.TP
+.I string 
+.B wiener
+.B =
+.R  	file to output Wiener filter (auxiliary output file name)
+.SH SOURCE
+.I su/main/pef.c
+.SH VERSION
+4.2

@@ -1,0 +1,149 @@
+.TH sfthplot 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfthplot \- Hidden-line surface plot.\n.SH SYNOPSIS
+.B sfthplot < in.rsf uflag=y dflag=y alpha=45. titlsz=9 axissz=6 plotfat=0 titlefat=2 axisfat=2 plotcolup=VP_YELLOW plotcoldn=VP_RED wanttitle=y axis=y axis1=y axis2=y axis3=y clip=0. pclip=100. gainstep=0.5+nx/256. bias=0. dclip=1. norm=y xc=1.5 zc=3 ratio=5. zmax= zmin= sz=6. title= > plot.vpl 
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B alpha
+.B =45.
+.R  	apparent angle in degrees, |alpha| < 89
+.TP
+.I bool   
+.B axis
+.B =y
+.R  [y/n]
+.TP
+.I bool   
+.B axis1
+.B =y
+.R  [y/n]
+.TP
+.I bool   
+.B axis2
+.B =y
+.R  [y/n]
+.TP
+.I bool   
+.B axis3
+.B =y
+.R  [y/n]	plot axis
+.TP
+.I int    
+.B axisfat
+.B =2
+.R  	axes fatness
+.TP
+.I int    
+.B axissz
+.B =6
+.R  	axes size
+.TP
+.I float  
+.B bias
+.B =0.
+.R  	subtract bias from data
+.TP
+.I float  
+.B clip
+.B =0.
+.R  	data clip
+.TP
+.I float  
+.B dclip
+.B =1.
+.R  	change the clip: clip *= dclip
+.TP
+.I bool   
+.B dflag
+.B =y
+.R  [y/n]	if y, plot down side of the surface
+.TP
+.I int    
+.B gainstep
+.B =0.5+nx/256.
+.R  	subsampling for gpow and clip estimation
+.TP
+.I bool   
+.B norm
+.B =y
+.R  [y/n]	normalize by the clip
+.TP
+.I float  
+.B pclip
+.B =100.
+.R  	data clip percentile
+.TP
+.I int    
+.B plotcoldn
+.B =VP_RED
+.R  	color of the lower side
+.TP
+.I int    
+.B plotcolup
+.B =VP_YELLOW
+.R  	color of the upper side
+.TP
+.I int    
+.B plotfat
+.B =0
+.R  	line fatness
+.TP
+.I float  
+.B ratio
+.B =5.
+.R  	plot adjustment
+.TP
+.I float  
+.B sz
+.B =6.
+.R  	vertical scale
+.TP
+.I string 
+.B title
+.B =
+.R  
+.TP
+.I int    
+.B titlefat
+.B =2
+.R  	title fatness
+.TP
+.I int    
+.B titlsz
+.B =9
+.R  	title size
+.TP
+.I bool   
+.B uflag
+.B =y
+.R  [y/n]	if y, plot upper side of the surface
+.TP
+.I bool   
+.B wanttitle
+.B =y
+.R  [y/n]
+.TP
+.I float  
+.B xc
+.B =1.5
+.R  
+.TP
+.I float  
+.B zc
+.B =3
+.R  	lower left corner of the plot
+.TP
+.I float  
+.B zmax
+.B =
+.R  
+.TP
+.I float  
+.B zmin
+.B =
+.R  
+.SH SOURCE
+.I plot/main/thplot.c
+.SH VERSION
+4.2

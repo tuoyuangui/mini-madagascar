@@ -1,0 +1,49 @@
+.TH sfrwezomig 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfrwezomig \- Riemannian Wavefield Extrapolation: zero-offset modeling/migration \n.SH SYNOPSIS
+.B sfrwezomig abm=Fm.rsf abr=Fr.rsf < Fi.rsf > Fd.rsf verb=n method=0 adj=n nw= dw= ow=0.
+.SH PARAMETERS
+.PD 0
+.TP
+.I file   
+.B abm
+.B =
+.R  	auxiliary input file name
+.TP
+.I file   
+.B abr
+.B =
+.R  	auxiliary input file name
+.TP
+.I bool   
+.B adj
+.B =n
+.R  [y/n]	y=modeling; n=migration
+.TP
+.I float  
+.B dw
+.B =
+.R  
+.TP
+.I int    
+.B method
+.B =0
+.R  	extrapolation method
+.TP
+.I int    
+.B nw
+.B =
+.R  
+.TP
+.I float  
+.B ow
+.B =0.
+.R  
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]
+.SH SOURCE
+.I system/seismic/Mrwezomig.c
+.SH VERSION
+4.2

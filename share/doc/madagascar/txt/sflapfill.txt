@@ -1,0 +1,10 @@
+Program sflapfill | Missing data interpolation in 2-D by Laplacian regularization. 
+[SYNOPSIS]
+sflapfill < in.rsf > out.rsf mask=mask.rsf niter=200 grad=n verb=n
+[PARAMETERS]
+bool    | grad | =n |  [y/n] | 	if y, use gradient instead of laplacian 
+string  | mask | = |   | 	optional mask file with zeroes for missing data locations (auxiliary input file name)
+int     | niter | =200 |   | 	number of iterations 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+system/generic

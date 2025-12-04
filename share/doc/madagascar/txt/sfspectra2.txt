@@ -1,0 +1,7 @@
+Program sfspectra2 | Frequency spectra in 2-D. 
+[SYNOPSIS]
+sfspectra2 < in.rsf > out.rsf all=n
+[PARAMETERS]
+bool    | all | =n |  [y/n] | 	if y, compute average spectrum for all traces 
+[DIRECTORY]
+system/generic

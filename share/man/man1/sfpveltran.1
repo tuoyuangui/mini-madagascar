@@ -1,0 +1,49 @@
+.TH sfpveltran 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfpveltran \- Slope-based velocity transform. \n.SH SYNOPSIS
+.B sfpveltran < cmp.rsf dip=dip.rsf > vel.rsf dipt=dipt.rsf half=y nv= v0= dv= interval=n eps=0.1
+.SH PARAMETERS
+.PD 0
+.TP
+.I file   
+.B dip
+.B =
+.R  	auxiliary input file name
+.TP
+.I file   
+.B dipt
+.B =
+.R  	auxiliary input file name
+.TP
+.I float  
+.B dv
+.B =
+.R  	velocity sampling
+.TP
+.I float  
+.B eps
+.B =0.1
+.R  	stretch regularization
+.TP
+.I bool   
+.B half
+.B =y
+.R  [y/n]	if y, the second axis is half-offset instead of full offset
+.TP
+.I bool   
+.B interval
+.B =n
+.R  [y/n]	if y, compute interval velocity
+.TP
+.I int    
+.B nv
+.B =
+.R  	number of velocities
+.TP
+.I float  
+.B v0
+.B =
+.R  	velocity origin
+.SH SOURCE
+.I system/seismic/Mpveltran.c
+.SH VERSION
+4.2

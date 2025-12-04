@@ -1,0 +1,14 @@
+Program sfrwezomig | Riemannian Wavefield Extrapolation: zero-offset modeling/migration 
+[SYNOPSIS]
+sfrwezomig abm=Fm.rsf abr=Fr.rsf < Fi.rsf > Fd.rsf verb=n method=0 adj=n nw= dw= ow=0.
+[PARAMETERS]
+file    | abm | = |   | 	auxiliary input file name
+file    | abr | = |   | 	auxiliary input file name
+bool    | adj | =n |  [y/n] | 	y=modeling; n=migration 
+float   | dw | = |   | 	
+int     | method | =0 |   | 	extrapolation method 
+int     | nw | = |   | 	
+float   | ow | =0. |   | 	
+bool    | verb | =n |  [y/n] | 	
+[DIRECTORY]
+system/seismic

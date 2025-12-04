@@ -1,0 +1,39 @@
+.TH sfmodrefl 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfmodrefl \- Normal reflectivity modeling. \n.SH SYNOPSIS
+.B sfmodrefl < depth.rsf vp=vp.rsf vs=vs.rsf rho=rho.rsf > dat.rsf nt= dt= nw=4
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B dt
+.B =
+.R  	time sampling
+.TP
+.I int    
+.B nt
+.B =
+.R  	time samples
+.TP
+.I int    
+.B nw
+.B =4
+.R  	interpolation length
+.TP
+.I file   
+.B rho
+.B =
+.R  	auxiliary input file name
+.TP
+.I file   
+.B vp
+.B =
+.R  	auxiliary input file name
+.TP
+.I file   
+.B vs
+.B =
+.R  	auxiliary input file name
+.SH SOURCE
+.I system/seismic/Mmodrefl.c
+.SH VERSION
+4.2

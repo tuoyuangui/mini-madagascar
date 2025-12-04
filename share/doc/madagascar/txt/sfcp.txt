@@ -1,0 +1,9 @@
+Program sfcp | Copy or move a dataset.
+[SYNOPSIS]
+sfcp < in.rsf > out.rsf in.rsf out.rsf
+[COMMENTS]
+sfcp - copy, sfmv - move.
+Mimics standard Unix commands.
+
+[DIRECTORY]
+system/main

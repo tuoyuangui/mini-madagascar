@@ -1,0 +1,22 @@
+Program sfslant | Time-space-domain Radon transform (slant stack) 
+[SYNOPSIS]
+sfslant < in.rsf > out.rsf verb=n adj=n rho=y anti=1. np= dp= p0= x0= dx= nx= p1=0.
+[COMMENTS]
+
+April 2015 program of the month:
+http://ahay.org/blog/2015/04/21/program-of-the-month-sfslant/
+
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	adjoint flag 
+float   | anti | =1. |   | 	antialiasing 
+float   | dp | = |   | 	p sampling (if adj=y) 
+float   | dx | = |   | 	offset sampling 
+int     | np | = |   | 	number of p values (if adj=y) 
+int     | nx | = |   | 	number of offsets 
+float   | p0 | = |   | 	p origin (if adj=y) 
+float   | p1 | =0. |   | 	reference slope 
+bool    | rho | =y |  [y/n] | 	rho filtering 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+float   | x0 | = |   | 	offset origin 
+[DIRECTORY]
+system/seismic

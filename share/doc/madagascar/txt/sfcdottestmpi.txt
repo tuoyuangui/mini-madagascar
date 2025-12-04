@@ -1,0 +1,12 @@
+Program sfcdottestmpi | Generic dot-product test for complex linear operators with adjoints 
+[SYNOPSIS]
+sfcdottestmpi mod=mod.rsf dat=dat.rsf
+[COMMENTS]
+
+In this version, the linear operator program uses --input and --output instead of stdin and stdout.
+
+[PARAMETERS]
+file    | dat | = |   | 	auxiliary input file name
+file    | mod | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/main

@@ -1,0 +1,39 @@
+.TH sfptaupmo 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfptaupmo \- Slope-based tau-p moveout. \n.SH SYNOPSIS
+.B sfptaupmo < inp.rsf dip=dip.rsf dipt=dipt.rsf > nmod.rsf vel2=vel2.rsf eps=0.01 v0=0. type=
+.SH PARAMETERS
+.PD 0
+.TP
+.I file   
+.B dip
+.B =
+.R  	auxiliary input file name
+.TP
+.I file   
+.B dipt
+.B =
+.R  	auxiliary input file name
+.TP
+.I float  
+.B eps
+.B =0.01
+.R  	stretch regularization
+.TP
+.I string 
+.B type
+.B =
+.R  	transform type
+.TP
+.I float  
+.B v0
+.B =0.
+.R  	initial velocity
+.TP
+.I file   
+.B vel2
+.B =
+.R  	auxiliary output file name
+.SH SOURCE
+.I system/seismic/Mptaupmo.c
+.SH VERSION
+4.2

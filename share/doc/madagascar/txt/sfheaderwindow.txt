@@ -1,0 +1,14 @@
+Program sfheaderwindow | Window a dataset based on a header mask.
+[SYNOPSIS]
+sfheaderwindow mask=head.rsf < in.rsf > out.rsf inv=n
+[COMMENTS]
+
+The input data is a collection of traces n1xn2,
+mask is an integer array os size n2, windowed is n1xm2,
+where m2 is the number of nonzero elements in mask.
+
+[PARAMETERS]
+bool    | inv | =n |  [y/n] | 	inversion flag 
+file    | mask | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/main

@@ -1,0 +1,39 @@
+.TH sfaastack 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfaastack \- Stack with antialiasing \n.SH SYNOPSIS
+.B sfaastack < inp.rsf > out.rsf adj=n inv=n n2=15 n2=1 vel=1.5 antialias=1. box=n
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B adj
+.B =n
+.R  [y/n]	adjoint flag
+.TP
+.I float  
+.B antialias
+.B =1.
+.R  	antialiasing
+.TP
+.I bool   
+.B box
+.B =n
+.R  [y/n]	box antialiasing
+.TP
+.I bool   
+.B inv
+.B =n
+.R  [y/n]	inverse flag
+.TP
+.I int    
+.B n2
+.B =1
+.R  
+.TP
+.I float  
+.B vel
+.B =1.5
+.R  	velocity
+.SH SOURCE
+.I system/seismic/Maastack.c
+.SH VERSION
+4.2

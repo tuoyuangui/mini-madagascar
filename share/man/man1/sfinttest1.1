@@ -1,0 +1,39 @@
+.TH sfinttest1 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfinttest1 \- Interpolation from a regular grid in 1-D. \n.SH SYNOPSIS
+.B sfinttest1 < in.rsf > out.rsf coord=crd.rsf nw= same=y kai=4.0 interp=
+.SH COMMENTS
+
+January 2014 program of the month:
+http://ahay.org/blog/2014/01/09/program-of-the-month-sfinttest1/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I file   
+.B coord
+.B =
+.R  	auxiliary input file name
+.TP
+.I string 
+.B interp
+.B =
+.R  	interpolation (lagrange,cubic,kaiser,lanczos,cosine,welch,spline,mom)
+.TP
+.I float  
+.B kai
+.B =4.0
+.R  	Kaiser window parameter
+.TP
+.I int    
+.B nw
+.B =
+.R  	interpolator size
+.TP
+.I bool   
+.B same
+.B =y
+.R  [y/n]	same or different coordinates for each trace
+.SH SOURCE
+.I system/generic/Minttest1.c
+.SH VERSION
+4.2

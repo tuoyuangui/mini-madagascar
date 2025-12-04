@@ -1,0 +1,24 @@
+Program sfdipfilter | Filter data based on dip in 2-D or 3-D.
+[SYNOPSIS]
+sfdipfilter < in.rsf > out.rsf dim=2 angle=n v=-1. ang1=-50. ang2=-45. ang3=45. ang4=50. v1=0. v2=0.1 v3=99999. v4=999999. pass=y
+[COMMENTS]
+
+February 2014 program of the month:
+http://ahay.org/blog/2014/02/06/program-of-the-month-sfdipfilter/
+
+[PARAMETERS]
+float   | ang1 | =-50. |   | 	
+float   | ang2 | =-45. |   | 	
+float   | ang3 | =45. |   | 	
+float   | ang4 | =50. |   | 	Angle gate (in degrees) 
+bool    | angle | =n |  [y/n] | 	Filter based on angle (or velocity) 
+int     | dim | =2 |  [2,3] | 	Dimensionality: filter 2-D planes or 3-D cubes 
+bool    | pass | =y |  [y/n] | 	Pass or reject band 
+float   | v | =-1. |   | 	constant velocity (if angle-y)
+	   The default is d(frequency)/d(wavenumber) 
+float   | v1 | =0. |   | 	
+float   | v2 | =0.1 |   | 	
+float   | v3 | =99999. |   | 	
+float   | v4 | =999999. |   | 	Velocity gate 
+[DIRECTORY]
+system/generic

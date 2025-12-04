@@ -1,0 +1,16 @@
+Program sfbin1 | Data binning in 1-D slices. 
+[SYNOPSIS]
+sfbin1 < in.rsf > out.rsf pattern=pattern.rsf fold=fold.rsf xmin= xmax= nx= x0=xmin dx= interp=1 clip=FLT_EPSILON head=
+[PARAMETERS]
+float   | clip | =FLT_EPSILON |   | 	clip for fold normalization 
+float   | dx | = |   | 	grid spacing 
+string  | fold | = |   | 	output fold file (optional) (auxiliary output file name)
+string  | head | = |   | 	
+int     | interp | =1 |  [1,2] | 	interpolation method, 1: nearest neighbor, 2: linear 
+int     | nx | = |   | 	Number of bins 
+string  | pattern | = |   | 	auxiliary input file name
+float   | x0 | =xmin |   | 	grid origin 
+float   | xmax | = |   | 	
+float   | xmin | = |   | 	grid dimensions 
+[DIRECTORY]
+system/generic

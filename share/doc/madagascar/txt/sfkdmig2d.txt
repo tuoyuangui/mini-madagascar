@@ -1,0 +1,34 @@
+Program sfkdmig2d | 2-D Prestack Kirchhoff depth migration (SU version). 
+[SYNOPSIS]
+sfkdmig2d < infp.rsf > outfp.rsf verb=n dxm=0.5*ds rscale=RSCALE_KDMIG nxo=(nxt-1)*2+1 fxo=fxt dxo=dxt*0.5 nzo=(nzt-1)*5+1 fzo=fzt dzo=dzt*0.2 v0=1.5 dvz=0 angmax=60. aperx=0.5*nxt*dxt offmax=3.0 fmax=0.25/dt noff=1 off0=0. doff=0.1 ls=1 absoff=0 limoff=0 ntr=sf_leftsize (infp, 1) mtr=100 npv=0 ttfile= tvfile= csfile= outfile1=
+[PARAMETERS]
+int     | absoff | =0 |   | 	1 - use absolute value of offset, 0 - use offset =gx-sx 
+float   | angmax | =60. |   | 	migration angle aperature from vertical 
+float   | aperx | =0.5*nxt*dxt |   | 	migration lateral aperature 
+string  | csfile | = |   | 	input file of cosine tables 
+float   | doff | =0.1 |   | 	offset increment in output 
+float   | dvz | =0 |   | 	reference velocity vertical gradient 
+float   | dxm | =0.5*ds |   | 	sampling interval of midpoints 
+float   | dxo | =dxt*0.5 |   | 	horizontal spacing of output trace 
+float   | dzo | =dzt*0.2 |   | 	vertical spacing of output trace 
+float   | fmax | =0.25/dt |   | 	frequency-highcut for input traces 
+float   | fxo | =fxt |   | 	x-coordinate of first output trace 
+float   | fzo | =fzt |   | 	z-coordinate of first point in output trace 
+int     | limoff | =0 |   | 	1 - limit traces used by offset, 0 - use all traces 
+int     | ls | =1 |   | 	flag for line source 
+int     | mtr | =100 |   | 	print verbal information at every mtr traces 
+int     | noff | =1 |   | 	number of offsets in output 
+int     | npv | =0 |   | 	1 - compute quantities for velocity analysis 
+int     | ntr | =sf_leftsize (infp, 1) |   | 	maximum number of input traces to be migrated 
+int     | nxo | =(nxt-1)*2+1 |   | 	number of output traces 
+int     | nzo | =(nzt-1)*5+1 |   | 	number of points in output trace 
+float   | off0 | =0. |   | 	first offest in output 
+float   | offmax | =3.0 |   | 	maximum absolute offset allowed in migration 
+string  | outfile1 | = |   | 	file containning additional migration output 
+float   | rscale | =RSCALE_KDMIG |   | 	scaling for roundoff error suppression 
+string  | ttfile | = |   | 	input traveltime tables 
+string  | tvfile | = |   | 	input file of traveltime variation tables 
+float   | v0 | =1.5 |   | 	reference velocity value at surface 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+su/main

@@ -1,0 +1,34 @@
+.TH sfsmooth 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfsmooth \- Multi-dimensional triangle smoothing. \n.SH SYNOPSIS
+.B sfsmooth < in.rsf > out.rsf repeat=1 adj=n rect#=(1,1,...) diff#=(n,n,...)
+.SH COMMENTS
+
+January 2012 program of the month:
+http://ahay.org/blog/2012/01/01/program-of-the-month-sfsmooth/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B adj
+.B =n
+.R  [y/n]	run in the adjoint mode
+.TP
+.I bool   
+.B diff#
+.B =(n,n,...)
+.R  [y/n]	differentiation on #-th axis
+.TP
+.I int    
+.B rect#
+.B =(1,1,...)
+.R  	smoothing radius on #-th axis
+.TP
+.I int    
+.B repeat
+.B =1
+.R  	repeat filtering several times
+.SH SOURCE
+.I system/generic/Msmooth.c
+.SH VERSION
+4.2

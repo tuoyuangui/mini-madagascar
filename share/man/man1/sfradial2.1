@@ -1,0 +1,39 @@
+.TH sfradial2 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfradial2 \- Another version of radial transform. \n.SH SYNOPSIS
+.B sfradial2 < in.rsf > out.rsf inv=n eps=0.01 tp=t0 nv= vmin= vmax=
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B eps
+.B =0.01
+.R  	stretch regularization
+.TP
+.I bool   
+.B inv
+.B =n
+.R  [y/n]	if y, do inverse transform
+.TP
+.I int    
+.B nv
+.B =
+.R  	number of velocities (if inv=n)
+.TP
+.I float  
+.B tp
+.B =t0
+.R  
+.TP
+.I float  
+.B vmax
+.B =
+.R  	maximum velocity (if inv=n)
+.TP
+.I float  
+.B vmin
+.B =
+.R  	minimum velocity (if inv=n)
+.SH SOURCE
+.I system/seismic/Mradial2.c
+.SH VERSION
+4.2

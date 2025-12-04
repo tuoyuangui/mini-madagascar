@@ -1,0 +1,14 @@
+Program sfovczo | Post-stack 2-D oriented velocity continuation. 
+[SYNOPSIS]
+sfovczo < in.rsf > out.rsf verb=y nv= dv= v0=
+[COMMENTS]
+
+Axes: (Omega,k,p) -> (Omega,v,k,p)
+
+[PARAMETERS]
+float   | dv | = |   | 	velocity step size 
+int     | nv | = |   | 	velocity steps 
+float   | v0 | = |   | 	starting velocity 
+bool    | verb | =y |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+system/seismic

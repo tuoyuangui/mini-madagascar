@@ -1,0 +1,79 @@
+.TH sfgraph3 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfgraph3 \- Generate 3-D cube plot for surfaces.\n.SH SYNOPSIS
+.B sfgraph3 < in.rsf orient=1 yreverse=n min= max= point1=0.5 point2=0.5 frame1=0.5*(min+max) frame2=n1-1 frame3=0 movie=0 dframe=1 n1pix=n1/point1+n3/(1.-point1) n2pix=n2/point2+n3/(1.-point2) flat=y > plot.vpl
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B dframe
+.B =1
+.R  	frame increment in a movie
+.TP
+.I bool   
+.B flat
+.B =y
+.R  [y/n]	if n, display perspective view
+.TP
+.I float  
+.B frame1
+.B =0.5*(min+max)
+.R  
+.TP
+.I int    
+.B frame2
+.B =n1-1
+.R  
+.TP
+.I int    
+.B frame3
+.B =0
+.R  	frame numbers for cube faces
+.TP
+.I float  
+.B max
+.B =
+.R  	maximum function value
+.TP
+.I float  
+.B min
+.B =
+.R  	minimum function value
+.TP
+.I int    
+.B movie
+.B =0
+.R  	0: no movie, 1: movie over axis 1, 2: axis 2, 3: axis 3
+.TP
+.I int    
+.B n1pix
+.B =n1/point1+n3/(1.-point1)
+.R  	number of vertical pixels
+.TP
+.I int    
+.B n2pix
+.B =n2/point2+n3/(1.-point2)
+.R  	number of horizontal pixels
+.TP
+.I int    
+.B orient
+.B =1
+.R  	function orientation
+.TP
+.I float  
+.B point1
+.B =0.5
+.R  	fraction of the vertical axis for front face
+.TP
+.I float  
+.B point2
+.B =0.5
+.R  	fraction of the horizontal axis for front face
+.TP
+.I bool   
+.B yreverse
+.B =n
+.R  [y/n]
+.SH SOURCE
+.I plot/main/graph3.c
+.SH VERSION
+4.2

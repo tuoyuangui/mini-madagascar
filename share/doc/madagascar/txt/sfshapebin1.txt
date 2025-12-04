@@ -1,0 +1,20 @@
+Program sfshapebin1 | 1-D inverse interpolation with shaping regularization. 
+[SYNOPSIS]
+sfshapebin1 < in.rsf > out.rsf verb=y nx= xmin= xmax= x0=xmin dx= interp=2 filter=3. niter=nx eps=1./nd pef=n gauss=n pad=0 head=
+[PARAMETERS]
+float   | dx | = |   | 	grid sampling 
+float   | eps | =1./nd |   | 	regularization parameter 
+float   | filter | =3. |   | 	smoothing length 
+bool    | gauss | =n |  [y/n] | 	if y, use Gaussian shaping 
+string  | head | = |   | 	
+int     | interp | =2 |  [1,2] | 	forward interpolation method, 1: nearest neighbor, 2: linear 
+int     | niter | =nx |   | 	number of conjugate-gradient iterations 
+int     | nx | = |   | 	number of bins 
+int     | pad | =0 |   | 	padding for Gaussian shaping 
+bool    | pef | =n |  [y/n] | 	if y, use monofrequency regularization 
+bool    | verb | =y |  [y/n] | 	verbosity flag 
+float   | x0 | =xmin |   | 	grid origin 
+float   | xmax | = |   | 	
+float   | xmin | = |   | 	grid size 
+[DIRECTORY]
+system/generic

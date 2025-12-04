@@ -1,0 +1,14 @@
+Program sfdmo | Kirchhoff DMO with antialiasing by reparameterization. 
+[SYNOPSIS]
+sfdmo < in.rsf > out.rsf mint=2 n=32 adj=y inv=n type=1 h= half=y velhalf=0.75
+[PARAMETERS]
+bool    | adj | =y |  [y/n] | 	adjoint flag 
+float   | h | = |   | 	
+bool    | half | =y |  [y/n] | 	if y, the third axis is half-offset instead of full offset 
+bool    | inv | =n |  [y/n] | 	inversion flag 
+int     | mint | =2 |   | 	starting time sample 
+int     | n | =32 |   | 	number of offset samples 
+int     | type | =1 |   | 	type of amplitude (0,1,2,3) 
+float   | velhalf | =0.75 |   | 	half-velocity 
+[DIRECTORY]
+system/seismic

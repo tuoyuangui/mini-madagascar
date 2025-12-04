@@ -1,0 +1,24 @@
+.TH sfderiv 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfderiv \- First derivative with a maximally linear FIR differentiator. \n.SH SYNOPSIS
+.B sfderiv < in.rsf > out.rsf order=6 scale=n
+.SH COMMENTS
+
+May 2012 program of the month:
+http://ahay.org/blog/2012/05/01/program-of-the-month-sfderiv/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B order
+.B =6
+.R  	filter order
+.TP
+.I bool   
+.B scale
+.B =n
+.R  [y/n]	if scale by 1/dx
+.SH SOURCE
+.I system/generic/Mderiv.c
+.SH VERSION
+4.2

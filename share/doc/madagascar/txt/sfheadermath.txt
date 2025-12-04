@@ -1,0 +1,24 @@
+Program sfheadermath | Mathematical operations, possibly on header keys. 
+[SYNOPSIS]
+sfheadermath < in.rsf > out.rsf segy=y nkey=-1 memsize=sf_memsize() key= output=
+[COMMENTS]
+
+Known functions for float data: 
+cos,  sin,  tan,  acos,  asin,  atan, 
+cosh, sinh, tanh, acosh, asinh, atanh,
+exp,  log,  sqrt, abs, erf, erfc, sign
+
+Known functions for int data: sign, abs
+
+See also sfmath.
+
+An addition operation can be performed by sfadd.
+
+[PARAMETERS]
+string  | key | = |   | 	key to replace 
+int     | memsize | =sf_memsize() |   | 	Max amount of RAM (in Mb) to be used 
+int     | nkey | =-1 |   | 	number of key to replace 
+string  | output | = |   | 	Describes the output in a mathematical notation. 
+bool    | segy | =y |  [y/n] | 	if SEGY headers 
+[DIRECTORY]
+system/seismic

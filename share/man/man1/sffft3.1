@@ -1,0 +1,46 @@
+.TH sffft3 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsffft3 \- FFT transform on extra axis.\n.SH SYNOPSIS
+.B sffft3 < in.rsf > out.rsf inv=n sym=n sign=inv? 1: 0 opt=y axis=2 pad=2
+.SH COMMENTS
+
+Input and output are complex data. The input is padded by factor pad.
+
+July 2012 program of the month:
+http://ahay.org/blog/2012/07/02/program-of-the-month-sffft3/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B axis
+.B =2
+.R  	Axis to transform
+.TP
+.I bool   
+.B inv
+.B =n
+.R  [y/n]	if y, perform inverse transform
+.TP
+.I bool   
+.B opt
+.B =y
+.R  [y/n]	if y, determine optimal size for efficiency
+.TP
+.I int    
+.B pad
+.B =2
+.R  	padding factor
+.TP
+.I int    
+.B sign
+.B =inv? 1: 0
+.R  	transform sign (0 or 1)
+.TP
+.I bool   
+.B sym
+.B =n
+.R  [y/n]	if y, apply symmetric scaling to make the FFT operator Hermitian
+.SH SOURCE
+.I system/generic/Mfft3.c
+.SH VERSION
+4.2

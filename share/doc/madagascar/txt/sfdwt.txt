@@ -1,0 +1,10 @@
+Program sfdwt | 1-D digital wavelet transform 
+[SYNOPSIS]
+sfdwt < in.rsf > out.rsf inv=n adj=n unit=n type=
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	if y, do adjoint transform 
+bool    | inv | =n |  [y/n] | 	if y, do inverse transform 
+string  | type | = |   | 	[haar,linear,biorthogonal] wavelet type, the default is linear  
+bool    | unit | =n |  [y/n] | 	if y, use unitary scaling 
+[DIRECTORY]
+system/generic

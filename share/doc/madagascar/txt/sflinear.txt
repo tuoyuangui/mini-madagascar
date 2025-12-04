@@ -1,0 +1,23 @@
+Program sflinear | 1-D linear interpolation.
+[SYNOPSIS]
+sflinear < in.rsf > out.rsf pattern=pattern.rsf sort=n niter=0 rect=1 nw=2 n1= d1= o1=
+[COMMENTS]
+
+The input should have n2=2 (coordinates,values)
+
+For output, specify either n1= o1= d1= or pattern=
+
+March 2016 program of the month:
+http://ahay.org/blog/2016/03/23/program-of-the-month-sflinear/
+
+[PARAMETERS]
+float   | d1 | = |   | 	Output sampling 
+string  | n1 | = |   | 	Output grid size 
+int     | niter | =0 |   | 	number of iterations 
+int     | nw | =2 |   | 	interpolator size 
+float   | o1 | = |   | 	Output origin 
+string  | pattern | = |   | 	auxiliary input file name
+int     | rect | =1 |   | 	smoothing regularization 
+bool    | sort | =n |  [y/n] | 	if y, the coordinates need sorting 
+[DIRECTORY]
+system/generic

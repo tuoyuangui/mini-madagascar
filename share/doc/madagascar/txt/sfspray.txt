@@ -1,0 +1,15 @@
+Program sfspray | Extend a dataset by duplicating in the specified axis dimension.
+[SYNOPSIS]
+sfspray < in.rsf > out.rsf axis=2 n= d= o= label= unit=
+[COMMENTS]
+This operation is adjoint to sfstack.
+
+[PARAMETERS]
+int     | axis | =2 |   | 	which axis to spray 
+float   | d | = |   | 	Sampling of the newly created dimension 
+string  | label | = |   | 	Label of the newly created dimension 
+int     | n | = |   | 	Size of the newly created dimension 
+float   | o | = |   | 	Origin of the newly created dimension 
+string  | unit | = |   | 	Units of the newly created dimension 
+[DIRECTORY]
+system/main

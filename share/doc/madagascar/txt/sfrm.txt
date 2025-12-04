@@ -1,0 +1,10 @@
+Program sfrm | Remove RSF files together with their data.
+[SYNOPSIS]
+sfrm file1.rsf [file2.rsf ...] [-i] [-v] [-f] 
+[COMMENTS]
+Mimics the standard Unix rm command.
+
+See also: sfmv, sfcp.
+
+[DIRECTORY]
+system/main

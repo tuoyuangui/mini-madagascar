@@ -1,0 +1,154 @@
+.TH sfmakevel 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfmakevel \- Make a velocity function v(x,y,z) \n.SH SYNOPSIS
+.B sfmakevel > out.rsf n2= n1= n3=1 d2=1.0 d3=1.0 d1=1.0 o2=0.0 o3=0.0 o1=0.0 v000=2.0 dvdx2=0.0 dvdx3=0.0 dvdx1=0.0 x2lens=fx x3lens=fy x1lens=fz vlens=0.0 dlens=1.0 tlens=1.0 vran=0.0 vx1ran=0.0 vx1c=0.0 x11c=fz x12c=fz+(nz-1)*dz l1c=dz l2c=dz exc=1.0 vzfile= vx1file=
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B d1
+.B =1.0
+.R  	1st dimension sampling interval
+.TP
+.I float  
+.B d2
+.B =1.0
+.R  	2nd dimension sampling interval
+.TP
+.I float  
+.B d3
+.B =1.0
+.R  	3rd dimension sampling interval
+.TP
+.I float  
+.B dlens
+.B =1.0
+.R  	diameter of parabolic lens
+.TP
+.I float  
+.B dvdx1
+.B =0.0
+.R  	velocity gradient with respect to 1st dimension
+.TP
+.I float  
+.B dvdx2
+.B =0.0
+.R  	velocity gradient with respect to 2nd dimension
+.TP
+.I float  
+.B dvdx3
+.B =0.0
+.R  	velocity gradient with respect to 3rd dimension
+.TP
+.I float  
+.B exc
+.B =1.0
+.R  	exponent of chirp
+.TP
+.I float  
+.B l1c
+.B =dz
+.R  	wavelength at beginning of chirp
+.TP
+.I float  
+.B l2c
+.B =dz
+.R  	wavelength at end of chirp
+.TP
+.I int    
+.B n1
+.B =
+.R  	number of z samples (1st dimension)), must be provided!
+.TP
+.I int    
+.B n2
+.B =
+.R  	number of x samples (2nd dimension), must be provided!
+.TP
+.I int    
+.B n3
+.B =1
+.R  	number of y samples (3rd dimension)
+.TP
+.I float  
+.B o1
+.B =0.0
+.R  	Origin 1st dimension
+.TP
+.I float  
+.B o2
+.B =0.0
+.R  	Origin 2nd dimension
+.TP
+.I float  
+.B o3
+.B =0.0
+.R  	Origin 3rd dimension
+.TP
+.I float  
+.B tlens
+.B =1.0
+.R  	thickness of parabolic lens
+.TP
+.I float  
+.B v000
+.B =2.0
+.R  	velocity at (x=0,y=0,z=0)
+.TP
+.I float  
+.B vlens
+.B =0.0
+.R  	velocity perturbation in parabolic lens
+.TP
+.I float  
+.B vran
+.B =0.0
+.R  	standard deviation of random perturbation
+.TP
+.I float  
+.B vx1c
+.B =0.0
+.R  	1st dimension v(z) chirp amplitude
+.TP
+.I string 
+.B vx1file
+.B =
+.R  	file containing v(z) 1st dimension profile
+.TP
+.I float  
+.B vx1ran
+.B =0.0
+.R  	standard deviation of random perturbation to 1st dimension
+.TP
+.I string 
+.B vzfile
+.B =
+.R  
+.TP
+.I float  
+.B x11c
+.B =fz
+.R  	1st dimension at which to begin chirp
+.TP
+.I float  
+.B x12c
+.B =fz+(nz-1)*dz
+.R  	1st dimension at which to end chirp
+.TP
+.I float  
+.B x1lens
+.B =fz
+.R  	1st dimension coordinate of center of parabolic lens
+.TP
+.I float  
+.B x2lens
+.B =fx
+.R  	2nd dimension coordinate of center of parabolic lens
+.TP
+.I float  
+.B x3lens
+.B =fy
+.R  	3rd dimension coordinate of center of parabolic lens
+.SH SOURCE
+.I su/main/makevel.c
+.SH VERSION
+4.2

@@ -1,0 +1,7 @@
+Program sflinefit | Fit a line to a set of points in 2-D.
+[SYNOPSIS]
+sflinefit < in.rsf > out.rsf pattern=pattern.rsf
+[PARAMETERS]
+string  | pattern | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/generic

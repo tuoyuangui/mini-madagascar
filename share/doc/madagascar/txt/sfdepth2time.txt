@@ -1,0 +1,18 @@
+Program sfdepth2time | Conversion from depth to time in a V(z) medium.
+[SYNOPSIS]
+sfdepth2time < in.rsf velocity=velocity.rsf > out.rsf nt= dt= t0= slow=n eps=0.01
+[COMMENTS]
+
+Transforms function of z to function of
+
+tau = Integral[2/v[x,n],{n,0,z}]
+
+[PARAMETERS]
+float   | dt | = |   | 	Time sampling (default is d1) 
+float   | eps | =0.01 |   | 	smoothness parameter 
+int     | nt | = |   | 	Number of points in time (default is n1) 
+bool    | slow | =n |  [y/n] | 	y: slowness, n: velocity 
+float   | t0 | = |   | 	Time origin (default is 0) 
+file    | velocity | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/seismic

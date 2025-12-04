@@ -1,0 +1,35 @@
+.TH sfscale 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfscale \- Scale data.\n.SH SYNOPSIS
+.B sfscale < in.rsf > out.rsf axis=0 rscale=0. pclip=100. dscale=1.
+.SH COMMENTS
+
+To scale by a constant factor, you can also use sfmath.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B axis
+.B =0
+.R  	Scale by maximum in the dimensions up to this axis.
+.TP
+.I float  
+.B dscale
+.B =1.
+.R  	Scale by this factor (works if rscale=0)
+.TP
+.I float  
+.B pclip
+.B =100.
+.R  	data clip percentile
+.TP
+.I float  
+.B rscale
+.B =0.
+.R  	Scale by this factor.
+.SH SOURCE
+.I system/main/scale.c
+.SH DOCUMENTATION
+.BR http://ahay.org/wiki/Guide_to_madagascar_programs#sfscale
+.SH VERSION
+4.2

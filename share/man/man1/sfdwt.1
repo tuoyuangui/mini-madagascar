@@ -1,0 +1,29 @@
+.TH sfdwt 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfdwt \- 1-D digital wavelet transform \n.SH SYNOPSIS
+.B sfdwt < in.rsf > out.rsf inv=n adj=n unit=n type=
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B adj
+.B =n
+.R  [y/n]	if y, do adjoint transform
+.TP
+.I bool   
+.B inv
+.B =n
+.R  [y/n]	if y, do inverse transform
+.TP
+.I string 
+.B type
+.B =
+.R  	[haar,linear,biorthogonal] wavelet type, the default is linear
+.TP
+.I bool   
+.B unit
+.B =n
+.R  [y/n]	if y, use unitary scaling
+.SH SOURCE
+.I system/generic/Mdwt.c
+.SH VERSION
+4.2

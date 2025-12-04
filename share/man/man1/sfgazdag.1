@@ -1,0 +1,89 @@
+.TH sfgazdag 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfgazdag \- Post-stack 2-D/3-D v(z) time modeling/migration with Gazdag phase-shift. \n.SH SYNOPSIS
+.B sfgazdag < in.rsf > out.rsf velocity=vel.rsf velz=velz.rsf eta=eta.rsf inv=n eps=0.01 verb=n depth=n nt= dt= nz= dz= vel= vz=v0 n=0.0 pad=2*kiss_fft_next_fast_size((nt+1)/2) rule=
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B depth
+.B =n
+.R  [y/n]	if true, depth migration
+.TP
+.I float  
+.B dt
+.B =
+.R  	Sampling of time axis (for modeling)
+.TP
+.I float  
+.B dz
+.B =
+.R  	Sampling of depth axis (for migration, if no velocity file)
+.TP
+.I float  
+.B eps
+.B =0.01
+.R  	stabilization parameter
+.TP
+.I string 
+.B eta
+.B =
+.R  	auxiliary input file name
+.TP
+.I bool   
+.B inv
+.B =n
+.R  [y/n]	if y, modeling; if n, migration
+.TP
+.I float  
+.B n
+.B =0.0
+.R  	Constant eta (if no velocity file)
+.TP
+.I int    
+.B nt
+.B =
+.R  	Length of time axis (for modeling)
+.TP
+.I int    
+.B nz
+.B =
+.R  	Length of depth axis (for migration, if no velocity file)
+.TP
+.I int    
+.B pad
+.B =2*kiss_fft_next_fast_size((nt+1)/2)
+.R  
+.TP
+.I string 
+.B rule
+.B =
+.R  	phase-shift interpolation rule (simple, midpoint, linear)
+.TP
+.I float  
+.B vel
+.B =
+.R  	Constant velocity (if no velocity file)
+.TP
+.I string 
+.B velocity
+.B =
+.R  	auxiliary input file name
+.TP
+.I string 
+.B velz
+.B =
+.R  	auxiliary input file name
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]	verbosity flag
+.TP
+.I float  
+.B vz
+.B =v0
+.R  	Constant vertical velocity (if no velocity file)
+.SH SOURCE
+.I system/seismic/Mgazdag.c
+.SH VERSION
+4.2

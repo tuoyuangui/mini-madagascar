@@ -1,0 +1,46 @@
+Program sfkirmod | Kirchhoff 2-D/2.5-D modeling with analytical Green's functions. 
+[SYNOPSIS]
+sfkirmod < modl.rsf > data.rsf curv=curv.rsf refl=refl.rsf picks=picks.rsf slopes=slopes.rsf lin=n adj=n absoff=n nt= dt=0.004 t0=0. ns=nx s0=x0 ds=dx nh=nx h0=0. dh=dx verb=n r0=1. r0=1. twod=n cmp=n freq=0.2/dt vel= gradx= gradz= velz= eta= refx= refz= vel2= gradx2= gradz2= rgrad= dip= type= type2=
+[COMMENTS]
+
+October 2012 program of the month:
+http://ahay.org/blog/2012/10/03/program-of-the-month-sfkirmod/
+
+[PARAMETERS]
+bool    | absoff | =n |  [y/n] | 	y - h0 is not in shot coordinate system 
+bool    | adj | =n |  [y/n] | 	adjoint flag 
+bool    | cmp | =n |  [y/n] | 	compute CMP instead of shot gathers 
+file    | curv | = |   | 	auxiliary input file name
+float   | dh | =dx |   | 	offset increment 
+string  | dip | = |   | 	reflector dip file 
+float   | ds | =dx |   | 	shot/midpoint increment 
+float   | dt | =0.004 |   | 	time sampling 
+float   | eta | = |   | 	parameter for VTI anisotropy 
+float   | freq | =0.2/dt |   | 	peak frequency for Ricker wavelet 
+float   | gradx | = |   | 	horizontal velocity gradient 
+float   | gradx2 | = |   | 	converted velocity, horizontal gradient 
+float   | gradz | = |   | 	vertical velocity gradient 
+float   | gradz2 | = |   | 	converted velocity, vertical gradient 
+float   | h0 | =0. |   | 	first offset 
+bool    | lin | =n |  [y/n] | 	if linear operator 
+int     | nh | =nx |   | 	number of offsets 
+int     | ns | =nx |   | 	number of shots (midpoints if cmp=y) 
+int     | nt | = |   | 	time samples 
+string  | picks | = |   | 	auxiliary output file name
+float   | r0 | =1. |   | 	normal reflectivity (if constant) 
+string  | refl | = |   | 	auxiliary input file name
+float   | refx | = |   | 	reference x-coordinate for velocity 
+float   | refz | = |   | 	reference z-coordinate for velocity 
+string  | rgrad | = |   | 	AVO gradient file (B/A) 
+float   | s0 | =x0 |   | 	first shot (midpoint if cmp=y) 
+string  | slopes | = |   | 	auxiliary output file name
+float   | t0 | =0. |   | 	time origin 
+bool    | twod | =n |  [y/n] | 	2-D or 2.5-D 
+string  | type | = |   | 	type of velocity, 'c': constant, 's': linear sloth, 'v': linear velocity, 'a': VTI anisotropy 
+string  | type2 | = |   | 	type of velocity for the converted (receiver side) branch 
+float   | vel | = |   | 	velocity 
+float   | vel2 | = |   | 	converted velocity 
+float   | velz | = |   | 	vertical velocity for VTI anisotropy 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+system/seismic

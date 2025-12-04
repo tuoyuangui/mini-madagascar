@@ -1,0 +1,83 @@
+.TH sfintbin3 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfintbin3 \- 4-D data binning. \n.SH SYNOPSIS
+.B sfintbin3 < in.rsf > out.rsf xkey= ykey= zkey= xmin= xmax= ymin= ymax= zmin= zmax= head= xk= yk= zk= mask=
+.SH COMMENTS
+
+if xkey < 0, the first axis indexes traces in a gather like cdpt.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I string 
+.B head
+.B =
+.R  	header file
+.TP
+.I string 
+.B mask
+.B =
+.R  	output mask file
+.TP
+.I string 
+.B xk
+.B =
+.R  	x key name
+.TP
+.I int    
+.B xkey
+.B =
+.R  	x key number (if no xk), default is fldr
+.TP
+.I int    
+.B xmax
+.B =
+.R  	x maximum
+.TP
+.I int    
+.B xmin
+.B =
+.R  	x minimum
+.TP
+.I string 
+.B yk
+.B =
+.R  	y key name
+.TP
+.I int    
+.B ykey
+.B =
+.R  	y key number (if no yk), default is iline
+.TP
+.I int    
+.B ymax
+.B =
+.R  	y maximum
+.TP
+.I int    
+.B ymin
+.B =
+.R  	y minimum
+.TP
+.I string 
+.B zk
+.B =
+.R  	z key name
+.TP
+.I int    
+.B zkey
+.B =
+.R  	z key number (if no zk), default is xline
+.TP
+.I int    
+.B zmax
+.B =
+.R  	z maximum
+.TP
+.I int    
+.B zmin
+.B =
+.R  	z minimum
+.SH SOURCE
+.I system/seismic/Mintbin3.c
+.SH VERSION
+4.2

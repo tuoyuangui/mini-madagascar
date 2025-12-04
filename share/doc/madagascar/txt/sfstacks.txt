@@ -1,0 +1,19 @@
+Program sfstacks | Constant-velocity stacks. 
+[SYNOPSIS]
+sfstacks < cmp.rsf > stk.rsf offset=offset.rsf mask=msk.rsf half=y str=0.5 mute=12 nv= v0= dv= CDPtype= slowness=n squared=n h0=0. extend=4
+[PARAMETERS]
+int     | CDPtype | = |   | 	
+float   | dv | = |   | 	step in velocity 
+int     | extend | =4 |   | 	trace extension 
+float   | h0 | =0. |   | 	reference offset 
+bool    | half | =y |  [y/n] | 	if y, the second axis is half-offset instead of full offset 
+string  | mask | = |   | 	auxiliary input file name
+int     | mute | =12 |   | 	mute zone 
+int     | nv | = |   | 	number of velocities 
+string  | offset | = |   | 	auxiliary input file name
+bool    | slowness | =n |  [y/n] | 	if y, use slowness instead of velocity 
+bool    | squared | =n |  [y/n] | 	if y, the slowness or velocity is squared 
+float   | str | =0.5 |   | 	maximum stretch allowed 
+float   | v0 | = |   | 	first velocity 
+[DIRECTORY]
+system/seismic

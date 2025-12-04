@@ -1,0 +1,29 @@
+.TH sfstripes 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfstripes \- Model the positions and dips of the constant offset, source, midpoint, and receiver strikes in a source vs. offset space. \n.SH SYNOPSIS
+.B sfstripes < inp.rsf > out.rsf mo= ms= my= mr=
+.SH PARAMETERS
+.PD 0
+.TP
+.I int    
+.B mo
+.B =
+.R  	offset parameter, a constant offset line will appear in the output every o offset
+.TP
+.I int    
+.B mr
+.B =
+.R  	receiver parameter, a constant receiver line will appear in the output every r receiver
+.TP
+.I int    
+.B ms
+.B =
+.R  	source parameter, a constant source line will appear in the output every s source
+.TP
+.I int    
+.B my
+.B =
+.R  	midpoint parameter, a constant midpoint line will appear in the output every y midpoint
+.SH SOURCE
+.I system/seismic/Mstripes.c
+.SH VERSION
+4.2

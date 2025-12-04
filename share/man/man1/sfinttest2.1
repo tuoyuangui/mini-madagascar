@@ -1,0 +1,29 @@
+.TH sfinttest2 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfinttest2 \- Interpolation from a regular grid in 2-D. \n.SH SYNOPSIS
+.B sfinttest2 < in.rsf > out.rsf coord=crd.rsf nw= kai=4.0 interp=
+.SH PARAMETERS
+.PD 0
+.TP
+.I file   
+.B coord
+.B =
+.R  	auxiliary input file name
+.TP
+.I string 
+.B interp
+.B =
+.R  	interpolation (lagrange,cubic,kaiser,lanczos,cosine,welch,spline)
+.TP
+.I float  
+.B kai
+.B =4.0
+.R  	Kaiser window parameter
+.TP
+.I int    
+.B nw
+.B =
+.R  	interpolator size
+.SH SOURCE
+.I system/generic/Minttest2.c
+.SH VERSION
+4.2

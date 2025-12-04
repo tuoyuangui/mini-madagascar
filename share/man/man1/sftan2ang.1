@@ -1,0 +1,39 @@
+.TH sftan2ang 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsftan2ang \- tangent to angle transformation \n.SH SYNOPSIS
+.B sftan2ang < Fstk.rsf > Fang.rsf velocity=velocity.rsf na=nt da=90/(nt-1) a0=0. extend=4 top=n
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B a0
+.B =0.
+.R  
+.TP
+.I float  
+.B da
+.B =90/(nt-1)
+.R  
+.TP
+.I int    
+.B extend
+.B =4
+.R  	tmp extension
+.TP
+.I int    
+.B na
+.B =nt
+.R  
+.TP
+.I bool   
+.B top
+.B =n
+.R  [y/n]
+.TP
+.I file   
+.B velocity
+.B =
+.R  	auxiliary input file name
+.SH SOURCE
+.I system/seismic/Mtan2ang.c
+.SH VERSION
+4.2

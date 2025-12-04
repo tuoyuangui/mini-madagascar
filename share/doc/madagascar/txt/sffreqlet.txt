@@ -1,0 +1,14 @@
+Program sffreqlet | 1-D seislet frame 
+[SYNOPSIS]
+sffreqlet < in.rsf > out.rsf freq=w.rsf inv=n verb=y decomp=n ncycle=0 niter=1 perc=50.0 type=
+[PARAMETERS]
+bool    | decomp | =n |  [y/n] | 	do decomposition 
+file    | freq | = |   | 	auxiliary input file name
+bool    | inv | =n |  [y/n] | 	if y, do inverse transform 
+int     | ncycle | =0 |   | 	number of iterations 
+int     | niter | =1 |   | 	number of Bregman iterations 
+float   | perc | =50.0 |   | 	percentage for sharpening 
+string  | type | = |   | 	[haar,linear,biorthogonal] wavelet type, the default is linear  
+bool    | verb | =y |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+system/seismic

@@ -1,0 +1,11 @@
+Program sfdiffoc | Diffraction focusing test. 
+[SYNOPSIS]
+sfdiffoc < inp.rsf > out.rsf v0=SF_EPS v= pad=nt pad2=2*kiss_fft_next_fast_size((n2+1)/2) extend=4
+[PARAMETERS]
+int     | extend | =4 |   | 	trace extension 
+int     | pad | =nt |   | 	padding for stretch 
+int     | pad2 | =2*kiss_fft_next_fast_size((n2+1)/2) |   | 	padding for FFT 
+float   | v | = |   | 	final velocity 
+float   | v0 | =SF_EPS |   | 	initial velocity 
+[DIRECTORY]
+system/seismic

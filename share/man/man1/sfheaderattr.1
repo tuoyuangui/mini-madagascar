@@ -1,0 +1,25 @@
+.TH sfheaderattr 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfheaderattr \- Display header attributes. \n.SH SYNOPSIS
+.B sfheaderattr < head.rsf segy=y desc=n
+.SH COMMENTS
+
+Only nonzero values are reported.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B desc
+.B =n
+.R  [y/n]	if describe keys
+.TP
+.I bool   
+.B segy
+.B =y
+.R  [y/n]	if SEGY headers
+.SH SOURCE
+.I system/seismic/Mheaderattr.c
+.SH DOCUMENTATION
+.BR http://ahay.org/wiki/Guide_to_madagascar_programs#sfheaderattr
+.SH VERSION
+4.2

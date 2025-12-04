@@ -1,0 +1,68 @@
+.TH sfunif2 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfunif2 \- Generate 2-D layered velocity model from specified interfaces. \n.SH SYNOPSIS
+.B sfunif2 < surface.rsf > model.rsf x0= z0= v00= dvdx= dvdz= n1= d1= o1=0. label1= unit1=
+.SH COMMENTS
+
+In each layer, velocity is a linear function of position.
+
+Inspired by SU's unif2.
+
+October 2013 program of the month:
+http://ahay.org/blog/2013/10/03/program-of-the-month-sfunif2/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B d1
+.B =
+.R  	Sampling of the depth axis
+.TP
+.I floats 
+.B dvdx
+.B =
+.R  	 [ninf]
+.TP
+.I floats 
+.B dvdz
+.B =
+.R  	 [ninf]
+.TP
+.I string 
+.B label1
+.B =
+.R  	depth axis label
+.TP
+.I int    
+.B n1
+.B =
+.R  	Number of samples on the depth axis
+.TP
+.I float  
+.B o1
+.B =0.
+.R  	Origin of the depth axis
+.TP
+.I string 
+.B unit1
+.B =
+.R  
+.TP
+.I floats 
+.B v00
+.B =
+.R  	 [ninf]
+.TP
+.I floats 
+.B x0
+.B =
+.R  	 [ninf]
+.TP
+.I floats 
+.B z0
+.B =
+.R  	 [ninf]
+.SH SOURCE
+.I system/generic/Munif2.c
+.SH VERSION
+4.2

@@ -1,0 +1,138 @@
+.TH sfdots 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfdots \- Plot signal with lollipops.\n.SH SYNOPSIS
+.B sfdots < in.rsf labels= dots=(n1 <= 130)? 1: 0 seemean=(bool) (n2 <= 30) strings=(bool) (n1 <= 400) connect=1 corners= silk=n gaineach=y labelsz=8 yreverse=n constsep=n seedead=n transp=n xxscale=1. yyscale=1. clip=-1. overlap=0.9 screenratio=VP_SCREEN_RATIO screenht=VP_STANDARD_HEIGHT screenwd=screenhigh / screenratio radius=dd1/3 font=-1 label1= unit1= title= > plot.vpl
+.SH COMMENTS
+The axis is displayed only if label1= is present in the input
+file or the command line.  
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B clip
+.B =-1.
+.R  	data clip
+.TP
+.I int    
+.B connect
+.B =1
+.R  	connection type: 1 - diagonal, 2 - bar, 4 - only for non-zero data
+.TP
+.I bool   
+.B constsep
+.B =n
+.R  [y/n]	if y, use constant trace separation
+.TP
+.I int    
+.B corners
+.B =
+.R  	number of polygon corners (default is 6)
+.TP
+.I int    
+.B dots
+.B =(n1 <= 130)? 1: 0
+.R  	type of dots: 1 - baloon, 0 - no dots, 2 - only for non-zero data
+.TP
+.I int    
+.B font
+.B =-1
+.R  	font to use in text
+.TP
+.I bool   
+.B gaineach
+.B =y
+.R  [y/n]	if y, gain each trace independently
+.TP
+.I string 
+.B label1
+.B =
+.R  	label for the axis
+.TP
+.I strings
+.B labels
+.B =
+.R  	trace labels  [n2]
+.TP
+.I int    
+.B labelsz
+.B =8
+.R  	label size
+.TP
+.I float  
+.B overlap
+.B =0.9
+.R  	trace overlap
+.TP
+.I float  
+.B radius
+.B =dd1/3
+.R  	dot radius
+.TP
+.I float  
+.B screenht
+.B =VP_STANDARD_HEIGHT
+.R  	screen height
+.TP
+.I float  
+.B screenratio
+.B =VP_SCREEN_RATIO
+.R  	screen aspect ratio
+.TP
+.I float  
+.B screenwd
+.B =screenhigh / screenratio
+.R  	screen width
+.TP
+.I bool   
+.B seedead
+.B =n
+.R  [y/n]	if y, show zero traces
+.TP
+.I bool   
+.B seemean
+.B =(bool) (n2 <= 30)
+.R  [y/n]	if y, draw axis lines
+.TP
+.I bool   
+.B silk
+.B =n
+.R  [y/n]	if y, silky plot
+.TP
+.I bool   
+.B strings
+.B =(bool) (n1 <= 400)
+.R  [y/n]	if y, draw strings
+.TP
+.I string 
+.B title
+.B =
+.R  	plot title
+.TP
+.I bool   
+.B transp
+.B =n
+.R  [y/n]	if y, transpose the axis
+.TP
+.I string 
+.B unit1
+.B =
+.R  	unit for the axis
+.TP
+.I float  
+.B xxscale
+.B =1.
+.R  	x scaling
+.TP
+.I bool   
+.B yreverse
+.B =n
+.R  [y/n]	if y, reverse y axis
+.TP
+.I float  
+.B yyscale
+.B =1.
+.R  	y scaling
+.SH SOURCE
+.I plot/main/dots.c
+.SH VERSION
+4.2

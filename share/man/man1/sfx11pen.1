@@ -1,0 +1,284 @@
+.TH sfx11pen 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfx11pen \- Vplot filter for X-Window \n.SH SYNOPSIS
+.B sfx11pen colormask= red= green= blue= stay=n width= height= mono=n endpause= cachepipe= shade= wantras= window= frame= overlay= invras= txsquare= serifs= background= redpow=1.0 greenpow=1.0 bluepow=1.0 dither= greyc=1.0 pixc=1.0 txfont= txprec= txovly= xcenter= ycenter= patternmult=1. pause=0 fatmult= rotate=0 txscale=1.0 mkscale=1.0 dashscale=1.0 scale=1.0 xscale=1.0 yscale=1.0 xshift=0. yshift=0. xwmax= ywmax= xwmin= ywmin= fat=0 server= align= erase= break= interact= style= size=
+.SH PARAMETERS
+.PD 0
+.TP
+.I string 
+.B align
+.B =
+.R  
+.TP
+.I bool   
+.B background
+.B =
+.R  [y/n]
+.TP
+.I floats 
+.B blue
+.B =
+.R  	 [4]
+.TP
+.I float  
+.B bluepow
+.B =1.0
+.R  
+.TP
+.I string 
+.B break
+.B =
+.R  
+.TP
+.I bool   
+.B cachepipe
+.B =
+.R  [y/n]
+.TP
+.I bools  
+.B colormask
+.B =
+.R  	 [5]
+.TP
+.I float  
+.B dashscale
+.B =1.0
+.R  
+.TP
+.I int    
+.B dither
+.B =
+.R  	dithering to improve raster display, see "man vplotraster"
+                    0    No dither,
+                    1    Random Dither
+                    2    Ordered Dither
+                    3    Minimized Average Error Method
+                    4    Digital Halftoning
+.TP
+.I bool   
+.B endpause
+.B =
+.R  [y/n]
+.TP
+.I string 
+.B erase
+.B =
+.R  
+.TP
+.I int    
+.B fat
+.B =0
+.R  	base line fatness
+.TP
+.I float  
+.B fatmult
+.B =
+.R  
+.TP
+.I bool   
+.B frame
+.B =
+.R  [y/n]
+.TP
+.I floats 
+.B green
+.B =
+.R  	 [4]
+.TP
+.I float  
+.B greenpow
+.B =1.0
+.R  
+.TP
+.I float  
+.B greyc
+.B =1.0
+.R  	"grey correction" modifies the grey scale used to display a raster to simulate the nonlinearity of displays, see "man vplotraster"
+.TP
+.I float  
+.B height
+.B =
+.R  
+.TP
+.I string 
+.B interact
+.B =
+.R  
+.TP
+.I bool   
+.B invras
+.B =
+.R  [y/n]
+.TP
+.I float  
+.B mkscale
+.B =1.0
+.R  
+.TP
+.I bool   
+.B mono
+.B =n
+.R  [y/n]	no color
+.TP
+.I bool   
+.B overlay
+.B =
+.R  [y/n]
+.TP
+.I float  
+.B patternmult
+.B =1.
+.R  
+.TP
+.I int    
+.B pause
+.B =0
+.R  
+.TP
+.I float  
+.B pixc
+.B =1.0
+.R  	"pixel  correction" controls  alteration of the grey scale, see "man vplotraster".
+.TP
+.I floats 
+.B red
+.B =
+.R  	 [4]
+.TP
+.I float  
+.B redpow
+.B =1.0
+.R  
+.TP
+.I int    
+.B rotate
+.B =0
+.R  
+.TP
+.I float  
+.B scale
+.B =1.0
+.R  
+.TP
+.I bool   
+.B serifs
+.B =
+.R  [y/n]
+.TP
+.I string 
+.B server
+.B =
+.R  	X server
+.TP
+.I bool   
+.B shade
+.B =
+.R  [y/n]
+.TP
+.I string 
+.B size
+.B =
+.R  
+.TP
+.I bool   
+.B stay
+.B =n
+.R  [y/n]	open terminal to count keys
+.TP
+.I string 
+.B style
+.B =
+.R  
+.TP
+.I int    
+.B txfont
+.B =
+.R  
+.TP
+.I int    
+.B txovly
+.B =
+.R  
+.TP
+.I int    
+.B txprec
+.B =
+.R  
+.TP
+.I float  
+.B txscale
+.B =1.0
+.R  
+.TP
+.I bool   
+.B txsquare
+.B =
+.R  [y/n]
+.TP
+.I bool   
+.B wantras
+.B =
+.R  [y/n]
+.TP
+.I float  
+.B width
+.B =
+.R  
+.TP
+.I bool   
+.B window
+.B =
+.R  [y/n]
+.TP
+.I float  
+.B xcenter
+.B =
+.R  
+.TP
+.I float  
+.B xscale
+.B =1.0
+.R  
+.TP
+.I float  
+.B xshift
+.B =0.
+.R  
+.TP
+.I float  
+.B xwmax
+.B =
+.R  
+.TP
+.I float  
+.B xwmin
+.B =
+.R  
+.TP
+.I float  
+.B ycenter
+.B =
+.R  
+.TP
+.I float  
+.B yscale
+.B =1.0
+.R  
+.TP
+.I float  
+.B yshift
+.B =0.
+.R  
+.TP
+.I float  
+.B ywmax
+.B =
+.R  
+.TP
+.I float  
+.B ywmin
+.B =
+.R  
+.SH SOURCE
+.I pens/main/x11pen.c
+.SH VERSION
+4.2

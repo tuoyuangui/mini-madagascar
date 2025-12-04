@@ -1,0 +1,46 @@
+.TH sfdd 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfdd \- Convert between different formats. \n.SH SYNOPSIS
+.B sfdd < in.rsf > out.rsf trunc=n line=8 strip=0 ibm=n form= type= format=
+.SH PARAMETERS
+.PD 0
+.TP
+.I string 
+.B form
+.B =
+.R  	ascii, native, xdr
+.TP
+.I string 
+.B format
+.B =
+.R  	Element format (for conversion to ASCII)
+.TP
+.I bool   
+.B ibm
+.B =n
+.R  [y/n]	Special case - assume integers actually represent IBM floats
+.TP
+.I int    
+.B line
+.B =8
+.R  	Number of numbers per line (for conversion to ASCII)
+.TP
+.I int    
+.B strip
+.B =0
+.R  	If strip characters from format at the end of the line
+.TP
+.I bool   
+.B trunc
+.B =n
+.R  [y/n]	Truncate or round to nearest when converting from float to int/short
+.TP
+.I string 
+.B type
+.B =
+.R  	int, float, complex, short, long
+.SH SOURCE
+.I system/main/dd.c
+.SH DOCUMENTATION
+.BR http://ahay.org/wiki/Guide_to_madagascar_programs#sfdd
+.SH VERSION
+4.2

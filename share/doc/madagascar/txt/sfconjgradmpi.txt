@@ -1,0 +1,14 @@
+Program sfconjgradmpi | Generic conjugate-gradient solver for linear inversion.
+[SYNOPSIS]
+sfconjgradmpi mod=mod.rsf mwt=mwt.rsf x0=x0.rsf niter=1
+[COMMENTS]
+
+In this version, the linear operator program uses --input and --output instead of stdin and stdout.
+
+[PARAMETERS]
+file    | mod | = |   | 	auxiliary input file name
+string  | mwt | = |   | 	auxiliary input file name
+int     | niter | =1 |   | 	number of iterations 
+string  | x0 | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/main

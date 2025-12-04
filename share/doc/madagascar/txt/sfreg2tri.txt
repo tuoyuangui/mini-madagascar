@@ -1,0 +1,9 @@
+Program sfreg2tri | Decimate a regular grid to triplets for triangulation. 
+[SYNOPSIS]
+sfreg2tri < in.rsf > out.rsf edgeout=edge.rsf nt= zero=0.
+[PARAMETERS]
+string  | edgeout | = |   | 	auxiliary output file name
+int     | nt | = |   | 	number of triplets 
+float   | zero | =0. |   | 	level surface 
+[DIRECTORY]
+system/generic

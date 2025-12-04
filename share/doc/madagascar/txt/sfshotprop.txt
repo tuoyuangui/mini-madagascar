@@ -1,0 +1,10 @@
+Program sfshotprop | Shot propagation. 
+[SYNOPSIS]
+sfshotprop < in.rsf > out.rsf ns= ds= eps=0.1 positive=y
+[PARAMETERS]
+float   | ds | = |   | 	shot sampling 
+float   | eps | =0.1 |   | 	regularization parameter 
+int     | ns | = |   | 	number of shots 
+bool    | positive | =y |  [y/n] | 	initial offset orientation 
+[DIRECTORY]
+system/seismic

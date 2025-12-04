@@ -1,0 +1,24 @@
+.TH sfpostfilter2 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfpostfilter2 \- Convert B-spline coefficients to data in 2-D. \n.SH SYNOPSIS
+.B sfpostfilter2 < in.rsf > out.rsf nw= vert=y horz=y
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B horz
+.B =y
+.R  [y/n]	include filter on the second axis
+.TP
+.I int    
+.B nw
+.B =
+.R  	filter size
+.TP
+.I bool   
+.B vert
+.B =y
+.R  [y/n]	include filter on the first axis
+.SH SOURCE
+.I system/generic/Mpostfilter2.c
+.SH VERSION
+4.2

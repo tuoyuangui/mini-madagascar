@@ -1,0 +1,49 @@
+.TH sfheadermath 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfheadermath \- Mathematical operations, possibly on header keys. \n.SH SYNOPSIS
+.B sfheadermath < in.rsf > out.rsf segy=y nkey=-1 memsize=sf_memsize() key= output=
+.SH COMMENTS
+
+Known functions for float data: 
+cos,  sin,  tan,  acos,  asin,  atan, 
+cosh, sinh, tanh, acosh, asinh, atanh,
+exp,  log,  sqrt, abs, erf, erfc, sign
+
+Known functions for int data: sign, abs
+
+See also sfmath.
+
+An addition operation can be performed by sfadd.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I string 
+.B key
+.B =
+.R  	key to replace
+.TP
+.I int    
+.B memsize
+.B =sf_memsize()
+.R  	Max amount of RAM (in Mb) to be used
+.TP
+.I int    
+.B nkey
+.B =-1
+.R  	number of key to replace
+.TP
+.I string 
+.B output
+.B =
+.R  	Describes the output in a mathematical notation.
+.TP
+.I bool   
+.B segy
+.B =y
+.R  [y/n]	if SEGY headers
+.SH SOURCE
+.I system/seismic/Mheadermath.c
+.SH DOCUMENTATION
+.BR http://ahay.org/wiki/Guide_to_madagascar_programs#sfheadermath
+.SH VERSION
+4.2

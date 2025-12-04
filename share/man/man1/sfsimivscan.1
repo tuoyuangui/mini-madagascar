@@ -1,0 +1,134 @@
+.TH sfsimivscan 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfsimivscan \- Velocity analysis using similarity-weighted semblance.\n.SH SYNOPSIS
+.B sfsimivscan < cmp.rsf > scan.rsf ref=ref.rsf offset=offset.rsf mask=msk.rsf grad=grd.rsf semblance=n diffsemblance=n avosemblance=n nb=2 weight=y half=y smax=2.0 ns=1 slowness=n squared=n v1= extend=4 mute=12 str=0.5 thr=0.3 eps=0.01 niter=10 v0= dv= nv= v1= type=
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B avosemblance
+.B =n
+.R  [y/n]	if y, compute AVO-friendly semblance
+.TP
+.I bool   
+.B diffsemblance
+.B =n
+.R  [y/n]	if y, compute differential semblance
+.TP
+.I float  
+.B dv
+.B =
+.R  	step in velocity
+.TP
+.I float  
+.B eps
+.B =0.01
+.R  
+.TP
+.I int    
+.B extend
+.B =4
+.R  	trace extension
+.TP
+.I string 
+.B grad
+.B =
+.R  	auxiliary input file name
+.TP
+.I bool   
+.B half
+.B =y
+.R  [y/n]	if y, the second axis is half-offset instead of full offset
+.TP
+.I string 
+.B mask
+.B =
+.R  	optional mask file (auxiliary input file name)
+.TP
+.I int    
+.B mute
+.B =12
+.R  	mute zone
+.TP
+.I int    
+.B nb
+.B =2
+.R  	semblance averaging
+.TP
+.I int    
+.B niter
+.B =10
+.R  
+.TP
+.I int    
+.B ns
+.B =1
+.R  	number of heterogeneity scans
+.TP
+.I int    
+.B nv
+.B =
+.R  	number of scanned velocities
+.TP
+.I string 
+.B offset
+.B =
+.R  	auxiliary input file name
+.TP
+.I file   
+.B ref
+.B =
+.R  	auxiliary input file name
+.TP
+.I bool   
+.B semblance
+.B =n
+.R  [y/n]	if y, compute semblance; if n, stack
+.TP
+.I bool   
+.B slowness
+.B =n
+.R  [y/n]	if y, use slowness instead of velocity
+.TP
+.I float  
+.B smax
+.B =2.0
+.R  	maximum heterogeneity
+.TP
+.I bool   
+.B squared
+.B =n
+.R  [y/n]	if y, the slowness or velocity is squared
+.TP
+.I float  
+.B str
+.B =0.5
+.R  	maximum stretch allowed
+.TP
+.I float  
+.B thr
+.B =0.3
+.R  
+.TP
+.I string 
+.B type
+.B =
+.R  	type of semblance (avo,diff,sembl,power,weighted)
+.TP
+.I float  
+.B v0
+.B =
+.R  	first scanned velocity
+.TP
+.I float  
+.B v1
+.B =
+.R  	reference velocity
+.TP
+.I bool   
+.B weight
+.B =y
+.R  [y/n]	if y, apply pseudo-unitary weighting
+.SH SOURCE
+.I system/seismic/Msimivscan.c
+.SH VERSION
+4.2

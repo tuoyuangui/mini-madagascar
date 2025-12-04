@@ -1,0 +1,44 @@
+.TH sfpnmo 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfpnmo \- Slope-based normal moveout. \n.SH SYNOPSIS
+.B sfpnmo < cmp.rsf dip=dip.rsf > nmod.rsf vel=vel.rsf offset=offset.rsf crv=crv.rsf eta=eta.rsf half=y eps=0.01
+.SH PARAMETERS
+.PD 0
+.TP
+.I string 
+.B crv
+.B =
+.R  	auxiliary input file name
+.TP
+.I file   
+.B dip
+.B =
+.R  	auxiliary input file name
+.TP
+.I float  
+.B eps
+.B =0.01
+.R  	stretch regularization
+.TP
+.I file   
+.B eta
+.B =
+.R  	auxiliary output file name
+.TP
+.I bool   
+.B half
+.B =y
+.R  [y/n]	if y, the second axis is half-offset instead of full offset
+.TP
+.I string 
+.B offset
+.B =
+.R  	auxiliary input file name
+.TP
+.I file   
+.B vel
+.B =
+.R  	auxiliary output file name
+.SH SOURCE
+.I system/seismic/Mpnmo.c
+.SH VERSION
+4.2

@@ -1,0 +1,87 @@
+.TH sfrays2a 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfrays2a \- Ray tracing in VTI media by a Runge-Kutta integrator.\n.SH SYNOPSIS
+.B sfrays2a < vz.rsf > rays.rsf shotfile=shots.rsf anglefile=angles.rsf vel=y order=4 nt= dt= verb=y escvar=n zshot=0. yshot=o[1] + 0.5*(n[1]-1)*d[1] nr= a0=0. amax=360. vx= eta= > rays.rsf
+.SH COMMENTS
+Rays can be plotted with sfplotrays.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B a0
+.B =0.
+.R  	minimum angle (if no anglefile)
+.TP
+.I float  
+.B amax
+.B =360.
+.R  	maximum angle (if no anglefile)
+.TP
+.I string 
+.B anglefile
+.B =
+.R  	file with initial angles (auxiliary input file name)
+.TP
+.I float  
+.B dt
+.B =
+.R  	Sampling in time
+.TP
+.I bool   
+.B escvar
+.B =n
+.R  [y/n]	If y - output escape values, n - trajectories
+.TP
+.I string 
+.B eta
+.B =
+.R  	eta parameter
+.TP
+.I int    
+.B nr
+.B =
+.R  	number of angles (if no anglefile)
+.TP
+.I int    
+.B nt
+.B =
+.R  	Number of time steps
+.TP
+.I int    
+.B order
+.B =4
+.R  	Interpolation order
+.TP
+.I string 
+.B shotfile
+.B =
+.R  	file with shot locations (auxiliary input file name)
+.TP
+.I bool   
+.B vel
+.B =y
+.R  [y/n]	If y, input is velocity; if n, slowness
+.TP
+.I bool   
+.B verb
+.B =y
+.R  [y/n]	Verbosity flag
+.TP
+.I string 
+.B vx
+.B =
+.R  	horizontal velocity or slowness
+.TP
+.I float  
+.B yshot
+.B =o[1] + 0.5*(n[1]-1)*d[1]
+.R  
+.TP
+.I float  
+.B zshot
+.B =0.
+.R  	shot coordinates (if no shotfile)
+.SH SOURCE
+.I system/seismic/Mrays2a.c
+.SH VERSION
+4.2

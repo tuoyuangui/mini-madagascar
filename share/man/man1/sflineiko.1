@@ -1,0 +1,54 @@
+.TH sflineiko 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsflineiko \- Iterative solution of the linearized eikonal equation. \n.SH SYNOPSIS
+.B sflineiko < time.rsf > dtime.rsf time=time0.rsf slow=slow.rsf mask=mask.rsf squared=y adj=n inv=n niter=1 tol=0.001 what=
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B adj
+.B =n
+.R  [y/n]	adjoint flag (for what=linear)
+.TP
+.I bool   
+.B inv
+.B =n
+.R  [y/n]	inverse flag (for what=linear)
+.TP
+.I string 
+.B mask
+.B =
+.R  	auxiliary input file name
+.TP
+.I int    
+.B niter
+.B =1
+.R  	maximum number of iterations
+.TP
+.I file   
+.B slow
+.B =
+.R  	auxiliary input file name
+.TP
+.I bool   
+.B squared
+.B =y
+.R  [y/n]	if slowness is squared
+.TP
+.I string 
+.B time
+.B =
+.R  	auxiliary input file name
+.TP
+.I float  
+.B tol
+.B =0.001
+.R  	tolerance for convergence
+.TP
+.I string 
+.B what
+.B =
+.R  	what to compute
+.SH SOURCE
+.I system/seismic/Mlineiko.c
+.SH VERSION
+4.2

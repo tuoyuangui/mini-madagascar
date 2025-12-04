@@ -1,0 +1,125 @@
+Program sfstdplot | Setting up frames for a generic plot. 
+[SYNOPSIS]
+sfstdplot backcol= fillcol= dash= plotfat= plotcol= xreverse=xreverse1 yreverse=yreverse1 pad=pad1 scalebar=n barmove=n tickscale=0.5 tickscale1=tickscale tickscale2=tickscale tickscale3=tickscale tickscale4=tickscale min1=umin1 min2=umin2 max1=umax1 max2=umax2 font=-1 screenratio=VP_SCREEN_RATIO screenht=VP_STANDARD_HEIGHT screenwd=screenht / screenratio crowd=0.75 xinch= crowd1=crowd yinch= crowd2=crowd xll= xur= yll= yur= barwidth=0.36 axiscol=VP_WHITE framelabelcol=VP_YELLOW cubelinecol=framelabelcol labelsz=8. larnersz=0.0f labelrot=n grid1=transp? false: grid grid2=transp? grid: false gridcol=grid? VP_RED: framecol gridfat=1 griddash=0.0f titlesz=10. barlabelsz= framelabel1=(bool) (NULL != label1) framelabel2=(bool) (NULL != label2) framelabel3=(bool) (NULL != label3) axisfat=0 axiscol=7 labelfat=0 labelsz=8. wantaxis= screenratio=VP_SCREEN_RATIO screenht=VP_STANDARD_HEIGHT screenwd=screenht / screenratio crowd=0.75 xinch= crowd1=crowd yinch= crowd2=crowd xll= xur= yll= yur= transp=transp1 xreverse=n yreverse=yreverse1 labelrot=n min1= min2= max1= max2= wanttitle=y titlefat=0 titlesz=10. wantaxis= wantaxis1= wantaxis2= wantaxis3= labelfat= label1= unit1= label3= unit3= label2= unit2= nbartic= dbarnum= obarnum= wherebartics= n1tic= d1num= o1num= n2tic= d2num= o2num= n3tic= d3num= o3num= n4tic= d4num= o4num= wheretics= grid1= g1num0= g1num= grid2= g2num0= g2num= title= barlabelfat= barlabel= barunit= bartype= wherexlabel= whereylabel= formatbar= format2= format1= format3= wheretitle= wherebarlabel=
+[PARAMETERS]
+int     | axiscol | =7 |   | 	
+int     | axisfat | =0 |   | 	
+floats  | backcol | = |   | 	 [3]
+string  | barlabel | = |   | 	( barlabel bar label )(bar label)
+int     | barlabelfat | = |   | 	bar label fatness 
+float   | barlabelsz | = |   | 	bar label font size 
+bool    | barmove | =n |  [y/n] | 	adjust scalebar position, if bartype=h 
+string  | bartype | = |   | 	[v,h] vertical or horizontal bar (default is v) 
+string  | barunit | = |   | 	( barunit bar unit )(bar unit)
+float   | barwidth | =0.36 |   | 	scale bar size 
+float   | crowd | =0.75 |   | 	
+float   | crowd1 | =crowd |   | 	
+float   | crowd2 | =crowd |   | 	
+int     | cubelinecol | =framelabelcol |   | 	cube lines color 
+float   | d1num | = |   | 	axis1 tic increment 
+float   | d2num | = |   | 	axis2 tic increment 
+float   | d3num | = |   | 	axis3 tic increment 
+float   | d4num | = |   | 	axis4 tic increment 
+floats  | dash | = |   | 	line dash type	
+	    0 continuos (default)
+	    1 fine dash
+	    2 fine dot
+	    3 dash
+	    4 large dash
+	    5 dot dash
+	    6 large dash small dash
+	    7 double dot
+	    8 double dash
+	    9 loose dash  The part after the decimal point determines the pattern repetition interval  [n2]
+string  | dbarnum | = |   | 	scalebar tic increment 
+floats  | fillcol | = |   | 	 [3]
+int     | font | =-1 |   | 	font to use in text 
+string  | format1 | = |   | 	tick mark format 
+string  | format2 | = |   | 	tickmark format ()
+string  | format3 | = |   | 	tickmark format 
+string  | formatbar | = |   | 	format for ticmark labels in the scalebar 
+bool    | framelabel1 | =(bool) (NULL != label1) |  [y/n] | 	to put numbers at frame ends 
+bool    | framelabel2 | =(bool) (NULL != label2) |  [y/n] | 	to put numbers at frame ends 
+bool    | framelabel3 | =(bool) (NULL != label3) |  [y/n] | 	to put numbers at frame ends 
+int     | framelabelcol | =VP_YELLOW |   | 	frame labels color 
+float   | g1num | = |   | 	grid mark sampling on first axis 
+float   | g1num0 | = |   | 	grid mark origin on first axis 
+float   | g2num | = |   | 	grid mark sampling on second axis 
+float   | g2num0 | = |   | 	grid mark origin on second axis 
+bool    | grid1 | = |  [y/n] | 	to draw grid on first axis 
+bool    | grid2 | = |  [y/n] | 	to draw grid on second axis 
+int     | gridcol | =grid? VP_RED: framecol |   | 	grid color 
+float   | griddash | =0.0f |   | 	grid dash pattern 
+int     | gridfat | =1 |   | 	grid fatness 
+string  | label1 | = |   | 	label on the first axis
+string  | label2 | = |   | 	label on the second axis
+string  | label3 | = |   | 	label on the third axis
+int     | labelfat | = |   | 	label fatness 
+bool    | labelrot | =n |  [y/n] | 	
+float   | labelsz | =8. |   | 	
+float   | larnersz | =0.0f |   | 	give the font size as a fraction of the total screen height, 
+       this is based on Ken Larner's 1/20 rule.
+       Any positive larnersz value will overwrite labelsz with 
+       the appropiate rule
+float   | max1 | = |   | 	
+float   | max2 | = |   | 	
+float   | min1 | = |   | 	
+float   | min2 | = |   | 	
+int     | n1tic | = |   | 	axis1 number of ticmarks 
+int     | n2tic | = |   | 	axis2 number of ticmarks 
+int     | n3tic | = |   | 	axis3 number of ticmarks 
+int     | n4tic | = |   | 	axis4 number of ticmarks 
+int     | nbartic | = |   | 	number of scalebar ticmarks 
+float   | o1num | = |   | 	axis1 tic origin 
+float   | o2num | = |   | 	axis2 tic origin 
+float   | o3num | = |   | 	axis3 tic origin 
+float   | o4num | = |   | 	axis4 tic origin 
+float   | obarnum | = |   | 	scalebar tic origin 
+bool    | pad | =pad1 |  [y/n] | 	pad plotting area 
+ints    | plotcol | = |   | 	line color 
+	   7 white
+	   6 yellow (default)
+	   5 cyan
+	   4 green
+	   3 magenta
+	   2 red
+	   1 blue
+	   0 black  [n2]
+ints    | plotfat | = |   | 	line fatness  [n2]
+bool    | scalebar | =n |  [y/n] | 	plot a scalebar 
+float   | screenht | =VP_STANDARD_HEIGHT |   | 	
+float   | screenratio | =VP_SCREEN_RATIO |   | 	
+float   | screenwd | =screenht / screenratio |   | 	
+float   | tickscale | =0.5 |   | 	ticks scaling 
+float   | tickscale1 | =tickscale |   | 	ticks scaling on first axis 
+float   | tickscale2 | =tickscale |   | 	ticks scaling on second axis 
+float   | tickscale3 | =tickscale |   | 	ticks scaling on third axis 
+float   | tickscale4 | =tickscale |   | 	ticks scaling on fourth axis 
+string  | title | = |   | 	( title plot title )(plot title)
+int     | titlefat | =0 |   | 	
+float   | titlesz | =10. |   | 	
+bool    | transp | =transp1 |  [y/n] | 	
+string  | unit1 | = |   | 	unit on the first axis
+string  | unit2 | = |   | 	unit on the second axis
+string  | unit3 | = |   | 	unit on the third axis
+bool    | wantaxis | = |  [y/n] | 	if draw axes 
+bool    | wantaxis1 | = |  [y/n] | 	if draw first axis 
+bool    | wantaxis2 | = |  [y/n] | 	if draw second axis 
+bool    | wantaxis3 | = |  [y/n] | 	if draw third axis in cube plots 
+bool    | wanttitle | =y |  [y/n] | 	
+string  | wherebarlabel | = |   | 	where to put bar label (top,bottom,left,right) 
+string  | wherebartics | = |   | 	( wherebartics where to put scalebar ticmarks )(where to put scalebar ticmarks)
+string  | wheretics | = |   | 	( wheretics where to put ticmarks )(where to put ticmarks)
+string  | wheretitle | = |   | 	where to put title (top,bottom,left,right)
+string  | wherexlabel | = |   | 	where to put horizontal axis (top,bottom)
+string  | whereylabel | = |   | 	checking to see if wantaxis is fetched (where to put vertical label (left,right))
+float   | xinch | = |   | 	
+float   | xll | = |   | 	
+bool    | xreverse | =n |  [y/n] | 	
+float   | xur | = |   | 	
+float   | yinch | = |   | 	
+float   | yll | = |   | 	
+bool    | yreverse | =yreverse1 |  [y/n] | 	
+float   | yur | = |   | 	
+[DIRECTORY]
+plot/lib

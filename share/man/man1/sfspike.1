@@ -1,0 +1,70 @@
+.TH sfspike 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfspike \- Generate simple data: spikes, boxes, planes, constants. \n.SH SYNOPSIS
+.B sfspike < in.rsf > spike.rsf mag= nsp=1 k#=[0,...] l#=[k1,k2,...] p#=[0,...] n#= o#=[0,0,...] d#=[0.004,0.1,0.1,...] label#=[Time,Distance,Distance,...] unit#=[s,km,km,...] title=
+.SH COMMENTS
+
+Spike positioning is given in samples and starts with 1.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B d#
+.B =[0.004,0.1,0.1,...]
+.R  	sampling on #-th axis
+.TP
+.I ints   
+.B k#
+.B =[0,...]
+.R  	spike starting position  [nsp]
+.TP
+.I ints   
+.B l#
+.B =[k1,k2,...]
+.R  	spike ending position  [nsp]
+.TP
+.I string 
+.B label#
+.B =[Time,Distance,Distance,...]
+.R  	label on #-th axis
+.TP
+.I floats 
+.B mag
+.B =
+.R  	spike magnitudes  [nsp]
+.TP
+.I int    
+.B n#
+.B =
+.R  	size of #-th axis
+.TP
+.I int    
+.B nsp
+.B =1
+.R  	Number of spikes
+.TP
+.I float  
+.B o#
+.B =[0,0,...]
+.R  	origin on #-th axis
+.TP
+.I floats 
+.B p#
+.B =[0,...]
+.R  	spike inclination (in samples)  [nsp]
+.TP
+.I string 
+.B title
+.B =
+.R  	title for plots
+.TP
+.I string 
+.B unit#
+.B =[s,km,km,...]
+.R  	unit on #-th axis
+.SH SOURCE
+.I system/main/spike.c
+.SH DOCUMENTATION
+.BR http://ahay.org/wiki/Guide_to_madagascar_programs#sfspike
+.SH VERSION
+4.2

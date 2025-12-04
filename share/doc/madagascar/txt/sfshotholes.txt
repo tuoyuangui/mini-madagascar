@@ -1,0 +1,7 @@
+Program sfshotholes | Remove random shot gathers from a 2-D dataset. 
+[SYNOPSIS]
+sfshotholes < in.rsf > mask.rsf perc=0.75
+[PARAMETERS]
+float   | perc | =0.75 |   | 	how many shots to remove 
+[DIRECTORY]
+system/seismic

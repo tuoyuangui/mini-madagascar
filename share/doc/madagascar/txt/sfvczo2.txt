@@ -1,0 +1,10 @@
+Program sfvczo2 | Post-stack 2-D velocity continuation in the time-stretch frequency domain. 
+[SYNOPSIS]
+sfvczo2 < in.rsf > out.rsf verb=y nv= dv= v0=
+[PARAMETERS]
+float   | dv | = |   | 	velocity step size 
+int     | nv | = |   | 	velocity steps 
+float   | v0 | = |   | 	starting velocity 
+bool    | verb | =y |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+system/seismic

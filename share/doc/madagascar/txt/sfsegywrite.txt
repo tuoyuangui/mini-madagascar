@@ -1,0 +1,25 @@
+Program sfsegywrite | Convert an RSF dataset to SEGY or SU.
+[SYNOPSIS]
+sfsegywrite < in.rsf tfile=hdr.rsf verb=n endian=y su= suxdr=n suxdr=n tape= hfile= bfile=
+[COMMENTS]
+
+Merges trace headers with data.
+
+"suwrite" is equivalent to "segywrite su=y"
+
+If bfile= and/or hfile= are not provided, they will be created automatically
+using information from the trace headers.
+
+The file for tfile= can be generated with sfsegyheader.
+
+[PARAMETERS]
+string  | bfile | = |   | 	input binary data header file 
+bool    | endian | =y |  [y/n] | 	Whether to automatically estimate endianness or not 
+string  | hfile | = |   | 	input text data header file 
+bool    | su | = |  [y/n] | 	y if input is SU, n if input is SEGY 
+bool    | suxdr | =n |  [y/n] | 	y, SU has XDR support 
+string  | tape | = |   | 	output data 
+file    | tfile | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	Verbosity flag 
+[DIRECTORY]
+system/seismic

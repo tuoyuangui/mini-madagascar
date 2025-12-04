@@ -1,0 +1,29 @@
+.TH sfhalfint 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfhalfint \- Half-order integration or differentiation. \n.SH SYNOPSIS
+.B sfhalfint < in.rsf > out.rsf adj=n inv=n rho=1.-1./n1
+.SH COMMENTS
+
+December 2012 program of the month:
+http://ahay.org/blog/2012/12/23/program-of-the-month-sfhalfint/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B adj
+.B =n
+.R  [y/n]	If y, apply adjoint
+.TP
+.I bool   
+.B inv
+.B =n
+.R  [y/n]	If y, do differentiation instead of integration
+.TP
+.I float  
+.B rho
+.B =1.-1./n1
+.R  	Leaky integration constant
+.SH SOURCE
+.I system/seismic/Mhalfint.c
+.SH VERSION
+4.2

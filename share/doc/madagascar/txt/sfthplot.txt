@@ -1,0 +1,34 @@
+Program sfthplot | Hidden-line surface plot.
+[SYNOPSIS]
+sfthplot < in.rsf uflag=y dflag=y alpha=45. titlsz=9 axissz=6 plotfat=0 titlefat=2 axisfat=2 plotcolup=VP_YELLOW plotcoldn=VP_RED wanttitle=y axis=y axis1=y axis2=y axis3=y clip=0. pclip=100. gainstep=0.5+nx/256. bias=0. dclip=1. norm=y xc=1.5 zc=3 ratio=5. zmax= zmin= sz=6. title= > plot.vpl 
+[PARAMETERS]
+float   | alpha | =45. |   | 	apparent angle in degrees, |alpha| < 89 
+bool    | axis | =y |  [y/n] | 	
+bool    | axis1 | =y |  [y/n] | 	
+bool    | axis2 | =y |  [y/n] | 	
+bool    | axis3 | =y |  [y/n] | 	plot axis 
+int     | axisfat | =2 |   | 	axes fatness 
+int     | axissz | =6 |   | 	axes size 
+float   | bias | =0. |   | 	subtract bias from data 
+float   | clip | =0. |   | 	data clip 
+float   | dclip | =1. |   | 	change the clip: clip *= dclip 
+bool    | dflag | =y |  [y/n] | 	if y, plot down side of the surface 
+int     | gainstep | =0.5+nx/256. |   | 	subsampling for gpow and clip estimation 
+bool    | norm | =y |  [y/n] | 	normalize by the clip 
+float   | pclip | =100. |   | 	data clip percentile 
+int     | plotcoldn | =VP_RED |   | 	color of the lower side 
+int     | plotcolup | =VP_YELLOW |   | 	color of the upper side 
+int     | plotfat | =0 |   | 	line fatness 
+float   | ratio | =5. |   | 	plot adjustment 
+float   | sz | =6. |   | 	vertical scale 
+string  | title | = |   | 	
+int     | titlefat | =2 |   | 	title fatness 
+int     | titlsz | =9 |   | 	title size 
+bool    | uflag | =y |  [y/n] | 	if y, plot upper side of the surface 
+bool    | wanttitle | =y |  [y/n] | 	
+float   | xc | =1.5 |   | 	
+float   | zc | =3 |   | 	lower left corner of the plot 
+float   | zmax | = |   | 	
+float   | zmin | = |   | 	
+[DIRECTORY]
+plot/main

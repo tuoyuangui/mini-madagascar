@@ -1,0 +1,29 @@
+Program sfgrey3 | Generate 3-D cube plot.
+[SYNOPSIS]
+sfgrey3 < in.rsf point1=0.5 point2=0.5 frame1=0 frame2=n2-1 frame3=0 movie=0 dframe=1 n1pix=n1/point1+n3/(1.-point1) n2pix=n2/point2+n3/(1.-point2) flat=y scalebar=n minval= maxval= barreverse=n nreserve=8 bar= color= > plot.vpl
+[COMMENTS]
+Requires an "unsigned char" input (the output of sfbyte).
+
+April 2012 program of the month:
+http://ahay.org/blog/2012/04/01/program-of-the-month-sfgrey3/
+
+[PARAMETERS]
+string  | bar | = |   | 	file for scalebar data 
+bool    | barreverse | =n |  [y/n] | 	if y, go from small to large on the bar scale 
+string  | color | = |   | 	color scheme (default is i) 
+int     | dframe | =1 |   | 	frame increment in a movie 
+bool    | flat | =y |  [y/n] | 	if n, display perspective view 
+int     | frame1 | =0 |   | 	top frame number 
+int     | frame2 | =n2-1 |   | 	side frame number 
+int     | frame3 | =0 |   | 	front frame number 
+float   | maxval | = |   | 	maximum value for scalebar (default is the data maximum) 
+float   | minval | = |   | 	minimum value for scalebar (default is the data minimum) 
+int     | movie | =0 |   | 	0: no movie, 1: movie over axis 1, 2: axis 2, 3: axis 3 
+int     | n1pix | =n1/point1+n3/(1.-point1) |   | 	number of vertical pixels 
+int     | n2pix | =n2/point2+n3/(1.-point2) |   | 	number of horizontal pixels 
+int     | nreserve | =8 |   | 	reserved colors 
+float   | point1 | =0.5 |   | 	fraction of the vertical axis for front face 
+float   | point2 | =0.5 |   | 	fraction of the horizontal axis for front face 
+bool    | scalebar | =n |  [y/n] | 	if y, draw scalebar 
+[DIRECTORY]
+plot/main

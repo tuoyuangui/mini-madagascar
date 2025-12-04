@@ -1,0 +1,10 @@
+Program sfstripes | Model the positions and dips of the constant offset, source, midpoint, and receiver strikes in a source vs. offset space. 
+[SYNOPSIS]
+sfstripes < inp.rsf > out.rsf mo= ms= my= mr=
+[PARAMETERS]
+int     | mo | = |   | 	offset parameter, a constant offset line will appear in the output every o offset 
+int     | mr | = |   | 	receiver parameter, a constant receiver line will appear in the output every r receiver 
+int     | ms | = |   | 	source parameter, a constant source line will appear in the output every s source 
+int     | my | = |   | 	midpoint parameter, a constant midpoint line will appear in the output every y midpoint 
+[DIRECTORY]
+system/seismic

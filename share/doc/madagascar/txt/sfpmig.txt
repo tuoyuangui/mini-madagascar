@@ -1,0 +1,11 @@
+Program sfpmig | Slope-based prestack time migration. 
+[SYNOPSIS]
+sfpmig < cmp.rsf xdip=xdip.rsf hdip=hdip.rsf > mig.rsf half=y mzo=n eps=1.0
+[PARAMETERS]
+float   | eps | =1.0 |   | 	stretch regularization 
+bool    | half | =y |  [y/n] | 	if y, the second axis is half-offset instead of full offset 
+file    | hdip | = |   | 	auxiliary input file name
+bool    | mzo | =n |  [y/n] | 	do migration to zero offset 
+file    | xdip | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/seismic

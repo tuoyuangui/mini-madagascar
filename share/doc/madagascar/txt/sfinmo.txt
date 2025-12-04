@@ -1,0 +1,13 @@
+Program sfinmo | Inverse normal moveout. 
+[SYNOPSIS]
+sfinmo < cmp.rsf velocity=velocity.rsf > nmod.rsf offset=offset.rsf mask=msk.rsf half=y slowness=n h0=0. eps=0.01
+[PARAMETERS]
+float   | eps | =0.01 |   | 	stretch regularization 
+float   | h0 | =0. |   | 	reference offset 
+bool    | half | =y |  [y/n] | 	if y, the second axis is half-offset instead of full offset 
+string  | mask | = |   | 	auxiliary input file name
+string  | offset | = |   | 	auxiliary input file name
+bool    | slowness | =n |  [y/n] | 	if y, use slowness instead of velocity 
+file    | velocity | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/seismic

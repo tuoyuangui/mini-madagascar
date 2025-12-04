@@ -1,0 +1,29 @@
+.TH sfextract 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfextract \- Forward interpolation in 2-D slices. \n.SH SYNOPSIS
+.B sfextract < in.rsf > out.rsf head=head.rsf xkey=0 ykey=1 interp=2
+.SH PARAMETERS
+.PD 0
+.TP
+.I file   
+.B head
+.B =
+.R  	auxiliary input file name
+.TP
+.I int    
+.B interp
+.B =2
+.R  [1,2]	interpolation method, 1: nearest neighbor, 2: bi-linear
+.TP
+.I int    
+.B xkey
+.B =0
+.R  	x key number
+.TP
+.I int    
+.B ykey
+.B =1
+.R  	y key number
+.SH SOURCE
+.I system/generic/Mextract.c
+.SH VERSION
+4.2

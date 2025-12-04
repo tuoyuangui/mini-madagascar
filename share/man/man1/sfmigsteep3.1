@@ -1,0 +1,58 @@
+.TH sfmigsteep3 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfmigsteep3 \- 3-D Kirchhoff time migration for antialiased steep dips. \n.SH SYNOPSIS
+.B sfmigsteep3 < in.rsf hdr=head.rsf > mig.rsf n2= d2= o2= n3= d3= o3= n1= vel=
+.SH COMMENTS
+
+Combine with sfmig3 antialias=flat for the complete response.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B d2
+.B =
+.R  
+.TP
+.I float  
+.B d3
+.B =
+.R  
+.TP
+.I file   
+.B hdr
+.B =
+.R  	auxiliary input file name
+.TP
+.I int    
+.B n1
+.B =
+.R  
+.TP
+.I int    
+.B n2
+.B =
+.R  
+.TP
+.I int    
+.B n3
+.B =
+.R  
+.TP
+.I float  
+.B o2
+.B =
+.R  
+.TP
+.I float  
+.B o3
+.B =
+.R  
+.TP
+.I float  
+.B vel
+.B =
+.R  	migration velocity
+.SH SOURCE
+.I system/seismic/Mmigsteep3.c
+.SH VERSION
+4.2

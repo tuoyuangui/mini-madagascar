@@ -1,0 +1,14 @@
+Program sfshot2cmp | Convert shots to CMPs for regular 2-D geometry. 
+[SYNOPSIS]
+sfshot2cmp < in.rsf > out.rsf mask=msk.rsf positive=y half=y
+[COMMENTS]
+
+The axes in the input are {time,offset,shot}
+The axes in the output are {time,offset,midpoint}
+
+[PARAMETERS]
+bool    | half | =y |  [y/n] | 	if y, the second axis is half-offset instead of full offset
+string  | mask | = |   | 	auxiliary output file name
+bool    | positive | =y |  [y/n] | 	initial offset orientation 
+[DIRECTORY]
+system/seismic

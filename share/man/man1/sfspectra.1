@@ -1,0 +1,24 @@
+.TH sfspectra 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfspectra \- Frequency spectra. \n.SH SYNOPSIS
+.B sfspectra < in.rsf > out.rsf all=n opt=y
+.SH COMMENTS
+
+March 2012 program of the month:
+http://ahay.org/blog/2012/03/18/program-of-the-month-sfspectra/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B all
+.B =n
+.R  [y/n]	if y, compute average spectrum for all traces
+.TP
+.I bool   
+.B opt
+.B =y
+.R  [y/n]	if y, determine optimal size for efficiency
+.SH SOURCE
+.I system/generic/Mspectra.c
+.SH VERSION
+4.2

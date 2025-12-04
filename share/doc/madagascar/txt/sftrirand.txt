@@ -1,0 +1,5 @@
+Program sftrirand | Edit points for triangulation by removing similar and randomizing. 
+[SYNOPSIS]
+sftrirand < in.rsf > out.rsf
+[DIRECTORY]
+system/generic

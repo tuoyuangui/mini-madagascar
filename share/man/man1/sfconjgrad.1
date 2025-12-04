@@ -1,0 +1,31 @@
+.TH sfconjgrad 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfconjgrad \- Generic conjugate-gradient solver for linear inversion \n.SH SYNOPSIS
+.B sfconjgrad < dat.rsf mod0=mod.rsf mwt=mwt.rsf known=known.rsf mod0=x0.rsf > to.rsf < from.rsf > out.rsf niter=1
+.SH PARAMETERS
+.PD 0
+.TP
+.I string 
+.B known
+.B =
+.R  	auxiliary input file name
+.TP
+.I string 
+.B mod0
+.B =
+.R  	auxiliary input file name
+.TP
+.I string 
+.B mwt
+.B =
+.R  	auxiliary input file name
+.TP
+.I int    
+.B niter
+.B =1
+.R  	number of iterations
+.SH SOURCE
+.I system/main/conjgrad.c
+.SH DOCUMENTATION
+.BR http://ahay.org/wiki/Guide_to_madagascar_programs#sfconjgrad
+.SH VERSION
+4.2

@@ -1,0 +1,26 @@
+Program sfpveltranVTI | Slope-based tau-p velocity transform for VTI media. 
+[SYNOPSIS]
+sfpveltranVTI < tau0.rsf > velN.rsf velH=velH.rsf eta=eta.rsf cmp=cmp.rsf dip=dip.rsf curv=curv.rsf dipt=dipt.rsf tau0t=tau0t.rsf curvt=curvt.rsf map=n nv= v0= dv= nvh=nv vh0=v0 dvh=dv ne=101 e0=-0.5 de=0.01 nw=4 method=
+[PARAMETERS]
+file    | cmp | = |   | 	auxiliary input file name
+string  | curv | = |   | 	curvature field (required for method=e and method=d) (auxiliary input file name)
+string  | curvt | = |   | 	time derivative of curvature field (required for method=d and method=s) (auxiliary input file name)
+float   | de | =0.01 |   | 	eta sampling 
+string  | dip | = |   | 	slope field (required for method=e and method=d) (auxiliary input file name)
+string  | dipt | = |   | 	time derivative of slope field(auxiliary input file name)
+float   | dv | = |   | 	velocity sampling 
+float   | dvh | =dv |   | 	HOR velocity sampling 
+float   | e0 | =-0.5 |   | 	eta origin 
+file    | eta | = |   | 	auxiliary output file name
+bool    | map | =n |  [y/n] | 	output maps instead of coherency panels 
+string  | method | = |   | 	method to use (stripping,dix,fowler,effective) 
+int     | ne | =101 |   | 	number of etas 
+int     | nv | = |   | 	number of velocities 
+int     | nvh | =nv |   | 	number of HOR velocities  
+int     | nw | =4 |   | 	interpolator size (2,3,4,6,8) 
+string  | tau0t | = |   | 	tau0 tau derivative field (required for method=f) (auxiliary input file name)
+float   | v0 | = |   | 	velocity origin 
+file    | velH | = |   | 	auxiliary output file name
+float   | vh0 | =v0 |   | 	HOR velocity origin 
+[DIRECTORY]
+system/seismic

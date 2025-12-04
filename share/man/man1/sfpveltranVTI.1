@@ -1,0 +1,109 @@
+.TH sfpveltranVTI 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfpveltranVTI \- Slope-based tau-p velocity transform for VTI media. \n.SH SYNOPSIS
+.B sfpveltranVTI < tau0.rsf > velN.rsf velH=velH.rsf eta=eta.rsf cmp=cmp.rsf dip=dip.rsf curv=curv.rsf dipt=dipt.rsf tau0t=tau0t.rsf curvt=curvt.rsf map=n nv= v0= dv= nvh=nv vh0=v0 dvh=dv ne=101 e0=-0.5 de=0.01 nw=4 method=
+.SH PARAMETERS
+.PD 0
+.TP
+.I file   
+.B cmp
+.B =
+.R  	auxiliary input file name
+.TP
+.I string 
+.B curv
+.B =
+.R  	curvature field (required for method=e and method=d) (auxiliary input file name)
+.TP
+.I string 
+.B curvt
+.B =
+.R  	time derivative of curvature field (required for method=d and method=s) (auxiliary input file name)
+.TP
+.I float  
+.B de
+.B =0.01
+.R  	eta sampling
+.TP
+.I string 
+.B dip
+.B =
+.R  	slope field (required for method=e and method=d) (auxiliary input file name)
+.TP
+.I string 
+.B dipt
+.B =
+.R  	time derivative of slope field(auxiliary input file name)
+.TP
+.I float  
+.B dv
+.B =
+.R  	velocity sampling
+.TP
+.I float  
+.B dvh
+.B =dv
+.R  	HOR velocity sampling
+.TP
+.I float  
+.B e0
+.B =-0.5
+.R  	eta origin
+.TP
+.I file   
+.B eta
+.B =
+.R  	auxiliary output file name
+.TP
+.I bool   
+.B map
+.B =n
+.R  [y/n]	output maps instead of coherency panels
+.TP
+.I string 
+.B method
+.B =
+.R  	method to use (stripping,dix,fowler,effective)
+.TP
+.I int    
+.B ne
+.B =101
+.R  	number of etas
+.TP
+.I int    
+.B nv
+.B =
+.R  	number of velocities
+.TP
+.I int    
+.B nvh
+.B =nv
+.R  	number of HOR velocities
+.TP
+.I int    
+.B nw
+.B =4
+.R  	interpolator size (2,3,4,6,8)
+.TP
+.I string 
+.B tau0t
+.B =
+.R  	tau0 tau derivative field (required for method=f) (auxiliary input file name)
+.TP
+.I float  
+.B v0
+.B =
+.R  	velocity origin
+.TP
+.I file   
+.B velH
+.B =
+.R  	auxiliary output file name
+.TP
+.I float  
+.B vh0
+.B =v0
+.R  	HOR velocity origin
+.SH SOURCE
+.I system/seismic/MpveltranVTI.c
+.SH VERSION
+4.2

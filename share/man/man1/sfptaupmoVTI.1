@@ -1,0 +1,34 @@
+.TH sfptaupmoVTI 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfptaupmoVTI \- Slope-based tau-p moveout in VTI. \n.SH SYNOPSIS
+.B sfptaupmoVTI < inp.rsf dip=dip.rsf ddip=ddip.rsf > nmod.rsf tau0=tau0.rsf cos2=cos2.rsf eps=0.01
+.SH PARAMETERS
+.PD 0
+.TP
+.I file   
+.B cos2
+.B =
+.R  	auxiliary output file name
+.TP
+.I string 
+.B ddip
+.B =
+.R  	curvature field (auxiliary input file name)
+.TP
+.I string 
+.B dip
+.B =
+.R  	slope field (auxiliary input file name)
+.TP
+.I float  
+.B eps
+.B =0.01
+.R  	stretch regularization
+.TP
+.I string 
+.B tau0
+.B =
+.R  	tau0(tau,p) (auxiliary output file name)
+.SH SOURCE
+.I system/seismic/MptaupmoVTI.c
+.SH VERSION
+4.2

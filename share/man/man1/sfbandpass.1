@@ -1,0 +1,44 @@
+.TH sfbandpass 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfbandpass \- Bandpass filtering. \n.SH SYNOPSIS
+.B sfbandpass < in.rsf > out.rsf flo= fhi= phase=n verb=n nplo=6 nphi=6
+.SH COMMENTS
+
+November 2012 program of the month:
+http://ahay.org/blog/2012/11/03/program-of-the-month-sfbandpass/
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B fhi
+.B =
+.R  	High frequency in band, default is Nyquist
+.TP
+.I float  
+.B flo
+.B =
+.R  	Low frequency in band, default is 0
+.TP
+.I int    
+.B nphi
+.B =6
+.R  	number of poles for high cutoff
+.TP
+.I int    
+.B nplo
+.B =6
+.R  	number of poles for low cutoff
+.TP
+.I bool   
+.B phase
+.B =n
+.R  [y/n]	y: minimum phase, n: zero phase
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]	verbosity flag
+.SH SOURCE
+.I system/generic/Mbandpass.c
+.SH VERSION
+4.2

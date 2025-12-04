@@ -1,0 +1,39 @@
+.TH sfstoltstretch 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfstoltstretch \- Stolt stretch. \n.SH SYNOPSIS
+.B sfstoltstretch < in.rsf > st.rsf velocity=vel.rsf inv=n nstretch=1 pad=nt eps=0.01 vel=
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B eps
+.B =0.01
+.R  	stretch regularization
+.TP
+.I bool   
+.B inv
+.B =n
+.R  [y/n]	if y, inverse stretch
+.TP
+.I int    
+.B nstretch
+.B =1
+.R  	number of steps
+.TP
+.I int    
+.B pad
+.B =nt
+.R  	time axis padding
+.TP
+.I float  
+.B vel
+.B =
+.R  	reference velocity
+.TP
+.I file   
+.B velocity
+.B =
+.R  	auxiliary input file name
+.SH SOURCE
+.I system/seismic/Mstoltstretch.c
+.SH VERSION
+4.2

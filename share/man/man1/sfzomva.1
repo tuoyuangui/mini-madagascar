@@ -1,0 +1,69 @@
+.TH sfzomva 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfzomva \- 3-D zero-offset WEMVA \n.SH SYNOPSIS
+.B sfzomva slo=Bs.rsf wfl=Bw.rsf < Pi.rsf > Ps.rsf verb=n eps=0.01 inv=n twoway=y nrmax=1 dtmax=0.004 pmx=0 pmy=0 tmx=0 tmy=0
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B dtmax
+.B =0.004
+.R  	time error
+.TP
+.I float  
+.B eps
+.B =0.01
+.R  	stability parameter
+.TP
+.I bool   
+.B inv
+.B =n
+.R  [y/n]	y=modeling; n=migration
+.TP
+.I int    
+.B nrmax
+.B =1
+.R  	maximum number of references
+.TP
+.I int    
+.B pmx
+.B =0
+.R  	padding on x
+.TP
+.I int    
+.B pmy
+.B =0
+.R  	padding on y
+.TP
+.I file   
+.B slo
+.B =
+.R  	auxiliary input file name
+.TP
+.I int    
+.B tmx
+.B =0
+.R  	taper on x
+.TP
+.I int    
+.B tmy
+.B =0
+.R  	taper on y
+.TP
+.I bool   
+.B twoway
+.B =y
+.R  [y/n]	two-way traveltime
+.TP
+.I bool   
+.B verb
+.B =n
+.R  [y/n]	verbosity flag
+.TP
+.I file   
+.B wfl
+.B =
+.R  	auxiliary input file name
+.SH SOURCE
+.I system/seismic/Mzomva.c
+.SH VERSION
+4.2

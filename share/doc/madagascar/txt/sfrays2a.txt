@@ -1,0 +1,24 @@
+Program sfrays2a | Ray tracing in VTI media by a Runge-Kutta integrator.
+[SYNOPSIS]
+sfrays2a < vz.rsf > rays.rsf shotfile=shots.rsf anglefile=angles.rsf vel=y order=4 nt= dt= verb=y escvar=n zshot=0. yshot=o[1] + 0.5*(n[1]-1)*d[1] nr= a0=0. amax=360. vx= eta= > rays.rsf
+[COMMENTS]
+Rays can be plotted with sfplotrays.
+
+[PARAMETERS]
+float   | a0 | =0. |   | 	minimum angle (if no anglefile) 
+float   | amax | =360. |   | 	maximum angle (if no anglefile) 
+string  | anglefile | = |   | 	file with initial angles (auxiliary input file name)
+float   | dt | = |   | 	Sampling in time 
+bool    | escvar | =n |  [y/n] | 	If y - output escape values, n - trajectories 
+string  | eta | = |   | 	eta parameter 
+int     | nr | = |   | 	number of angles (if no anglefile) 
+int     | nt | = |   | 	Number of time steps 
+int     | order | =4 |   | 	Interpolation order 
+string  | shotfile | = |   | 	file with shot locations (auxiliary input file name)
+bool    | vel | =y |  [y/n] | 	If y, input is velocity; if n, slowness 
+bool    | verb | =y |  [y/n] | 	Verbosity flag 
+string  | vx | = |   | 	horizontal velocity or slowness 
+float   | yshot | =o[1] + 0.5*(n[1]-1)*d[1] |   | 	
+float   | zshot | =0. |   | 	shot coordinates (if no shotfile) 
+[DIRECTORY]
+system/seismic

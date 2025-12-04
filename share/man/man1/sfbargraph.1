@@ -1,0 +1,37 @@
+.TH sfbargraph 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfbargraph \- Bar plot.\n.SH SYNOPSIS
+.B sfbargraph < in.rsf wantframenum=(bool) (n3 > 1) pclip=100. width=0.8 stack=y transp=n > plot.vpl
+.SH COMMENTS
+Run "sfdoc stdplot" for more parameters.
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B pclip
+.B =100.
+.R  	clip percentile
+.TP
+.I bool   
+.B stack
+.B =y
+.R  [y/n]	if stack bars on top
+.TP
+.I bool   
+.B transp
+.B =n
+.R  [y/n]	if y, transpose the axes
+.TP
+.I bool   
+.B wantframenum
+.B =(bool) (n3 > 1)
+.R  [y/n]	if y, display third axis position in the corner
+.TP
+.I float  
+.B width
+.B =0.8
+.R  	bar width
+.SH SOURCE
+.I plot/main/bargraph.c
+.SH VERSION
+4.2

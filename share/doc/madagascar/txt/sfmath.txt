@@ -1,0 +1,41 @@
+Program sfmath | Mathematical operations on data files.
+[SYNOPSIS]
+sfmath > out.rsf nostdin=n n#= d#=(1,1,...) o#=(0,0,...) label#= unit#= type= label= unit= output=
+[COMMENTS]
+
+Known functions: 
+cos,  sin,  tan,  acos,  asin,  atan, 
+cosh, sinh, tanh, acosh, asinh, atanh,
+exp,  log,  sqrt, abs,
+erf,  erfc, sign (for float data),
+arg,  conj, real, imag (for complex data).
+
+sfmath will work on float or complex data, but all the input and output
+files must be of the same data type.
+
+An alternative to sfmath is sfadd, which may be more efficient, but is
+less versatile.
+
+Examples:
+
+sfmath x=file1.rsf y=file2.rsf power=file3.rsf output='sin((x+2*y)^power)' > out.rsf
+sfmath < file1.rsf tau=file2.rsf output='exp(tau*input)' > out.rsf
+sfmath n1=100 type=complex output="exp(I*x1)" > out.rsf
+
+Arguments which are not treated as variables in mathematical expressions:
+datapath=, type=, out=
+
+See also: sfheadermath.
+[PARAMETERS]
+float   | d# | =(1,1,...) |   | 	sampling on #-th axis 
+string  | label | = |   | 	data label 
+string  | label# | = |   | 	label on #-th axis 
+largeint | n# | = |   | 	size of #-th axis 
+bool    | nostdin | =n |  [y/n] | 	y - ignore stdin 
+float   | o# | =(0,0,...) |   | 	origin on #-th axis 
+string  | output | = |   | 	Mathematical description of the output 
+string  | type | = |   | 	output data type [float,complex] 
+string  | unit | = |   | 	data unit 
+string  | unit# | = |   | 	unit on #-th axis 
+[DIRECTORY]
+system/main

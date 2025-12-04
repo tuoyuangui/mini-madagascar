@@ -1,0 +1,80 @@
+Program sfpspen | Vplot filter for Postscript. 
+[SYNOPSIS]
+sfpspen colormask= red= green= blue= ppi= dumbfat=n color=n force=n forcebw=n force_raster=y rgb=y tex=n hold=n copies=1 corners=y mono=n endpause= cachepipe= shade= wantras= window= frame= overlay= invras= txsquare= serifs= background= redpow=1.0 greenpow=1.0 bluepow=1.0 dither= greyc=1.0 pixc=1.0 txfont= txprec= txovly= xcenter= ycenter= patternmult=1. pause=0 fatmult= rotate=0 txscale=1.0 mkscale=1.0 dashscale=1.0 scale=1.0 xscale=1.0 yscale=1.0 xshift=0. yshift=0. xwmax= ywmax= xwmin= ywmin= fat=0 label= printer= paper= erase= break= interact= style= size=
+[COMMENTS]
+
+output is in PostScript language; if not redirected, it is sent to
+lpr -Ppostscript   (override with $PSPRINTER environment variable.)
+
+[PARAMETERS]
+bool    | background | = |  [y/n] | 	
+floats  | blue | = |   | 	 [4]
+float   | bluepow | =1.0 |   | 	
+string  | break | = |   | 	
+bool    | cachepipe | = |  [y/n] | 	
+bool    | color | =n |  [y/n] | 	use color 
+bools   | colormask | = |   | 	 [5]
+int     | copies | =1 |   | 	number of copies 
+bool    | corners | =y |  [y/n] | 	n - remove "corner" group. 
+float   | dashscale | =1.0 |   | 	
+int     | dither | = |   | 	dithering to improve raster display, see "man vplotraster"
+                    0    No dither,
+                    1    Random Dither
+                    2    Ordered Dither
+                    3    Minimized Average Error Method
+                    4    Digital Halftoning 
+bool    | dumbfat | =n |  [y/n] | 	
+bool    | endpause | = |  [y/n] | 	
+string  | erase | = |   | 	
+int     | fat | =0 |   | 	base line fatness 
+float   | fatmult | = |   | 	
+bool    | force | =n |  [y/n] | 	if y, don't replace colors with their compliments 
+bool    | force_raster | =y |  [y/n] | 	if y, don't replace raster colors with their compliments 
+bool    | forcebw | =n |  [y/n] | 	if y, don't replace black and white colors with their compliments 
+bool    | frame | = |  [y/n] | 	
+floats  | green | = |   | 	 [4]
+float   | greenpow | =1.0 |   | 	
+float   | greyc | =1.0 |   | 	"grey correction" modifies the grey scale used to display a raster to simulate the nonlinearity of displays, see "man vplotraster" 
+bool    | hold | =n |  [y/n] | 	tells the printer to not print the job until you
+       add paper through the manual feed slot 
+string  | interact | = |   | 	
+bool    | invras | = |  [y/n] | 	
+string  | label | = |   | 	label for pages, default is user name and date
+float   | mkscale | =1.0 |   | 	
+bool    | mono | =n |  [y/n] | 	no color 
+bool    | overlay | = |  [y/n] | 	
+string  | paper | = |   | 	
+float   | patternmult | =1. |   | 	
+int     | pause | =0 |   | 	
+float   | pixc | =1.0 |   | 	"pixel  correction" controls  alteration of the grey scale, see "man vplotraster". 
+float   | ppi | = |   | 	pixels per inch 
+string  | printer | = |   | 	what printer to send it to 
+floats  | red | = |   | 	 [4]
+float   | redpow | =1.0 |   | 	
+bool    | rgb | =y |  [y/n] | 	For figures turned into GEOPHYSICS, use "rgb=no". 
+int     | rotate | =0 |   | 	
+float   | scale | =1.0 |   | 	
+bool    | serifs | = |  [y/n] | 	
+bool    | shade | = |  [y/n] | 	
+string  | size | = |   | 	
+string  | style | = |   | 	
+bool    | tex | =n |  [y/n] | 	
+int     | txfont | = |   | 	
+int     | txovly | = |   | 	
+int     | txprec | = |   | 	
+float   | txscale | =1.0 |   | 	
+bool    | txsquare | = |  [y/n] | 	
+bool    | wantras | = |  [y/n] | 	
+bool    | window | = |  [y/n] | 	
+float   | xcenter | = |   | 	
+float   | xscale | =1.0 |   | 	
+float   | xshift | =0. |   | 	
+float   | xwmax | = |   | 	
+float   | xwmin | = |   | 	
+float   | ycenter | = |   | 	
+float   | yscale | =1.0 |   | 	
+float   | yshift | =0. |   | 	
+float   | ywmax | = |   | 	
+float   | ywmin | = |   | 	
+[DIRECTORY]
+pens/main

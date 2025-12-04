@@ -1,0 +1,37 @@
+.TH sfkirchnew 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfkirchnew \- Kirchhoff 2-D post-stack time migration and modeling with antialiasing. \n.SH SYNOPSIS
+.B sfkirchnew < in.rsf > out.rsf velocity=vel.rsf adj=y hd=y sw=0 v0=
+.SH COMMENTS
+
+Antialiasing by reparameterization. 
+.SH PARAMETERS
+.PD 0
+.TP
+.I bool   
+.B adj
+.B =y
+.R  [y/n]	yes: migration, no: modeling
+.TP
+.I bool   
+.B hd
+.B =y
+.R  [y/n]	if y, apply half-derivative filter
+.TP
+.I int    
+.B sw
+.B =0
+.R  	if > 0, select a branch of the antialiasing operation
+.TP
+.I float  
+.B v0
+.B =
+.R  	constant velocity (if no velocity=)
+.TP
+.I string 
+.B velocity
+.B =
+.R  	velocity file (auxiliary input file name)
+.SH SOURCE
+.I system/seismic/Mkirchnew.c
+.SH VERSION
+4.2

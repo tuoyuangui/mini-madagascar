@@ -1,0 +1,8 @@
+Program sfjacobi | Find eigenvalues of a symmetric matrix by Jacobi's iteration. 
+[SYNOPSIS]
+sfjacobi < mat.rsf > val.rsf eig=eig.rsf niter=10
+[PARAMETERS]
+string  | eig | = |   | 	auxiliary output file name
+int     | niter | =10 |   | 	
+[DIRECTORY]
+system/generic

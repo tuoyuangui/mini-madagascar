@@ -1,0 +1,80 @@
+Program sfimage | X IMAGE plot of a uniformly-sampled function f(x1,x2).
+[SYNOPSIS]
+sfimage < in.rsf curve= npair= curvecolor= curvecolor= ncurve=0 ncurvecolor=0 clip= clip= perc=100.0 balance=n bclip= bperc=perc wclip= wperc=100.0-perc verbose=y blockinterp=n legend=n blank=0.0f xbox=50 ybox=50 wbox=550 hbox=700 lwidth=16 lheight=hbox/3 lx=3 ly=(hbox-lheight)/3 x1beg=x1min x1end=x1max d1num=0.0 f1num=x1min n1tic=1 x2beg=x2min x2end=x2max d2num=0.0 f2num=0.0 n2tic=1 labelsize=18.0 titlesize=24.0 mpicks= cmap= units= legendfont= grid1= label1= grid2= label2= labelfont= title= titlefont= style= titlecolor= labelcolor= gridcolor= windowtitle=
+[COMMENTS]
+X Functionality:							
+Button 1	Zoom with rubberband box				
+Button 2	Show mouse (x1,x2) coordinates while pressed		
+q or Q key	Quit							
+s key		Save current mouse (x1,x2) location to file		
+a or page up keys		enhance clipping by 10%			
+c or page down keys		reduce clipping by 10%			
+up,down,left,right keys	move zoom window by half width/height	
+i or +(keypad) 		zoom in by factor 2 			
+o or -(keypad) 		zoom out by factor 2 			
+									
+... change colormap interactively					
+r	     install next RGB - colormap				
+R	     install previous RGB - colormap				
+h	     install next HSV - colormap				
+H	     install previous HSV - colormap				
+H	     install previous HSV - colormap				
+(Move mouse cursor out and back into window for r,R,h,H to take effect)
+
+[PARAMETERS]
+bool    | balance | =n |  [y/n] | 	if false, determine bclip & wclip individually; 
+	   else set them to the same abs value 
+float   | bclip | = |   | 	
+float   | blank | =0.0f |   | 	portion of the lower range to blank out 
+bool    | blockinterp | =n |  [y/n] | 	whether to use block interpolation 
+float   | bperc | =perc |   | 	percentile for determining black clip value 
+float   | clip | = |   | 	
+string  | cmap | = |   | 	colormap specification (hsv# or rgb#) 
+strings | curve | = |   | 	file(s) containing points to draw curve(s)  [curve]
+strings | curvecolor | = |   | 	color(s) for curve(s)  [ncurvecolor]
+float   | d1num | =0.0 |   | 	numbered tic interval on axis 1 (0.0 for automatic) 
+float   | d2num | =0.0 |   | 	numbered tic interval on axis 2 (0.0 for automatic) 
+float   | f1num | =x1min |   | 	first numbered tic on axis 1 (used if d1num not 0.0) 
+float   | f2num | =0.0 |   | 	first numbered tic on axis 2 (used if d2num not 0.0) 
+string  | grid1 | = |   | 	grid lines on axis 1 (none, dot, dash, or solid) 
+string  | grid2 | = |   | 	grid lines on axis 2 (none, dot, dash, or solid) 
+string  | gridcolor | = |   | 	color for grid lines 
+int     | hbox | =700 |   | 	height in pixels of window 
+string  | label1 | = |   | 	label on axis 1 
+string  | label2 | = |   | 	label on axis 2 
+string  | labelcolor | = |   | 	color for axes labels 
+string  | labelfont | = |   | 	font name for axes labels 
+float   | labelsize | =18.0 |   | 	
+bool    | legend | =n |  [y/n] | 	if display the color scale 
+string  | legendfont | = |   | 	font name for legend 
+int     | lheight | =hbox/3 |   | 	colorscale (legend) height in pixels 
+int     | lwidth | =16 |   | 	colorscale (legend) width in pixels 
+int     | lx | =3 |   | 	colorscale (legend) x-position in pixels 
+int     | ly | =(hbox-lheight)/3 |   | 	colorscale (legend) y-position in pixels 
+string  | mpicks | = |   | 	file to save mouse picks 
+int     | n1tic | =1 |   | 	number of tics per numbered tic on axis 1 
+int     | n2tic | =1 |   | 	number of tics per numbered tic on axis 2 
+int     | ncurve | =0 |   | 	number of curves to draw 
+int     | ncurvecolor | =0 |   | 	number of curve colors 
+ints    | npair | = |   | 	number(s) of pairs in each curve file  [curve]
+float   | perc | =100.0 |   | 	percentile used to determine clip 
+string  | style | = |   | 	normal (axis 1 horizontal, axis 2 vertical) 
+	or  seismic (axis 1 vertical, axis 2 horizontal) 
+string  | title | = |   | 	title of plot 
+string  | titlecolor | = |   | 	color for title 
+string  | titlefont | = |   | 	font name for title 
+float   | titlesize | =24.0 |   | 	
+string  | units | = |   | 	unit label for legend 
+bool    | verbose | =y |  [y/n] | 	verbose mode 
+int     | wbox | =550 |   | 	width in pixels of window 
+float   | wclip | = |   | 	
+string  | windowtitle | = |   | 	title on window 
+float   | wperc | =100.0-perc |   | 	percentile for determining white clip value 
+float   | x1beg | =x1min |   | 	value at which axis 1 begins 
+float   | x1end | =x1max |   | 	value at which axis 1 ends 
+float   | x2beg | =x2min |   | 	value at which axis 2 begins 
+float   | x2end | =x2max |   | 	value at which axis 2 ends 
+int     | xbox | =50 |   | 	x in pixels of upper left corner of window 
+int     | ybox | =50 |   | 	y in pixels of upper left corner of window 
+[DIRECTORY]
+su/plot

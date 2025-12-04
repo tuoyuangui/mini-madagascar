@@ -1,0 +1,45 @@
+.TH sfdepth2time 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfdepth2time \- Conversion from depth to time in a V(z) medium.\n.SH SYNOPSIS
+.B sfdepth2time < in.rsf velocity=velocity.rsf > out.rsf nt= dt= t0= slow=n eps=0.01
+.SH COMMENTS
+
+Transforms function of z to function of
+
+tau = Integral[2/v[x,n],{n,0,z}]
+
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B dt
+.B =
+.R  	Time sampling (default is d1)
+.TP
+.I float  
+.B eps
+.B =0.01
+.R  	smoothness parameter
+.TP
+.I int    
+.B nt
+.B =
+.R  	Number of points in time (default is n1)
+.TP
+.I bool   
+.B slow
+.B =n
+.R  [y/n]	y: slowness, n: velocity
+.TP
+.I float  
+.B t0
+.B =
+.R  	Time origin (default is 0)
+.TP
+.I file   
+.B velocity
+.B =
+.R  	auxiliary input file name
+.SH SOURCE
+.I system/seismic/Mdepth2time.c
+.SH VERSION
+4.2

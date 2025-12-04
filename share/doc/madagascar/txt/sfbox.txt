@@ -1,0 +1,31 @@
+Program sfbox | Draw a balloon-style label.
+[SYNOPSIS]
+sfbox lab_color=VP_WHITE lab_fat=0 pscale=1. pointer=y reverse=n lat=0. long=90. angle=0. x0=0. y0=0. scale0=1. xt=2. yt=0. x_oval=0. y_oval=0. boxit=y length= scalet= size=.25 font=VP_NO_CHANGE label= > out.vpl
+[COMMENTS]
+May 2015 program of the month:
+http://ahay.org/blog/2015/05/01/program-of-the-month-sfbox/
+
+[PARAMETERS]
+float   | angle | =0. |   | 	longitude of floating label in 3-D 
+bool    | boxit | =y |  [y/n] | 	if y, create a box around text 
+int     | font | =VP_NO_CHANGE |   | 	text font 
+int     | lab_color | =VP_WHITE |   | 	label color 
+int     | lab_fat | =0 |   | 	label fatness 
+string  | label | = |   | 	text for label 
+float   | lat | =0. |   | 	latitude of viewpoint in 3-D 
+float   | length | = |   | 	normalization for xt and yt 
+float   | long | =90. |   | 	longitude of viewpoint in 3-D 
+bool    | pointer | =y |  [y/n] | 	if y, create arrow pointer 
+float   | pscale | =1. |   | 	scale factor for width of pointer 
+bool    | reverse | =n |  [y/n] | 	if reverse 
+float   | scale0 | =1. |   | 	scale factor for x0 and y0 
+float   | scalet | = |   | 	( scalet scale factor for xt and yt (if length is not set) )
+float   | size | =.25 |   | 	text height in inches 
+float   | x0 | =0. |   | 	x position of the pointer tip 
+float   | x_oval | =0. |   | 	x size of the oval around pointer 
+float   | xt | =2. |   | 	relative position of text in x 
+float   | y0 | =0. |   | 	y position of the pointer tip 
+float   | y_oval | =0. |   | 	y size of the oval around pointer 
+float   | yt | =0. |   | 	relative position of text in y 
+[DIRECTORY]
+plot/main

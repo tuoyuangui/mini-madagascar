@@ -1,0 +1,46 @@
+.TH sfmap2coh 1  "DECEMBER 2025" Madagascar "Madagascar Manuals"
+.SH NAME\nsfmap2coh \- From parameter's attribute map (veltran) to coherency-like plots. \n.SH SYNOPSIS
+.B sfmap2coh < cmp.rsf map=map.rsf > coh.rsf nv= v0= dv= min2=o2 max2=o2+d2*(n2-1) nw=4
+.SH COMMENTS
+(eventually masked) 
+.SH PARAMETERS
+.PD 0
+.TP
+.I float  
+.B dv
+.B =
+.R  	velocity sampling
+.TP
+.I string 
+.B map
+.B =
+.R  	parameters map (auxiliary input file name)
+.TP
+.I float  
+.B max2
+.B =o2+d2*(n2-1)
+.R  	max2
+.TP
+.I float  
+.B min2
+.B =o2
+.R  	min2
+.TP
+.I int    
+.B nv
+.B =
+.R  	number of velocities
+.TP
+.I int    
+.B nw
+.B =4
+.R  	interpolator size (2,3,4,6,8)
+.TP
+.I float  
+.B v0
+.B =
+.R  	velocity origin
+.SH SOURCE
+.I system/seismic/Mmap2coh.c
+.SH VERSION
+4.2
