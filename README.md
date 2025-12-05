@@ -1,3 +1,52 @@
+# 🌊Mini-Madagascar: A Lightweight Geophysical Processing Package
+
+## 🚀Overview
+
+**Mini-Madagascar** is a minimal, streamlined distribution of the [Madagascar](https://www.reproducibility.org/) open-source software package for geophysical data processing and reproducible research. Inspired by the `Miniconda` philosophy, **Mini-Madagascar** provides the essential core executables and libraries required for geophysical analysis, stripping away the extensive documentation, examples, and auxiliary tools found in the full Madagascar distribution.
+
+The result is a powerful, portable, and incredibly lightweight toolkit, with a compressed archive size of **under 7MB**.
+
+## ✨Key Features
+
+- **Minimal Footprint**: The entire package is under 7MB when compressed, making it ideal for quick installations, containerized environments (C, Python), and systems with limited storage.
+- **Core Functionality**: Includes the full suite of Madagascar command-line programs (`sf*` commands) for seismic and other geophysical data processing.
+- **Fast Setup**: Get up and running in seconds without the overhead of a full installation (two miniutes).
+- **Reproducible Research Ready**: Retains the core framework for creating reproducible computational experiments, which is the central philosophy of the Madagascar project.
+- **Cross-Platform**: Designed to be easily compiled and run on Linux, and Windows (via WSL).
+
+## 🔥What’s Included?
+
+**Mini-Madagascar** focuses on the essential runtime components:
+
+- **Core Executables**: All essential data processing programs (e.g., `Simple process`, `Segy operation`, `Plot the figure`, `Reproducible experiment`).
+- **Runtime Libraries**: The shared API libraries required for the executables to function (e.g., `C`  and `Python`).
+- **Configuration Files**: Basic configuration to integrate with standard system paths.
+- **Core programs**:  That you can find in the website ([[Guide to madagascar programs - Madagascar](https://ahay.org/wiki/Guide_to_madagascar_programs)]).
+
+## 🛠Install method
+
+To install **Mini-Madagascar**,  you can run the following commands, need about **`3 minitue`**.  The install method are same as the original **Madagascar**,  see in the `INSTALL.txt` and [[Installation - Madagascar](https://ahay.org/wiki/Installation)].
+
+```bash
+git clone https://github.com/tuoyuangui/mini-madagascar.git
+cd mini-madagascar
+./configure --prefix=`pwd`
+make 
+make install
+echo "source `pwd`/env.sh" >>~/.bashrc
+source ~/.bashrc
+```
+
+
+
+--------------------------------------------------------------------------------------
+
+# **`the below is the original readme markdown file`**
+
+------------------------------------------------------------------------------------
+
+
+
 <p align="center">
   <img src=https://ahay.org//wikilocal/style/Madagascar2.png>
 </p>
